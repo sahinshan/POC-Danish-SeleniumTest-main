@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="35d63802408847a79754d05dd8b2dc30" Name="Diagram1">
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.AssessmentPrintRecord" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.TeamRestrictedDataAccess" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.UserRestrictedDataAccess" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.Appointment" Width="1.5" PointX="7.875" PointY="64" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.AttachDocumentType" Width="1.5" PointX="6.375" PointY="19.5" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.Case" Width="1.5" PointX="5.625" PointY="64.75" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.CaseAction" Width="1.5" PointX="10.875" PointY="65.75" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.CaseAttachment" Width="1.5" PointX="13.875" PointY="66.375" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.CaseForm" Width="1.5" PointX="10.875" PointY="55.125" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.CaseFormOutcome" Width="1.5" PointX="19.125" PointY="64.375" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.Document" Width="1.5" PointX="8.625" PointY="12.75" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.DocumentAnswer" Width="1.5" PointX="3.375" PointY="5.75" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.Email" Width="1.5" PointX="13.875" PointY="72.625" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.Letter" Width="1.5" PointX="10.875" PointY="73.125" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.Person" Width="1.5" PointX="3.375" PointY="44.375" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.PersonAbsenceHospitalStayReason" Width="1.5" PointX="5.375" PointY="5.75" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.PersonAttendedEducationEstablishment" Width="1.5" PointX="5.625" PointY="39.25" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.PersonCaseNote" Width="1.5" PointX="5.625" PointY="46.375" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.PersonSignificantEvent" Width="1.5" PointX="5.625" PointY="33" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.PhoneCall" Width="1.5" PointX="16.875" PointY="64.25" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.Task" Width="1.5" PointX="13.875" PointY="56.875" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Case_Appointment_CaseId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_Appointment_PersonId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_AttachDocumentType_CaseAttachment_DocumentTypeId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_AttachDocumentType_Document_EdmsDocumentTypeId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Case_CaseAction_CaseId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Case_CaseAttachment_CaseId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Case_CaseForm_CaseId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Case_CaseFormOutcome_CaseId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Case_Email_CaseId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Case_Letter_CaseId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Case_PhoneCall_CaseId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Case_Task_CaseId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_Case_PersonId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_Case_WhoWasNotifiedId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_CaseAction_PersonId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_CaseAttachment_PersonId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_CaseForm_CaseFormOutcome_CaseFormId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Document_CaseForm_DocumentId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_CaseForm_JointCarerId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_CaseForm_PersonId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_CaseFormOutcome_PersonId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_Email_PersonId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_Letter_PersonId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_PersonAttendedEducationEstablishment_PersonId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_PersonCaseNote_PersonId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_PersonSignificantEvent_PersonId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_PhoneCall_PersonId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Person_Task_PersonId" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.DocumentQuestionIdentifier" Width="1.5" PointX="10.875" PointY="18.375" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Document_documentquestionidentifier_DocumentId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_DocumentQuestionIdentifier_DocumentAnswer_DocumentQuestionIdentifierId" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.Audit" Width="1.5" PointX="0.75" PointY="16.25" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.Audit_2018" Width="1.5" PointX="12.75" PointY="2.25" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.Audit_2019" Width="1.5" PointX="11.75" PointY="9.25" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.Audit_2020" Width="1.5" PointX="7.75" PointY="2.25" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.AuditChangeSet" Width="1.5" PointX="3" PointY="15.125" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.AuditChangeSet_2018" Width="1.5" PointX="15" PointY="1.125" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.AuditChangeSet_2019" Width="1.5" PointX="14" PointY="8.125" />
+        <EntityTypeShape EntityType="CareDirectorQA_CDModel.AuditChangeSet_2020" Width="1.5" PointX="10" PointY="1.125" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_AuditId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_2018_AuditId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_2019_AuditId" />
+        <AssociationConnector Association="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_2020_AuditId" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

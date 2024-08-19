@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Phoenix.OpenPeoplePage" Id="8bee2442-28a8-4d24-bb27-f8778c44988e" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.27f79d32-9378-4826-8994-8524a7500769.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Comment CommentText="Navigate to the &quot;People&quot; page" />
+    <Request Method="GET" Guid="1932e683-22b8-4e1f-ab05-d40e705aba30" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/login.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam12.type" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?type=" />
+            <RuleParameter Name="EndsWith" Value="'" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam13.type" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?type=" />
+            <RuleParameter Name="EndsWith" Value="'" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam14.type" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?type=" />
+            <RuleParameter Name="EndsWith" Value="'" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="GET" Guid="4a96b47b-3170-4a34-b2f9-ae22191584de" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/listpage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/default.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="type" Value="person" RecordedValue="person" CorrelationBinding="{{QueryStringParam12.type}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="bd310748-51ec-4b5d-98df-d87f2915f14e" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=person" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMwAwAGYAOAA0AGIAMgBkAC0AYgAxADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADEAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="6bfbcf23-9c3c-496b-ba2e-e299dd001cd1" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="17" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=person" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAMABjAGQANQBiADcAMgBhAC0AYwA0ADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAHAAZQByAHMAbwBuACIALAAiAFAAYQByAGUAbgB0AEkAZAAiADoAIgAiACwAIgBQAGEAcgBlAG4AdABUAHkAcABlAE4AYQBtAGUAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBJAGQAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBEAGkAcwBwAGwAYQB5AE4AYQBtAGUAIgA6ACIAIgAsACIAUgBlAGwAYQB0AGkAbwBuAHMAaABpAHAASQBkACIAOgAiACIALAAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMwAwAGYAOAA0AGIAMgBkAC0AYgAxADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAUgBlAGMAbwByAGQAcwBQAGUAcgBQAGEAZwBlACIAOgAiADEAMAAwACIALAAiAFYAaQBlAHcAVAB5AHAAZQAiADoAIgAxACIALAAiAFAAYQByAGUAbgB0AEkAZABGAGkAZQBsAGQATgBhAG0AZQAiADoAIgAiACwAIgBBAGwAbABvAHcATQB1AGwAdABpAFMAZQBsAGUAYwB0ACIAOgAiAHQAcgB1AGUAIgAsACIATwB0AGgAZQByAEkAZABGAGkAZQBsAGQAIgA6ACIAIgAsACIAVgBpAGUAdwBHAHIAbwB1AHAAIgA6ACIAMQAiAH0A</StringHttpBody>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

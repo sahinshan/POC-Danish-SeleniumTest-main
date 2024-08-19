@@ -1,0 +1,1821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CareDirectorQA_CDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AssessmentPrintRecord">
+    <Key>
+      <PropertyRef Name="AssessmentPrintRecordId" />
+    </Key>
+    <Property Name="AssessmentPrintRecordId" Type="Guid" Nullable="false" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="Title" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="FileId" Type="Guid" />
+    <Property Name="PrintTemplateName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AssessmentSectionId" Type="Guid" />
+    <Property Name="AssessmentId" Type="Guid" />
+    <Property Name="AssessmentIdTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="VersionStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="PrintAuditOnly" Type="Boolean" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AssessmentIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TeamRestrictedDataAccess">
+    <Key>
+      <PropertyRef Name="TeamRestrictedDataAccessId" />
+    </Key>
+    <Property Name="TeamRestrictedDataAccessId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TeamId" Type="Guid" Nullable="false" />
+    <Property Name="DataRestrictionReferenceId" Type="Guid" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="UserRestrictedDataAccess">
+    <Key>
+      <PropertyRef Name="UserRestrictedDataAccessId" />
+    </Key>
+    <Property Name="UserRestrictedDataAccessId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="DataRestrictionReferenceId" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="CareDirectorQA_CDEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AssessmentPrintRecords" EntityType="Self.AssessmentPrintRecord" />
+    <EntitySet Name="TeamRestrictedDataAccesses" EntityType="Self.TeamRestrictedDataAccess" />
+    <EntitySet Name="UserRestrictedDataAccesses" EntityType="Self.UserRestrictedDataAccess" />
+    <EntitySet Name="Appointments" EntityType="CareDirectorQA_CDModel.Appointment" />
+    <EntitySet Name="AttachDocumentTypes" EntityType="CareDirectorQA_CDModel.AttachDocumentType" />
+    <EntitySet Name="Cases" EntityType="CareDirectorQA_CDModel.Case" />
+    <EntitySet Name="CaseActions" EntityType="CareDirectorQA_CDModel.CaseAction" />
+    <EntitySet Name="CaseAttachments" EntityType="CareDirectorQA_CDModel.CaseAttachment" />
+    <EntitySet Name="CaseForms" EntityType="CareDirectorQA_CDModel.CaseForm" />
+    <EntitySet Name="CaseFormOutcomes" EntityType="CareDirectorQA_CDModel.CaseFormOutcome" />
+    <EntitySet Name="Documents" EntityType="CareDirectorQA_CDModel.Document" />
+    <EntitySet Name="DocumentAnswers" EntityType="CareDirectorQA_CDModel.DocumentAnswer" />
+    <EntitySet Name="Emails" EntityType="CareDirectorQA_CDModel.Email" />
+    <EntitySet Name="Letters" EntityType="CareDirectorQA_CDModel.Letter" />
+    <EntitySet Name="People" EntityType="CareDirectorQA_CDModel.Person" />
+    <EntitySet Name="PersonAbsenceHospitalStayReasons" EntityType="CareDirectorQA_CDModel.PersonAbsenceHospitalStayReason" />
+    <EntitySet Name="PersonAttendedEducationEstablishments" EntityType="CareDirectorQA_CDModel.PersonAttendedEducationEstablishment" />
+    <EntitySet Name="PersonCaseNotes" EntityType="CareDirectorQA_CDModel.PersonCaseNote" />
+    <EntitySet Name="PersonSignificantEvents" EntityType="CareDirectorQA_CDModel.PersonSignificantEvent" />
+    <EntitySet Name="PhoneCalls" EntityType="CareDirectorQA_CDModel.PhoneCall" />
+    <EntitySet Name="Tasks" EntityType="CareDirectorQA_CDModel.Task" />
+    <AssociationSet Name="FK_Case_Appointment_CaseId" Association="CareDirectorQA_CDModel.FK_Case_Appointment_CaseId">
+      <End Role="Case" EntitySet="Cases" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Appointment_PersonId" Association="CareDirectorQA_CDModel.FK_Person_Appointment_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttachDocumentType_CaseAttachment_DocumentTypeId" Association="CareDirectorQA_CDModel.FK_AttachDocumentType_CaseAttachment_DocumentTypeId">
+      <End Role="AttachDocumentType" EntitySet="AttachDocumentTypes" />
+      <End Role="CaseAttachment" EntitySet="CaseAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttachDocumentType_Document_EdmsDocumentTypeId" Association="CareDirectorQA_CDModel.FK_AttachDocumentType_Document_EdmsDocumentTypeId">
+      <End Role="AttachDocumentType" EntitySet="AttachDocumentTypes" />
+      <End Role="Document" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_CaseAction_CaseId" Association="CareDirectorQA_CDModel.FK_Case_CaseAction_CaseId">
+      <End Role="Case" EntitySet="Cases" />
+      <End Role="CaseAction" EntitySet="CaseActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_CaseAttachment_CaseId" Association="CareDirectorQA_CDModel.FK_Case_CaseAttachment_CaseId">
+      <End Role="Case" EntitySet="Cases" />
+      <End Role="CaseAttachment" EntitySet="CaseAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_CaseForm_CaseId" Association="CareDirectorQA_CDModel.FK_Case_CaseForm_CaseId">
+      <End Role="Case" EntitySet="Cases" />
+      <End Role="CaseForm" EntitySet="CaseForms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_CaseFormOutcome_CaseId" Association="CareDirectorQA_CDModel.FK_Case_CaseFormOutcome_CaseId">
+      <End Role="Case" EntitySet="Cases" />
+      <End Role="CaseFormOutcome" EntitySet="CaseFormOutcomes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_Email_CaseId" Association="CareDirectorQA_CDModel.FK_Case_Email_CaseId">
+      <End Role="Case" EntitySet="Cases" />
+      <End Role="Email" EntitySet="Emails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_Letter_CaseId" Association="CareDirectorQA_CDModel.FK_Case_Letter_CaseId">
+      <End Role="Case" EntitySet="Cases" />
+      <End Role="Letter" EntitySet="Letters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_PhoneCall_CaseId" Association="CareDirectorQA_CDModel.FK_Case_PhoneCall_CaseId">
+      <End Role="Case" EntitySet="Cases" />
+      <End Role="PhoneCall" EntitySet="PhoneCalls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_Task_CaseId" Association="CareDirectorQA_CDModel.FK_Case_Task_CaseId">
+      <End Role="Case" EntitySet="Cases" />
+      <End Role="Task" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Case_PersonId" Association="CareDirectorQA_CDModel.FK_Person_Case_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Case" EntitySet="Cases" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Case_WhoWasNotifiedId" Association="CareDirectorQA_CDModel.FK_Person_Case_WhoWasNotifiedId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Case" EntitySet="Cases" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_CaseAction_PersonId" Association="CareDirectorQA_CDModel.FK_Person_CaseAction_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="CaseAction" EntitySet="CaseActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_CaseAttachment_PersonId" Association="CareDirectorQA_CDModel.FK_Person_CaseAttachment_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="CaseAttachment" EntitySet="CaseAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseForm_CaseFormOutcome_CaseFormId" Association="CareDirectorQA_CDModel.FK_CaseForm_CaseFormOutcome_CaseFormId">
+      <End Role="CaseForm" EntitySet="CaseForms" />
+      <End Role="CaseFormOutcome" EntitySet="CaseFormOutcomes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_CaseForm_DocumentId" Association="CareDirectorQA_CDModel.FK_Document_CaseForm_DocumentId">
+      <End Role="Document" EntitySet="Documents" />
+      <End Role="CaseForm" EntitySet="CaseForms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_CaseForm_JointCarerId" Association="CareDirectorQA_CDModel.FK_Person_CaseForm_JointCarerId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="CaseForm" EntitySet="CaseForms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_CaseForm_PersonId" Association="CareDirectorQA_CDModel.FK_Person_CaseForm_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="CaseForm" EntitySet="CaseForms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_CaseFormOutcome_PersonId" Association="CareDirectorQA_CDModel.FK_Person_CaseFormOutcome_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="CaseFormOutcome" EntitySet="CaseFormOutcomes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Email_PersonId" Association="CareDirectorQA_CDModel.FK_Person_Email_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Email" EntitySet="Emails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Letter_PersonId" Association="CareDirectorQA_CDModel.FK_Person_Letter_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Letter" EntitySet="Letters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_PersonAttendedEducationEstablishment_PersonId" Association="CareDirectorQA_CDModel.FK_Person_PersonAttendedEducationEstablishment_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="PersonAttendedEducationEstablishment" EntitySet="PersonAttendedEducationEstablishments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_PersonCaseNote_PersonId" Association="CareDirectorQA_CDModel.FK_Person_PersonCaseNote_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="PersonCaseNote" EntitySet="PersonCaseNotes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_PersonSignificantEvent_PersonId" Association="CareDirectorQA_CDModel.FK_Person_PersonSignificantEvent_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="PersonSignificantEvent" EntitySet="PersonSignificantEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_PhoneCall_PersonId" Association="CareDirectorQA_CDModel.FK_Person_PhoneCall_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="PhoneCall" EntitySet="PhoneCalls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Task_PersonId" Association="CareDirectorQA_CDModel.FK_Person_Task_PersonId">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Task" EntitySet="Tasks" />
+    </AssociationSet>
+    <EntitySet Name="DocumentQuestionIdentifiers" EntityType="CareDirectorQA_CDModel.DocumentQuestionIdentifier" />
+    <AssociationSet Name="FK_Document_documentquestionidentifier_DocumentId" Association="CareDirectorQA_CDModel.FK_Document_documentquestionidentifier_DocumentId">
+      <End Role="Document" EntitySet="Documents" />
+      <End Role="DocumentQuestionIdentifier" EntitySet="DocumentQuestionIdentifiers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentQuestionIdentifier_DocumentAnswer_DocumentQuestionIdentifierId" Association="CareDirectorQA_CDModel.FK_DocumentQuestionIdentifier_DocumentAnswer_DocumentQuestionIdentifierId">
+      <End Role="DocumentQuestionIdentifier" EntitySet="DocumentQuestionIdentifiers" />
+      <End Role="DocumentAnswer" EntitySet="DocumentAnswers" />
+    </AssociationSet>
+    <EntitySet Name="Audits" EntityType="CareDirectorQA_CDModel.Audit" />
+    <EntitySet Name="Audit_2018" EntityType="CareDirectorQA_CDModel.Audit_2018" />
+    <EntitySet Name="Audit_2019" EntityType="CareDirectorQA_CDModel.Audit_2019" />
+    <EntitySet Name="Audit_2020" EntityType="CareDirectorQA_CDModel.Audit_2020" />
+    <EntitySet Name="AuditChangeSets" EntityType="CareDirectorQA_CDModel.AuditChangeSet" />
+    <EntitySet Name="AuditChangeSet_2018" EntityType="CareDirectorQA_CDModel.AuditChangeSet_2018" />
+    <EntitySet Name="AuditChangeSet_2019" EntityType="CareDirectorQA_CDModel.AuditChangeSet_2019" />
+    <EntitySet Name="AuditChangeSet_2020" EntityType="CareDirectorQA_CDModel.AuditChangeSet_2020" />
+    <AssociationSet Name="FK_Audit_AuditChangeSet_AuditId" Association="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_AuditId">
+      <End Role="Audit" EntitySet="Audits" />
+      <End Role="AuditChangeSet" EntitySet="AuditChangeSets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Audit_AuditChangeSet_2018_AuditId" Association="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_2018_AuditId">
+      <End Role="Audit_2018" EntitySet="Audit_2018" />
+      <End Role="AuditChangeSet_2018" EntitySet="AuditChangeSet_2018" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Audit_AuditChangeSet_2019_AuditId" Association="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_2019_AuditId">
+      <End Role="Audit_2019" EntitySet="Audit_2019" />
+      <End Role="AuditChangeSet_2019" EntitySet="AuditChangeSet_2019" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Audit_AuditChangeSet_2020_AuditId" Association="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_2020_AuditId">
+      <End Role="Audit_2020" EntitySet="Audit_2020" />
+      <End Role="AuditChangeSet_2020" EntitySet="AuditChangeSet_2020" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="AppointmentId" />
+    </Key>
+    <Property Name="AppointmentId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="Subject" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="RegardingId" Type="Guid" />
+    <Property Name="RegardingIdTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityCategoryId" Type="Guid" />
+    <Property Name="ActivitySubCategoryId" Type="Guid" />
+    <Property Name="ActivityOutcomeId" Type="Guid" />
+    <Property Name="ActivityReasonId" Type="Guid" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="PriorityId" Type="Int32" />
+    <Property Name="PersonId" Type="Guid" />
+    <Property Name="Location" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Duration" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RegardingIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityPriorityId" Type="Guid" />
+    <Property Name="InformationByThirdParty" Type="Boolean" />
+    <Property Name="IsSignificantEvent" Type="Boolean" />
+    <Property Name="SignificantEventCategoryId" Type="Guid" />
+    <Property Name="SignificantEventSubCategoryId" Type="Guid" />
+    <Property Name="SignificantEventDate" Type="DateTime" Precision="0" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="ResponsibleUserId" Type="Guid" />
+    <Property Name="AppointmentTypeId" Type="Guid" />
+    <Property Name="ShowTimeAsId" Type="Int32" />
+    <Property Name="AllowConcurrent" Type="Boolean" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="StartTime" Type="Time" Precision="7" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="EndTime" Type="Time" Precision="7" />
+    <Property Name="CaseId" Type="Guid" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="RecurringAppointmentId" Type="Guid" />
+    <Property Name="SyncedWithMailbox" Type="Boolean" />
+    <Property Name="GroupRecordId" Type="Guid" />
+    <NavigationProperty Name="Case" Relationship="CareDirectorQA_CDModel.FK_Case_Appointment_CaseId" FromRole="Appointment" ToRole="Case" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_Appointment_PersonId" FromRole="Appointment" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="AttachDocumentType">
+    <Key>
+      <PropertyRef Name="AttachDocumentTypeId" />
+    </Key>
+    <Property Name="AttachDocumentTypeId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="Code" Type="Int32" />
+    <Property Name="GovCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="ValidForExport" Type="Boolean" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <NavigationProperty Name="CaseAttachments" Relationship="CareDirectorQA_CDModel.FK_AttachDocumentType_CaseAttachment_DocumentTypeId" FromRole="AttachDocumentType" ToRole="CaseAttachment" />
+    <NavigationProperty Name="Documents" Relationship="CareDirectorQA_CDModel.FK_AttachDocumentType_Document_EdmsDocumentTypeId" FromRole="AttachDocumentType" ToRole="Document" />
+  </EntityType>
+  <EntityType Name="Case">
+    <Key>
+      <PropertyRef Name="CaseId" />
+    </Key>
+    <Property Name="CaseId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PersonId" Type="Guid" Nullable="false" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="ContactReceivedDateTime" Type="DateTime" Precision="3" />
+    <Property Name="ContactReceivedById" Type="Guid" />
+    <Property Name="RequestReceivedDateTime" Type="DateTime" Precision="3" />
+    <Property Name="PresentingNeedDetails" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalInformation" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="ContactMadeByName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="CommunityAndClinicTeamId" Type="Guid" />
+    <Property Name="CaseAcceptedDateTime" Type="DateTime" Precision="3" />
+    <Property Name="InformationFormReferrer" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="MoreInformationResponse" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="MoreInformationResponseDateTime" Type="DateTime" Precision="3" />
+    <Property Name="CNACount" Type="Int32" />
+    <Property Name="DNACount" Type="Int32" />
+    <Property Name="DischargePerson" Type="Boolean" />
+    <Property Name="DischargingProfessionalId" Type="Guid" />
+    <Property Name="AdditionalDischargeInformation" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="DischargeDateTime" Type="DateTime" Precision="3" />
+    <Property Name="CommunityAndClinicTeamTransferredToId" Type="Guid" />
+    <Property Name="TeamTransferredToId" Type="Guid" />
+    <Property Name="CaseTransferredDateTime" Type="DateTime" Precision="3" />
+    <Property Name="ResponsibleUserId" Type="Guid" />
+    <Property Name="SecondaryCaseReasonId" Type="Guid" />
+    <Property Name="CasePriorityId" Type="Guid" />
+    <Property Name="CaseRejectedReasonId" Type="Guid" />
+    <Property Name="CaseStatusId" Type="Guid" />
+    <Property Name="CaseClosureReasonId" Type="Guid" />
+    <Property Name="InitialContactId" Type="Guid" />
+    <Property Name="OtherRelatedContactId" Type="Guid" />
+    <Property Name="ContactReasonId" Type="Guid" />
+    <Property Name="PresentingPriorityId" Type="Guid" />
+    <Property Name="CaseTransferredTeamFromId" Type="Guid" />
+    <Property Name="AdministrativeCategoryId" Type="Guid" />
+    <Property Name="ServiceTypeRequestedId" Type="Guid" />
+    <Property Name="PersonAwareOfContactId" Type="Int32" />
+    <Property Name="PersonSupportContactId" Type="Int32" />
+    <Property Name="CarerAwareOfContactId" Type="Int32" />
+    <Property Name="CarerSupportContactId" Type="Int32" />
+    <Property Name="NextOfKinAwareOfContactId" Type="Int32" />
+    <Property Name="CaseAcceptedId" Type="Int32" />
+    <Property Name="ProfessionalTypeId" Type="Guid" />
+    <Property Name="ContactMadeById" Type="Guid" />
+    <Property Name="ContactMadeByIdTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ContactMadeByIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="StartDateTime" Type="DateTime" Precision="3" />
+    <Property Name="EndDateTime" Type="DateTime" Precision="3" />
+    <Property Name="DataFormId" Type="Guid" />
+    <Property Name="CaseNumber" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="ContactSourceId" Type="Guid" />
+    <Property Name="PersonAge" Type="Int32" />
+    <Property Name="ChildInNeedCodeId" Type="Guid" />
+    <Property Name="ReviewDate" Type="DateTime" Precision="0" />
+    <Property Name="ClosureAcceptedById" Type="Guid" />
+    <Property Name="ArchiveDate" Type="DateTime" Precision="0" />
+    <Property Name="PoliceNotified" Type="Boolean" />
+    <Property Name="PoliceNotifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="PoliceNotes" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="ReReferral" Type="Boolean" />
+    <Property Name="ReferringAgencyCaseId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ResponseMadeToContact" Type="Boolean" />
+    <Property Name="NonMigratedWorkerName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ContactWithTrainedStaffDate" Type="DateTime" Precision="3" />
+    <Property Name="CaseOriginId" Type="Int32" />
+    <Property Name="InpatientWardId" Type="Guid" />
+    <Property Name="InpatientBedId" Type="Guid" />
+    <Property Name="InpatientAdmissionSourceId" Type="Guid" />
+    <Property Name="InpatientPatientClassificationId" Type="Guid" />
+    <Property Name="InpatientIntendedManagementId" Type="Guid" />
+    <Property Name="WishNokCarerNotifiedAdmissionId" Type="Int32" />
+    <Property Name="WhoWasNotifiedId" Type="Guid" />
+    <Property Name="InpatientAdmissionMethodId" Type="Guid" />
+    <Property Name="CurrentConsultantId" Type="Guid" />
+    <Property Name="DolsConcernId" Type="Int32" />
+    <Property Name="NamedProfessionalId" Type="Guid" />
+    <Property Name="AdmissionDateTime" Type="DateTime" Precision="3" />
+    <Property Name="DecisionToAdmitAgreedDateTime" Type="DateTime" Precision="3" />
+    <Property Name="IntendedAdmissionDate" Type="DateTime" Precision="0" />
+    <Property Name="InpatientChangeIntendedAdmissionReasonId" Type="Guid" />
+    <Property Name="DateIntendedAdmissionChanged" Type="DateTime" Precision="0" />
+    <Property Name="EstimatedDischargeDate" Type="DateTime" Precision="0" />
+    <Property Name="FitForDischageDate" Type="DateTime" Precision="0" />
+    <Property Name="ProviderId" Type="Guid" />
+    <Property Name="InpatientBayId" Type="Guid" />
+    <Property Name="InpatientResponsibleWardId" Type="Guid" />
+    <Property Name="ActualDischargeDateTime" Type="DateTime" Precision="3" />
+    <Property Name="DischargeInformation" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Section117AftercareEntitlement" Type="Boolean" />
+    <Property Name="DischargedToHomeAddressId" Type="Int32" />
+    <Property Name="PropertyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressLine1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressLine2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AddressPropertyTypeId" Type="Guid" />
+    <Property Name="AddressLine3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UPRN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressLine4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressBoroughId" Type="Guid" />
+    <Property Name="AddressLine5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressWardId" Type="Guid" />
+    <Property Name="PostCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WishesContactFromImhaId" Type="Int32" />
+    <Property Name="DaysAsInpatient" Type="Int32" />
+    <Property Name="InpatientCaseStatusId" Type="Int32" />
+    <Property Name="IsPersonOnLeave" Type="Boolean" />
+    <Property Name="IsSwappingInpatient" Type="Boolean" />
+    <Property Name="PathwayKeySourceId" Type="Int32" />
+    <Property Name="HealthPathwayKeyId" Type="Guid" />
+    <Property Name="InpatientTransferOfCareReasonId" Type="Guid" />
+    <Property Name="ActualTransferDateTime" Type="DateTime" Precision="3" />
+    <Property Name="InpatientDischargeDestinationId" Type="Guid" />
+    <Property Name="PlannedDischargeDate" Type="DateTime" Precision="0" />
+    <Property Name="CarerNokNotified" Type="Boolean" />
+    <Property Name="MHASectionOnAdmissionId" Type="Guid" />
+    <Property Name="CommunityHealthCaseTransferReasonId" Type="Guid" />
+    <Property Name="ClonedFromCase" Type="Guid" />
+    <Property Name="actualdischargedestinationid" Type="Guid" />
+    <Property Name="MasterId" Type="Guid" />
+    <Property Name="CaseReopenReasonId" Type="Guid" />
+    <Property Name="FollowUpTeamId" Type="Guid" />
+    <Property Name="followupteamidtablename" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="followupteamidname" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Appointments" Relationship="CareDirectorQA_CDModel.FK_Case_Appointment_CaseId" FromRole="Case" ToRole="Appointment" />
+    <NavigationProperty Name="CaseActions" Relationship="CareDirectorQA_CDModel.FK_Case_CaseAction_CaseId" FromRole="Case" ToRole="CaseAction" />
+    <NavigationProperty Name="CaseAttachments" Relationship="CareDirectorQA_CDModel.FK_Case_CaseAttachment_CaseId" FromRole="Case" ToRole="CaseAttachment" />
+    <NavigationProperty Name="CaseForms" Relationship="CareDirectorQA_CDModel.FK_Case_CaseForm_CaseId" FromRole="Case" ToRole="CaseForm" />
+    <NavigationProperty Name="CaseFormOutcomes" Relationship="CareDirectorQA_CDModel.FK_Case_CaseFormOutcome_CaseId" FromRole="Case" ToRole="CaseFormOutcome" />
+    <NavigationProperty Name="Emails" Relationship="CareDirectorQA_CDModel.FK_Case_Email_CaseId" FromRole="Case" ToRole="Email" />
+    <NavigationProperty Name="Letters" Relationship="CareDirectorQA_CDModel.FK_Case_Letter_CaseId" FromRole="Case" ToRole="Letter" />
+    <NavigationProperty Name="PhoneCalls" Relationship="CareDirectorQA_CDModel.FK_Case_PhoneCall_CaseId" FromRole="Case" ToRole="PhoneCall" />
+    <NavigationProperty Name="Tasks" Relationship="CareDirectorQA_CDModel.FK_Case_Task_CaseId" FromRole="Case" ToRole="Task" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_Case_PersonId" FromRole="Case" ToRole="Person" />
+    <NavigationProperty Name="Person1" Relationship="CareDirectorQA_CDModel.FK_Person_Case_WhoWasNotifiedId" FromRole="Case" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="CaseAction">
+    <Key>
+      <PropertyRef Name="CaseActionId" />
+    </Key>
+    <Property Name="CaseActionId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="ResponsibleUserId" Type="Guid" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="PersonId" Type="Guid" Nullable="false" />
+    <Property Name="CaseId" Type="Guid" Nullable="false" />
+    <Property Name="HealthAppointmentId" Type="Guid" />
+    <Property Name="CaseActionTypeId" Type="Guid" />
+    <Property Name="DueDate" Type="DateTime" Precision="0" />
+    <Property Name="CasePriorityId" Type="Guid" />
+    <Property Name="ActionDetails" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="CaseActionStatusId" Type="Guid" />
+    <Property Name="CompletionDate" Type="DateTime" Precision="0" />
+    <Property Name="NextAppointmentDay" Type="Int32" />
+    <Property Name="TimePeriodId" Type="Int32" />
+    <Property Name="TargetDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Case" Relationship="CareDirectorQA_CDModel.FK_Case_CaseAction_CaseId" FromRole="CaseAction" ToRole="Case" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_CaseAction_PersonId" FromRole="CaseAction" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="CaseAttachment">
+    <Key>
+      <PropertyRef Name="CaseAttachmentId" />
+    </Key>
+    <Property Name="CaseAttachmentId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="DocumentTypeId" Type="Guid" />
+    <Property Name="DocumentSubTypeId" Type="Guid" />
+    <Property Name="FileId" Type="Guid" />
+    <Property Name="CaseId" Type="Guid" Nullable="false" />
+    <Property Name="PersonId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="AttachDocumentType" Relationship="CareDirectorQA_CDModel.FK_AttachDocumentType_CaseAttachment_DocumentTypeId" FromRole="CaseAttachment" ToRole="AttachDocumentType" />
+    <NavigationProperty Name="Case" Relationship="CareDirectorQA_CDModel.FK_Case_CaseAttachment_CaseId" FromRole="CaseAttachment" ToRole="Case" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_CaseAttachment_PersonId" FromRole="CaseAttachment" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="CaseForm">
+    <Key>
+      <PropertyRef Name="CaseFormId" />
+    </Key>
+    <Property Name="CaseFormId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentId" Type="Guid" Nullable="false" />
+    <Property Name="AssessmentStatusId" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="DueDate" Type="DateTime" Precision="0" />
+    <Property Name="ReviewDate" Type="DateTime" Precision="0" />
+    <Property Name="CompletedById" Type="Guid" />
+    <Property Name="CompletionDate" Type="DateTime" Precision="0" />
+    <Property Name="SignedOffById" Type="Guid" />
+    <Property Name="SignOffDate" Type="DateTime" Precision="0" />
+    <Property Name="DocumentModifiedById" Type="Guid" />
+    <Property Name="DocumentModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="SDEExecuted" Type="Boolean" />
+    <Property Name="AnswersInitialized" Type="Boolean" />
+    <Property Name="FormCancellationReasonId" Type="Guid" />
+    <Property Name="PersonId" Type="Guid" Nullable="false" />
+    <Property Name="CaseId" Type="Guid" Nullable="false" />
+    <Property Name="ResponsibleUserId" Type="Guid" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="JointCarerAssessment" Type="Boolean" />
+    <Property Name="SeparateAssessment" Type="Boolean" />
+    <Property Name="CarerDeclinedJointAssessment" Type="Boolean" />
+    <Property Name="NewPerson" Type="Boolean" />
+    <Property Name="JointCarerId" Type="Guid" />
+    <Property Name="TargetStartDate" Type="DateTime" Precision="0" />
+    <Property Name="TerminatedDate" Type="DateTime" Precision="0" />
+    <Property Name="TriggerDate" Type="DateTime" Precision="0" />
+    <Property Name="FormDelayReasonId" Type="Guid" />
+    <Property Name="ClonedFromId" Type="Guid" />
+    <NavigationProperty Name="Case" Relationship="CareDirectorQA_CDModel.FK_Case_CaseForm_CaseId" FromRole="CaseForm" ToRole="Case" />
+    <NavigationProperty Name="CaseFormOutcomes" Relationship="CareDirectorQA_CDModel.FK_CaseForm_CaseFormOutcome_CaseFormId" FromRole="CaseForm" ToRole="CaseFormOutcome" />
+    <NavigationProperty Name="Document" Relationship="CareDirectorQA_CDModel.FK_Document_CaseForm_DocumentId" FromRole="CaseForm" ToRole="Document" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_CaseForm_JointCarerId" FromRole="CaseForm" ToRole="Person" />
+    <NavigationProperty Name="Person1" Relationship="CareDirectorQA_CDModel.FK_Person_CaseForm_PersonId" FromRole="CaseForm" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="CaseFormOutcome">
+    <Key>
+      <PropertyRef Name="CaseFormOutcomeId" />
+    </Key>
+    <Property Name="CaseFormOutcomeId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="CaseFormId" Type="Guid" Nullable="false" />
+    <Property Name="CaseId" Type="Guid" Nullable="false" />
+    <Property Name="PersonId" Type="Guid" Nullable="false" />
+    <Property Name="CaseFormOutcomeTypeId" Type="Guid" />
+    <Property Name="OutcomeDate" Type="DateTime" Precision="0" />
+    <Property Name="Comments" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Case" Relationship="CareDirectorQA_CDModel.FK_Case_CaseFormOutcome_CaseId" FromRole="CaseFormOutcome" ToRole="Case" />
+    <NavigationProperty Name="CaseForm" Relationship="CareDirectorQA_CDModel.FK_CaseForm_CaseFormOutcome_CaseFormId" FromRole="CaseFormOutcome" ToRole="CaseForm" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_CaseFormOutcome_PersonId" FromRole="CaseFormOutcome" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="Document">
+    <Key>
+      <PropertyRef Name="DocumentId" />
+    </Key>
+    <Property Name="DocumentId" Type="Guid" Nullable="false" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="CommentBold" Type="Boolean" />
+    <Property Name="DocumentCategoryId" Type="Guid" Nullable="false" />
+    <Property Name="CommentItalic" Type="Boolean" />
+    <Property Name="CommentUnderline" Type="Boolean" />
+    <Property Name="DaysToComplete" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentTypeId" Type="Guid" />
+    <Property Name="DoesNotRequireManagerSignOff" Type="Boolean" />
+    <Property Name="TableHeaderBold" Type="Boolean" />
+    <Property Name="TableHeaderItalic" Type="Boolean" />
+    <Property Name="TableHeaderUnderline" Type="Boolean" />
+    <Property Name="InstructionBold" Type="Boolean" />
+    <Property Name="InstructionItalic" Type="Boolean" />
+    <Property Name="InstructionUnderline" Type="Boolean" />
+    <Property Name="LastUpgradedOn" Type="DateTime" Precision="3" />
+    <Property Name="PrimaryQuestionBold" Type="Boolean" />
+    <Property Name="PrimaryQuestionItalic" Type="Boolean" />
+    <Property Name="PrimaryQuestionUnderline" Type="Boolean" />
+    <Property Name="QuestionBold" Type="Boolean" />
+    <Property Name="QuestionItalic" Type="Boolean" />
+    <Property Name="QuestionUnderline" Type="Boolean" />
+    <Property Name="SectionBold" Type="Boolean" />
+    <Property Name="SectionItalic" Type="Boolean" />
+    <Property Name="SectionUnderline" Type="Boolean" />
+    <Property Name="SubHeadingBold" Type="Boolean" />
+    <Property Name="SubHeadingItalic" Type="Boolean" />
+    <Property Name="SubHeadingUnderline" Type="Boolean" />
+    <Property Name="SyncQuestionIds" Type="Boolean" />
+    <Property Name="Version" Type="Decimal" Precision="18" Scale="1" />
+    <Property Name="DocumentNameLocalizedStringId" Type="Guid" />
+    <Property Name="AnswerFontSizeId" Type="Int32" />
+    <Property Name="CommentFontSizeId" Type="Int32" />
+    <Property Name="FontStyleId" Type="Int32" />
+    <Property Name="InstructionBackgroundColorId" Type="Int32" />
+    <Property Name="InstructionFontColorId" Type="Int32" />
+    <Property Name="InstructionFontSizeId" Type="Int32" />
+    <Property Name="PrimaryQuestionBackgroundColorId" Type="Int32" />
+    <Property Name="PrimaryQuestionFontColorId" Type="Int32" />
+    <Property Name="PrimaryQuestionFontSizeId" Type="Int32" />
+    <Property Name="QuestionFontSizeId" Type="Int32" />
+    <Property Name="QuestionNumberingId" Type="Int32" />
+    <Property Name="QuestionSubHeadingFontSizeId" Type="Int32" />
+    <Property Name="SectionFontColorId" Type="Int32" />
+    <Property Name="SectionFontSizeId" Type="Int32" />
+    <Property Name="SectionHeadingBackgroundColorId" Type="Int32" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="TableBorderColorId" Type="Int32" />
+    <Property Name="TableHeaderBackgroundColorId" Type="Int32" />
+    <Property Name="TableHeaderFontColorId" Type="Int32" />
+    <Property Name="TableHeaderFontSizeId" Type="Int32" />
+    <Property Name="SDEMappingModeId" Type="Int32" />
+    <Property Name="RuleEvents" Type="Int32" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="AvailableInMobile" Type="Boolean" />
+    <Property Name="DisplayPageNumber" Type="Boolean" />
+    <Property Name="DisableAutoSave" Type="Boolean" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="ResponsibleUserSelfSignOffAllowed" Type="Boolean" />
+    <Property Name="AutomaticallyCloseOnCompletion" Type="Boolean" />
+    <Property Name="MultipleOpenFormsAllowed" Type="Boolean" />
+    <Property Name="AllowFormStatusCloning" Type="Boolean" />
+    <Property Name="TypeOfDaysId" Type="Int32" />
+    <Property Name="CompletionDateAllowedBeforeStartDate" Type="Boolean" />
+    <Property Name="SignOffDateAllowedBeforeCompletion" Type="Boolean" />
+    <Property Name="SignOffDateAllowedBeforeStartDate" Type="Boolean" />
+    <Property Name="ReviewDateAllowedBeforeStartDate" Type="Boolean" />
+    <Property Name="SignOffDateAllowedBeforeCaseDate" Type="Boolean" />
+    <Property Name="StartDateallowedBeforeCaseStartDate" Type="Boolean" />
+    <Property Name="CaseClosureBeforeFormCompletedClosedDate" Type="Boolean" />
+    <Property Name="ProtectiveMarkingSchemeId" Type="Guid" />
+    <Property Name="RecordAssessmentFactor" Type="Boolean" />
+    <Property Name="EnableReporting" Type="Boolean" />
+    <Property Name="ReportingTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ReportingLastSyncDateTime" Type="DateTime" Precision="3" />
+    <Property Name="IsReportingTableInSync" Type="Boolean" />
+    <Property Name="EdmsDocumentTypeId" Type="Guid" />
+    <Property Name="EdmsDocumentSubTypeId" Type="Guid" />
+    <NavigationProperty Name="AttachDocumentType" Relationship="CareDirectorQA_CDModel.FK_AttachDocumentType_Document_EdmsDocumentTypeId" FromRole="Document" ToRole="AttachDocumentType" />
+    <NavigationProperty Name="CaseForms" Relationship="CareDirectorQA_CDModel.FK_Document_CaseForm_DocumentId" FromRole="Document" ToRole="CaseForm" />
+    <NavigationProperty Name="DocumentQuestionIdentifiers" Relationship="CareDirectorQA_CDModel.FK_Document_documentquestionidentifier_DocumentId" FromRole="Document" ToRole="DocumentQuestionIdentifier" />
+  </EntityType>
+  <EntityType Name="DocumentAnswer">
+    <Key>
+      <PropertyRef Name="DocumentAnswerId" />
+    </Key>
+    <Property Name="DocumentAnswerId" Type="Guid" Nullable="false" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="Comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="DateAnswer" Type="DateTime" Precision="0" />
+    <Property Name="DateAndTimeAnswer" Type="DateTime" Precision="3" />
+    <Property Name="DecimalAnswer" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MultichoiceAnswerId" Type="Guid" />
+    <Property Name="NumericAnswer" Type="Int32" />
+    <Property Name="ParagraphAnswer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShortAnswer" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="TrueFalseAnswer" Type="Boolean" />
+    <Property Name="PicklistValueId" Type="Guid" />
+    <Property Name="DocumentQuestionIdentifierId" Type="Guid" Nullable="false" />
+    <Property Name="AssessmentId" Type="Guid" Nullable="false" />
+    <Property Name="AssessmentIdTableName" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="LookupObjectId" Type="Guid" />
+    <Property Name="LookupObjectTypeName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerOverrideReason" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LinkedRecordId" Type="Guid" />
+    <Property Name="LinkedRecordTypeName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="OriginAnswerId" Type="Guid" />
+    <Property Name="UserSaved" Type="Boolean" />
+    <Property Name="GridRowId" Type="Int32" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="QuestionTypeId" Type="Int32" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ImageId" Type="Guid" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LookupObjectTitle" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="AssessmentIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DocumentQuestionIdentifier" Relationship="CareDirectorQA_CDModel.FK_DocumentQuestionIdentifier_DocumentAnswer_DocumentQuestionIdentifierId" FromRole="DocumentAnswer" ToRole="DocumentQuestionIdentifier" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="EmailId" />
+    </Key>
+    <Property Name="EmailId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="Subject" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="RegardingId" Type="Guid" />
+    <Property Name="RegardingIdTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="SentDate" Type="DateTime" Precision="3" />
+    <Property Name="LastFailDate" Type="DateTime" Precision="3" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RegardingIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityPriorityId" Type="Guid" />
+    <Property Name="InformationByThirdParty" Type="Boolean" />
+    <Property Name="IsSignificantEvent" Type="Boolean" />
+    <Property Name="SignificantEventCategoryId" Type="Guid" />
+    <Property Name="SignificantEventSubCategoryId" Type="Guid" />
+    <Property Name="SignificantEventDate" Type="DateTime" Precision="0" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityReasonId" Type="Guid" />
+    <Property Name="ActivityOutcomeId" Type="Guid" />
+    <Property Name="ActivityCategoryId" Type="Guid" />
+    <Property Name="ActivitySubCategoryId" Type="Guid" />
+    <Property Name="PersonId" Type="Guid" />
+    <Property Name="CaseId" Type="Guid" />
+    <Property Name="ResponsibleUserId" Type="Guid" />
+    <Property Name="DueDate" Type="DateTime" Precision="3" />
+    <Property Name="EmailFromId" Type="Guid" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="ProtectiveMarkingSchemeId" Type="Guid" />
+    <Property Name="FailureMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="GroupRecordId" Type="Guid" />
+    <NavigationProperty Name="Case" Relationship="CareDirectorQA_CDModel.FK_Case_Email_CaseId" FromRole="Email" ToRole="Case" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_Email_PersonId" FromRole="Email" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="Letter">
+    <Key>
+      <PropertyRef Name="LetterId" />
+    </Key>
+    <Property Name="LetterId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Subject" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RegardingId" Type="Guid" />
+    <Property Name="RegardingIdTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityCategoryId" Type="Guid" />
+    <Property Name="ActivitySubCategoryId" Type="Guid" />
+    <Property Name="ActivityOutcomeId" Type="Guid" />
+    <Property Name="ActivityReasonId" Type="Guid" />
+    <Property Name="FileId" Type="Guid" />
+    <Property Name="RegardingIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="ResponsibleUserId" Type="Guid" />
+    <Property Name="ActivityPriorityId" Type="Guid" />
+    <Property Name="InformationByThirdParty" Type="Boolean" />
+    <Property Name="IsSignificantEvent" Type="Boolean" />
+    <Property Name="SignificantEventDate" Type="DateTime" Precision="0" />
+    <Property Name="SignificantEventCategoryId" Type="Guid" />
+    <Property Name="SignificantEventSubCategoryId" Type="Guid" />
+    <Property Name="PersonId" Type="Guid" />
+    <Property Name="SenderId" Type="Guid" />
+    <Property Name="SenderIdTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="SenderIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="RecipientId" Type="Guid" />
+    <Property Name="RecipientIdTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="RecipientIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="LetterDate" Type="DateTime" Precision="0" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="DirectionId" Type="Int32" />
+    <Property Name="CaseId" Type="Guid" />
+    <Property Name="IsCaseNote" Type="Boolean" />
+    <Property Name="GroupRecordId" Type="Guid" />
+    <NavigationProperty Name="Case" Relationship="CareDirectorQA_CDModel.FK_Case_Letter_CaseId" FromRole="Letter" ToRole="Case" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_Letter_PersonId" FromRole="Letter" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="Guid" Nullable="false" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+    <Property Name="DateOfDeath" Type="DateTime" Precision="0" />
+    <Property Name="GenderId" Type="Int32" />
+    <Property Name="HomePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DOBAndAgeTypeId" Type="Int32" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="PersonPhotoId" Type="Guid" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="PreferredName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MasterId" Type="Guid" />
+    <Property Name="PersonNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NHSNumber" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="NoNHSNumberReasonId" Type="Guid" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EthnicityId" Type="Guid" />
+    <Property Name="SameAsBirthGenderId" Type="Guid" />
+    <Property Name="MaritalStatusId" Type="Guid" />
+    <Property Name="ExpectedDateOfBirth" Type="DateTime" Precision="0" />
+    <Property Name="Deceased" Type="Boolean" />
+    <Property Name="CauseOfDeathId" Type="Guid" />
+    <Property Name="PlaceOfDeath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FullAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="PropertyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressTypeId" Type="Int32" />
+    <Property Name="AddressLine1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressLine2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AddressPropertyTypeId" Type="Guid" />
+    <Property Name="AddressLine3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UPRN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressLine4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressBoroughId" Type="Guid" />
+    <Property Name="AddressLine5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressWardId" Type="Guid" />
+    <Property Name="Postcode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AccommodationStatusId" Type="Int32" />
+    <Property Name="LivesAloneTypeId" Type="Int32" />
+    <Property Name="BusinessPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrimaryEmail" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="SecondaryEmail" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="RetainInformationConcern" Type="Boolean" />
+    <Property Name="LanguageId" Type="Guid" />
+    <Property Name="ModeOfCommunicationId" Type="Guid" />
+    <Property Name="ContactMethodId" Type="Guid" />
+    <Property Name="AllowEmail" Type="Boolean" />
+    <Property Name="AllowMail" Type="Boolean" />
+    <Property Name="DocumentFormatId" Type="Guid" />
+    <Property Name="AllowPhone" Type="Boolean" />
+    <Property Name="PreferredContactTimeId" Type="Int32" />
+    <Property Name="PreferredContactDayId" Type="Int32" />
+    <Property Name="SexualOrientationId" Type="Guid" />
+    <Property Name="CountryOfOriginId" Type="Guid" />
+    <Property Name="NationalityId" Type="Guid" />
+    <Property Name="ImmigrationStatusId" Type="Guid" />
+    <Property Name="ReligionId" Type="Guid" />
+    <Property Name="NHSCardLocation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MaidenName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PlaceOfBirth" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AgeGroupId" Type="Int32" />
+    <Property Name="PersonTargetGroupId" Type="Guid" />
+    <Property Name="ExternalNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SSDNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="CourtCaseNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NationalInsuranceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NHSNumberPre1995" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BirthCertificateNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="IsExternalPerson" Type="Boolean" />
+    <Property Name="FormerUniquePupilNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HomeOfficeRegistrationNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UPNUnknownReasonId" Type="Guid" />
+    <Property Name="CreditorNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DebtorNumber1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DebtorNumber2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DebtorNumber3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DebtorNumber4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SuppressStatementInvoices" Type="Boolean" />
+    <Property Name="Telephone1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UniquePupilNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="RepresentAlertOrHazard" Type="Boolean" />
+    <Property Name="AllergiesNotRecorded" Type="Boolean" />
+    <Property Name="KnownAllergies" Type="Boolean" />
+    <Property Name="NoKnownAllergies" Type="Boolean" />
+    <Property Name="InterpreterRequired" Type="Boolean" />
+    <Property Name="ChildProtectionFlag" Type="Boolean" />
+    <Property Name="RelatedChildProtectionFlag" Type="Boolean" />
+    <Property Name="AdultSafeguardingFlag" Type="Boolean" />
+    <Property Name="RelatedAdultSafeguardingFlag" Type="Boolean" />
+    <Property Name="RecordedInError" Type="Boolean" />
+    <Property Name="AccommodationTypeId" Type="Guid" />
+    <Property Name="IsLookedAfterChild" Type="Boolean" />
+    <Property Name="ExBritishForcesId" Type="Int32" />
+    <Property Name="AddressStartDate" Type="DateTime" Precision="0" />
+    <Property Name="CCGBoundaryId" Type="Guid" />
+    <Property Name="LowerSuperOutputAreaId" Type="Guid" />
+    <Property Name="UpdatePersonAddress" Type="Boolean" />
+    <Property Name="LinkedAddressId" Type="Guid" />
+    <Property Name="AllowSMS" Type="Boolean" />
+    <Property Name="PDSIsDeferred" Type="Boolean" />
+    <Property Name="PDSLastSyncDateTime" Type="DateTime" Precision="3" />
+    <Property Name="LeavingCareEligibilityId" Type="Guid" />
+    <Property Name="PDSNHSNoSuperseded" Type="Boolean" />
+    <Property Name="NHSNumberStatusId" Type="Int32" />
+    <NavigationProperty Name="Appointments" Relationship="CareDirectorQA_CDModel.FK_Person_Appointment_PersonId" FromRole="Person" ToRole="Appointment" />
+    <NavigationProperty Name="Cases" Relationship="CareDirectorQA_CDModel.FK_Person_Case_PersonId" FromRole="Person" ToRole="Case" />
+    <NavigationProperty Name="Cases1" Relationship="CareDirectorQA_CDModel.FK_Person_Case_WhoWasNotifiedId" FromRole="Person" ToRole="Case" />
+    <NavigationProperty Name="CaseActions" Relationship="CareDirectorQA_CDModel.FK_Person_CaseAction_PersonId" FromRole="Person" ToRole="CaseAction" />
+    <NavigationProperty Name="CaseAttachments" Relationship="CareDirectorQA_CDModel.FK_Person_CaseAttachment_PersonId" FromRole="Person" ToRole="CaseAttachment" />
+    <NavigationProperty Name="CaseForms" Relationship="CareDirectorQA_CDModel.FK_Person_CaseForm_JointCarerId" FromRole="Person" ToRole="CaseForm" />
+    <NavigationProperty Name="CaseForms1" Relationship="CareDirectorQA_CDModel.FK_Person_CaseForm_PersonId" FromRole="Person" ToRole="CaseForm" />
+    <NavigationProperty Name="CaseFormOutcomes" Relationship="CareDirectorQA_CDModel.FK_Person_CaseFormOutcome_PersonId" FromRole="Person" ToRole="CaseFormOutcome" />
+    <NavigationProperty Name="Emails" Relationship="CareDirectorQA_CDModel.FK_Person_Email_PersonId" FromRole="Person" ToRole="Email" />
+    <NavigationProperty Name="Letters" Relationship="CareDirectorQA_CDModel.FK_Person_Letter_PersonId" FromRole="Person" ToRole="Letter" />
+    <NavigationProperty Name="PersonAttendedEducationEstablishments" Relationship="CareDirectorQA_CDModel.FK_Person_PersonAttendedEducationEstablishment_PersonId" FromRole="Person" ToRole="PersonAttendedEducationEstablishment" />
+    <NavigationProperty Name="PersonCaseNotes" Relationship="CareDirectorQA_CDModel.FK_Person_PersonCaseNote_PersonId" FromRole="Person" ToRole="PersonCaseNote" />
+    <NavigationProperty Name="PersonSignificantEvents" Relationship="CareDirectorQA_CDModel.FK_Person_PersonSignificantEvent_PersonId" FromRole="Person" ToRole="PersonSignificantEvent" />
+    <NavigationProperty Name="PhoneCalls" Relationship="CareDirectorQA_CDModel.FK_Person_PhoneCall_PersonId" FromRole="Person" ToRole="PhoneCall" />
+    <NavigationProperty Name="Tasks" Relationship="CareDirectorQA_CDModel.FK_Person_Task_PersonId" FromRole="Person" ToRole="Task" />
+  </EntityType>
+  <EntityType Name="PersonAbsenceHospitalStayReason">
+    <Key>
+      <PropertyRef Name="personabsencehospitalstayreasonid" />
+    </Key>
+    <Property Name="personabsencehospitalstayreasonid" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="Int32" />
+    <Property Name="GovCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ValidForExport" Type="Boolean" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="PersonAttendedEducationEstablishment">
+    <Key>
+      <PropertyRef Name="personattendededucationestablishmentid" />
+    </Key>
+    <Property Name="personattendededucationestablishmentid" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PersonId" Type="Guid" Nullable="false" />
+    <Property Name="ProviderId" Type="Guid" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="CurrentYear" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="EducationEstablishmentTypeId" Type="Guid" />
+    <Property Name="EducationEnrolmentStatusId" Type="Guid" />
+    <Property Name="AttendedEducationEstablishmentStatusId" Type="Int32" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="EducationEndReasonId" Type="Guid" />
+    <Property Name="ReasonEndedDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HeadTeacherId" Type="Guid" />
+    <Property Name="SchoolNurseId" Type="Guid" />
+    <Property Name="SENCOId" Type="Guid" />
+    <Property Name="SENCOAssistantId" Type="Guid" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_PersonAttendedEducationEstablishment_PersonId" FromRole="PersonAttendedEducationEstablishment" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="PersonCaseNote">
+    <Key>
+      <PropertyRef Name="PersonCaseNoteId" />
+    </Key>
+    <Property Name="PersonCaseNoteId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="ResponsibleUserId" Type="Guid" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Subject" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityCategoryId" Type="Guid" />
+    <Property Name="ActivitySubCategoryId" Type="Guid" />
+    <Property Name="ActivityOutcomeId" Type="Guid" />
+    <Property Name="ActivityReasonId" Type="Guid" />
+    <Property Name="ActivityPriorityId" Type="Guid" />
+    <Property Name="InformationByThirdParty" Type="Boolean" />
+    <Property Name="IsSignificantEvent" Type="Boolean" />
+    <Property Name="SignificantEventCategoryId" Type="Guid" />
+    <Property Name="SignificantEventSubCategoryId" Type="Guid" />
+    <Property Name="SignificantEventDate" Type="DateTime" Precision="0" />
+    <Property Name="PersonId" Type="Guid" />
+    <Property Name="CaseNoteDate" Type="DateTime" Precision="3" />
+    <Property Name="StatusId" Type="Int32" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_PersonCaseNote_PersonId" FromRole="PersonCaseNote" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="PersonSignificantEvent">
+    <Key>
+      <PropertyRef Name="PersonSignificantEventId" />
+    </Key>
+    <Property Name="PersonSignificantEventId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="PersonId" Type="Guid" Nullable="false" />
+    <Property Name="EventDate" Type="DateTime" Precision="0" />
+    <Property Name="EventDetails" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="SignificantEventCategoryId" Type="Guid" />
+    <Property Name="SignificantEventSubCategoryId" Type="Guid" />
+    <Property Name="SourceActivityId" Type="Guid" />
+    <Property Name="SourceActivityIdTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="SourceActivityIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_PersonSignificantEvent_PersonId" FromRole="PersonSignificantEvent" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="PhoneCall">
+    <Key>
+      <PropertyRef Name="PhoneCallId" />
+    </Key>
+    <Property Name="PhoneCallId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="ResponsibleUserId" Type="Guid" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Subject" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="RegardingId" Type="Guid" />
+    <Property Name="RegardingIdTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="RegardingIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityCategoryId" Type="Guid" />
+    <Property Name="ActivitySubCategoryId" Type="Guid" />
+    <Property Name="ActivityOutcomeId" Type="Guid" />
+    <Property Name="ActivityReasonId" Type="Guid" />
+    <Property Name="ActivityPriorityId" Type="Guid" />
+    <Property Name="InformationByThirdParty" Type="Boolean" />
+    <Property Name="IsSignificantEvent" Type="Boolean" />
+    <Property Name="SignificantEventCategoryId" Type="Guid" />
+    <Property Name="SignificantEventSubCategoryId" Type="Guid" />
+    <Property Name="SignificantEventDate" Type="DateTime" Precision="0" />
+    <Property Name="CallerId" Type="Guid" />
+    <Property Name="CallerIdTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="CallerIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecipientId" Type="Guid" />
+    <Property Name="RecipientIdTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="RecipientIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="DirectionId" Type="Int32" />
+    <Property Name="PhoneCallDate" Type="DateTime" Precision="3" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="PersonId" Type="Guid" />
+    <Property Name="IsCaseNote" Type="Boolean" />
+    <Property Name="CaseId" Type="Guid" />
+    <Property Name="GroupRecordId" Type="Guid" />
+    <NavigationProperty Name="Case" Relationship="CareDirectorQA_CDModel.FK_Case_PhoneCall_CaseId" FromRole="PhoneCall" ToRole="Case" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_PhoneCall_PersonId" FromRole="PhoneCall" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="TaskId" />
+    </Key>
+    <Property Name="TaskId" Type="Guid" Nullable="false" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="Subject" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="RegardingId" Type="Guid" />
+    <Property Name="RegardingIdTableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityCategoryId" Type="Guid" />
+    <Property Name="ActivitySubCategoryId" Type="Guid" />
+    <Property Name="ActivityOutcomeId" Type="Guid" />
+    <Property Name="ActivityReasonId" Type="Guid" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="DueDate" Type="DateTime" Precision="3" />
+    <Property Name="PersonId" Type="Guid" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RegardingIdName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityPriorityId" Type="Guid" />
+    <Property Name="InformationByThirdParty" Type="Boolean" />
+    <Property Name="IsSignificantEvent" Type="Boolean" />
+    <Property Name="SignificantEventCategoryId" Type="Guid" />
+    <Property Name="SignificantEventSubCategoryId" Type="Guid" />
+    <Property Name="SignificantEventDate" Type="DateTime" Precision="0" />
+    <Property Name="ResponsibleUserId" Type="Guid" />
+    <Property Name="DataRestrictionId" Type="Guid" />
+    <Property Name="IsCaseNote" Type="Boolean" />
+    <Property Name="CaseId" Type="Guid" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="MHASectionReminderSetupId" Type="Guid" />
+    <Property Name="GroupRecordId" Type="Guid" />
+    <NavigationProperty Name="Case" Relationship="CareDirectorQA_CDModel.FK_Case_Task_CaseId" FromRole="Task" ToRole="Case" />
+    <NavigationProperty Name="Person" Relationship="CareDirectorQA_CDModel.FK_Person_Task_PersonId" FromRole="Task" ToRole="Person" />
+  </EntityType>
+  <Association Name="FK_Case_Appointment_CaseId">
+    <End Type="CareDirectorQA_CDModel.Case" Role="Case" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.Appointment" Role="Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Appointment_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.Appointment" Role="Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttachDocumentType_CaseAttachment_DocumentTypeId">
+    <End Type="CareDirectorQA_CDModel.AttachDocumentType" Role="AttachDocumentType" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.CaseAttachment" Role="CaseAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AttachDocumentType">
+        <PropertyRef Name="AttachDocumentTypeId" />
+      </Principal>
+      <Dependent Role="CaseAttachment">
+        <PropertyRef Name="DocumentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttachDocumentType_Document_EdmsDocumentTypeId">
+    <End Type="CareDirectorQA_CDModel.AttachDocumentType" Role="AttachDocumentType" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.Document" Role="Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AttachDocumentType">
+        <PropertyRef Name="AttachDocumentTypeId" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="EdmsDocumentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_CaseAction_CaseId">
+    <End Type="CareDirectorQA_CDModel.Case" Role="Case" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.CaseAction" Role="CaseAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="CaseAction">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_CaseAttachment_CaseId">
+    <End Type="CareDirectorQA_CDModel.Case" Role="Case" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.CaseAttachment" Role="CaseAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="CaseAttachment">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_CaseForm_CaseId">
+    <End Type="CareDirectorQA_CDModel.Case" Role="Case" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.CaseForm" Role="CaseForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="CaseForm">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_CaseFormOutcome_CaseId">
+    <End Type="CareDirectorQA_CDModel.Case" Role="Case" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.CaseFormOutcome" Role="CaseFormOutcome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="CaseFormOutcome">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_Email_CaseId">
+    <End Type="CareDirectorQA_CDModel.Case" Role="Case" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.Email" Role="Email" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="Email">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_Letter_CaseId">
+    <End Type="CareDirectorQA_CDModel.Case" Role="Case" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.Letter" Role="Letter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="Letter">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_PhoneCall_CaseId">
+    <End Type="CareDirectorQA_CDModel.Case" Role="Case" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.PhoneCall" Role="PhoneCall" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="PhoneCall">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_Task_CaseId">
+    <End Type="CareDirectorQA_CDModel.Case" Role="Case" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.Task" Role="Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Case_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.Case" Role="Case" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Case">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Case_WhoWasNotifiedId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.Case" Role="Case" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Case">
+        <PropertyRef Name="WhoWasNotifiedId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_CaseAction_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.CaseAction" Role="CaseAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="CaseAction">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_CaseAttachment_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.CaseAttachment" Role="CaseAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="CaseAttachment">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseForm_CaseFormOutcome_CaseFormId">
+    <End Type="CareDirectorQA_CDModel.CaseForm" Role="CaseForm" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.CaseFormOutcome" Role="CaseFormOutcome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CaseForm">
+        <PropertyRef Name="CaseFormId" />
+      </Principal>
+      <Dependent Role="CaseFormOutcome">
+        <PropertyRef Name="CaseFormId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_CaseForm_DocumentId">
+    <End Type="CareDirectorQA_CDModel.Document" Role="Document" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.CaseForm" Role="CaseForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="DocumentId" />
+      </Principal>
+      <Dependent Role="CaseForm">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_CaseForm_JointCarerId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.CaseForm" Role="CaseForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="CaseForm">
+        <PropertyRef Name="JointCarerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_CaseForm_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.CaseForm" Role="CaseForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="CaseForm">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_CaseFormOutcome_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.CaseFormOutcome" Role="CaseFormOutcome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="CaseFormOutcome">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Email_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.Email" Role="Email" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Email">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Letter_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.Letter" Role="Letter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Letter">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_PersonAttendedEducationEstablishment_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.PersonAttendedEducationEstablishment" Role="PersonAttendedEducationEstablishment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="PersonAttendedEducationEstablishment">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_PersonCaseNote_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.PersonCaseNote" Role="PersonCaseNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="PersonCaseNote">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_PersonSignificantEvent_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.PersonSignificantEvent" Role="PersonSignificantEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="PersonSignificantEvent">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_PhoneCall_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.PhoneCall" Role="PhoneCall" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="PhoneCall">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Task_PersonId">
+    <End Type="CareDirectorQA_CDModel.Person" Role="Person" Multiplicity="0..1" />
+    <End Type="CareDirectorQA_CDModel.Task" Role="Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DocumentQuestionIdentifier">
+    <Key>
+      <PropertyRef Name="DocumentQuestionIdentifierId" />
+    </Key>
+    <Property Name="DocumentQuestionIdentifierId" Type="Guid" Nullable="false" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="Identifier" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="RowId" Type="Int32" />
+    <Property Name="DocumentSectionQuestionId" Type="Guid" />
+    <Property Name="QuestionCatalogueId" Type="Guid" />
+    <Property Name="PrimaryQuestionId" Type="Guid" />
+    <Property Name="SecondaryQuestionId" Type="Guid" />
+    <Property Name="DocumentId" Type="Guid" Nullable="false" />
+    <Property Name="DocumentSectionId" Type="Guid" Nullable="false" />
+    <Property Name="QuestionViewId" Type="Guid" />
+    <Property Name="IsMandatory" Type="Boolean" />
+    <Property Name="ManagerOverrideAllowed" Type="Boolean" />
+    <Property Name="MandatoryOnCompletion" Type="Boolean" />
+    <Property Name="TableQuestionCellId" Type="Guid" />
+    <Property Name="ShowSDELink" Type="Boolean" />
+    <Property Name="SDELinkSectionMode" Type="Boolean" />
+    <Property Name="LinkedSubQuestionId" Type="Guid" />
+    <Property Name="ImportCreateSequence" Type="Int32" />
+    <Property Name="ImportUpdateSequence" Type="Int32" />
+    <Property Name="HideQuestionText" Type="Boolean" />
+    <Property Name="QuestionTypeId" Type="Int32" />
+    <Property Name="ParentQuestionTypeId" Type="Int32" />
+    <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ApplicableToSnapshot" Type="Boolean" />
+    <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsReportingColumnSearchable" Type="Boolean" />
+    <Property Name="ReportingColumnAlias" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Document" Relationship="CareDirectorQA_CDModel.FK_Document_documentquestionidentifier_DocumentId" FromRole="DocumentQuestionIdentifier" ToRole="Document" />
+    <NavigationProperty Name="DocumentAnswers" Relationship="CareDirectorQA_CDModel.FK_DocumentQuestionIdentifier_DocumentAnswer_DocumentQuestionIdentifierId" FromRole="DocumentQuestionIdentifier" ToRole="DocumentAnswer" />
+  </EntityType>
+  <Association Name="FK_Document_documentquestionidentifier_DocumentId">
+    <End Type="CareDirectorQA_CDModel.Document" Role="Document" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.DocumentQuestionIdentifier" Role="DocumentQuestionIdentifier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="DocumentId" />
+      </Principal>
+      <Dependent Role="DocumentQuestionIdentifier">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentQuestionIdentifier_DocumentAnswer_DocumentQuestionIdentifierId">
+    <End Type="CareDirectorQA_CDModel.DocumentQuestionIdentifier" Role="DocumentQuestionIdentifier" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.DocumentAnswer" Role="DocumentAnswer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentQuestionIdentifier">
+        <PropertyRef Name="DocumentQuestionIdentifierId" />
+      </Principal>
+      <Dependent Role="DocumentAnswer">
+        <PropertyRef Name="DocumentQuestionIdentifierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Audit">
+    <Key>
+      <PropertyRef Name="AuditId" />
+    </Key>
+    <Property Name="AuditId" Type="Guid" Nullable="false" />
+    <Property Name="TableName" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Operation" Type="Int32" Nullable="false" />
+    <Property Name="RecordId" Type="Guid" Nullable="false" />
+    <Property Name="RecordTitle" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="Comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorManagementReasonId" Type="Guid" />
+    <Property Name="ApplicationId" Type="Guid" />
+    <NavigationProperty Name="AuditChangeSets" Relationship="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_AuditId" FromRole="Audit" ToRole="AuditChangeSet" />
+  </EntityType>
+  <EntityType Name="Audit_2018">
+    <Key>
+      <PropertyRef Name="AuditId" />
+    </Key>
+    <Property Name="AuditId" Type="Guid" Nullable="false" />
+    <Property Name="TableName" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Operation" Type="Int32" Nullable="false" />
+    <Property Name="RecordId" Type="Guid" Nullable="false" />
+    <Property Name="RecordTitle" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="Comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorManagementReasonId" Type="Guid" />
+    <Property Name="ApplicationId" Type="Guid" />
+    <NavigationProperty Name="AuditChangeSet_2018" Relationship="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_2018_AuditId" FromRole="Audit_2018" ToRole="AuditChangeSet_2018" />
+  </EntityType>
+  <EntityType Name="Audit_2019">
+    <Key>
+      <PropertyRef Name="AuditId" />
+    </Key>
+    <Property Name="AuditId" Type="Guid" Nullable="false" />
+    <Property Name="TableName" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Operation" Type="Int32" Nullable="false" />
+    <Property Name="RecordId" Type="Guid" Nullable="false" />
+    <Property Name="RecordTitle" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="Comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorManagementReasonId" Type="Guid" />
+    <Property Name="ApplicationId" Type="Guid" />
+    <NavigationProperty Name="AuditChangeSet_2019" Relationship="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_2019_AuditId" FromRole="Audit_2019" ToRole="AuditChangeSet_2019" />
+  </EntityType>
+  <EntityType Name="Audit_2020">
+    <Key>
+      <PropertyRef Name="AuditId" />
+    </Key>
+    <Property Name="AuditId" Type="Guid" Nullable="false" />
+    <Property Name="TableName" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Operation" Type="Int32" Nullable="false" />
+    <Property Name="RecordId" Type="Guid" Nullable="false" />
+    <Property Name="RecordTitle" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+    <Property Name="Comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorManagementReasonId" Type="Guid" />
+    <Property Name="ApplicationId" Type="Guid" />
+    <NavigationProperty Name="AuditChangeSet_2020" Relationship="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_2020_AuditId" FromRole="Audit_2020" ToRole="AuditChangeSet_2020" />
+  </EntityType>
+  <EntityType Name="AuditChangeSet">
+    <Key>
+      <PropertyRef Name="AuditChangeSetId" />
+    </Key>
+    <Property Name="AuditChangeSetId" Type="Guid" Nullable="false" />
+    <Property Name="AuditId" Type="Guid" Nullable="false" />
+    <Property Name="FieldName" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="NewValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PreviousValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PreviousBooleanValue" Type="Boolean" />
+    <Property Name="NewBooleanValue" Type="Boolean" />
+    <Property Name="PreviousDateValue" Type="DateTime" Precision="0" />
+    <Property Name="NewDateValue" Type="DateTime" Precision="0" />
+    <Property Name="PreviousDecimalValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NewDecimalValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PreviousIntValue" Type="Int32" />
+    <Property Name="NewIntValue" Type="Int32" />
+    <Property Name="PreviousGuidValue" Type="Guid" />
+    <Property Name="NewGuidValue" Type="Guid" />
+    <Property Name="PreviousDateTimeValue" Type="DateTime" Precision="3" />
+    <Property Name="NewDateTimeValue" Type="DateTime" Precision="3" />
+    <Property Name="PreviousTimeValue" Type="Time" Precision="7" />
+    <Property Name="NewTimeValue" Type="Time" Precision="7" />
+    <Property Name="FieldType" Type="Int32" Nullable="false" />
+    <Property Name="PreviousChecklistValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NewChecklistValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Audit" Relationship="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_AuditId" FromRole="AuditChangeSet" ToRole="Audit" />
+  </EntityType>
+  <EntityType Name="AuditChangeSet_2018">
+    <Key>
+      <PropertyRef Name="AuditChangeSetId" />
+    </Key>
+    <Property Name="AuditChangeSetId" Type="Guid" Nullable="false" />
+    <Property Name="AuditId" Type="Guid" Nullable="false" />
+    <Property Name="FieldName" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="NewValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PreviousValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PreviousBooleanValue" Type="Boolean" />
+    <Property Name="NewBooleanValue" Type="Boolean" />
+    <Property Name="PreviousDateValue" Type="DateTime" Precision="0" />
+    <Property Name="NewDateValue" Type="DateTime" Precision="0" />
+    <Property Name="PreviousDecimalValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NewDecimalValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PreviousIntValue" Type="Int32" />
+    <Property Name="NewIntValue" Type="Int32" />
+    <Property Name="PreviousGuidValue" Type="Guid" />
+    <Property Name="NewGuidValue" Type="Guid" />
+    <Property Name="PreviousDateTimeValue" Type="DateTime" Precision="3" />
+    <Property Name="NewDateTimeValue" Type="DateTime" Precision="3" />
+    <Property Name="PreviousTimeValue" Type="Time" Precision="7" />
+    <Property Name="NewTimeValue" Type="Time" Precision="7" />
+    <Property Name="FieldType" Type="Int32" Nullable="false" />
+    <Property Name="PreviousChecklistValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NewChecklistValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Audit_2018" Relationship="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_2018_AuditId" FromRole="AuditChangeSet_2018" ToRole="Audit_2018" />
+  </EntityType>
+  <EntityType Name="AuditChangeSet_2019">
+    <Key>
+      <PropertyRef Name="AuditChangeSetId" />
+    </Key>
+    <Property Name="AuditChangeSetId" Type="Guid" Nullable="false" />
+    <Property Name="AuditId" Type="Guid" Nullable="false" />
+    <Property Name="FieldName" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="NewValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PreviousValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PreviousBooleanValue" Type="Boolean" />
+    <Property Name="NewBooleanValue" Type="Boolean" />
+    <Property Name="PreviousDateValue" Type="DateTime" Precision="0" />
+    <Property Name="NewDateValue" Type="DateTime" Precision="0" />
+    <Property Name="PreviousDecimalValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NewDecimalValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PreviousIntValue" Type="Int32" />
+    <Property Name="NewIntValue" Type="Int32" />
+    <Property Name="PreviousGuidValue" Type="Guid" />
+    <Property Name="NewGuidValue" Type="Guid" />
+    <Property Name="PreviousDateTimeValue" Type="DateTime" Precision="3" />
+    <Property Name="NewDateTimeValue" Type="DateTime" Precision="3" />
+    <Property Name="PreviousTimeValue" Type="Time" Precision="7" />
+    <Property Name="NewTimeValue" Type="Time" Precision="7" />
+    <Property Name="FieldType" Type="Int32" Nullable="false" />
+    <Property Name="PreviousChecklistValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NewChecklistValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Audit_2019" Relationship="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_2019_AuditId" FromRole="AuditChangeSet_2019" ToRole="Audit_2019" />
+  </EntityType>
+  <EntityType Name="AuditChangeSet_2020">
+    <Key>
+      <PropertyRef Name="AuditChangeSetId" />
+    </Key>
+    <Property Name="AuditChangeSetId" Type="Guid" Nullable="false" />
+    <Property Name="AuditId" Type="Guid" Nullable="false" />
+    <Property Name="FieldName" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="NewValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PreviousValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PreviousBooleanValue" Type="Boolean" />
+    <Property Name="NewBooleanValue" Type="Boolean" />
+    <Property Name="PreviousDateValue" Type="DateTime" Precision="0" />
+    <Property Name="NewDateValue" Type="DateTime" Precision="0" />
+    <Property Name="PreviousDecimalValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NewDecimalValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PreviousIntValue" Type="Int32" />
+    <Property Name="NewIntValue" Type="Int32" />
+    <Property Name="PreviousGuidValue" Type="Guid" />
+    <Property Name="NewGuidValue" Type="Guid" />
+    <Property Name="PreviousDateTimeValue" Type="DateTime" Precision="3" />
+    <Property Name="NewDateTimeValue" Type="DateTime" Precision="3" />
+    <Property Name="PreviousTimeValue" Type="Time" Precision="7" />
+    <Property Name="NewTimeValue" Type="Time" Precision="7" />
+    <Property Name="FieldType" Type="Int32" Nullable="false" />
+    <Property Name="PreviousChecklistValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NewChecklistValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Audit_2020" Relationship="CareDirectorQA_CDModel.FK_Audit_AuditChangeSet_2020_AuditId" FromRole="AuditChangeSet_2020" ToRole="Audit_2020" />
+  </EntityType>
+  <Association Name="FK_Audit_AuditChangeSet_AuditId">
+    <End Type="CareDirectorQA_CDModel.Audit" Role="Audit" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.AuditChangeSet" Role="AuditChangeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Audit">
+        <PropertyRef Name="AuditId" />
+      </Principal>
+      <Dependent Role="AuditChangeSet">
+        <PropertyRef Name="AuditId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Audit_AuditChangeSet_2018_AuditId">
+    <End Type="CareDirectorQA_CDModel.Audit_2018" Role="Audit_2018" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.AuditChangeSet_2018" Role="AuditChangeSet_2018" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Audit_2018">
+        <PropertyRef Name="AuditId" />
+      </Principal>
+      <Dependent Role="AuditChangeSet_2018">
+        <PropertyRef Name="AuditId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Audit_AuditChangeSet_2019_AuditId">
+    <End Type="CareDirectorQA_CDModel.Audit_2019" Role="Audit_2019" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.AuditChangeSet_2019" Role="AuditChangeSet_2019" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Audit_2019">
+        <PropertyRef Name="AuditId" />
+      </Principal>
+      <Dependent Role="AuditChangeSet_2019">
+        <PropertyRef Name="AuditId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Audit_AuditChangeSet_2020_AuditId">
+    <End Type="CareDirectorQA_CDModel.Audit_2020" Role="Audit_2020" Multiplicity="1" />
+    <End Type="CareDirectorQA_CDModel.AuditChangeSet_2020" Role="AuditChangeSet_2020" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Audit_2020">
+        <PropertyRef Name="AuditId" />
+      </Principal>
+      <Dependent Role="AuditChangeSet_2020">
+        <PropertyRef Name="AuditId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

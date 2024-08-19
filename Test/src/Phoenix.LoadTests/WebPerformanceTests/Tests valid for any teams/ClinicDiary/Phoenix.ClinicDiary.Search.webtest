@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Phoenix.ClinicDiary.Search" Id="51aeeadc-dbb0-4771-9652-d2bd434ac54a" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.544c80d8-49df-4f18-93f1-06a7bdd3b835.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="37e26aaa-0893-42c5-a362-849d99d60b77" Version="1.1" Url="https://phoenixqa.careworks.ie/resourcefile/Html_ClinicDiary.html" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/default.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="c504f5b0-0415-4774-991d-8813884467c9" Version="1.1" Url="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/resourcefile/Html_ClinicDiary.html" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam49.viewtype" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?viewtype=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam51.winmode" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;winmode=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam52.dialogname" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;dialogname=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewtype" Value="lookup" RecordedValue="lookup" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="type" Value="communityandclinicteam" RecordedValue="communityandclinicteam" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWLookupForm" RecordedValue="CWLookupForm" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="19cf9dd8-b2ee-4324-9b87-6878b2b1ee32" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;type=communityandclinicteam&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMwAxADMANwAxAGYANQBlAC0AYQA2AGIAMgAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="89a2e552-2754-4dc6-b268-17f3ed5623f3" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="8" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;type=communityandclinicteam&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAZAA1ADMANwAxAGYANQBlAC0AYQA2AGIAMgAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAGMAbwBtAG0AdQBuAGkAdAB5AGEAbgBkAGMAbABpAG4AaQBjAHQAZQBhAG0AIgAsACIAUABhAHIAZQBuAHQASQBkACIAOgAiACIALAAiAFAAYQByAGUAbgB0AFQAeQBwAGUATgBhAG0AZQAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEkAZAAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEQAaQBzAHAAbABhAHkATgBhAG0AZQAiADoAIgAiACwAIgBSAGUAbABhAHQAaQBvAG4AcwBoAGkAcABJAGQAIgA6ACIAIgAsACIAQgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AEkAZAAiADoAIgAzADEAMwA3ADEAZgA1AGUALQBhADYAYgAyAC0AZQA4ADEAMQAtADgAMABkAGMALQAwADAANQAwADUANgAwADUAMAAyAGMAYwAiACwAIgBSAGUAYwBvAHIAZABzAFAAZQByAFAAYQBnAGUAIgA6ACIAMQAwADAAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgAsACIAUABhAHIAZQBuAHQASQBkAEYAaQBlAGwAZABOAGEAbQBlACIAOgAiACIALAAiAEEAbABsAG8AdwBNAHUAbAB0AGkAUwBlAGwAZQBjAHQAIgA6ACIAZgBhAGwAcwBlACIALAAiAE8AdABoAGUAcgBJAGQARgBpAGUAbABkACIAOgAiACIALAAiAFYAaQBlAHcARwByAG8AdQBwACIAOgAiADEAIgAsACIAUABhAGcAaQBuAGcASQBuAGYAbwAiADoAIgAiACwAIgBEAGEAdABhAFEAdQBlAHIAeQBYAG0AbAAiADoAbgB1AGwAbAB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="16b0727e-dec7-413b-b36a-f59841f3a273" Version="1.1" Url="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/resourcefile/Html_ClinicDiary.html" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewtype" Value="lookup" RecordedValue="lookup" CorrelationBinding="{{QueryStringParam49.viewtype}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="type" Value="provider" RecordedValue="provider" CorrelationBinding="{{QueryStringParam55.type}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam51.winmode}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWLookupForm" RecordedValue="CWLookupForm" CorrelationBinding="{{QueryStringParam52.dialogname}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="9f4e4edc-71f2-4a1a-9bb7-681078616cee" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;type=provider&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAYQA3ADkAYQA2AGUANwA3AC0AZQBhADcAZQAtAGUANAAxADEALQBhADIAZABlAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="961529d9-e0d6-4a74-819d-fc5662c297eb" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;type=provider&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAKAAkAIgBTAGUAYQByAGMAaABUAGUAeAB0ACIAOgAgACIAIgAsAAoACQAiAEMAdQByAHIAZQBuAHQAUABhAGcAZQAiADoAIAAiADEAIgAsAAoACQAiAFMAbwByAHQATwBwAHQAaQBvAG4AcwAiADoAIAAiACIALAAKAAkAIgBDAHUAcgByAGUAbgB0AFYAaQBlAHcASQBkACIAOgAgACIAOAAzADcANQA2ADcANwBkAC0AZQBhADcAZQAtAGUANAAxADEALQBhADIAZABlAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsAAoACQAiAFQAeQBwAGUATgBhAG0AZQAiADoAIAAiAHAAcgBvAHYAaQBkAGUAcgAiACwACgAJACIAUABhAHIAZQBuAHQASQBkACIAOgAgACIAIgAsAAoACQAiAFAAYQByAGUAbgB0AFQAeQBwAGUATgBhAG0AZQAiADoAIAAiACIALAAKAAkAIgBTAGUAYQByAGMAaABWAGkAZQB3AEkAZAAiADoAIAAiACIALAAKAAkAIgBTAGUAYQByAGMAaABWAGkAZQB3AEQAaQBzAHAAbABhAHkATgBhAG0AZQAiADoAIAAiACIALAAKAAkAIgBSAGUAbABhAHQAaQBvAG4AcwBoAGkAcABJAGQAIgA6ACAAIgAiACwACgAJACIAQgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AEkAZAAiADoAIAAiAGEANwA5AGEANgBlADcANwAtAGUAYQA3AGUALQBlADQAMQAxAC0AYQAyAGQAZQAtADAAMAA1ADAANQA2AGMAMAAwADAAMAA4ACIALAAKAAkAIgBSAGUAYwBvAHIAZABzAFAAZQByAFAAYQBnAGUAIgA6ACAAIgAxADAAMAAiACwACgAJACIAVgBpAGUAdwBUAHkAcABlACIAOgAgACIANAAiACwACgAJACIAUABhAHIAZQBuAHQASQBkAEYAaQBlAGwAZABOAGEAbQBlACIAOgAgACIAIgAsAAoACQAiAEEAbABsAG8AdwBNAHUAbAB0AGkAUwBlAGwAZQBjAHQAIgA6ACAAIgBmAGEAbABzAGUAIgAsAAoACQAiAE8AdABoAGUAcgBJAGQARgBpAGUAbABkACIAOgAgACIAIgAsAAoACQAiAFYAaQBlAHcARwByAG8AdQBwACIAOgAgACIAMQAiACwACgAJACIAUABhAGcAaQBuAGcASQBuAGYAbwAiADoAIAAiACIALAAKAAkAIgBEAGEAdABhAFEAdQBlAHIAeQBYAG0AbAAiADoAIAAiADwARABhAHQAYQBRAHUAZQByAHkAIABUAGEAYgBsAGUATgBhAG0AZQA9ACcAcAByAG8AdgBpAGQAZQByACcAIABUAGEAYgBsAGUAQQBsAGkAYQBzAD0AJwBQAFIATwBWAEkARABFAFIAJwA+AAoACQA8AFIAZQBsAGEAdABpAG8AbgBzAGgAaQBwAHMAPgAKAAkACQA8AEQAYQB0AGEAUgBlAGwAYQB0AGkAbwBuAHMAaABpAHAAIABSAGkAZwBoAHQAVABhAGIAbABlAE4AYQBtAGUAPQAnAGMAbwBtAG0AdQBuAGkAdAB5AGMAbABpAG4AaQBjAGQAaQBhAHIAeQB2AGkAZQB3AHMAZQB0AHUAcAAnACAAUgBpAGcAaAB0AFQAYQBiAGwAZQBBAGwAaQBhAHMAPQAnAFAAUgBPAFYASQBEAEUAUgBJAEQAXwBDAE8ATQBNAFUATgBJAFQAWQBDAEwASQBOAEkAQwBEAEkAQQBSAFkAVgBJAEUAVwBTAEUAVABVAFAAJwAgAEoAbwBpAG4AVAB5AHAAZQA9ACcASQBuAG4AZQByAEoAbwBpAG4AJwA+AAoACQAJAAkAPABEAGEAdABhAFIAZQBsAGEAdABpAG8AbgBzAGgAaQBwAEoAbwBpAG4AcwA+AAoACQAJAAkACQA8AEQAYQB0AGEAUgBlAGwAYQB0AGkAbwBuAHMAaABpAHAASgBvAGkAbgAgAFQAYQBiAGwAZQBGAGkAZQBsAGQATgBhAG0AZQA9ACcAcAByAG8AdgBpAGQAZQByAGkAZAAnACAAVABhAGIAbABlAEEAbABpAGEAcwA9ACcAUABSAE8AVgBJAEQARQBSACcAIABSAGkAZwBoAHQAVABhAGIAbABlAEYAaQBlAGwAZABOAGEAbQBlAD0AJwBwAHIAbwB2AGkAZABlAHIAaQBkACcAIABWAGEAbAB1AGUAVAB5AHAAZQA9ACcARgBpAGUAbABkACcAIABEAGIAVAB5AHAAZQA9ACcAQgBpAGcASQBuAHQAJwAgAC8APgAKAAkACQAJADwALwBEAGEAdABhAFIAZQBsAGEAdABpAG8AbgBzAGgAaQBwAEoAbwBpAG4AcwA+AAoACQAJADwALwBEAGEAdABhAFIAZQBsAGEAdABpAG8AbgBzAGgAaQBwAD4ACgAJADwALwBSAGUAbABhAHQAaQBvAG4AcwBoAGkAcABzAD4ACgAJADwARgBpAGwAdABlAHIAIABGAGkAbAB0AGUAcgBUAHkAcABlAD0AJwBBAG4AZAAnAD4ACgAJAAkAPABGAGkAbAB0AGUAcgBzAD4ACgAJAAkACQA8AEQAYQB0AGEARgBpAGwAdABlAHIAIABGAGkAbAB0AGUAcgBUAHkAcABlAD0AJwBBAG4AZAAnAD4ACgAJAAkACQAJADwAQwBvAG4AZABpAHQAaQBvAG4AcwA+AAoACQAJAAkACQAJADwAQwBvAG4AZABpAHQAaQBvAG4AIABUAGEAYgBsAGUAQQBsAGkAYQBzAD0AJwBQAFIATwBWAEkARABFAFIASQBEAF8AQwBPAE0ATQBVAE4ASQBUAFkAQwBMAEkATgBJAEMARABJAEEAUgBZAFYASQBFAFcAUwBFAFQAVQBQACcAIABGAGkAZQBsAGQAPQAnAEMATwBNAE0AVQBOAEkAVABZAEEATgBEAEMATABJAE4ASQBDAFQARQBBAE0ASQBEACcAIABPAHAAZQByAGEAdABvAHIAPQAnAEUAcQB1AGEAbAAnACAAVgBhAGwAdQBlAFQAeQBwAGUAPQAnAFMAaQBuAGcAbABlAFYAYQBsAHUAZQAnAD4ACgAJAAkACQAJAAkACQA8AEMAbwBuAGQAaQB0AGkAbwBuAFYAYQBsAHUAZQAgAEQAYgBUAHkAcABlAD0AJwBVAG4AaQBxAHUAZQBJAGQAZQBuAHQAaQBmAGkAZQByACcAIABHAHUAaQBkAFYAYQBsAHUAZQA9ACcAewB7AHAAcgBvAHYAaQBkAGUAcgBEAFMALgBQAGgAbwBlAG4AaQB4AFAAcgBvAHYAaQBkAGUAcgBJAG4AZgBvACMAYwBzAHYALgBDAG8AbQBtAHUAbgBpAHQAeQBBAG4AZABDAGwAaQBuAGkAYwBUAGUAYQBtAEkAZAB9AH0AJwAgAC8APgAKAAkACQAJAAkACQA8AC8AQwBvAG4AZABpAHQAaQBvAG4APgAKAAkACQAJAAkACQA8AEMAbwBuAGQAaQB0AGkAbwBuACAAVABhAGIAbABlAEEAbABpAGEAcwA9ACcAUABSAE8AVgBJAEQARQBSAEkARABfAEMATwBNAE0AVQBOAEkAVABZAEMATABJAE4ASQBDAEQASQBBAFIAWQBWAEkARQBXAFMARQBUAFUAUAAnACAARgBpAGUAbABkAD0AJwBJAE4AQQBDAFQASQBWAEUAJwAgAE8AcABlAHIAYQB0AG8AcgA9ACcARQBxAHUAYQBsACcAIABWAGEAbAB1AGUAVAB5AHAAZQA9ACcAUwBpAG4AZwBsAGUAVgBhAGwAdQBlACcAPgAKAAkACQAJAAkACQAJADwAQwBvAG4AZABpAHQAaQBvAG4AVgBhAGwAdQBlACAARABiAFQAeQBwAGUAPQAnAEIAaQB0ACcAIABCAG8AbwBsAFYAYQBsAHUAZQA9ACcAZgBhAGwAcwBlACcAIAAvAD4ACgAJAAkACQAJAAkAPAAvAEMAbwBuAGQAaQB0AGkAbwBuAD4ACgAJAAkACQAJADwALwBDAG8AbgBkAGkAdABpAG8AbgBzAD4ACgAJAAkACQA8AC8ARABhAHQAYQBGAGkAbAB0AGUAcgA+AAoACQAJADwALwBGAGkAbAB0AGUAcgBzAD4ACgAJADwALwBGAGkAbAB0AGUAcgA+AAoAPAAvAEQAYQB0AGEAUQB1AGUAcgB5AD4AIgAKAH0A</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="19705310-566d-40ac-a656-00f1b60d484c" Version="1.1" Url="https://phoenixqa.careworks.ie/api/clinicdatacontroller/retrieveproviderroomsforlocation" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/resourcefile/Html_ClinicDiary.html" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAKAAkAIgBTAHQAYQByAHQARABhAHQAZQAiADoAIAAiAHsAewBTAHQAYQByAHQARABhAHQAZQB9AH0AVAAwADAAOgAwADAAOgAwADAALgAwADAAMABaACIALAAKAAkAIgBFAG4AZABEAGEAdABlACIAOgAgACIAewB7AEUAbgBkAEQAYQB0AGUAfQB9AFQAMAAwADoAMAAwADoAMAAwAC4AMAAwADAAWgAiACwACgAJACIAQwBsAGkAbgBpAGMAVAB5AHAAZQBJAGQAIgA6ACAAIgB7AHsAcAByAG8AdgBpAGQAZQByAEQAUwAuAFAAaABvAGUAbgBpAHgAUAByAG8AdgBpAGQAZQByAEkAbgBmAG8AIwBjAHMAdgAuAEMAbwBtAG0AdQBuAGkAdAB5AEEAbgBkAEMAbABpAG4AaQBjAFQAZQBhAG0ASQBkAH0AfQAiACwACgAJACIATABvAGMAYQB0AGkAbwBuAEkAZAAiADoAIAAiAHsAewBwAHIAbwB2AGkAZABlAHIARABTAC4AUABoAG8AZQBuAGkAeABQAHIAbwB2AGkAZABlAHIASQBuAGYAbwAjAGMAcwB2AC4AUAByAG8AdgBpAGQAZQByAEkARAB9AH0AIgAsAAoACQAiAEgAbwBtAGUAVgBpAHMAaQB0ACIAOgAgAGYAYQBsAHMAZQAsAAoACQAiAEgAZQBhAGwAdABoAFAAcgBvAGYAZQBzAHMAaQBvAG4AYQBsAEkAZABzACIAOgAgAG4AdQBsAGwALAAKAAkAIgBQAHIAbwB2AGkAZABlAHIAUgBvAG8AbQBJAGQAcwAiADoAIABbAF0ACgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="207a17bb-7a95-46a4-818f-93f260867572" Version="1.1" Url="https://phoenixqa.careworks.ie/api/clinicdatacontroller/retrieveclinicdiarydata" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/resourcefile/Html_ClinicDiary.html" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewANAAoACQAiAFMAdABhAHIAdABEAGEAdABlACIAOgAgACIAewB7AFMARAB9AH0AVAAwADAAOgAwADAAOgAwADAALgAwADAAMABaACIALAANAAoACQAiAEUAbgBkAEQAYQB0AGUAIgA6ACAAIgB7AHsAUwBEAH0AfQBUADAAMAA6ADAAMAA6ADAAMAAuADAAMAAwAFoAIgAsAA0ACgAJACIAQwBsAGkAbgBpAGMAVAB5AHAAZQBJAGQAIgA6ACAAIgB7AHsAcAByAG8AdgBpAGQAZQByAEQAUwAuAFAAaABvAGUAbgBpAHgAUAByAG8AdgBpAGQAZQByAEkAbgBmAG8AIwBjAHMAdgAuAEMAbwBtAG0AdQBuAGkAdAB5AEEAbgBkAEMAbABpAG4AaQBjAFQAZQBhAG0ASQBkAH0AfQAiACwADQAKAAkAIgBMAG8AYwBhAHQAaQBvAG4ASQBkACIAOgAgACIAewB7AHAAcgBvAHYAaQBkAGUAcgBEAFMALgBQAGgAbwBlAG4AaQB4AFAAcgBvAHYAaQBkAGUAcgBJAG4AZgBvACMAYwBzAHYALgBQAHIAbwB2AGkAZABlAHIASQBEAH0AfQAiACwADQAKAAkAIgBIAG8AbQBlAFYAaQBzAGkAdAAiADoAIABmAGEAbABzAGUALAANAAoACQAiAEgAZQBhAGwAdABoAFAAcgBvAGYAZQBzAHMAaQBvAG4AYQBsAEkAZABzACIAOgAgAG4AdQBsAGwALAANAAoACQAiAFAAcgBvAHYAaQBkAGUAcgBSAG8AbwBtAEkAZABzACIAOgAgAFsAIgB7AHsAcAByAG8AdgBpAGQAZQByAEQAUwAuAFAAaABvAGUAbgBpAHgAUAByAG8AdgBpAGQAZQByAEkAbgBmAG8AIwBjAHMAdgAuAFAAcgBvAHYAaQBkAGUAcgBSAG8AbwBtADEAfQB9ACIALAAgACIAewB7AHAAcgBvAHYAaQBkAGUAcgBEAFMALgBQAGgAbwBlAG4AaQB4AFAAcgBvAHYAaQBkAGUAcgBJAG4AZgBvACMAYwBzAHYALgBQAHIAbwB2AGkAZABlAHIAUgBvAG8AbQAyAH0AfQAiACwAIAAiAHsAewBwAHIAbwB2AGkAZABlAHIARABTAC4AUABoAG8AZQBuAGkAeABQAHIAbwB2AGkAZABlAHIASQBuAGYAbwAjAGMAcwB2AC4AUAByAG8AdgBpAGQAZQByAFIAbwBvAG0AMwB9AH0AIgAsACAAIgB7AHsAcAByAG8AdgBpAGQAZQByAEQAUwAuAFAAaABvAGUAbgBpAHgAUAByAG8AdgBpAGQAZQByAEkAbgBmAG8AIwBjAHMAdgAuAFAAcgBvAHYAaQBkAGUAcgBSAG8AbwBtADQAfQB9ACIALAAgACIAewB7AHAAcgBvAHYAaQBkAGUAcgBEAFMALgBQAGgAbwBlAG4AaQB4AFAAcgBvAHYAaQBkAGUAcgBJAG4AZgBvACMAYwBzAHYALgBQAHIAbwB2AGkAZABlAHIAUgBvAG8AbQA1AH0AfQAiAF0ADQAKAH0A</StringHttpBody>
+    </Request>
+  </Items>
+  <DataSources>
+    <DataSource Name="providerDS" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\PhoenixProviderInfo.csv">
+      <Tables>
+        <DataSourceTable Name="PhoenixProviderInfo#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Random" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="Microsoft.VisualStudio.TestTools.WebTesting.RequestPlugins.DateTimeWebTestPlugin, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Date Time Plugin" Description="Composes date and time in the specified format and assigns it to a given context parameter.">
+      <RuleParameters>
+        <RuleParameter Name="AddDays" Value="0" />
+        <RuleParameter Name="AddHours" Value="0" />
+        <RuleParameter Name="AddMilliseconds" Value="0" />
+        <RuleParameter Name="AddMinutes" Value="0" />
+        <RuleParameter Name="AddMonths" Value="0" />
+        <RuleParameter Name="AddSeconds" Value="0" />
+        <RuleParameter Name="AddYears" Value="0" />
+        <RuleParameter Name="ContextParameterName" Value="StartDate" />
+        <RuleParameter Name="InputDateTime" Value="" />
+        <RuleParameter Name="OutputFormat" Value="yyyy-MM-dd" />
+        <RuleParameter Name="OutputJsonDateTime" Value="False" />
+        <RuleParameter Name="UseCurrentTime" Value="True" />
+        <RuleParameter Name="UseLocalTime" Value="False" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="Microsoft.VisualStudio.TestTools.WebTesting.RequestPlugins.DateTimeWebTestPlugin, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Date Time Plugin" Description="Composes date and time in the specified format and assigns it to a given context parameter.">
+      <RuleParameters>
+        <RuleParameter Name="AddDays" Value="6" />
+        <RuleParameter Name="AddHours" Value="0" />
+        <RuleParameter Name="AddMilliseconds" Value="0" />
+        <RuleParameter Name="AddMinutes" Value="0" />
+        <RuleParameter Name="AddMonths" Value="0" />
+        <RuleParameter Name="AddSeconds" Value="0" />
+        <RuleParameter Name="AddYears" Value="0" />
+        <RuleParameter Name="ContextParameterName" Value="EndDate" />
+        <RuleParameter Name="InputDateTime" Value="" />
+        <RuleParameter Name="OutputFormat" Value="yyyy-MM-dd" />
+        <RuleParameter Name="OutputJsonDateTime" Value="False" />
+        <RuleParameter Name="UseCurrentTime" Value="True" />
+        <RuleParameter Name="UseLocalTime" Value="False" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="Phoenix.LoadTests.GenerateDatesPlugin, Phoenix.LoadTest.plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="GenerateDatesPlugin" Description="Generates a Random Start Date ; Start Time; End Date and End Time. End Date and time will happen five minutes after the start date and time">
+      <RuleParameters>
+        <RuleParameter Name="StartDateContextParameterName" Value="SD" />
+        <RuleParameter Name="StartTimeContextParameterName" Value="ST" />
+        <RuleParameter Name="EndDateContextParameterName" Value="ED" />
+        <RuleParameter Name="EndTimeContextParameterName" Value="ET" />
+        <RuleParameter Name="MaximumMonthsInTheFuture" Value="6" />
+        <RuleParameter Name="MinimumHour" Value="2" />
+        <RuleParameter Name="MaximumHour" Value="22" />
+        <RuleParameter Name="DateOutputFormat" Value="yyyy-MM-yy" />
+      </RuleParameters>
+    </WebTestPlugin>
+  </WebTestPlugins>
+</WebTest>

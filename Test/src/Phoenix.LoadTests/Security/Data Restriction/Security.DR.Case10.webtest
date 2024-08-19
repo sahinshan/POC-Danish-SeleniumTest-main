@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Security.DR.Case10" Id="0dcffa73-3e2f-4b9b-9f83-986e354ccd2f" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.20f60f41-36ab-4522-b4cc-d20664efa4cd.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="3e13a0a4-5796-4ef9-8b39-3e3c05e2a70a" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://phoenixqa.careworks.ie/pages/loginredirector.aspx?ReturnUrl=%2fCareDirector%2fpages%2fdefault.aspx" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="f2286d65-a9c5-4f2a-95f1-e1015990e70b" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/login.aspx" ThinkTime="7" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/loginredirector.aspx?ReturnUrl=%2fCareDirector%2fpages%2fdefault.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="POST" Guid="4aadd5b2-0489-48af-a859-0ade7d62db6b" Version="1.1" Url="https://phoenixqa.careworks.ie/api/security/retrieveactiveenvironmentsforuser" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/login.aspx" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&quot;Success&quot;:true" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFUAcwBlAHIAbgBhAG0AZQAiADoAIgBTAGUAYwB1AHIAaQB0AHkAVABlAHMAdABVAHMAZQByAEQAYQB0AGEAUgBlAHMAdAByAGkAYwB0AGkAbwBuADQAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="ce876ae8-e0ea-4c88-95ea-58db2622e4cb" Version="1.1" Url="https://phoenixqa.careworks.ie/api/security/authenticateuser" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/login.aspx" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&quot;Success&quot;:true" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFUAcwBlAHIAbgBhAG0AZQAiADoAIgBTAGUAYwB1AHIAaQB0AHkAVABlAHMAdABVAHMAZQByAEQAYQB0AGEAUgBlAHMAdAByAGkAYwB0AGkAbwBuADQAIgAsACIAUABhAHMAcwB3AG8AcgBkACIAOgAiAFAAYQBzAHMAdwAwAHIAZABfACEAIgAsACIARQBuAHYAaQByAG8AbgBtAGUAbgB0AEkAZAAiADoAIgAzAEIANAA1ADEANgBEAEMALQAzADcAMAA3AC0ANAAxADkAOQAtAEEAQQA1AEMALQBFADMARgBFAEUAQQA0ADgANAAyAEEARAAiACwAIgBSAGUAbQBlAG0AYgBlAHIARABlAHQAYQBpAGwAcwAiADoAZgBhAGwAcwBlAH0A</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="e799d5a2-656c-4569-93ec-410122640528" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/default.aspx" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/login.aspx" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateHtmlTagInnerText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Tag Inner Text" Description="Validates that the specified expected inner text exists within the specified HTML tag." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="TagName" Value="a" />
+            <RuleParameter Name="AttributeName" Value="title" />
+            <RuleParameter Name="AttributeValue" Value="Professionals" />
+            <RuleParameter Name="ExpectedInnerText" Value="Professionals" />
+            <RuleParameter Name="RemoveInnerTags" Value="True" />
+            <RuleParameter Name="HasClosingTags" Value="True" />
+            <RuleParameter Name="CollapseWhiteSpace" Value="True" />
+            <RuleParameter Name="Index" Value="-1" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam22.type" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?type=" />
+            <RuleParameter Name="EndsWith" Value="'" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="GET" Guid="bf4ee81b-e9f2-481e-a571-f8ce15f5d465" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/listpage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/default.aspx" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&gt;Professionals&lt;/h1&gt;" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateHtmlTagInnerText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Tag Inner Text" Description="Validates that the specified expected inner text exists within the specified HTML tag." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="TagName" Value="button" />
+            <RuleParameter Name="AttributeName" Value="id" />
+            <RuleParameter Name="AttributeValue" Value="TI_NewRecordButton" />
+            <RuleParameter Name="ExpectedInnerText" Value="New" />
+            <RuleParameter Name="RemoveInnerTags" Value="True" />
+            <RuleParameter Name="HasClosingTags" Value="True" />
+            <RuleParameter Name="CollapseWhiteSpace" Value="True" />
+            <RuleParameter Name="Index" Value="-1" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam23.type" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?type=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="type" Value="professional" RecordedValue="professional" CorrelationBinding="{{QueryStringParam22.type}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="f3f23008-ec0e-4705-ab2d-6f21d1fc9b4c" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=professional" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&quot;Success&quot;:true" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMgA1ADYANgAwADQAMQA4AC0AMgA2ADkAYgAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADEAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="3feb7d93-da63-45bd-8ca9-817bec547c6d" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="34" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=professional" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateHtmlTagInnerText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Tag Inner Text" Description="Validates that the specified expected inner text exists within the specified HTML tag." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="TagName" Value="td" />
+            <RuleParameter Name="AttributeName" Value="id" />
+            <RuleParameter Name="AttributeValue" Value="cce6a061-15cb-e811-80dc-0050560502cc_Primary" />
+            <RuleParameter Name="ExpectedInnerText" Value="Mario Raymond" />
+            <RuleParameter Name="RemoveInnerTags" Value="True" />
+            <RuleParameter Name="HasClosingTags" Value="True" />
+            <RuleParameter Name="CollapseWhiteSpace" Value="True" />
+            <RuleParameter Name="Index" Value="-1" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAOABhADYANgAwADQAMQA4AC0AMgA2ADkAYgAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAHAAcgBvAGYAZQBzAHMAaQBvAG4AYQBsACIALAAiAFAAYQByAGUAbgB0AEkAZAAiADoAIgAiACwAIgBQAGEAcgBlAG4AdABUAHkAcABlAE4AYQBtAGUAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBJAGQAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBEAGkAcwBwAGwAYQB5AE4AYQBtAGUAIgA6ACIAIgAsACIAUgBlAGwAYQB0AGkAbwBuAHMAaABpAHAASQBkACIAOgAiACIALAAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMgA1ADYANgAwADQAMQA4AC0AMgA2ADkAYgAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAUgBlAGMAbwByAGQAcwBQAGUAcgBQAGEAZwBlACIAOgAiADEAMAAwACIALAAiAFYAaQBlAHcAVAB5AHAAZQAiADoAIgAxACIALAAiAFAAYQByAGUAbgB0AEkAZABGAGkAZQBsAGQATgBhAG0AZQAiADoAIgAiACwAIgBBAGwAbABvAHcATQB1AGwAdABpAFMAZQBsAGUAYwB0ACIAOgAiAHQAcgB1AGUAIgAsACIATwB0AGgAZQByAEkAZABGAGkAZQBsAGQAIgA6ACIAIgAsACIAVgBpAGUAdwBHAHIAbwB1AHAAIgA6ACIAMQAiACwAIgBQAGEAZwBpAG4AZwBJAG4AZgBvACIAOgAiACIALAAiAEQAYQB0AGEAUQB1AGUAcgB5AFgAbQBsACIAOgBuAHUAbABsAH0A</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="2d54e1e2-d8dc-4b44-ab03-a99740f7504e" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/editpage.aspx" ThinkTime="48" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=professional" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateHtmlTagInnerText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Tag Inner Text" Description="Validates that the specified expected inner text exists within the specified HTML tag." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="TagName" Value="button" />
+            <RuleParameter Name="AttributeName" Value="id" />
+            <RuleParameter Name="AttributeValue" Value="TI_SaveButton" />
+            <RuleParameter Name="ExpectedInnerText" Value="Save" />
+            <RuleParameter Name="RemoveInnerTags" Value="True" />
+            <RuleParameter Name="HasClosingTags" Value="True" />
+            <RuleParameter Name="CollapseWhiteSpace" Value="True" />
+            <RuleParameter Name="Index" Value="-1" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateHtmlTagInnerText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Tag Inner Text" Description="Validates that the specified expected inner text exists within the specified HTML tag." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="TagName" Value="button" />
+            <RuleParameter Name="AttributeName" Value="id" />
+            <RuleParameter Name="AttributeValue" Value="TI_SaveAndCloseButton" />
+            <RuleParameter Name="ExpectedInnerText" Value="Save &amp; Close" />
+            <RuleParameter Name="RemoveInnerTags" Value="True" />
+            <RuleParameter Name="HasClosingTags" Value="True" />
+            <RuleParameter Name="CollapseWhiteSpace" Value="True" />
+            <RuleParameter Name="Index" Value="-1" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateHtmlTagInnerText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Tag Inner Text" Description="Validates that the specified expected inner text exists within the specified HTML tag." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="TagName" Value="h1" />
+            <RuleParameter Name="AttributeName" Value="title" />
+            <RuleParameter Name="AttributeValue" Value="Professional: Mario Raymond" />
+            <RuleParameter Name="ExpectedInnerText" Value="ProfessionalMario Raymond" />
+            <RuleParameter Name="RemoveInnerTags" Value="True" />
+            <RuleParameter Name="HasClosingTags" Value="True" />
+            <RuleParameter Name="CollapseWhiteSpace" Value="True" />
+            <RuleParameter Name="Index" Value="-1" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="id=&quot;CWField_professionalnumber&quot;" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="type" Value="professional" RecordedValue="professional" CorrelationBinding="{{QueryStringParam23.type}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="id" Value="cce6a061-15cb-e811-80dc-0050560502cc" RecordedValue="cce6a061-15cb-e811-80dc-0050560502cc" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogdepth" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWDataFormDialog" RecordedValue="CWDataFormDialog" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="d0509b44-556d-4b25-9a3b-68bf2d2cf8d8" Version="1.1" Url="https://phoenixqa.careworks.ie/api/dataform/Update" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=professional&amp;id=cce6a061-15cb-e811-80dc-0050560502cc&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDataFormDialog" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&quot;Success&quot;:true" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAgAAkAIgBJAGQAIgA6ACAAIgBjAGMAZQA2AGEAMAA2ADEALQAxADUAYwBiAC0AZQA4ADEAMQAtADgAMABkAGMALQAwADAANQAwADUANgAwADUAMAAyAGMAYwAiACwAIAAJACIAQgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AE4AYQBtAGUAIgA6ACAAIgBwAHIAbwBmAGUAcwBzAGkAbwBuAGEAbAAiACwAIAAJACIAUAByAGkAbQBhAHIAeQBLAGUAeQBOAGEAbQBlACIAOgAgACIAcAByAG8AZgBlAHMAcwBpAG8AbgBhAGwAaQBkACIALAAgAAkAIgBNAGUAdABhAGQAYQB0AGEAVAB5AHAAZQAiADoAIAAiADAAIgAsACAACQAiAFAAYQByAGUAbgB0AEkAZAAiADoAIAAiACIALAAgAAkAIgBQAGEAcgBlAG4AdABUAHkAcABlACIAOgAgACIAIgAsACAACQAiAFIAZQBsAGEAdABpAG8AbgBzAGgAaQBwAEkAZAAiADoAIAAiACIALAAgAAkAIgBIAGEAcwBQAGEAcgBlAG4AdABGAGkAZQBsAGQAIgA6ACAAIgBmAGEAbABzAGUAIgAsACAACQAiAEMAdQBsAHQAdQByAGUATgBhAG0AZQAiADoAIAAiAGUAbgAtAEcAQgAiACwAIAAJACIASQBnAG4AbwByAGUARAB1AHAAbABpAGMAYQB0AGUAcwAiADoAIABmAGEAbABzAGUALAAgAAkAIgBEAGEAdABhACIAOgAgACIAPABSAGUAYwBvAHIAZAA+ADwARgBpAGUAbABkAHMAPgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcAByAG8AZgBlAHMAcwBpAG8AbgBhAGwAbgB1AG0AYgBlAHIAXAAiACAAVAB5AHAAZQA9AFwAIgAzADQAXAAiACAAVgBhAGwAdQBlAD0AXAAiADkAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAOQBcACIALwA+ADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgB0AGkAdABsAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAE0AcgBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBNAHIAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAZgBpAHIAcwB0AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAE0AYQByAGkAbwBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBNAGEAcgBpAG8AXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAbQBpAGQAZABsAGUAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAbABhAHMAdABuAGEAbQBlAFwAIgAgAFQAeQBwAGUAPQBcACIAMQAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBSAGEAeQBtAG8AbgBkAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFIAYQB5AG0AbwBuAGQAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcAByAG8AZgBlAHMAcwBpAG8AbgB0AHkAcABlAGkAZABcACIAIABUAHkAcABlAD0AXAAiADEAOQBcACIAIABWAGEAbAB1AGUAPQBcACIAMwAwADIANABkADcANgA3AC0AOAA5ADkAYwAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAMwAwADIANABkADcANgA3AC0AOAA5ADkAYwAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcAByAG8AZgBlAHMAcwBpAG8AbgB0AHkAcABlAGkAZABfAGMAdwBuAGEAbQBlAFwAIgAgAFQAeQBwAGUAPQBcACIAMQAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBTAG8AZgB0AHcAYQByAGUAIABFAG4AZwBpAG4AZQBlAHIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAUwBvAGYAdAB3AGEAcgBlACAARQBuAGcAaQBuAGUAZQByAFwAIgAvAD4APABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAG8AdwBuAGUAcgBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAyADIAXAAiACAAVgBhAGwAdQBlAD0AXAAiADUANQA5ADEANgAzAGQAZAAtADIAYwA1AGEALQBlADUAMQAxAC0AOAAwAGMAOAAtADAAMAA1ADAANQA2ADAANQAwADIAYwBjAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiADUANQA5ADEANgAzAGQAZAAtADIAYwA1AGEALQBlADUAMQAxAC0AOAAwAGMAOAAtADAAMAA1ADAANQA2ADAANQAwADIAYwBjAFwAIgAvAD4APABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAG8AdwBuAGUAcgBpAGQAXwBjAHcAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAQwBhAHIAZQBEAGkAcgBlAGMAdABvAHIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAQwBhAHIAZQBEAGkAcgBlAGMAdABvAHIAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAZwBlAG4AZABlAHIAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMwAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgAyAFwAIgAgAEQAaQBzAHAAPQBcACIATQBhAGwAZQBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgAyAFwAIgAgAFAAcgBlAHYARABpAHMAcAA9AFwAIgBNAGEAbABlAFwAIgAvAD4APABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAHAAcgBvAGYAZQBzAHMAaQBvAG4AYQBsAGMAbwBkAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4APABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGEAZABkAHIAZQBzAHMAdAB5AHAAZQBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAzADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiADMAXAAiACAARABpAHMAcAA9AFwAIgBQAHIAaQBtAGEAcgB5AFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiADMAXAAiACAAUAByAGUAdgBEAGkAcwBwAD0AXAAiAFAAcgBpAG0AYQByAHkAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcAByAG8AcABlAHIAdAB5AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFAATgBBAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFAATgBBAFwAIgAvAD4APABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGEAZABkAHIAZQBzAHMAbABpAG4AZQAxAFwAIgAgAFQAeQBwAGUAPQBcACIAMQAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBQAE4ATwBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBQAE4ATwBcACIALwA+ADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBhAGQAZAByAGUAcwBzAGwAaQBuAGUAMgBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAUwBUAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFMAVABcACIALwA+ADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBhAGQAZAByAGUAcwBzAGwAaQBuAGUAMwBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAVgBMAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFYATABcACIALwA+ADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBhAGQAZAByAGUAcwBzAGwAaQBuAGUANABcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAVABXAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFQAVwBcACIALwA+ADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBhAGQAZAByAGUAcwBzAGwAaQBuAGUANQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAQwBPAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAEMATwBcACIALwA+ADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBwAG8AcwB0AGMAbwBkAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFAAQwBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBQAEMAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYQBkAGQAcgBlAHMAcwBwAHIAbwBwAGUAcgB0AHkAdAB5AHAAZQBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADkAXAAiACAAVgBhAGwAdQBlAD0AXAAiADAAZQA1ADkAMwBhADMANgAtADIAMgA5ADcALQBlADgAMQAxAC0AOAAwAGQAYwAtADAAMAA1ADAANQA2ADAANQAwADYAMwAwAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiADAAZQA1ADkAMwBhADMANgAtADIAMgA5ADcALQBlADgAMQAxAC0AOAAwAGQAYwAtADAAMAA1ADAANQA2ADAANQAwADYAMwAwAFwAIgAvAD4APABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGEAZABkAHIAZQBzAHMAcAByAG8AcABlAHIAdAB5AHQAeQBwAGUAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAE8AdABoAGUAcgBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBPAHQAaABlAHIAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAdQBwAHIAbgBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYQBkAGQAcgBlAHMAcwBiAG8AcgBvAHUAZwBoAGkAZABcACIAIABUAHkAcABlAD0AXAAiADEAOQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYQBkAGQAcgBlAHMAcwBiAG8AcgBvAHUAZwBoAGkAZABfAGMAdwBuAGEAbQBlAFwAIgAgAFQAeQBwAGUAPQBcACIAMQAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBcACIALwA+ADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBhAGQAZAByAGUAcwBzAHcAYQByAGQAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMQA5AFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBcACIALwA+ADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBhAGQAZAByAGUAcwBzAHcAYQByAGQAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4APABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAbwB1AG4AdAByAHkAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAEMATwBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBDAE8AXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYgB1AHMAaQBuAGUAcwBzAHAAaABvAG4AZQBcACIAIABUAHkAcABlAD0AXAAiADIANwBcACIAIABWAGEAbAB1AGUAPQBcACIAMQAyADMAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAMQAyADMAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAbQBvAGIAaQBsAGUAcABoAG8AbgBlAFwAIgAgAFQAeQBwAGUAPQBcACIAMgA3AFwAIgAgAEQAaQByAHQAeQA9AFwAIgB0AHIAdQBlAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgB7AHsAUgBhAG4AZABvAG0ASQBuAHQAfQB9AFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiADMAMgAxAFwAIgAvAD4APABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGUAbQBhAGkAbABcACIAIABUAHkAcABlAD0AXAAiADQAXAAiACAAVgBhAGwAdQBlAD0AXAAiAE0AYQBsAGwAZQBjAGsAQAB0AGUAbQBwAG0AYQBpAGwALgBjAG8AbQBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBSAGEAeQBtAG8AbgBkAEAAdABlAG0AcABlAG0AYQBpAGwALgBjAG8AbQBcACIALwA+ADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAG8AbgB0AGEAYwB0AG0AZQB0AGgAbwBkAGkAZABcACIAIABUAHkAcABlAD0AXAAiADEAOQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBvAG4AdABhAGMAdABtAGUAdABoAG8AZABpAGQAXwBjAHcAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYQBsAGwAbwB3AHAAaABvAG4AZQBcACIAIABUAHkAcABlAD0AXAAiADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHQAcgB1AGUAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAdAByAHUAZQBcACIALwA+ADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATABpAG4AawBlAGQARgBpAGUAbABkAD0AXAAiAGEAbABsAG8AdwBwAGgAbwBuAGUAXAAiACAATgBhAG0AZQA9AFwAIgB1AG4AZABlAGYAaQBuAGUAZABcACIAIABWAGEAbAB1AGUAPQBcACIAZgBhAGwAcwBlAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAGYAYQBsAHMAZQBcACIALwA+ADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBhAGwAbABvAHcAZQBtAGEAaQBsAFwAIgAgAFQAeQBwAGUAPQBcACIAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAdAByAHUAZQBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgB0AHIAdQBlAFwAIgAvAD4APABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABMAGkAbgBrAGUAZABGAGkAZQBsAGQAPQBcACIAYQBsAGwAbwB3AGUAbQBhAGkAbABcACIAIABOAGEAbQBlAD0AXAAiAHUAbgBkAGUAZgBpAG4AZQBkAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBmAGEAbABzAGUAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAZgBhAGwAcwBlAFwAIgAvAD4APABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGEAbABsAG8AdwBtAGEAaQBsAFwAIgAgAFQAeQBwAGUAPQBcACIAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAdAByAHUAZQBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgB0AHIAdQBlAFwAIgAvAD4APABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABMAGkAbgBrAGUAZABGAGkAZQBsAGQAPQBcACIAYQBsAGwAbwB3AG0AYQBpAGwAXAAiACAATgBhAG0AZQA9AFwAIgB1AG4AZABlAGYAaQBuAGUAZABcACIAIABWAGEAbAB1AGUAPQBcACIAZgBhAGwAcwBlAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAGYAYQBsAHMAZQBcACIALwA+ADwALwBGAGkAZQBsAGQAcwA+ADwALwBSAGUAYwBvAHIAZAA+ACIAIAB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="60a88b56-ce0c-4707-9514-caf73f60d0dc" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=professional" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateHtmlTagInnerText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Tag Inner Text" Description="Validates that the specified expected inner text exists within the specified HTML tag." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="TagName" Value="td" />
+            <RuleParameter Name="AttributeName" Value="id" />
+            <RuleParameter Name="AttributeValue" Value="cce6a061-15cb-e811-80dc-0050560502cc_Primary" />
+            <RuleParameter Name="ExpectedInnerText" Value="Mario Raymond" />
+            <RuleParameter Name="RemoveInnerTags" Value="True" />
+            <RuleParameter Name="HasClosingTags" Value="True" />
+            <RuleParameter Name="CollapseWhiteSpace" Value="True" />
+            <RuleParameter Name="Index" Value="-1" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiAFsAewBcACIAVABhAGIAbABlAEEAbABpAGEAcwBcACIAOgBcACIAcAByAG8AZgBlAHMAcwBpAG8AbgBhAGwAXAAiACwAXAAiAEYAaQBlAGwAZABOAGEAbQBlAFwAIgA6AFwAIgBmAGkAcgBzAHQAbgBhAG0AZQBcACIALABcACIAUwBvAHIAdABPAHIAZABlAHIAXAAiADoAMAB9ACwAewBcACIAVABhAGIAbABlAEEAbABpAGEAcwBcACIAOgBcACIAcAByAG8AZgBlAHMAcwBpAG8AbgBhAGwAXAAiACwAXAAiAEYAaQBlAGwAZABOAGEAbQBlAFwAIgA6AFwAIgBsAGEAcwB0AG4AYQBtAGUAXAAiACwAXAAiAFMAbwByAHQATwByAGQAZQByAFwAIgA6ADAAfQAsAHsAXAAiAFQAYQBiAGwAZQBBAGwAaQBhAHMAXAAiADoAXAAiAHAAcgBvAGYAZQBzAHMAaQBvAG4AYQBsAFwAIgAsAFwAIgBGAGkAZQBsAGQATgBhAG0AZQBcACIAOgBcACIAcAByAG8AZgBlAHMAcwBpAG8AbgBhAGwAaQBkAFwAIgAsAFwAIgBTAG8AcgB0AE8AcgBkAGUAcgBcACIAOgAwAH0AXQAiACwAIgBDAHUAcgByAGUAbgB0AFYAaQBlAHcASQBkACIAOgAiADgAYQA2ADYAMAA0ADEAOAAtADIANgA5AGIALQBlADgAMQAxAC0AOAAwAGQAYwAtADAAMAA1ADAANQA2ADAANQAwADIAYwBjACIALAAiAFQAeQBwAGUATgBhAG0AZQAiADoAIgBwAHIAbwBmAGUAcwBzAGkAbwBuAGEAbAAiACwAIgBQAGEAcgBlAG4AdABJAGQAIgA6ACIAIgAsACIAUABhAHIAZQBuAHQAVAB5AHAAZQBOAGEAbQBlACIAOgAiACIALAAiAFMAZQBhAHIAYwBoAFYAaQBlAHcASQBkACIAOgAiACIALAAiAFMAZQBhAHIAYwBoAFYAaQBlAHcARABpAHMAcABsAGEAeQBOAGEAbQBlACIAOgAiACIALAAiAFIAZQBsAGEAdABpAG8AbgBzAGgAaQBwAEkAZAAiADoAIgAiACwAIgBCAHUAcwBpAG4AZQBzAHMATwBiAGoAZQBjAHQASQBkACIAOgAiADIANQA2ADYAMAA0ADEAOAAtADIANgA5AGIALQBlADgAMQAxAC0AOAAwAGQAYwAtADAAMAA1ADAANQA2ADAANQAwADIAYwBjACIALAAiAFIAZQBjAG8AcgBkAHMAUABlAHIAUABhAGcAZQAiADoAIgAxADAAMAAiACwAIgBWAGkAZQB3AFQAeQBwAGUAIgA6ACIAMQAiACwAIgBQAGEAcgBlAG4AdABJAGQARgBpAGUAbABkAE4AYQBtAGUAIgA6ACIAIgAsACIAQQBsAGwAbwB3AE0AdQBsAHQAaQBTAGUAbABlAGMAdAAiADoAIgB0AHIAdQBlACIALAAiAE8AdABoAGUAcgBJAGQARgBpAGUAbABkACIAOgAiACIALAAiAFYAaQBlAHcARwByAG8AdQBwACIAOgAiADEAIgAsACIAUABhAGcAaQBuAGcASQBuAGYAbwAiADoAIgB7AFwAIgBwAG4AXAAiADoAMQAsAFwAIgBQAGEAZwBlAHMAXAAiADoAWwB7AFwAIgBwAG4AXAAiADoAMQAsAFwAIgB0AGEAXAAiADoAXAAiAHAAcgBvAGYAZQBzAHMAaQBvAG4AYQBsAFwAIgAsAFwAIgBmAG4AXAAiADoAXAAiAGYAaQByAHMAdABuAGEAbQBlAFwAIgAsAFwAIgBkAHQAXAAiADoAMQAyACwAXAAiAHMAdgBcACIAOgBcACIAUABlAHQAZQBzAFwAIgB9ACwAewBcACIAcABuAFwAIgA6ADEALABcACIAdABhAFwAIgA6AFwAIgBwAHIAbwBmAGUAcwBzAGkAbwBuAGEAbABcACIALABcACIAZgBuAFwAIgA6AFwAIgBsAGEAcwB0AG4AYQBtAGUAXAAiACwAXAAiAGQAdABcACIAOgAxADIALABcACIAcwB2AFwAIgA6AFwAIgBNAHUAcgBoAHAAeQBcACIAfQAsAHsAXAAiAHAAbgBcACIAOgAxACwAXAAiAHQAYQBcACIAOgBcACIAcAByAG8AZgBlAHMAcwBpAG8AbgBhAGwAXAAiACwAXAAiAGYAbgBcACIAOgBcACIAcAByAG8AZgBlAHMAcwBpAG8AbgBhAGwAaQBkAFwAIgAsAFwAIgBkAHQAXAAiADoAMQA0ACwAXAAiAGcAdgBcACIAOgBcACIAZgA3ADEAYgA2AGUAYQBkAC0AOABjADkAYwAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAXAAiAH0AXQB9ACIALAAiAEQAYQB0AGEAUQB1AGUAcgB5AFgAbQBsACIAOgBuAHUAbABsAH0A</StringHttpBody>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="Microsoft.SystemCenter.Cloud.GsmPlugins.RandomIntGeneratorWebTestPlugin, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Generate Random Integer" Description="Generates a random integer.">
+      <RuleParameters>
+        <RuleParameter Name="ContextParameterName" Value="RandomInt" />
+        <RuleParameter Name="MaxValue" Value="9999999" />
+        <RuleParameter Name="MinValue" Value="1" />
+      </RuleParameters>
+    </WebTestPlugin>
+  </WebTestPlugins>
+</WebTest>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebTest1" Id="5b0a8095-2476-4646-a66c-ab6aa72abf54" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.87573612-fb28-4866-afc4-47a62a62bdac.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="e6f4c451-71ef-4b4d-8124-50dcfbb48ac7" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://phoenixqa.careworks.ie/pages/loginredirector.aspx?ReturnUrl=%2fCareDirector%2fpages%2fdefault.aspx" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="248139f0-59ab-4914-a31d-fe43c5ce2ccf" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/login.aspx" ThinkTime="8" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/loginredirector.aspx?ReturnUrl=%2fCareDirector%2fpages%2fdefault.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="POST" Guid="a98049f8-c821-4e9b-b98d-e850ed302ead" Version="1.1" Url="https://phoenixqa.careworks.ie/api/security/retrieveactiveenvironmentsforuser" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/login.aspx" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFUAcwBlAHIAbgBhAG0AZQAiADoAIgBzAGUAYwB1AHIAaQB0AHkAdABlAHMAdAB1AHMAZQByAGEAZABtAGkAbgAiAH0A</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="fa375275-0b19-4ff8-95c8-b2bb6a8cbb1d" Version="1.1" Url="https://phoenixqa.careworks.ie/api/security/authenticateuser" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/login.aspx" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFUAcwBlAHIAbgBhAG0AZQAiADoAIgBzAGUAYwB1AHIAaQB0AHkAdABlAHMAdAB1AHMAZQByAGEAZABtAGkAbgAiACwAIgBQAGEAcwBzAHcAbwByAGQAIgA6ACIAUABhAHMAcwB3ADAAcgBkAF8AIQAiACwAIgBFAG4AdgBpAHIAbwBuAG0AZQBuAHQASQBkACIAOgAiADMAQgA0ADUAMQA2AEQAQwAtADMANwAwADcALQA0ADEAOQA5AC0AQQBBADUAQwAtAEUAMwBGAEUARQBBADQAOAA0ADIAQQBEACIALAAiAFIAZQBtAGUAbQBiAGUAcgBEAGUAdABhAGkAbABzACIAOgBmAGEAbABzAGUAfQA=</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="13120334-9f20-4f80-8589-48c942b1e452" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/login.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam10.type" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?type=" />
+            <RuleParameter Name="EndsWith" Value="'" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam11.type" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?type=" />
+            <RuleParameter Name="EndsWith" Value="'" />
+            <RuleParameter Name="Index" Value="20" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="GET" Guid="29e1e9c4-54b7-46f8-99f6-416e70af08e3" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/listpage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="POST" Guid="e645a2e0-f867-4418-84b2-783a0133e133" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=person" />
+          </Headers>
+          <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMwAwAGYAOAA0AGIAMgBkAC0AYgAxADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADEAIgB9AA==</StringHttpBody>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/default.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="type" Value="person" RecordedValue="person" CorrelationBinding="{{QueryStringParam10.type}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="e95e4349-dcc9-4525-aa7d-4c9420d6be85" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="6" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=person" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAOABkAGYAOAA0AGIAMgBkAC0AYgAxADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAHAAZQByAHMAbwBuACIALAAiAFAAYQByAGUAbgB0AEkAZAAiADoAIgAiACwAIgBQAGEAcgBlAG4AdABUAHkAcABlAE4AYQBtAGUAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBJAGQAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBEAGkAcwBwAGwAYQB5AE4AYQBtAGUAIgA6ACIAIgAsACIAUgBlAGwAYQB0AGkAbwBuAHMAaABpAHAASQBkACIAOgAiACIALAAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMwAwAGYAOAA0AGIAMgBkAC0AYgAxADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAUgBlAGMAbwByAGQAcwBQAGUAcgBQAGEAZwBlACIAOgAiADEAMAAwACIALAAiAFYAaQBlAHcAVAB5AHAAZQAiADoAIgAxACIALAAiAFAAYQByAGUAbgB0AEkAZABGAGkAZQBsAGQATgBhAG0AZQAiADoAIgAiACwAIgBBAGwAbABvAHcATQB1AGwAdABpAFMAZQBsAGUAYwB0ACIAOgAiAHQAcgB1AGUAIgAsACIATwB0AGgAZQByAEkAZABGAGkAZQBsAGQAIgA6ACIAIgAsACIAVgBpAGUAdwBHAHIAbwB1AHAAIgA6ACIAMQAiACwAIgBQAGEAZwBpAG4AZwBJAG4AZgBvACIAOgAiACIALAAiAEQAYQB0AGEAUQB1AGUAcgB5AFgAbQBsACIAOgBuAHUAbABsAH0A</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="f06ab513-2b48-4902-a536-98d67aa1c680" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/listpage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/default.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam12.type" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?type=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="type" Value="datarestriction" RecordedValue="datarestriction" CorrelationBinding="{{QueryStringParam11.type}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="93e298b7-7018-4a4b-8691-253470160e0a" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=datarestriction" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMAAwAGYAYwAwAGMANgA4AC0AYQA1ADcAZQAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADEAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="4bc33951-60ef-4ca9-be7b-833d101354da" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=datarestriction" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIANQAxAGYAYwAwAGMANgA4AC0AYQA1ADcAZQAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAGQAYQB0AGEAcgBlAHMAdAByAGkAYwB0AGkAbwBuACIALAAiAFAAYQByAGUAbgB0AEkAZAAiADoAIgAiACwAIgBQAGEAcgBlAG4AdABUAHkAcABlAE4AYQBtAGUAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBJAGQAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBEAGkAcwBwAGwAYQB5AE4AYQBtAGUAIgA6ACIAIgAsACIAUgBlAGwAYQB0AGkAbwBuAHMAaABpAHAASQBkACIAOgAiACIALAAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMAAwAGYAYwAwAGMANgA4AC0AYQA1ADcAZQAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAUgBlAGMAbwByAGQAcwBQAGUAcgBQAGEAZwBlACIAOgAiADEAMAAwACIALAAiAFYAaQBlAHcAVAB5AHAAZQAiADoAIgAxACIALAAiAFAAYQByAGUAbgB0AEkAZABGAGkAZQBsAGQATgBhAG0AZQAiADoAIgAiACwAIgBBAGwAbABvAHcATQB1AGwAdABpAFMAZQBsAGUAYwB0ACIAOgAiAHQAcgB1AGUAIgAsACIATwB0AGgAZQByAEkAZABGAGkAZQBsAGQAIgA6ACIAIgAsACIAVgBpAGUAdwBHAHIAbwB1AHAAIgA6ACIAMQAiACwAIgBQAGEAZwBpAG4AZwBJAG4AZgBvACIAOgAiACIALAAiAEQAYQB0AGEAUQB1AGUAcgB5AFgAbQBsACIAOgBuAHUAbABsAH0A</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="5c6993ea-70b4-4f41-a886-2a4f435b9445" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/editpage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=datarestriction" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateHtmlTagInnerText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Tag Inner Text" Description="Validates that the specified expected inner text exists within the specified HTML tag." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="TagName" Value="a" />
+            <RuleParameter Name="AttributeName" Value="id" />
+            <RuleParameter Name="AttributeValue" Value="CWNavItem_UserRestrictedDataAccess" />
+            <RuleParameter Name="ExpectedInnerText" Value="User Restricted Data Accesses" />
+            <RuleParameter Name="RemoveInnerTags" Value="True" />
+            <RuleParameter Name="HasClosingTags" Value="True" />
+            <RuleParameter Name="CollapseWhiteSpace" Value="True" />
+            <RuleParameter Name="Index" Value="-1" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateHtmlTagInnerText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Tag Inner Text" Description="Validates that the specified expected inner text exists within the specified HTML tag." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="TagName" Value="a" />
+            <RuleParameter Name="AttributeName" Value="id" />
+            <RuleParameter Name="AttributeValue" Value="CWNavItem_TeamRestrictedDataAccess" />
+            <RuleParameter Name="ExpectedInnerText" Value="Team Restricted Data Accesses" />
+            <RuleParameter Name="RemoveInnerTags" Value="True" />
+            <RuleParameter Name="HasClosingTags" Value="True" />
+            <RuleParameter Name="CollapseWhiteSpace" Value="True" />
+            <RuleParameter Name="Index" Value="-1" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="type" Value="datarestriction" RecordedValue="datarestriction" CorrelationBinding="{{QueryStringParam12.type}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="id" Value="91fe485b-27d2-e811-80dc-0050560502cc" RecordedValue="91fe485b-27d2-e811-80dc-0050560502cc" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogdepth" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWDataFormDialog" RecordedValue="CWDataFormDialog" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

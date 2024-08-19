@@ -1,0 +1,1155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{805AE2A7-8B6D-471C-A5A7-E6C75FD52FD0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phoenix.UITests.Framework</RootNamespace>
+    <AssemblyName>Phoenix.UITests.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JWT, Version=10.0.0.0, Culture=neutral, PublicKeyToken=6f98bca0f40f2ecf, processorArchitecture=MSIL">
+      <HintPath>..\packages\JWT.10.0.2\lib\net462\JWT.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="UglyToad.PdfPig, Version=0.1.8.0, Culture=neutral, PublicKeyToken=605d367334e74123, processorArchitecture=MSIL">
+      <HintPath>..\packages\PdfPig.0.1.8\lib\net47\UglyToad.PdfPig.dll</HintPath>
+    </Reference>
+    <Reference Include="UglyToad.PdfPig.Core, Version=0.1.8.0, Culture=neutral, PublicKeyToken=605d367334e74123, processorArchitecture=MSIL">
+      <HintPath>..\packages\PdfPig.0.1.8\lib\net47\UglyToad.PdfPig.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UglyToad.PdfPig.DocumentLayoutAnalysis, Version=0.1.8.0, Culture=neutral, PublicKeyToken=605d367334e74123, processorArchitecture=MSIL">
+      <HintPath>..\packages\PdfPig.0.1.8\lib\net47\UglyToad.PdfPig.DocumentLayoutAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="UglyToad.PdfPig.Fonts, Version=0.1.8.0, Culture=neutral, PublicKeyToken=605d367334e74123, processorArchitecture=MSIL">
+      <HintPath>..\packages\PdfPig.0.1.8\lib\net47\UglyToad.PdfPig.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="UglyToad.PdfPig.Package, Version=0.1.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PdfPig.0.1.8\lib\net47\UglyToad.PdfPig.Package.dll</HintPath>
+    </Reference>
+    <Reference Include="UglyToad.PdfPig.Tokenization, Version=0.1.8.0, Culture=neutral, PublicKeyToken=605d367334e74123, processorArchitecture=MSIL">
+      <HintPath>..\packages\PdfPig.0.1.8\lib\net47\UglyToad.PdfPig.Tokenization.dll</HintPath>
+    </Reference>
+    <Reference Include="UglyToad.PdfPig.Tokens, Version=0.1.8.0, Culture=neutral, PublicKeyToken=605d367334e74123, processorArchitecture=MSIL">
+      <HintPath>..\packages\PdfPig.0.1.8\lib\net47\UglyToad.PdfPig.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.4.10.0\lib\net47\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.4.8.2\lib\net47\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="CommonMethods\CommonMethods.cs" />
+    <Compile Include="FileSystem\FinanceObjects\SupplierPaymentsEndOfFileRecord.cs" />
+    <Compile Include="FileSystem\FinanceObjects\SupplierPaymentsFinanceInvoiceHeader.cs" />
+    <Compile Include="FileSystem\FinanceObjects\SupplierPaymentsBatchHeaderRecord.cs" />
+    <Compile Include="FileSystem\FinanceObjects\SupplierPaymentsFinanceInvoiceDetail.cs" />
+    <Compile Include="FileSystem\NetworkConnection.cs" />
+    <Compile Include="FileSystem\FileIOHelper.cs" />
+    <Compile Include="Image\ImageHelper.cs" />
+    <Compile Include="Office Tools\MSWordHelper.cs" />
+    <Compile Include="PageObjects\AdvancedSearch\UserTransportationSchedule.cs" />
+    <Compile Include="PageObjects\ChangeBookingStaffStatusDialogPopup.cs" />
+    <Compile Include="PageObjects\Finance\BookingPaymentRecordPage.cs" />
+    <Compile Include="PageObjects\Finance\ClonePersonContractServiceRatePeriodPopup.cs" />
+    <Compile Include="PageObjects\Finance\BookingPaymentsPage.cs" />
+    <Compile Include="PageObjects\Finance\PayrollBatchRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\ConversationRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\DistressedBehaviourRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\ConversationsPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonalSafetyAndEnvironmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonalSafetyAndEnvironmentPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PainManagementRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PainManagementPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\FoodAndFluidRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\FoodAndFluidsPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\HandoverCommentRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\HandoverCommentsPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\EmotionalSupportPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\EmotionalSupportRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\AttachmentsForFoodAndFluid.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonDiaryEventRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonDiaryEventsPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonActivityRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonActivitiesPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\HeightAndWeightRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\MobilityAttachmentsPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\MobilityAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\KeyworkerNotesAttachmentsPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\AttachmentForDailyPersonalCareRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\AttachmentsForDailyPersonalCare.cs" />
+    <Compile Include="PageObjects\People\DailyCare\DistressedBehavioursPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonDailyPersonalCareRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\ContinenceCarePage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonDailyRecordsPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonDailyRecord_RecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\ContinenceCareRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonRepositioningRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonWelfareCheckRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonRepositioningPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\HeightAndWeightPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonWelfareChecksPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonDailyPersonalCarePage.cs" />
+    <Compile Include="PageObjects\People\KeyworkerNotesAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\Person_DiaryRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonalisedCareAndSupportPlanRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonKeyworkerNotesPage.cs" />
+    <Compile Include="PageObjects\People\PersonKeyworkerNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\SelectPersonPhysicalObservationTypePopup.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\UpliftRatesforMasterPayArrangementsPopup.cs" />
+    <Compile Include="PageObjects\Finance\PayrollBatchesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\CareTasksPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\TypeOfSensorPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\IncidentTriggersPage.cs" />
+    <Compile Include="PageObjects\SpecifyCareWorkerPopup.cs" />
+    <Compile Include="PageObjects\CopyBookingToDialogPopup.cs" />
+    <Compile Include="PageObjects\WallchartWarningDialogPopup.cs" />
+    <Compile Include="PageObjects\FinanceCodeUpdaterPopup.cs" />
+    <Compile Include="PageObjects\BookingDiaryStaffRecordPage.cs" />
+    <Compile Include="PageObjects\BookingScheduleStaffRecordPage.cs" />
+    <Compile Include="PageObjects\CareProviderBookingScheduleRecordPage.cs" />
+    <Compile Include="PageObjects\DrawerDialogPopup.cs" />
+    <Compile Include="PageObjects\EmployeeSchedule\EmployeeSchedulePage.cs" />
+    <Compile Include="PageObjects\ExpressBook\ExpressBookingResultRecordPage.cs" />
+    <Compile Include="PageObjects\ExpressBook\ExpressBookingResultsPage.cs" />
+    <Compile Include="PageObjects\ExpressBook\ProcessScheduledBookingsForWeekCommencingPopup.cs" />
+    <Compile Include="PageObjects\ExpressBook\ExpressBookingCriteriaPage.cs" />
+    <Compile Include="PageObjects\ExpressBook\ExpressBookingCriteriaRecordPage.cs" />
+    <Compile Include="PageObjects\PeopleSchedule\PeopleSchedulePage.cs" />
+    <Compile Include="PageObjects\People\CareDiaryRecordPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\ChargeApportionmentDetailRecordPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\ChargeApportionmentDetailsPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonMobilityRecordPage.cs" />
+    <Compile Include="PageObjects\People\DailyCare\PersonMobilityPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\ChargeApportionmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\ChargeApportionmentsPage.cs" />
+    <Compile Include="PageObjects\ReviewExistingBookingsPopUp .cs" />
+    <Compile Include="PageObjects\People\CareDiaryPage.cs" />
+    <Compile Include="PageObjects\People\RegularCareLookupPopUp.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlansSubPage_RegularCareTask_CareScheludesRecordPage.cs" />
+    <Compile Include="PageObjects\SelectStaffPopup.cs" />
+    <Compile Include="PageObjects\CreateScheduleBookingPopup.cs" />
+    <Compile Include="PageObjects\AmendDiaryBookingPopUp.cs" />
+    <Compile Include="PageObjects\CloningContractServiceRatePeriodPopup.cs" />
+    <Compile Include="PageObjects\CreateInvoiceFilePopup.cs" />
+    <Compile Include="PageObjects\NoBookingOpenEndedAbsencesPopUp.cs" />
+    <Compile Include="PageObjects\OpenEndedAbsencesPopUp.cs" />
+    <Compile Include="PageObjects\CalendarDatePicker.cs" />
+    <Compile Include="PageObjects\Cases\CaseAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CommunityClinicAdditionalHealthProfessionalRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\Health\RTTEventsPage.cs" />
+    <Compile Include="PageObjects\Cases\Health\RTTWaitTimesPage.cs" />
+    <Compile Include="PageObjects\Cases\Health\RTTEventRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\Health\RTTWaitTimeRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\InpatientSeclusionAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\InpatientSeclusionAttachmentPage.cs" />
+    <Compile Include="PageObjects\Cases\InpatientLeaveAwolAttachmentsRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\InpatientLeaveAwolAttachmentsPage.cs" />
+    <Compile Include="PageObjects\Cases\ConsultantEpisodesPage.cs" />
+    <Compile Include="PageObjects\Cases\ConsultantEpisodesRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\RecurringHealthAppointmentRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\RecurringHealthAppointmentsPage.cs" />
+    <Compile Include="PageObjects\Cases\Related Items\CaseInvolvementRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\Related Items\CaseInvolvementsPage.cs" />
+    <Compile Include="PageObjects\Cases\SeclusionReviewsPage.cs" />
+    <Compile Include="PageObjects\Cases\SeclusionReviewsRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\SeclusionsRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\SeclusionsPage.cs" />
+    <Compile Include="PageObjects\Cases\SmokeTest_CaseFormEditAssessmentPage.cs" />
+    <Compile Include="PageObjects\Cases\BrokerageOfferCancellationReasonsRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\BrokerageOfferCancellationReasonsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageOfferAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageOfferAttachmentsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageEpisodeAttachmentsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageEpisodePausePeriodsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageEpisodeServiceProvisionsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageEpisodePausePeriodsRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormMembersRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormMembersPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormAssessmentFactorPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormAssessmentFactorRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageEpisodeAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\CorrectErrorsPopUp.cs" />
+    <Compile Include="PageObjects\CalendarPickerPopup.cs" />
+    <Compile Include="PageObjects\AppointmentDialogPopup.cs" />
+    <Compile Include="PageObjects\Diary Booking\BookingDiaryStaffPage.cs" />
+    <Compile Include="PageObjects\Diary Booking\DiaryBookingsRecordPage.cs" />
+    <Compile Include="PageObjects\EndContractActionPopup.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\AttachmentForPersonalMoneyAccountDetailRecordPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\AttachmentsForPersonalMoneyAccountDetailPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonalMoneyAccountDetailRecordPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonalMoneyAccountRecordPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonalMoneyAccountDetailsPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\AttachmentsForPersonalMoneyAccountPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonalMoneyAccountsPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\AttachmentForPersonalMoneyAccountRecordPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonContractServiceChargesPerWeekRecordPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonContractServiceChargesPerWeekPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonContractServiceRatePeriodRecordPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonContractServiceRatePeriodsPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonContractServiceRecordPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonContractServicesPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonSpecificTrainingsPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonSpecificTrainingRecordPage.cs" />
+    <Compile Include="PageObjects\Provider Schedule\ProviderSchedulePage.cs" />
+    <Compile Include="PageObjects\Providers\ContractServiceBandedRatesRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\ContractServiceRatePeriodRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\ContractServiceBandedRatesPage.cs" />
+    <Compile Include="PageObjects\Providers\ContractServiceRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\ContractServiceRatePeriodsPage.cs" />
+    <Compile Include="PageObjects\Providers\ContractServicesWithRatesPage.cs" />
+    <Compile Include="PageObjects\Providers\ContractServicesPage.cs" />
+    <Compile Include="PageObjects\ReasonForChangeOfSocialWorkerDialogPopup.cs" />
+    <Compile Include="PageObjects\EndContractWithSuspensionDatePopup.cs" />
+    <Compile Include="PageObjects\Finance\FinanceExtractRecordPage.cs" />
+    <Compile Include="PageObjects\Finance\FinanceExtractsPage.cs" />
+    <Compile Include="PageObjects\Finance\FinanceTransactionsPage.cs" />
+    <Compile Include="PageObjects\Finance\AdditionalTransactionsFinanceTransactionsPage.cs" />
+    <Compile Include="PageObjects\Finance\FinanceInvoiceRecordPage.cs" />
+    <Compile Include="PageObjects\Finance\FinanceInvoicesPage.cs" />
+    <Compile Include="PageObjects\Finance\FinanceTransactionRecordPage.cs" />
+    <Compile Include="PageObjects\Finance\FinanceTransactionTriggersPage.cs" />
+    <Compile Include="PageObjects\Finance\TotalsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseAttachmentsPage.cs" />
+    <Compile Include="PageObjects\MainMenu\MainMenuPinnedRecordsArea.cs" />
+    <Compile Include="PageObjects\PeopleDiary\PeopleDiaryPage.cs" />
+    <Compile Include="PageObjects\People\PersonAbsencesRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlansSubPage_RegularCareTasksTab_Record.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlansSubPage_RegularCareTasksTab.cs" />
+    <Compile Include="PageObjects\Diary Booking\DiaryBookingsPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonAbsencesPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonContractsPage.cs" />
+    <Compile Include="PageObjects\People\RelatedItems\PersonContractRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonAbsencesPage.cs" />
+    <Compile Include="PageObjects\People\PersonContractsPage.cs" />
+    <Compile Include="PageObjects\People\PersonHealthAbsencesPage.cs" />
+    <Compile Include="PageObjects\People\PersonHealthAbsencesRecordPage.cs" />
+    <Compile Include="PageObjects\Provider Diary\ProviderDiaryPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlansSubPage_RegularCareTasksTab.cs" />
+    <Compile Include="PageObjects\Recruitment\AllRoleApplicationsPage.cs" />
+    <Compile Include="PageObjects\Recruitment\ApplicantDashboardPage.cs" />
+    <Compile Include="PageObjects\Recruitment\AvailabilityErrorDialogPopup.cs" />
+    <Compile Include="PageObjects\Recruitment\AvailabilitySaveChangesDialogPopup.cs" />
+    <Compile Include="PageObjects\Recruitment\RecruitmentDocumentsManagementPage.cs" />
+    <Compile Include="PageObjects\SelectMultiplePeoplePopUp.cs" />
+    <Compile Include="PageObjects\Settings\CalendarTimePicker.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\BookingTypeClashActionRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\BookingTypeClashActionsPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\BookingTypeRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\BookingTypesPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\CareProviderSchedulingSetupPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\CareProviderSchedulingSetupRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CloningContractServicePopup.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPContractServiceRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPContractServicesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPFinanceAdminPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPFinanceExtractBatchSetupRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPMasterPayArrangementsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPFinanceExtractBatchSetupsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPFinanceInvoiceBatchSetupsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPFinanceTransactionTriggerRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPFinanceTransactionTriggersPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPServiceMappingRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPServiceMappingsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\ServiceDetailsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\ServicesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\ServiceRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinance\CPFinanceExtractBatchesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinance\CPFinanceExtractBatchRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinance\CPFinanceInvoiceBatchesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinance\CPFinanceInvoiceBatchRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinance\CPFinanceInvoicePaymentRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinance\CPFinanceInvoicePaymentsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinance\CPFinanceInvoicesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinance\CPFinanceTransactionRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinance\CPFinanceTransactionsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPFinanceInvoiceBatchSetupRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPFinanceInvoiceBatchSetupsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\CPMasterPayArrangementRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinance\PaymentAllocatePage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\HealthSetup\RTTPathwaysSetupPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\HealthSetup\RTTPathwaysSetupRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\PublicHolidayRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\PublicHolidaysPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\BandRateScheduleRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\BandRateTypeRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\BandRateSchedulesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\BankHolidayChargingCalendarRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\BankHolidayChargingCalendarsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\BankHolidayDateRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\BankHolidayDatesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\BookingDiaryDeletionReasonsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\BookingDiaryDeletionReasonsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\BookingScheduleDeletionReasonsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\BookingScheduleDeletionReasonsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\CareProviderStaffRoleTypeGroupRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\CareProviderStaffRoleTypeGroupsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\CareProviderStaffRoleTypeRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\CareProviderStaffRoleTypesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\ContactReasonRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\ContactReasonsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\ContractSchemeRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\ContractSchemesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\FinanceCodeLocationsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\FinanceCodeMappingRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\FinanceCodeMappingsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\PronounsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\PronounsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\RateUnitRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\RateUnitsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\RTTTreatmentFunctionRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\RTTTreatmentFunctionsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\SocialWorkerChangeReasonRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\SocialWorkerChangeReasonsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CPFinanceAdmin\ServiceDetailsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\BandRateTypesPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\DataFormEditPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\DataFormFieldPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\DataFormsPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\DataFormRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\SystemUserRecruitmentDashboardPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\ScheduleAvailabilityPopup.cs" />
+    <Compile Include="PageObjects\Settings\System User\SelectMultiplePeoplePopup.cs" />
+    <Compile Include="PageObjects\Settings\System User\CreateDiaryBookingPopup.cs" />
+    <Compile Include="PageObjects\Settings\System User\EmployeeDiaryPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserAbsencesPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserAbsencesRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserRecruitmentDocumentsPage.cs" />
+    <Compile Include="PageObjects\StaffReviewRequirementsPopup.cs" />
+    <Compile Include="PageObjects\Finance\CloneServiceDeliveryPopup.cs" />
+    <Compile Include="PageObjects\Finance\FinanceInvoiceBatchesPage.cs" />
+    <Compile Include="PageObjects\Finance\FinanceInvoiceBatchRecordPage.cs" />
+    <Compile Include="PageObjects\Finance\ServiceDeliveriesPage.cs" />
+    <Compile Include="PageObjects\Finance\ServiceDeliveryRecordPage.cs" />
+    <Compile Include="PageObjects\People\Finance\ServiceProvisionCostPerWeekRecordPage.cs" />
+    <Compile Include="PageObjects\People\Finance\ServiceProvisionRatePeriodRecordPage.cs" />
+    <Compile Include="PageObjects\People\Finance\ServiceProvisionRatePeriodsPage.cs" />
+    <Compile Include="PageObjects\People\Finance\ServiceProvisionRateScheduleRecordPage.cs" />
+    <Compile Include="PageObjects\People\Finance\ServiceProvisionRateSchedulePage.cs" />
+    <Compile Include="PageObjects\People\Finance\ServiceUprateRecordPage.cs" />
+    <Compile Include="PageObjects\People\Finance\ServiceUpratesPage.cs" />
+    <Compile Include="PageObjects\People\PersonAddressRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\ProviderCareSearchPopup.cs" />
+    <Compile Include="PageObjects\Providers\QualityAssurance\ComplaintAndFeedbackRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\QualityAssurance\ComplaintsAndFeedbackPage.cs" />
+    <Compile Include="PageObjects\Providers\ServiceFinanceSettingRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\ServiceFinanceSettingsPage.cs" />
+    <Compile Include="PageObjects\Providers\ServiceProvidedRatePeriodRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\ServiceProvidedRatePeriodsPage.cs" />
+    <Compile Include="PageObjects\People\WorkAndEducation\EducationYearRecordPage.cs" />
+    <Compile Include="PageObjects\People\WorkAndEducation\EducationYearsPage.cs" />
+    <Compile Include="PageObjects\People\WorkAndEducation\AttendedEducationEstablishmentsPage.cs" />
+    <Compile Include="PageObjects\People\WorkAndEducation\AttendedEducationEstablishmentRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\ServiceProvidedRateScheduleRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\ServiceProvidedRateSchedulesPage.cs" />
+    <Compile Include="PageObjects\ReactivateCasePopup.cs" />
+    <Compile Include="PageObjects\HealthDiaryViewPage.cs" />
+    <Compile Include="PageObjects\LookupFormPage.cs" />
+    <Compile Include="PageObjects\BookingTypesPopUp.cs" />
+    <Compile Include="PageObjects\LookUpRecordsPopUp.cs" />
+    <Compile Include="PageObjects\OptionSetFormPopUp.cs" />
+    <Compile Include="PageObjects\People\AutomationPersonForm1EditAssessmentPage - Copy.cs" />
+    <Compile Include="PageObjects\People\Finance\ServiceProvisionAllowanceRecordPage.cs" />
+    <Compile Include="PageObjects\People\Finance\FinancialAssessmentContributionRecordPage.cs" />
+    <Compile Include="PageObjects\People\Finance\ServiceProvisionCostPerWeekPage.cs" />
+    <Compile Include="PageObjects\People\Finance\ServiceProvisionAllowancesPage.cs" />
+    <Compile Include="PageObjects\People\NewCareNeedPopupPage.cs" />
+    <Compile Include="PageObjects\People\PersonBodyMapRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlanFormInitialAssessmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlanInterventionsRecordAddPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlanInterventionsRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlanNeedGoalsROutcomeRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlanNeedGoalsROutcomePage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlanFormRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlanNeedRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlanRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlansSubPage_AssessmentsTab.cs" />
+    <Compile Include="PageObjects\People\Finance\FinancialAssessmentContributionsPage.cs" />
+    <Compile Include="PageObjects\People\PersonPhysicalObservationCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonFinancialAssessmentCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\PersonPhysicalObservationCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormInvolvementRecordSubPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormInvolvementRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonHealthDiagnosisRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonHealthDiagnosesPage.cs" />
+    <Compile Include="PageObjects\People\PersonBodyMapsPage.cs" />
+    <Compile Include="PageObjects\People\PersonFinancialAssessmentCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonPhysicalObservationsRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonRecordPage_AboutMeArea.cs" />
+    <Compile Include="PageObjects\People\Person_AboutMePage.cs" />
+    <Compile Include="PageObjects\People\Person_AboutMeRecordPage.cs" />
+    <Compile Include="PageObjects\People\StaffReviewPage.cs" />
+    <Compile Include="PageObjects\Providers\ApprovedCareTypeRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\Commissioning\FeeRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\Commissioning\FeesPage.cs" />
+    <Compile Include="PageObjects\Providers\ServiceProvidedRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\ApprovedCareTypesPage.cs" />
+    <Compile Include="PageObjects\Providers\ServicesProvidedPage.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ActionPlansPage.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ActionPlansRecordPage.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ReportableEventImpactPersonBodymapRecordPages.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ReportableEventImpactRecordPages.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ReportableEventImpactsPages.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ReportableEventActionsRecordPages.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ReportableEventActionsPages.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ReportableEventBehaviourPage.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ReportableEventBehaviourRecordPages.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ReportableEventRecordPages.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ReportableEventPages.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\OrganisationalRiskManagementPage.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\OrganisationalRiskManagementRecordPage.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ReportableEventAttachmentsPage.cs" />
+    <Compile Include="PageObjects\QualityAndCompliance\ReportableEventAttchmentsRecordPage .cs" />
+    <Compile Include="PageObjects\Recruitment\ApplicantAliasRecordPage.cs" />
+    <Compile Include="PageObjects\Recruitment\ApplicantLanguageRecordPage.cs" />
+    <Compile Include="PageObjects\Recruitment\ApplicantPage.cs" />
+    <Compile Include="PageObjects\Recruitment\ApplicantViewDiaryOrManageAdhocSubPage.cs" />
+    <Compile Include="PageObjects\Recruitment\AvailabilityDinamicDialogPopup.cs" />
+    <Compile Include="PageObjects\Recruitment\ApplicantSelectScheduledTransportPopup.cs" />
+    <Compile Include="PageObjects\Recruitment\ApplicantScheduleTransportSubPage.cs" />
+    <Compile Include="PageObjects\Recruitment\ApplicantSheduleAvailability.cs" />
+    <Compile Include="PageObjects\Recruitment\ApplicantRecordPage.cs" />
+    <Compile Include="PageObjects\Recruitment\RecruitmentDocumentAttachmentPage.cs" />
+    <Compile Include="PageObjects\Recruitment\RecruitmentDocumentAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\Recruitment\RecruitmentDocumentManagementRecordPage.cs" />
+    <Compile Include="PageObjects\Recruitment\RecruitmentDocumentsPage.cs" />
+    <Compile Include="PageObjects\Recruitment\RecruitmentDocumentsRecordPage.cs" />
+    <Compile Include="PageObjects\Recruitment\RoleApplicationRecordPage.cs" />
+    <Compile Include="PageObjects\Recruitment\RoleApplicationsPage.cs" />
+    <Compile Include="PageObjects\SelectHealthAppointmentTypePopUp.cs" />
+    <Compile Include="PageObjects\SelectCaseTypePopUp.cs" />
+    <Compile Include="PageObjects\AdvancedSearch\AdvanceSearchPage.cs" />
+    <Compile Include="PageObjects\AddressActionPopUp.cs" />
+    <Compile Include="PageObjects\Cases\BrokerageEpisodeEscalationsSubArea.cs" />
+    <Compile Include="PageObjects\Cases\BrokerageEpisodeEscalationsPage.cs" />
+    <Compile Include="PageObjects\Cases\BrokerageEpisodeEscalationRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageOfferCommunicationRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageOfferCommunicationsSubArea.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageEpisodeOffersPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageEpisodeOfferRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseCaseNotesPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseHealthAppointmentRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseHealthAppointmentsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseTaskRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseTasksPage.cs" />
+    <Compile Include="PageObjects\Cases\HealthAppointmentCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\HealthAppointmentCaseNotesPage.cs" />
+    <Compile Include="PageObjects\Cases\InpatientLeaveAwolCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\InpatientLeaveAwolCaseNotesPage.cs" />
+    <Compile Include="PageObjects\Cases\LeaveAWOLRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\LeavesAWOLPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageEpisodesPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseBrokerageEpisodeRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\PersonCasesPage.cs" />
+    <Compile Include="PageObjects\Cases\PersonCasesRecordPage.cs" />
+    <Compile Include="PageObjects\EditSignaturePopup.cs" />
+    <Compile Include="PageObjects\DrawingCanvasPopup.cs" />
+    <Compile Include="PageObjects\CloneAttachmentsPopup.cs" />
+    <Compile Include="PageObjects\ExportDataPopup.cs" />
+    <Compile Include="PageObjects\People\PersonAllergyReactionsInnerGridArea.cs" />
+    <Compile Include="PageObjects\People\PersonAllergicReactionRecordPage.cs" />
+    <Compile Include="PageObjects\ServiceProvisionsPage.cs" />
+    <Compile Include="PageObjects\Settings\AboutMeSetupPage.cs" />
+    <Compile Include="PageObjects\Settings\AboutMeSetupRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\AvailabilityTypeRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\AvailabilityTypesPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\OrganisationalRiskCategoryPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\OrganisationalRiskCategoryRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\RecruitmentRequirementsPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\StaffReviewRequirementsPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\RecruitmentRequirementRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\StaffReviewRequirementsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\TrainingRequirementSetupRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\TrainingCourseRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\TrainingRequirementsSetupPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\TrainingCourseSetupPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\TrainingRequirementSetupPage.cs" />
+    <Compile Include="PageObjects\Settings\CareProviderSetup\TrainingRequirementSetupRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\FinanceAdmin\FinanceInvoiceBatchSetupPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\FinanceAdmin\FinanceInvoiceBatchSetupRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\GLCodeMappingsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\GLCodeMappingsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\TransportTypeRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\TransportTypesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\StaffRecruitmentItemsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceData\StaffRecruitmentItemRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ScheduleJobsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ScheduleJobsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReportableEventSubCategoriesRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReportableEventSubCategoriesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReportableEventRolesRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReportableEventRolesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReportableEventInjuritySeveritiesRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReportableEventInjuritySeveritiesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CacheMonitorPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CarePlanTypesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\CarePlanTypesRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ServiceMappingRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ServiceMappingsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ServicePermissionRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ServicePermissionsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ServiceElement2RecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ServiceElement2Page.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ServiceGLCodingsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ServiceElement1Page.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ServiceGLCodingsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\CreateScheduledAvailabilityPopup.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\BusinessModulesChecklistPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\CommunityClinicTeamRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\DiaryViewSetupRestrictionsPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\DiaryViewSetupRestrictionRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\LinkedProfessionalRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\LinkedProfessionalsPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\DiaryViewSetupPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\DiaryViewSetupRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\HealthSetupPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\LocalizedStringsPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\LocalizedStringsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\LocalizedStringValuesPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\LocalizedStringValuesRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\OptionSetsPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\OptionSetsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\OptionsetValueRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\CommunityClinicTeamsPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\OptionsetValuesPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserTrainingAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\ProviderUsersPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\CoreUsersPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\RosteredUsersPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\StaffReviewAttchmentsRecordPage .cs" />
+    <Compile Include="PageObjects\Settings\Security\StaffReviewAttachmentsPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\SecurityProfilePage.cs" />
+    <Compile Include="PageObjects\Settings\Security\StaffEvaluationFormQuestionsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\StaffReviewStaffSpotFormRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\StaffReviewStaffSupervisionFormRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\StaffReviewFormQuestionsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\StaffReviewFormsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\StaffReviewRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\StaffReviewFormsPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\SystemUserAvailabilityScheduleTransportPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\SystemUserAvailabilitySubPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\SystemUserUserWorkShcedules.cs" />
+    <Compile Include="PageObjects\Settings\Security\SystemUserViewDiaryManageAdHocPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\TeamsPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserTrainingAttachmentsPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserTrainingRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserTrainingPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserUserWorkSchedulesPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemSettingsPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemSettingRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserEmploymentContractsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserEmploymentContractsPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserSuspensionsRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserSuspensionPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserAliasesRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserAliasesPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserEmergencyContactsPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserEmergencyContactsRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonAddressesPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserLanguageRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ServiceElement1RecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ServiceProvisionStartReasonPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ServiceProvisionStartReasonRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserLanguagesPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserAddressPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserAddressRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUser_DiaryPage.cs" />
+    <Compile Include="PageObjects\Settings\UserWorkSchedulesPage.cs" />
+    <Compile Include="PageObjects\SnomedLookupPopup.cs" />
+    <Compile Include="PageObjects\People\AllegationInvestigatorPage.cs" />
+    <Compile Include="PageObjects\People\AllegationInvestigatorRecordPage.cs" />
+    <Compile Include="PageObjects\People\AllegedVictimRecordPage.cs" />
+    <Compile Include="PageObjects\People\AllegedVictimPage .cs" />
+    <Compile Include="PageObjects\People\AllegedAbuserPage.cs" />
+    <Compile Include="PageObjects\People\AllegedAbsuserRecordPage.cs" />
+    <Compile Include="PageObjects\People\BedRecordPage.cs" />
+    <Compile Include="PageObjects\People\BedPage.cs" />
+    <Compile Include="PageObjects\People\BayOrRoomsPage.cs" />
+    <Compile Include="PageObjects\People\HospitalWardsPage.cs" />
+    <Compile Include="PageObjects\People\HospitalWardsRecordPage.cs" />
+    <Compile Include="PageObjects\People\BayOrRoomsRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonAllergyRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonAllergiesPage.cs" />
+    <Compile Include="PageObjects\People\PersonHealthImmunisationRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonHealthImmunisationPage.cs" />
+    <Compile Include="PageObjects\People\PersonRecordNewPage.cs" />
+    <Compile Include="PageObjects\People\PersonRecordsOfDNARRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonRecordsOfDNARPage.cs" />
+    <Compile Include="PageObjects\People\PersonGestationPeriodPage.cs" />
+    <Compile Include="PageObjects\People\PersonGestationPeriodRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonRecurringAppointmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonRecurringAppointmentsPage.cs" />
+    <Compile Include="PageObjects\People\PersonHealthDisabilityImpairmentsPage.cs" />
+    <Compile Include="PageObjects\People\PersonHealthDisabilityImpairmentsRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonHealthProfessionalRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonHealthProfessionalsPage.cs" />
+    <Compile Include="PageObjects\People\PersonHealthDetailRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonHealthDetailsPage.cs" />
+    <Compile Include="PageObjects\People\PersonRelationshipRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonSignificantEvent.cs" />
+    <Compile Include="PageObjects\People\PersonPrimarySupportReasonRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonPrimarySupportReasonPage.cs" />
+    <!--<Compile Include="PageObjects\People\PersonAlertAndHazard Review.cs" />-->
+    <Compile Include="PageObjects\People\PersonAlertAndHazardReviewPage.cs" />
+    <Compile Include="PageObjects\People\PersonClinicalRiskFactorHistoryPage.cs" />
+    <Compile Include="PageObjects\People\PersonClinicalRiskFactorHistoryRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonPreAdoptionLinkRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonPostAdoptionLinkRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonPreAdoptionLinksPage.cs" />
+    <Compile Include="PageObjects\People\PersonPostAdoptionLinksPage.cs" />
+    <Compile Include="PageObjects\People\PersonPrimarySupportReasonRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonPrimarySupportReasonPage.cs" />
+    <Compile Include="PageObjects\People\PersonAlertAndHazardReviewRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonAlertandHazardsPage.cs" />
+    <Compile Include="PageObjects\People\PersonAlertandHazardsRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonContactCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonContactCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\PersonContactRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonContactsPage.cs" />
+    <Compile Include="PageObjects\People\Testing_CDV6_17721EditAssessmentPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormAttachmentsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\AutomationMASHEpisodeForm1EditAssessmentPage.cs" />
+    <Compile Include="PageObjects\People\CourtDatesAndOutcomeRecordPage.cs" />
+    <Compile Include="PageObjects\People\CourtDatesAndOutcomesCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\CourtDatesAndOutcomesCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\CourtDatesAndOutcomesPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlanCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonHeightAndWeightCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonClinicalRiskStatusCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlanCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\PersonHeightAndWeightCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\PersonClinicalRiskStatusCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\PersonClinicalRiskStatusesPage.cs" />
+    <Compile Include="PageObjects\People\PersonHeightWeighObservationRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonHeightWeightObservationsPage.cs" />
+    <Compile Include="PageObjects\People\CopyCarePlanPopupPage.cs" />
+    <Compile Include="PageObjects\People\PersonClinicalRiskStatusRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonMHALegalStatusCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonMHALegalStatusCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\PersonAppointmentsPage.cs" />
+    <Compile Include="PageObjects\People\PersonAppointmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonClinicalRiskFactorsPage.cs" />
+    <Compile Include="PageObjects\People\PersonClinicalRiskFactorRecordPage.cs" />
+    <Compile Include="PageObjects\People\RecordOfAppealCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\RecordOfAppealCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\RecordOfAppealRecordPage.cs" />
+    <Compile Include="PageObjects\People\RecordsOfAppealPage.cs" />
+    <Compile Include="PageObjects\People\RightsAndRequestForAnIMHAAndMHAAppealCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\RightsAndRequestForAnIMHAAndMHAAppealCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\RightsAndRequestForAnIMHAAndMHAAppealRecordPage.cs" />
+    <Compile Include="PageObjects\People\RightsAndRequestsForAnIMHAAndMHAAppealPage.cs" />
+    <Compile Include="PageObjects\People\PersonMHALegalStatusesPage.cs" />
+    <Compile Include="PageObjects\People\PersonMHALegalStatusRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonTaskRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonTasksPage.cs" />
+    <Compile Include="PageObjects\People\PersonLetterRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonPhoneCallRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonLettersPage.cs" />
+    <Compile Include="PageObjects\People\PersonPhoneCallsPage.cs" />
+    <Compile Include="PageObjects\People\PersonMASHEpisodeFormRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonMASHEpisodeRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonMASHEpisodeFormsPage.cs" />
+    <Compile Include="PageObjects\People\PersonMASHEpisodesPage.cs" />
+    <Compile Include="PageObjects\People\PersonSearchPage.cs" />
+    <Compile Include="PageObjects\PotentialDuplicatesPopup.cs" />
+    <Compile Include="PageObjects\Providers\AutomationProviderForm1EditAssessmentPage.cs" />
+    <Compile Include="PageObjects\Providers\ProviderFormsPage.cs" />
+    <Compile Include="PageObjects\Providers\ProviderFormRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\ProvidersRecordPage.cs" />
+    <Compile Include="PageObjects\RestrictPersonAlertAndHazardPopup.cs" />
+    <Compile Include="PageObjects\SDEMapListPopup.cs" />
+    <Compile Include="PageObjects\AuditChangeSetDialogPopup.cs" />
+    <Compile Include="PageObjects\AutomatedUITestDocument2EditAssessmentPage.cs" />
+    <Compile Include="PageObjects\AutomatedUITestDocument1EditAssessmentPage.cs" />
+    <Compile Include="PageObjects\MattTestScreeningToolTestSDEMapCopyAnswersPage.cs" />
+    <Compile Include="PageObjects\AutomatedUiTestDocument4PreviewPage.cs" />
+    <Compile Include="PageObjects\AutomatedUITestDocument2SDEMapCopyAnswersPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormActionsOutcomesPageFrame.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormActionOutcomePage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormAppointmentRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormAppointmentsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormEmailRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormEmailsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormLetterRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormLettersPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormPhoneCallRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormPhoneCallsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormTaskRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormTasksPage.cs" />
+    <Compile Include="PageObjects\CloneWebsitePopup.cs" />
+    <Compile Include="PageObjects\CloneActivityPopup.cs" />
+    <Compile Include="PageObjects\ChangeDefaultTeamPopup.cs" />
+    <Compile Include="PageObjects\CopyToClipboardDynamicDialogPopup.cs" />
+    <Compile Include="PageObjects\CreateBulkAttachmentsPopup.cs" />
+    <Compile Include="PageObjects\People\PersonFormActionOutcomePage.cs" />
+    <Compile Include="PageObjects\People\PersonFormActionsOutcomesPageFrame.cs" />
+    <Compile Include="PageObjects\Providers\ProviderWebsiteMessageRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\ProviderWebsiteMessagesPage.cs" />
+    <Compile Include="PageObjects\Providers\ProviderRecordPage.cs" />
+    <Compile Include="PageObjects\Providers\ProvidersPage.cs" />
+    <Compile Include="PageObjects\Sectio117EntitlementCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\Section117EntitlementCaseNotesPage.cs" />
+    <Compile Include="PageObjects\Section117EntitlementRecordPage.cs" />
+    <Compile Include="PageObjects\Section117EntitlementsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\HealthIssueTypesRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\HealthIssueTypesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\WorkflowSendEmailPropertiesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\WorkflowActionPopup.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\WorkflowConditionsPopup.cs" />
+    <Compile Include="PageObjects\People\PersonAttachmentsPage.cs" />
+    <Compile Include="PageObjects\People\PersonAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\DuplicateRecordMergeDialog.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\EDMSRepositoriesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\EDMSRepositoryRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\DuplicateRecordsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\DuplicateRecordRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\WorkflowJobRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\AddressPropertyTypesPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\WorkflowRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\WorkflowJobsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\WorkflowsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\SystemManagementPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\ModulesObjectPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\ModulesObjectRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentPrintTemplatesPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentPrintTemplateRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\GenericWebSiteUsersPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\SecurityProfileRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Security\SystemUserStaffReviewPage.cs" />
+    <Compile Include="PageObjects\Settings\Views and Dashboards\WidgetSettingsPopup.cs" />
+    <Compile Include="PageObjects\StaffReview\MyStaffReviewPage.cs" />
+    <Compile Include="PageObjects\TeamSelectingPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormTaskRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormTasksPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormPhoneCallRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormLetterRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormEmailRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormAppointmentRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormPhoneCallsPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormLettersPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormEmailsPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormAppointmentsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\PersonPortalTasksPage.cs" />
+    <Compile Include="PageObjects\People\PersonPortalTaskRecordPage.cs" />
+    <Compile Include="PageObjects\QueryResultsPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormsPage.cs" />
+    <Compile Include="PageObjects\ChangeEncryptedValuePopup.cs" />
+    <Compile Include="PageObjects\Dashboards\DashboardsPage.cs" />
+    <Compile Include="PageObjects\DataManagementPage.cs" />
+    <Compile Include="PageObjects\ConfirmDynamicDialogPopup.cs" />
+    <Compile Include="PageObjects\ChangePasswordPopup.cs" />
+    <Compile Include="PageObjects\ProfessionalRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentSectionQuestionApplicationAccessRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentSectionQuestionApplicationAccessPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentSectionApplicationAccessRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentSectionApplicationAccessPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentSectionQuestionRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentSectionRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentSectionQuestionsSubPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentSectionsSubPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentApplicationAccessRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentApplicationAccessPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebsitePortalTaskRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebsitePortalTasksPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteFeedbackRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteContactRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSitePointOfContactRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteFeedbackPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteContactsPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSitePointsOfContactPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteSitemapRecordDesignerPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteSitemapRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteSitemapsPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebsitePageWidgetSettingsPopup.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSitePageRecordDesignerSubPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteUserAccessAuditTab.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteUserPasswordHistoryRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteUserPasswordResetRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebsiteUserPasswordHistoryPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteUserPinRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebsiteUserPasswordResetsPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteUserPinsPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebsiteUserAccessAudiRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteUserRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteAnnouncementRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteUserAccessAuditPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteUsersPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteSettingRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteAnnouncementsPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteSettingsPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSitePagesPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSitePageRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSiteRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Portals\WebSitePage.cs" />
+    <Compile Include="PageObjects\Settings\Views and Dashboards\UserChartPopup.cs" />
+    <Compile Include="PageObjects\Settings\Views and Dashboards\UserChartsPage.cs" />
+    <Compile Include="PageObjects\SpellCheckPopup.cs" />
+    <Compile Include="PageObjects\HomePage_DashboardsArea.cs" />
+    <Compile Include="PageObjects\MailMergePopup.cs" />
+    <Compile Include="PageObjects\BulkEditDialogPopup.cs" />
+    <Compile Include="PageObjects\FinancialDetailRecordPage.cs" />
+    <Compile Include="PageObjects\DynamicDialogPopup.cs" />
+    <Compile Include="PageObjects\LookupViewPopup.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\MergedRecordRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlansSubPage_CarePlansTab.cs" />
+    <Compile Include="PageObjects\People\PersonCarePlansSubPage.cs" />
+    <Compile Include="PageObjects\People\PersonCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonTimelineSubPage.cs" />
+    <Compile Include="PageObjects\People\PersonEmailAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonCPISRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonEmailRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonEmailAttachmentsPage.cs" />
+    <Compile Include="PageObjects\People\PersonCPISPage.cs" />
+    <Compile Include="PageObjects\People\PersonEmailsPage.cs" />
+    <Compile Include="PageObjects\People\PersonPhysicalObservationsGenerateChartPopup.cs" />
+    <Compile Include="PageObjects\People\PersonPhysicalObservationsPage.cs" />
+    <Compile Include="PageObjects\People\PersonChronologyRecordPrintPopup.cs" />
+    <Compile Include="PageObjects\People\PersonChronologyRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonChronologiesPage.cs" />
+    <Compile Include="PageObjects\People\PersonCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\PersonContributionExceptionRecordPage.cs" />
+    <Compile Include="PageObjects\FinancialDetailDisregardsPage.cs" />
+    <Compile Include="PageObjects\FinancialDetailDisregardRecordPage.cs" />
+    <Compile Include="PageObjects\LookupMultiSelectPopup.cs" />
+    <Compile Include="PageObjects\People\PersonContributionRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonContributionExceptionsPage.cs" />
+    <Compile Include="PageObjects\People\PersonAllActivitiesSubPage.cs" />
+    <Compile Include="PageObjects\People\PersonFinancialDetailRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonContributionsSubPage.cs" />
+    <Compile Include="PageObjects\People\PersonFinancialDetailsSubPage.cs" />
+    <Compile Include="PageObjects\FinancialDetailRateSetupRecordPage.cs" />
+    <Compile Include="PageObjects\FinancialDetailRatesSetupPage.cs" />
+    <Compile Include="PageObjects\ChargesForServicesSetupPage.cs" />
+    <Compile Include="PageObjects\ChargeForServicesSetupRecordPage.cs" />
+    <Compile Include="PageObjects\NonResidentialPolicyRateSetupRecordPage.cs" />
+    <Compile Include="PageObjects\NonResidentialPolicyRateSetupPage.cs" />
+    <Compile Include="PageObjects\IncomeSupportSetupRecordPage.cs" />
+    <Compile Include="PageObjects\IncomeSupportSetupPage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentPage.cs" />
+    <Compile Include="PageObjects\ChargingRuleSetupRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonRecordEditPage.cs" />
+    <Compile Include="PageObjects\People\PersonDocumentViewSubPage.cs" />
+    <Compile Include="PageObjects\AuditListPage.cs" />
+    <Compile Include="PageObjects\People\PersonRecordPage_SummaryArea.cs" />
+    <Compile Include="PageObjects\ScheduleSetupRecordPage.cs" />
+    <Compile Include="PageObjects\ChargingRulesSetupPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\MergedRecordsPage.cs" />
+    <Compile Include="PageObjects\SchedulesSetupPage.cs" />
+    <Compile Include="PageObjects\FinanceAdminPage.cs" />
+    <Compile Include="PageObjects\FinancialAssessmentChargePage.cs" />
+    <Compile Include="PageObjects\FinancialAssessmentChargesSubPage.cs" />
+    <Compile Include="PageObjects\ServiceProvisionRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonServiceProvisionsPage.cs" />
+    <Compile Include="PageObjects\People\PersonFinancialAssessmentsPage.cs" />
+    <Compile Include="PageObjects\FinancialAssessmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonRelationshipPage.cs" />
+    <Compile Include="PageObjects\ManageSDEMapsPopup.cs" />
+    <Compile Include="PageObjects\QuestionAuditDialoguePopup.cs" />
+    <Compile Include="PageObjects\QuestionCompareDialoguePopup.cs" />
+    <Compile Include="PageObjects\QuestionCommentsDialoguePopup.cs" />
+    <Compile Include="PageObjects\QuestionInformationDialoguePopup.cs" />
+    <Compile Include="PageObjects\SectionInformationDialoguePopup.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\FAQApplicationComponentRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\FAQRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\FAQApplicationComponentsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\FAQSearchPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\FAQsPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\BusinessObjectFieldRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\CustomizationsPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\BusinessObjectsPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\BusinessObjectRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Customizations\BusinessObjectFieldsSubPage.cs" />
+    <Compile Include="PageObjects\Settings\FileDestructionGDPRPage.cs" />
+    <Compile Include="PageObjects\Settings\FileDestructionGDPRRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\TeamMemberPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserTeamMemberSubPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUserRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\SystemUsersPage.cs" />
+    <Compile Include="PageObjects\Settings\Views and Dashboards\SummaryDashboardRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Views and Dashboards\UserDashboardRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Views and Dashboards\UserDashboardsPage.cs" />
+    <Compile Include="PageObjects\Settings\Views and Dashboards\SystemDashboardRecordPage.cs" />
+    <Compile Include="PageObjects\Settings\Views and Dashboards\SummaryDashboardsPage.cs" />
+    <Compile Include="PageObjects\Settings\Views and Dashboards\SystemDashboardsPage.cs" />
+    <Compile Include="PageObjects\ShareRecordResultsPopup.cs" />
+    <Compile Include="PageObjects\ShareRecordPopup.cs" />
+    <Compile Include="PageObjects\EditPrintAuditRecordPopup.cs" />
+    <Compile Include="PageObjects\Cases\CaseRecordPage.cs" />
+    <Compile Include="PageObjects\AssignRecordPopup.cs" />
+    <Compile Include="PageObjects\Cases\CaseCasesFormPage.cs" />
+    <Compile Include="PageObjects\AssessmentPrintHistoryPopup.cs" />
+    <Compile Include="PageObjects\AlertPopup.cs" />
+    <Compile Include="PageObjects\PrintAssessmentPopup.cs" />
+    <Compile Include="PageObjects\LookupPopup.cs" />
+    <Compile Include="PageObjects\Cases\CaseFormPage.cs" />
+    <Compile Include="PageObjects\FormsCasePage.cs" />
+    <Compile Include="PageObjects\Settings\Forms Management\DocumentsPage.cs" />
+    <Compile Include="PageObjects\Settings\Configuration\ReferenceDataPage.cs" />
+    <Compile Include="PageObjects\Settings\DataRestrictionsPage.cs" />
+    <Compile Include="PageObjects\ProfessionalsPage.cs" />
+    <Compile Include="PageObjects\People\PeoplePage.cs" />
+    <Compile Include="PageObjects\Cases\CasesPage.cs" />
+    <Compile Include="PageObjects\CommonMethods.cs" />
+    <Compile Include="PageObjects\HomePage.cs" />
+    <Compile Include="PageObjects\LoginPage.cs" />
+    <Compile Include="PageObjects\MainMenu\MainMenu.cs" />
+    <Compile Include="PDF Tools\PdfHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebAppAPI\Classes\CareDirector\Data.cs" />
+    <Compile Include="WebAppAPI\Classes\CareDirector\Finance.cs" />
+    <Compile Include="WebAppAPI\Classes\CareDirector\GetFile.cs" />
+    <Compile Include="WebAppAPI\Classes\CareDirector\CacheMonitor.cs" />
+    <Compile Include="WebAppAPI\Classes\CareDirector\Audit.cs" />
+    <Compile Include="WebAppAPI\Classes\CareDirector\AdvanceFinancials.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\Attachments.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\DataView.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\Handlers.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\PortalSecurity.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\DataForms.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\WebsiteUserLogin.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\WebsitePages.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\WebsiteContact.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\WebsiteFeedback.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\Website.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\WebsiteAnnouncements.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\FAQ.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\WebsiteResourceFiles.cs" />
+    <Compile Include="WebAppAPI\Classes\Portal\WebsitePointsOfContact.cs" />
+    <Compile Include="WebAppAPI\Classes\CareDirector\WorkflowJob.cs" />
+    <Compile Include="WebAppAPI\Classes\CareDirector\ScheduleJob.cs" />
+    <Compile Include="WebAppAPI\Classes\CareDirector\Security.cs" />
+    <Compile Include="WebAppAPI\Entities\CareDirector\AdvanceFinancialsExtractBatchData.cs" />
+    <Compile Include="WebAppAPI\Entities\CareDirector\AuditResponse.cs" />
+    <Compile Include="WebAppAPI\Entities\CareDirector\AdvanceFinancialsAuthData.cs" />
+    <Compile Include="WebAppAPI\Entities\CareDirector\AuditSearch.cs" />
+    <Compile Include="WebAppAPI\Entities\CareDirector\CaseList.cs" />
+    <Compile Include="WebAppAPI\Entities\CareDirector\Person.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\AttachmentsInfoResponse.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\AttachmentsPostResponse.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\RetrievePortalDataViewLookupResponse.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\FileType.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\RetrievePortalDataViewResponse.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\RetrievePortalDataViewRequest.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\DataForm.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\ExecuteWebsiteHandlerRequest.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\FAQCategory.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\HandlerResponse.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\PortalRecord.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\RetrievePortalDataFormRequest.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\TwoFactorAuthentication.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\AccountLockoutPolicy.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\PasswordPolicy.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\PasswordComplexity.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\Administration.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\WebsiteUserReIssuePin.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\WebsiteUserPin.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\WebsiteUserLogin.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\WidgetSettting.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\Widget.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\WebsitePage.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\Website.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\WebsiteContact.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\WebsiteFeedback.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\WebsiteAnnouncements.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\FAQ.cs" />
+    <Compile Include="WebAppAPI\Entities\Portal\WebsitePointOfContact.cs" />
+    <Compile Include="WebAppAPI\Interfaces\CareDirector\IGetFile.cs" />
+    <Compile Include="WebAppAPI\Interfaces\CareDirector\IFinance.cs" />
+    <Compile Include="WebAppAPI\Interfaces\CareDirector\ICacheMonitor.cs" />
+    <Compile Include="WebAppAPI\Interfaces\CareDirector\IData.cs" />
+    <Compile Include="WebAppAPI\Interfaces\CareDirector\IAudit.cs" />
+    <Compile Include="WebAppAPI\Interfaces\CareDirector\IAdvanceFinancials.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IAttachments.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IDataView.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IHandlers.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IPortalSecurity.cs" />
+    <Compile Include="WebAppAPI\Interfaces\CareDirector\IWorkflowJob.cs" />
+    <Compile Include="WebAppAPI\Interfaces\CareDirector\IScheduleJob.cs" />
+    <Compile Include="WebAppAPI\Interfaces\CareDirector\ISecurity.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IDataForms.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IWebsiteUserLogin.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IWebsitePages.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IWebsite.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IWebsiteContact.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IWebsiteFeedback.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IWebsiteAnnouncements.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IFAQ.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IWebsiteResourceFiles.cs" />
+    <Compile Include="WebAppAPI\Interfaces\Portal\IWebsitePointsOfContact.cs" />
+    <Compile Include="WebAppAPI\Proxies\CareDirector\FinanceProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\CareDirector\GetFileProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\CareDirector\CacheMonitorProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\CareDirector\DataProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\CareDirector\Audit.cs" />
+    <Compile Include="WebAppAPI\Proxies\CareDirector\AdvanceFinancialsProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\AttachmentsProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\DataViewProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\HandlerProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\WebsiteAnnouncements.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\FAQProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\DataFormsProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\WebsiteContactProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\WebsitePagesProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\WebsiteUserLoginProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\WebsiteResourceFilesProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\WebsiteProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\WebsiteFeedbackProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\WebsitePointsOfContactProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\Portal\PortalSecurityProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\CareDirector\WorkflowJobProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\CareDirector\ScheduleJobProxy.cs" />
+    <Compile Include="WebAppAPI\Proxies\CareDirector\SecurityProxy.cs" />
+    <Compile Include="WebAppAPI\WebAPIHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.Firefox.WebDriver.0.27.0\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Firefox.WebDriver.0.27.0\build\Selenium.Firefox.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.IEDriver.4.8.1\build\Selenium.WebDriver.IEDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.IEDriver.4.8.1\build\Selenium.WebDriver.IEDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.4.10.0\build\Selenium.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.4.10.0\build\Selenium.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.125.0.6422.7800\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.125.0.6422.7800\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.Firefox.WebDriver.0.27.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\packages\Selenium.Firefox.WebDriver.0.27.0\build\Selenium.Firefox.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.IEDriver.4.8.1\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.IEDriver.4.8.1\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.4.10.0\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.10.0\build\Selenium.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.125.0.6422.7800\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.125.0.6422.7800\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

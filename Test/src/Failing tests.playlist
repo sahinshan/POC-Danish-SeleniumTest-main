@@ -1,0 +1,921 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="Phoenix.UITests" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="Phoenix.UITests.Admin" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="AuditList_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Admin.AuditList_UITestCases.Person_AuditHistoryShowingGuids_UITestMethod002" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_AuditHistoryShowingGuids_UITestMethod002" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+            <Rule Match="All">
+              <Property Name="Namespace" Value="Phoenix.UITests.Cases.Related_Items" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="Case_BrokerageEpisodes_NachaUITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Related_Items.Case_BrokerageEpisodes_NachaUITestCases.Case_BrokerageEpisodes_UITestMethod14" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_BrokerageEpisodes_UITestMethod14" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Related_Items.Case_BrokerageEpisodes_NachaUITestCases.Case_BrokerageEpisodes_UITestMethod15" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_BrokerageEpisodes_UITestMethod15" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Related_Items.Case_BrokerageEpisodes_NachaUITestCases.Case_BrokerageEpisodes_UITestMethod16" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_BrokerageEpisodes_UITestMethod16" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Case_BrokerageEpisodes_RubanUITestCases3" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Related_Items.Case_BrokerageEpisodes_RubanUITestCases3.Case_BrokerageEpisodes_UITestMethod1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_BrokerageEpisodes_UITestMethod1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Related_Items.Case_BrokerageEpisodes_RubanUITestCases3.Case_BrokerageEpisodes_UITestMethod2" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_BrokerageEpisodes_UITestMethod2" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+            <Rule Match="All">
+              <Property Name="Namespace" Value="Phoenix.UITests.Cases" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="Case_BrokerageEpisodes_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_BrokerageEpisodes_UITestCases.Case_BrokerageEpisodes_Batch2_UITestMethod001" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_BrokerageEpisodes_Batch2_UITestMethod001" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_BrokerageEpisodes_UITestCases.Case_BrokerageEpisodes_Batch2_UITestMethod002" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_BrokerageEpisodes_Batch2_UITestMethod002" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_BrokerageEpisodes_UITestCases.Case_BrokerageEpisodes_Batch2_UITestMethod003" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_BrokerageEpisodes_Batch2_UITestMethod003" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_BrokerageEpisodes_UITestCases.Case_BrokerageEpisodes_Batch2_UITestMethod004" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_BrokerageEpisodes_Batch2_UITestMethod004" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_BrokerageEpisodes_UITestCases.Case_BrokerageEpisodes_Batch3_UITestMethod002" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_BrokerageEpisodes_Batch3_UITestMethod002" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_BrokerageEpisodes_UITestCases.Case_BrokerageEpisodes_Batch3_UITestMethod004" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_BrokerageEpisodes_Batch3_UITestMethod004" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_BrokerageEpisodes_UITestCases.Case_BrokerageEpisodes_UITestMethod006" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_BrokerageEpisodes_UITestMethod006" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Case_CaseNotes_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_CaseNotes_UITestCases.CaseCaseNotes_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CaseCaseNotes_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_CaseNotes_UITestCases.CaseCaseNotes_Cloning_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CaseCaseNotes_Cloning_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Case_FormsCase_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_FormsCase_UITestCases.FormsCase_UITestMethod10" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="FormsCase_UITestMethod10" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Case_HealthAppointments_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_HealthAppointments_UITestCases.HealthAppointmentCaseNote_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="HealthAppointmentCaseNote_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Case_LeaveAWOL_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_LeaveAWOL_UITestCases.LeaveAWOLCaseNotes_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="LeaveAWOLCaseNotes_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Case_SocialCareCases_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_SocialCareCases_UITestCases.Case_SocialCareCases_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Case_SocialCareCases_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Case_Tasks_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_Tasks_UITestCases.CaseTasks_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CaseTasks_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.Case_Tasks_UITestCases.CaseTasks_Cloning_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CaseTasks_Cloning_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+            <Rule Match="All">
+              <Property Name="Namespace" Value="Phoenix.UITests.Cases.CaseForm" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="Case_CaseFormAttachments_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.Case_CaseFormAttachments_UITestCases.CaseFormAttachments_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CaseFormAttachments_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.Case_CaseFormAttachments_UITestCases.CaseFormAttachments_Cloning_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CaseFormAttachments_Cloning_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Case_CaseFormCaseNotes_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.Case_CaseFormCaseNotes_UITestCases.CloneCaseFormCaseNotes_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CloneCaseFormCaseNotes_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.Case_CaseFormCaseNotes_UITestCases.CloneCaseFormCaseNotes_UITestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CloneCaseFormCaseNotes_UITestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.Case_CaseFormCaseNotes_UITestCases.CloneCaseFormCaseNotes_UITestMethod04" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CloneCaseFormCaseNotes_UITestMethod04" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="CaseForm_DocumentRules_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0078" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0078" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0079_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0079_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0080" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0080" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0080_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0080_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0081" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0081" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0081_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0081_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0082" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0082" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0082_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0082_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0083" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0083" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0083_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0083_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0084" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0084" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0084_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0084_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0085" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0085" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0085_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0085_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0086" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0086" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0086_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0086_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0087" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0087" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0087_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0087_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0088" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0088" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0088_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0088_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0089" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0089" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0090" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0090" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0091" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0091" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0092" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0092" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0093" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0093" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0094" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0094" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0095" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0095" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0096" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0096" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0097" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0097" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0098" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0098" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0099" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0099" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0100" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0100" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0101" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0101" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0102" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0102" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0103" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0103" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0104" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0104" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0105" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0105" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0106" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0106" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0107" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0107" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0108" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0108" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0109" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0109" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0110" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0110" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0111" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0111" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0112" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0112" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0113" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0113" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0114" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0114" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0115" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0115" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0116" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0116" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0117" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0117" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0118" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0118" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0119" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0119" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0120" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0120" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0121" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0121" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0122" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0122" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0123" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0123" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0124" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0124" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0125" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0125" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0126" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0126" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0127" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0127" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0128" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0128" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0129" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0129" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0130" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0130" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0131" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0131" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0132" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0132" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0133" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0133" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0134" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0134" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0135" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0135" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0136" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0136" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0137" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0137" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0138" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0138" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0139" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0139" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0140" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0140" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0141" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0141" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0142" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0142" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0143" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0143" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0144" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0144" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0145" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0145" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0146" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0146" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0147" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0147" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0148" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0148" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0149" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0149" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0150" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0150" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0151" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0151" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0152" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0152" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0153" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0153" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0154" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0154" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0155" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0155" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0156" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0156" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0157" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0157" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0158" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0158" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0158_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0158_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0159" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0159" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0159_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0159_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0160" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0160" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0160_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0160_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0161" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0161" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0162" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0162" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0162_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0162_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0163" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0163" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0163_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0163_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0164" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0164" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0164_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0164_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0165" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0165" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0165_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0165_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0166" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0166" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0166_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0166_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0167" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0167" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0167_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0167_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0168" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0168" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0168_1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0168_1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.Cases.CaseForm.CaseForm_DocumentRules_UITestCases.Phoenix_CaseForms_DocRules_UITestMethod0169" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Phoenix_CaseForms_DocRules_UITestMethod0169" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>

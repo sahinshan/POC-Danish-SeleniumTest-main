@@ -1,0 +1,745 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="Phoenix.UITests" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="Phoenix.UITests.People" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_Tasks_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Tasks_UITestCases.PersonTask_UITestMethod28" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PersonTask_UITestMethod28" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Tasks_UITestCases.Task_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Task_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Tasks_UITestCases.Task_Cloning_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Task_Cloning_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Tasks_UITestCases.Task_Cloning_UITestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Task_Cloning_UITestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Tasks_UITestCases.Task_Cloning_UITestMethod04" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Task_Cloning_UITestMethod04" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_PersonFormCaseNotes_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_PersonFormCaseNotes_UITestCases.ClonePersonFormCaseNotes_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ClonePersonFormCaseNotes_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_PersonFormCaseNotes_UITestCases.ClonePersonFormCaseNotes_UITestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ClonePersonFormCaseNotes_UITestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_PersonFormCaseNotes_UITestCases.ClonePersonFormCaseNotes_UITestMethod04" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ClonePersonFormCaseNotes_UITestMethod04" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_Email_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Email_UITestCases.Emails_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Emails_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Email_UITestCases.Person_Emails_UITestCases01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Emails_UITestCases01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Email_UITestCases.Person_Emails_UITestCases05" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Emails_UITestCases05" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Email_UITestCases.Person_Emails_UITestCases18" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Emails_UITestCases18" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Email_UITestCases.Person_Emails_UITestCases22" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Emails_UITestCases22" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Email_UITestCases.Person_Emails_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Emails_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Email_UITestCases.Person_Emails_UITestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Emails_UITestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Email_UITestCases.Person_Emails_UITestMethod04" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Emails_UITestMethod04" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Email_UITestCases.Person_Emails_UITestMethod05" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Emails_UITestMethod05" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_PhoneCalls_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_PhoneCalls_UITestCases.PersonPhoneCalls_UITestMethod04" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PersonPhoneCalls_UITestMethod04" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_PhoneCalls_UITestCases.PersonPhoneCalls_UITestMethod17" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PersonPhoneCalls_UITestMethod17" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_PhoneCalls_UITestCases.PhoneCalls_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PhoneCalls_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="PersonRecord_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.CustomWorkflowCaseIdentification_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CustomWorkflowCaseIdentification_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.CustomWorkflowCaseIdentification_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CustomWorkflowCaseIdentification_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.CustomWorkflowCaseIdentification_UITestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CustomWorkflowCaseIdentification_UITestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.DuplicateDetection_DOBAndAgeGroup_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DuplicateDetection_DOBAndAgeGroup_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.DuplicateDetection_DOBAndAgeGroup_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DuplicateDetection_DOBAndAgeGroup_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.DuplicateDetection_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DuplicateDetection_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.DuplicateDetection_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DuplicateDetection_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.DuplicateDetection_UITestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DuplicateDetection_UITestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.EmailAddressValidation_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="EmailAddressValidation_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.EmailAddressValidation_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="EmailAddressValidation_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.EmailAddressValidation_UITestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="EmailAddressValidation_UITestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.EmailAddressValidation_UITestMethod04" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="EmailAddressValidation_UITestMethod04" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.EmailAddressValidation_UITestMethod05" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="EmailAddressValidation_UITestMethod05" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.EmailAddressValidation_UITestMethod06" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="EmailAddressValidation_UITestMethod06" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.EmailAddressValidation_UITestMethod25" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="EmailAddressValidation_UITestMethod25" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.EmailAddressValidation_UITestMethod26" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="EmailAddressValidation_UITestMethod26" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.Person_GridRefresh_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_GridRefresh_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.SampleWorkflowsToPopulateToDolist_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="SampleWorkflowsToPopulateToDolist_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.ShowIconInBannerForPersonLinkedToPortalProfile_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ShowIconInBannerForPersonLinkedToPortalProfile_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.ShowIconInBannerForPersonLinkedToPortalProfile_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ShowIconInBannerForPersonLinkedToPortalProfile_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonRecord_UITestCases.ShowIconInBannerForPersonLinkedToPortalProfile_UITestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ShowIconInBannerForPersonLinkedToPortalProfile_UITestMethod03" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_ClinicalRiskStatuses_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_ClinicalRiskStatuses_UITestCases.PersonClinicalRiskStatusCaseNote_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PersonClinicalRiskStatusCaseNote_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_CaseNotes_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CaseNotes_UITestCases.CaseNotes_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CaseNotes_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CaseNotes_UITestCases.PersonCaseNotes_UITestMethod18" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PersonCaseNotes_UITestMethod18" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CaseNotes_UITestCases.Person_CaseNotes_SpellCheck_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CaseNotes_SpellCheck_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CaseNotes_UITestCases.Person_CaseNotes_SpellCheck_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CaseNotes_SpellCheck_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_MailMerge_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_MailMerge_UITestCases.Person_MailMerge_UITestMethod001" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_MailMerge_UITestMethod001" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_MailMerge_UITestCases.Person_MailMerge_UITestMethod002" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_MailMerge_UITestMethod002" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_MailMerge_UITestCases.Person_MailMerge_UITestMethod003" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_MailMerge_UITestMethod003" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_PhysicalObservations_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_PhysicalObservations_UITestCases.Person_PhysicalObservations_UITestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_PhysicalObservations_UITestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_PhysicalObservations_UITestCases.Person_PhysicalObservations_UITestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_PhysicalObservations_UITestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_PhysicalObservations_UITestCases.Person_PhysicalObservations_UITestMethod04" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_PhysicalObservations_UITestMethod04" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_PhysicalObservations_UITestCases.Person_PhysicalObservations_UITestMethod06" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_PhysicalObservations_UITestMethod06" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="PersonForms_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.PersonForms_UITestCases.PersonForms_UITestMethod002" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PersonForms_UITestMethod002" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_Creation_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Creation_UITestCases.Person_Creation_UITestCases01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Creation_UITestCases01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Creation_UITestCases.Person_Creation_UITestCases02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Creation_UITestCases02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Creation_UITestCases.Person_Creation_UITestCases03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Creation_UITestCases03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Creation_UITestCases.Person_Creation_UITestCases04" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Creation_UITestCases04" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Creation_UITestCases.Person_Creation_UITestCases05" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Creation_UITestCases05" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Creation_UITestCases.Person_Creation_UITestCases06" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Creation_UITestCases06" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Creation_UITestCases.Person_Creation_UITestCases07" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Creation_UITestCases07" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Creation_UITestCases.Person_Creation_UITestCases08" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Creation_UITestCases08" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Creation_UITestCases.Person_Creation_UITestCases10" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Creation_UITestCases10" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Creation_UITestCases.Person_Creation_UITestCases13" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Creation_UITestCases13" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Creation_UITestCases.Person_Creation_UITestCases14" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Creation_UITestCases14" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Creation_UITestCases.Person_Creation_UITestCases15" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Creation_UITestCases15" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_Letters_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Letters_UITestCases.Letters_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Letters_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Letters_UITestCases.Letters_UITestMethod17" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Letters_UITestMethod17" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_MHALegalStatuses_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_MHALegalStatuses_UITestCases.CourtDateandOutcomeCaseNotes_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CourtDateandOutcomeCaseNotes_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_MHALegalStatuses_UITestCases.PersonMHALegalStatusCaseNotes_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PersonMHALegalStatusCaseNotes_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_MHALegalStatuses_UITestCases.RecordOfAppealCaseNotes_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="RecordOfAppealCaseNotes_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_MHALegalStatuses_UITestCases.RightsAndRequestsForAnIMHADndMHAAppealCaseNote_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="RightsAndRequestsForAnIMHADndMHAAppealCaseNote_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_HeightWeightObservations_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_HeightWeightObservations_UITestCases.HeightWeightObservationsCaseNote_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="HeightWeightObservationsCaseNote_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_CPISRecords_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CPISRecords_UITestCases.Person_CPISRecords_UITestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CPISRecords_UITestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CPISRecords_UITestCases.Person_CPISRecords_UITestMethod09" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CPISRecords_UITestMethod09" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CPISRecords_UITestCases.Person_CPISRecords_UITestMethod10" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CPISRecords_UITestMethod10" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CPISRecords_UITestCases.Person_CPISRecords_UITestMethod11" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CPISRecords_UITestMethod11" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CPISRecords_UITestCases.Person_CPISRecords_UITestMethod12" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CPISRecords_UITestMethod12" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CPISRecords_UITestCases.Person_CPISRecords_UITestMethod13" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CPISRecords_UITestMethod13" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CPISRecords_UITestCases.Person_CPISRecords_UITestMethod14" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CPISRecords_UITestMethod14" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CPISRecords_UITestCases.Person_CPISRecords_UITestMethod15" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CPISRecords_UITestMethod15" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CPISRecords_UITestCases.Person_CPISRecords_UITestMethod16" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CPISRecords_UITestMethod16" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CPISRecords_UITestCases.Person_CPISRecords_UITestMethod17" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CPISRecords_UITestMethod17" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_CarePlan_CareProvider_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_CarePlan_CareProvider_UITestCases.Person_CarePlan_CareProvider_UITestCases02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_CarePlan_CareProvider_UITestCases02" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_Contacts_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Contacts_UITestCases.PersonContactCaseNotes_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PersonContactCaseNotes_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_Chronology_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Chronology_UITestCases.Person_Chronology_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Chronology_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Chronology_UITestCases.Person_Chronology_UITestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Chronology_UITestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Chronology_UITestCases.Person_Chronology_UITestMethod04" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Chronology_UITestMethod04" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Chronology_UITestCases.Person_Chronology_UITestMethod05" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_Chronology_UITestMethod05" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_Section117Entitlements_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Person_Section117Entitlements_UITestCases.Section117EntitlementCaseNotes_Cloning_UITestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Section117EntitlementCaseNotes_Cloning_UITestMethod01" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+            <Rule Match="All">
+              <Property Name="Namespace" Value="Phoenix.UITests.People.Health" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_RecordsOfDNAR_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Health.Person_RecordsOfDNAR_UITestCases.Person_RecordsOfDNAR_UITestCases02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_RecordsOfDNAR_UITestCases02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Health.Person_RecordsOfDNAR_UITestCases.Person_RecordsOfDNAR_UITestCases07" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_RecordsOfDNAR_UITestCases07" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Health.Person_RecordsOfDNAR_UITestCases.Person_RecordsOfDNAR_UITestCases12" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_RecordsOfDNAR_UITestCases12" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_GestationPeriod_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Health.Person_GestationPeriod_UITestCases.Person_GestationPeriod_UITestCases12" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_GestationPeriod_UITestCases12" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Health.Person_GestationPeriod_UITestCases.Person_GestationPeriod_UITestCases13" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_GestationPeriod_UITestCases13" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Health.Person_GestationPeriod_UITestCases.Person_GestationPeriod_UITestCases21" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_GestationPeriod_UITestCases21" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Health.Person_GestationPeriod_UITestCases.Person_GestationPeriod_UITestCases22" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_GestationPeriod_UITestCases22" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Health.Person_GestationPeriod_UITestCases.Person_GestationPeriod_UITestCases23" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_GestationPeriod_UITestCases23" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Health.Person_GestationPeriod_UITestCases.Person_GestationPeriod_UITestCases24" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_GestationPeriod_UITestCases24" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+            <Rule Match="All">
+              <Property Name="Namespace" Value="Phoenix.UITests.People.Related_Items" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="Person_PrimarySupportReasons_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Related_Items.Person_PrimarySupportReasons_UITestCases.Person_PrimarySupportReasons_UITestMethod08" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_PrimarySupportReasons_UITestMethod08" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.UITests.People.Related_Items.Person_PrimarySupportReasons_UITestCases.Person_PrimarySupportReasons_UITestMethod12" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Person_PrimarySupportReasons_UITestMethod12" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>

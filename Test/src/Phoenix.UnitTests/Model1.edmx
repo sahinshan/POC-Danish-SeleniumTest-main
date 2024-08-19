@@ -1,0 +1,746 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CareDirectorCore_CDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Professional">
+          <Key>
+            <PropertyRef Name="ProfessionalId" />
+          </Key>
+          <Property Name="ProfessionalId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="uniqueidentifier" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="450" />
+          <Property Name="Inactive" Type="bit" />
+          <Property Name="ImportCreateSequence" Type="int" />
+          <Property Name="ImportUpdateSequence" Type="int" />
+          <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+          <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+          <Property Name="ProfessionTypeId" Type="uniqueidentifier" />
+          <Property Name="ProfessionalNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProfessionalCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullAddress" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PropertyName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddressTypeId" Type="int" />
+          <Property Name="AddressLine1" Type="nvarchar" MaxLength="100" />
+          <Property Name="Country" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddressLine2" Type="nvarchar" MaxLength="250" />
+          <Property Name="AddressPropertyTypeId" Type="uniqueidentifier" />
+          <Property Name="AddressLine3" Type="nvarchar" MaxLength="250" />
+          <Property Name="UPRN" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddressLine4" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddressBoroughId" Type="uniqueidentifier" />
+          <Property Name="AddressLine5" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddressWardId" Type="uniqueidentifier" />
+          <Property Name="Postcode" Type="nvarchar" MaxLength="20" />
+          <Property Name="BusinessPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="254" />
+          <Property Name="MobilePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactMethodId" Type="uniqueidentifier" />
+          <Property Name="AllowEmail" Type="bit" />
+          <Property Name="AllowPhone" Type="bit" />
+          <Property Name="AllowMail" Type="bit" />
+          <Property Name="GenderId" Type="int" />
+        </EntityType>
+        <EntityType Name="Provider">
+          <Key>
+            <PropertyRef Name="ProviderId" />
+          </Key>
+          <Property Name="ProviderId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="uniqueidentifier" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="OwnerId" Type="uniqueidentifier" />
+          <Property Name="Inactive" Type="bit" />
+          <Property Name="ImportCreateSequence" Type="int" />
+          <Property Name="ImportUpdateSequence" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="160" />
+          <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" />
+          <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProviderNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MainPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="OtherPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="AccountNumber" Type="nvarchar" MaxLength="16" />
+          <Property Name="Website" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Email" Type="nvarchar" MaxLength="254" />
+          <Property Name="CQCLocationId" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="EndDate" Type="date" />
+          <Property Name="PropertyName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddressLine1" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddressLine2" Type="nvarchar" MaxLength="250" />
+          <Property Name="AddressLine3" Type="nvarchar" MaxLength="250" />
+          <Property Name="AddressLine4" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddressLine5" Type="nvarchar" MaxLength="100" />
+          <Property Name="Postcode" Type="nvarchar" MaxLength="20" />
+          <Property Name="Country" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddressPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactHours" Type="nvarchar" MaxLength="40" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ProviderTypeId" Type="int" />
+          <Property Name="AddressPropertyTypeId" Type="uniqueidentifier" />
+          <Property Name="ParentProviderId" Type="uniqueidentifier" />
+          <Property Name="AddressTypeId" Type="int" />
+          <Property Name="FullAddress" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ContractLeadId" Type="uniqueidentifier" />
+          <Property Name="QALeadId" Type="uniqueidentifier" />
+          <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+          <Property Name="PrimaryContactId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="SystemUser">
+          <Key>
+            <PropertyRef Name="SystemUserId" />
+          </Key>
+          <Property Name="SystemUserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="450" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="uniqueidentifier" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="LanguageId" Type="uniqueidentifier" />
+          <Property Name="WorkEmail" Type="nvarchar" MaxLength="254" />
+          <Property Name="JobTitle" Type="nvarchar" MaxLength="100" />
+          <Property Name="WorkPhoneLandline" Type="nvarchar" MaxLength="64" />
+          <Property Name="WorkPhoneMobile" Type="nvarchar" MaxLength="64" />
+          <Property Name="ProfilePhotoId" Type="uniqueidentifier" />
+          <Property Name="ImportCreateSequence" Type="int" />
+          <Property Name="ImportUpdateSequence" Type="int" />
+          <Property Name="Password" Type="nvarchar" MaxLength="200" />
+          <Property Name="CanWorkOffline" Type="bit" />
+          <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="FailedPasswordAttemptCount" Type="int" />
+          <Property Name="LastFailedPasswordAttemptDate" Type="datetime" />
+          <Property Name="AccountLockedOutDate" Type="datetime" />
+          <Property Name="IsAccountLocked" Type="bit" />
+          <Property Name="SecureEmailAddress" Type="nvarchar" MaxLength="254" />
+          <Property Name="AuthenticationProviderId" Type="uniqueidentifier" />
+          <Property Name="IsServiceAccount" Type="bit" />
+          <Property Name="IsManager" Type="bit" />
+          <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" />
+          <Property Name="DefaultTeamId" Type="uniqueidentifier" />
+          <Property Name="TimeZoneId" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DisableFormAutoSave" Type="bit" />
+          <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+          <Property Name="Inactive" Type="bit" Nullable="false" />
+          <Property Name="RecordsPerPageId" Type="int" />
+          <Property Name="ProfessionalRegistrationNumber" Type="nvarchar" MaxLength="300" />
+          <Property Name="CanCompleteDNAR" Type="bit" />
+          <Property Name="CanAuthoriseDNAR" Type="bit" />
+          <Property Name="IsLegitimateRelationshipEnabled" Type="bit" />
+          <Property Name="CanAuthoriseForm" Type="bit" />
+          <Property Name="CanAuthoriseOnBehalfOfOthers" Type="bit" />
+        </EntityType>
+        <Association Name="FK_Professional_Provider_PrimaryContactId">
+          <End Role="Professional" Type="Self.Professional" Multiplicity="0..1" />
+          <End Role="Provider" Type="Self.Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Professional">
+              <PropertyRef Name="ProfessionalId" />
+            </Principal>
+            <Dependent Role="Provider">
+              <PropertyRef Name="PrimaryContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Provider_Provider_ParentProviderId">
+          <End Role="Provider" Type="Self.Provider" Multiplicity="0..1" />
+          <End Role="Provider1" Type="Self.Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provider">
+              <PropertyRef Name="ProviderId" />
+            </Principal>
+            <Dependent Role="Provider1">
+              <PropertyRef Name="ParentProviderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_Professional_CreatedBy">
+          <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="0..1" />
+          <End Role="Professional" Type="Self.Professional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserId" />
+            </Principal>
+            <Dependent Role="Professional">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_Professional_ModifiedBy">
+          <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="0..1" />
+          <End Role="Professional" Type="Self.Professional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserId" />
+            </Principal>
+            <Dependent Role="Professional">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_Provider_ContractLeadId">
+          <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="0..1" />
+          <End Role="Provider" Type="Self.Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserId" />
+            </Principal>
+            <Dependent Role="Provider">
+              <PropertyRef Name="ContractLeadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_Provider_CreatedBy">
+          <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="0..1" />
+          <End Role="Provider" Type="Self.Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserId" />
+            </Principal>
+            <Dependent Role="Provider">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_Provider_ModifiedBy">
+          <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="0..1" />
+          <End Role="Provider" Type="Self.Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserId" />
+            </Principal>
+            <Dependent Role="Provider">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_Provider_QALeadId">
+          <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="0..1" />
+          <End Role="Provider" Type="Self.Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserId" />
+            </Principal>
+            <Dependent Role="Provider">
+              <PropertyRef Name="QALeadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CareDirectorCore_CDModelStoreContainer">
+          <EntitySet Name="Professional" EntityType="Self.Professional" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Provider" EntityType="Self.Provider" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemUser" EntityType="Self.SystemUser" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Professional_Provider_PrimaryContactId" Association="Self.FK_Professional_Provider_PrimaryContactId">
+            <End Role="Professional" EntitySet="Professional" />
+            <End Role="Provider" EntitySet="Provider" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Provider_Provider_ParentProviderId" Association="Self.FK_Provider_Provider_ParentProviderId">
+            <End Role="Provider" EntitySet="Provider" />
+            <End Role="Provider1" EntitySet="Provider" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_Professional_CreatedBy" Association="Self.FK_SystemUser_Professional_CreatedBy">
+            <End Role="SystemUser" EntitySet="SystemUser" />
+            <End Role="Professional" EntitySet="Professional" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_Professional_ModifiedBy" Association="Self.FK_SystemUser_Professional_ModifiedBy">
+            <End Role="SystemUser" EntitySet="SystemUser" />
+            <End Role="Professional" EntitySet="Professional" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_Provider_ContractLeadId" Association="Self.FK_SystemUser_Provider_ContractLeadId">
+            <End Role="SystemUser" EntitySet="SystemUser" />
+            <End Role="Provider" EntitySet="Provider" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_Provider_CreatedBy" Association="Self.FK_SystemUser_Provider_CreatedBy">
+            <End Role="SystemUser" EntitySet="SystemUser" />
+            <End Role="Provider" EntitySet="Provider" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_Provider_ModifiedBy" Association="Self.FK_SystemUser_Provider_ModifiedBy">
+            <End Role="SystemUser" EntitySet="SystemUser" />
+            <End Role="Provider" EntitySet="Provider" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_Provider_QALeadId" Association="Self.FK_SystemUser_Provider_QALeadId">
+            <End Role="SystemUser" EntitySet="SystemUser" />
+            <End Role="Provider" EntitySet="Provider" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CareDirectorCore_CDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CareDirectorCore_CDEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Professionals" EntityType="CareDirectorCore_CDModel.Professional" />
+          <EntitySet Name="Providers" EntityType="CareDirectorCore_CDModel.Provider" />
+          <EntitySet Name="SystemUsers" EntityType="CareDirectorCore_CDModel.SystemUser" />
+          <AssociationSet Name="FK_Professional_Provider_PrimaryContactId" Association="CareDirectorCore_CDModel.FK_Professional_Provider_PrimaryContactId">
+            <End Role="Professional" EntitySet="Professionals" />
+            <End Role="Provider" EntitySet="Providers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_Professional_CreatedBy" Association="CareDirectorCore_CDModel.FK_SystemUser_Professional_CreatedBy">
+            <End Role="SystemUser" EntitySet="SystemUsers" />
+            <End Role="Professional" EntitySet="Professionals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_Professional_ModifiedBy" Association="CareDirectorCore_CDModel.FK_SystemUser_Professional_ModifiedBy">
+            <End Role="SystemUser" EntitySet="SystemUsers" />
+            <End Role="Professional" EntitySet="Professionals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Provider_Provider_ParentProviderId" Association="CareDirectorCore_CDModel.FK_Provider_Provider_ParentProviderId">
+            <End Role="Provider" EntitySet="Providers" />
+            <End Role="Provider1" EntitySet="Providers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_Provider_ContractLeadId" Association="CareDirectorCore_CDModel.FK_SystemUser_Provider_ContractLeadId">
+            <End Role="SystemUser" EntitySet="SystemUsers" />
+            <End Role="Provider" EntitySet="Providers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_Provider_CreatedBy" Association="CareDirectorCore_CDModel.FK_SystemUser_Provider_CreatedBy">
+            <End Role="SystemUser" EntitySet="SystemUsers" />
+            <End Role="Provider" EntitySet="Providers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_Provider_ModifiedBy" Association="CareDirectorCore_CDModel.FK_SystemUser_Provider_ModifiedBy">
+            <End Role="SystemUser" EntitySet="SystemUsers" />
+            <End Role="Provider" EntitySet="Providers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_Provider_QALeadId" Association="CareDirectorCore_CDModel.FK_SystemUser_Provider_QALeadId">
+            <End Role="SystemUser" EntitySet="SystemUsers" />
+            <End Role="Provider" EntitySet="Providers" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Professional">
+          <Key>
+            <PropertyRef Name="ProfessionalId" />
+          </Key>
+          <Property Name="ProfessionalId" Type="Guid" Nullable="false" />
+          <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedBy" Type="Guid" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Guid" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="OwnerId" Type="Guid" Nullable="false" />
+          <Property Name="OwningBusinessUnitId" Type="Guid" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="Inactive" Type="Boolean" />
+          <Property Name="ImportCreateSequence" Type="Int32" />
+          <Property Name="ImportUpdateSequence" Type="Int32" />
+          <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DataRestrictionId" Type="Guid" />
+          <Property Name="ProfessionTypeId" Type="Guid" />
+          <Property Name="ProfessionalNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProfessionalCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressTypeId" Type="Int32" />
+          <Property Name="AddressLine1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="AddressPropertyTypeId" Type="Guid" />
+          <Property Name="AddressLine3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="UPRN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressBoroughId" Type="Guid" />
+          <Property Name="AddressLine5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressWardId" Type="Guid" />
+          <Property Name="Postcode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BusinessPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ContactMethodId" Type="Guid" />
+          <Property Name="AllowEmail" Type="Boolean" />
+          <Property Name="AllowPhone" Type="Boolean" />
+          <Property Name="AllowMail" Type="Boolean" />
+          <Property Name="GenderId" Type="Int32" />
+          <NavigationProperty Name="Providers" Relationship="CareDirectorCore_CDModel.FK_Professional_Provider_PrimaryContactId" FromRole="Professional" ToRole="Provider" />
+          <NavigationProperty Name="SystemUser" Relationship="CareDirectorCore_CDModel.FK_SystemUser_Professional_CreatedBy" FromRole="Professional" ToRole="SystemUser" />
+          <NavigationProperty Name="SystemUser1" Relationship="CareDirectorCore_CDModel.FK_SystemUser_Professional_ModifiedBy" FromRole="Professional" ToRole="SystemUser" />
+        </EntityType>
+        <EntityType Name="Provider">
+          <Key>
+            <PropertyRef Name="ProviderId" />
+          </Key>
+          <Property Name="ProviderId" Type="Guid" Nullable="false" />
+          <Property Name="CreatedBy" Type="Guid" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Guid" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="OwnerId" Type="Guid" />
+          <Property Name="Inactive" Type="Boolean" />
+          <Property Name="ImportCreateSequence" Type="Int32" />
+          <Property Name="ImportUpdateSequence" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="160" FixedLength="false" Unicode="true" />
+          <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="OwningBusinessUnitId" Type="Guid" />
+          <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MainPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OtherPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNumber" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="Website" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="CQCLocationId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <Property Name="PropertyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Postcode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ContactHours" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderTypeId" Type="Int32" />
+          <Property Name="AddressPropertyTypeId" Type="Guid" />
+          <Property Name="ParentProviderId" Type="Guid" />
+          <Property Name="AddressTypeId" Type="Int32" />
+          <Property Name="FullAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ContractLeadId" Type="Guid" />
+          <Property Name="QALeadId" Type="Guid" />
+          <Property Name="DataRestrictionId" Type="Guid" />
+          <Property Name="PrimaryContactId" Type="Guid" />
+          <NavigationProperty Name="Professional" Relationship="CareDirectorCore_CDModel.FK_Professional_Provider_PrimaryContactId" FromRole="Provider" ToRole="Professional" />
+          <NavigationProperty Name="Provider1" Relationship="CareDirectorCore_CDModel.FK_Provider_Provider_ParentProviderId" FromRole="Provider" ToRole="Provider1" />
+          <NavigationProperty Name="Provider2" Relationship="CareDirectorCore_CDModel.FK_Provider_Provider_ParentProviderId" FromRole="Provider1" ToRole="Provider" />
+          <NavigationProperty Name="SystemUser" Relationship="CareDirectorCore_CDModel.FK_SystemUser_Provider_ContractLeadId" FromRole="Provider" ToRole="SystemUser" />
+          <NavigationProperty Name="SystemUser1" Relationship="CareDirectorCore_CDModel.FK_SystemUser_Provider_CreatedBy" FromRole="Provider" ToRole="SystemUser" />
+          <NavigationProperty Name="SystemUser2" Relationship="CareDirectorCore_CDModel.FK_SystemUser_Provider_ModifiedBy" FromRole="Provider" ToRole="SystemUser" />
+          <NavigationProperty Name="SystemUser3" Relationship="CareDirectorCore_CDModel.FK_SystemUser_Provider_QALeadId" FromRole="Provider" ToRole="SystemUser" />
+        </EntityType>
+        <EntityType Name="SystemUser">
+          <Key>
+            <PropertyRef Name="SystemUserId" />
+          </Key>
+          <Property Name="SystemUserId" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Guid" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Guid" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="LanguageId" Type="Guid" />
+          <Property Name="WorkEmail" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="JobTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="WorkPhoneLandline" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="WorkPhoneMobile" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="ProfilePhotoId" Type="Guid" />
+          <Property Name="ImportCreateSequence" Type="Int32" />
+          <Property Name="ImportUpdateSequence" Type="Int32" />
+          <Property Name="Password" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CanWorkOffline" Type="Boolean" />
+          <Property Name="VersionStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="FailedPasswordAttemptCount" Type="Int32" />
+          <Property Name="LastFailedPasswordAttemptDate" Type="DateTime" Precision="3" />
+          <Property Name="AccountLockedOutDate" Type="DateTime" Precision="3" />
+          <Property Name="IsAccountLocked" Type="Boolean" />
+          <Property Name="SecureEmailAddress" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="AuthenticationProviderId" Type="Guid" />
+          <Property Name="IsServiceAccount" Type="Boolean" />
+          <Property Name="IsManager" Type="Boolean" />
+          <Property Name="OwningBusinessUnitId" Type="Guid" />
+          <Property Name="DefaultTeamId" Type="Guid" />
+          <Property Name="TimeZoneId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DisableFormAutoSave" Type="Boolean" />
+          <Property Name="LegacyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Inactive" Type="Boolean" Nullable="false" />
+          <Property Name="RecordsPerPageId" Type="Int32" />
+          <Property Name="ProfessionalRegistrationNumber" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="CanCompleteDNAR" Type="Boolean" />
+          <Property Name="CanAuthoriseDNAR" Type="Boolean" />
+          <Property Name="IsLegitimateRelationshipEnabled" Type="Boolean" />
+          <Property Name="CanAuthoriseForm" Type="Boolean" />
+          <Property Name="CanAuthoriseOnBehalfOfOthers" Type="Boolean" />
+          <NavigationProperty Name="Professionals" Relationship="CareDirectorCore_CDModel.FK_SystemUser_Professional_CreatedBy" FromRole="SystemUser" ToRole="Professional" />
+          <NavigationProperty Name="Professionals1" Relationship="CareDirectorCore_CDModel.FK_SystemUser_Professional_ModifiedBy" FromRole="SystemUser" ToRole="Professional" />
+          <NavigationProperty Name="Providers" Relationship="CareDirectorCore_CDModel.FK_SystemUser_Provider_ContractLeadId" FromRole="SystemUser" ToRole="Provider" />
+          <NavigationProperty Name="Providers1" Relationship="CareDirectorCore_CDModel.FK_SystemUser_Provider_CreatedBy" FromRole="SystemUser" ToRole="Provider" />
+          <NavigationProperty Name="Providers2" Relationship="CareDirectorCore_CDModel.FK_SystemUser_Provider_ModifiedBy" FromRole="SystemUser" ToRole="Provider" />
+          <NavigationProperty Name="Providers3" Relationship="CareDirectorCore_CDModel.FK_SystemUser_Provider_QALeadId" FromRole="SystemUser" ToRole="Provider" />
+        </EntityType>
+        <Association Name="FK_Professional_Provider_PrimaryContactId">
+          <End Type="CareDirectorCore_CDModel.Professional" Role="Professional" Multiplicity="0..1" />
+          <End Type="CareDirectorCore_CDModel.Provider" Role="Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Professional">
+              <PropertyRef Name="ProfessionalId" />
+            </Principal>
+            <Dependent Role="Provider">
+              <PropertyRef Name="PrimaryContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_Professional_CreatedBy">
+          <End Type="CareDirectorCore_CDModel.SystemUser" Role="SystemUser" Multiplicity="0..1" />
+          <End Type="CareDirectorCore_CDModel.Professional" Role="Professional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserId" />
+            </Principal>
+            <Dependent Role="Professional">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_Professional_ModifiedBy">
+          <End Type="CareDirectorCore_CDModel.SystemUser" Role="SystemUser" Multiplicity="0..1" />
+          <End Type="CareDirectorCore_CDModel.Professional" Role="Professional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserId" />
+            </Principal>
+            <Dependent Role="Professional">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Provider_Provider_ParentProviderId">
+          <End Type="CareDirectorCore_CDModel.Provider" Role="Provider" Multiplicity="0..1" />
+          <End Type="CareDirectorCore_CDModel.Provider" Role="Provider1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provider">
+              <PropertyRef Name="ProviderId" />
+            </Principal>
+            <Dependent Role="Provider1">
+              <PropertyRef Name="ParentProviderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_Provider_ContractLeadId">
+          <End Type="CareDirectorCore_CDModel.SystemUser" Role="SystemUser" Multiplicity="0..1" />
+          <End Type="CareDirectorCore_CDModel.Provider" Role="Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserId" />
+            </Principal>
+            <Dependent Role="Provider">
+              <PropertyRef Name="ContractLeadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_Provider_CreatedBy">
+          <End Type="CareDirectorCore_CDModel.SystemUser" Role="SystemUser" Multiplicity="0..1" />
+          <End Type="CareDirectorCore_CDModel.Provider" Role="Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserId" />
+            </Principal>
+            <Dependent Role="Provider">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_Provider_ModifiedBy">
+          <End Type="CareDirectorCore_CDModel.SystemUser" Role="SystemUser" Multiplicity="0..1" />
+          <End Type="CareDirectorCore_CDModel.Provider" Role="Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserId" />
+            </Principal>
+            <Dependent Role="Provider">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_Provider_QALeadId">
+          <End Type="CareDirectorCore_CDModel.SystemUser" Role="SystemUser" Multiplicity="0..1" />
+          <End Type="CareDirectorCore_CDModel.Provider" Role="Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="SystemUserId" />
+            </Principal>
+            <Dependent Role="Provider">
+              <PropertyRef Name="QALeadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CareDirectorCore_CDModelStoreContainer" CdmEntityContainer="CareDirectorCore_CDEntities">
+          <EntitySetMapping Name="Professionals">
+            <EntityTypeMapping TypeName="CareDirectorCore_CDModel.Professional">
+              <MappingFragment StoreEntitySet="Professional">
+                <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+                <ScalarProperty Name="AllowMail" ColumnName="AllowMail" />
+                <ScalarProperty Name="AllowPhone" ColumnName="AllowPhone" />
+                <ScalarProperty Name="AllowEmail" ColumnName="AllowEmail" />
+                <ScalarProperty Name="ContactMethodId" ColumnName="ContactMethodId" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="BusinessPhone" ColumnName="BusinessPhone" />
+                <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+                <ScalarProperty Name="AddressWardId" ColumnName="AddressWardId" />
+                <ScalarProperty Name="AddressLine5" ColumnName="AddressLine5" />
+                <ScalarProperty Name="AddressBoroughId" ColumnName="AddressBoroughId" />
+                <ScalarProperty Name="AddressLine4" ColumnName="AddressLine4" />
+                <ScalarProperty Name="UPRN" ColumnName="UPRN" />
+                <ScalarProperty Name="AddressLine3" ColumnName="AddressLine3" />
+                <ScalarProperty Name="AddressPropertyTypeId" ColumnName="AddressPropertyTypeId" />
+                <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+                <ScalarProperty Name="AddressTypeId" ColumnName="AddressTypeId" />
+                <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+                <ScalarProperty Name="FullAddress" ColumnName="FullAddress" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="ProfessionalCode" ColumnName="ProfessionalCode" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ProfessionalNumber" ColumnName="ProfessionalNumber" />
+                <ScalarProperty Name="ProfessionTypeId" ColumnName="ProfessionTypeId" />
+                <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+                <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+                <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+                <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+                <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+                <ScalarProperty Name="ProfessionalId" ColumnName="ProfessionalId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Providers">
+            <EntityTypeMapping TypeName="CareDirectorCore_CDModel.Provider">
+              <MappingFragment StoreEntitySet="Provider">
+                <ScalarProperty Name="PrimaryContactId" ColumnName="PrimaryContactId" />
+                <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+                <ScalarProperty Name="QALeadId" ColumnName="QALeadId" />
+                <ScalarProperty Name="ContractLeadId" ColumnName="ContractLeadId" />
+                <ScalarProperty Name="FullAddress" ColumnName="FullAddress" />
+                <ScalarProperty Name="AddressTypeId" ColumnName="AddressTypeId" />
+                <ScalarProperty Name="ParentProviderId" ColumnName="ParentProviderId" />
+                <ScalarProperty Name="AddressPropertyTypeId" ColumnName="AddressPropertyTypeId" />
+                <ScalarProperty Name="ProviderTypeId" ColumnName="ProviderTypeId" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="ContactHours" ColumnName="ContactHours" />
+                <ScalarProperty Name="AddressPhone" ColumnName="AddressPhone" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+                <ScalarProperty Name="AddressLine5" ColumnName="AddressLine5" />
+                <ScalarProperty Name="AddressLine4" ColumnName="AddressLine4" />
+                <ScalarProperty Name="AddressLine3" ColumnName="AddressLine3" />
+                <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+                <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+                <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CQCLocationId" ColumnName="CQCLocationId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="OtherPhone" ColumnName="OtherPhone" />
+                <ScalarProperty Name="MainPhone" ColumnName="MainPhone" />
+                <ScalarProperty Name="ProviderNumber" ColumnName="ProviderNumber" />
+                <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+                <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+                <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+                <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+                <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ProviderId" ColumnName="ProviderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemUsers">
+            <EntityTypeMapping TypeName="CareDirectorCore_CDModel.SystemUser">
+              <MappingFragment StoreEntitySet="SystemUser">
+                <ScalarProperty Name="CanAuthoriseOnBehalfOfOthers" ColumnName="CanAuthoriseOnBehalfOfOthers" />
+                <ScalarProperty Name="CanAuthoriseForm" ColumnName="CanAuthoriseForm" />
+                <ScalarProperty Name="IsLegitimateRelationshipEnabled" ColumnName="IsLegitimateRelationshipEnabled" />
+                <ScalarProperty Name="CanAuthoriseDNAR" ColumnName="CanAuthoriseDNAR" />
+                <ScalarProperty Name="CanCompleteDNAR" ColumnName="CanCompleteDNAR" />
+                <ScalarProperty Name="ProfessionalRegistrationNumber" ColumnName="ProfessionalRegistrationNumber" />
+                <ScalarProperty Name="RecordsPerPageId" ColumnName="RecordsPerPageId" />
+                <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+                <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+                <ScalarProperty Name="DisableFormAutoSave" ColumnName="DisableFormAutoSave" />
+                <ScalarProperty Name="TimeZoneId" ColumnName="TimeZoneId" />
+                <ScalarProperty Name="DefaultTeamId" ColumnName="DefaultTeamId" />
+                <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+                <ScalarProperty Name="IsManager" ColumnName="IsManager" />
+                <ScalarProperty Name="IsServiceAccount" ColumnName="IsServiceAccount" />
+                <ScalarProperty Name="AuthenticationProviderId" ColumnName="AuthenticationProviderId" />
+                <ScalarProperty Name="SecureEmailAddress" ColumnName="SecureEmailAddress" />
+                <ScalarProperty Name="IsAccountLocked" ColumnName="IsAccountLocked" />
+                <ScalarProperty Name="AccountLockedOutDate" ColumnName="AccountLockedOutDate" />
+                <ScalarProperty Name="LastFailedPasswordAttemptDate" ColumnName="LastFailedPasswordAttemptDate" />
+                <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+                <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+                <ScalarProperty Name="CanWorkOffline" ColumnName="CanWorkOffline" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+                <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+                <ScalarProperty Name="ProfilePhotoId" ColumnName="ProfilePhotoId" />
+                <ScalarProperty Name="WorkPhoneMobile" ColumnName="WorkPhoneMobile" />
+                <ScalarProperty Name="WorkPhoneLandline" ColumnName="WorkPhoneLandline" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="WorkEmail" ColumnName="WorkEmail" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="SystemUserId" ColumnName="SystemUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

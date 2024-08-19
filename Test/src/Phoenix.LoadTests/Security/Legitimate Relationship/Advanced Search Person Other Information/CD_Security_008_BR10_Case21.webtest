@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="CD_Security_008_BR10_Case21" Id="5e903b17-653b-455d-9efd-c8f840626885" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.2cd61f34-8426-4c6f-89d9-f0597c0d3950.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="13dd4327-0ab7-4c98-88c3-a9641d64576c" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://phoenixqa.careworks.ie/pages/loginredirector.aspx?ReturnUrl=%2fCareDirector%2fpages%2fdefault.aspx" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="ea96d429-52ea-45db-85e2-54f73576387d" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/login.aspx" ThinkTime="58" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/loginredirector.aspx?ReturnUrl=%2fCareDirector%2fpages%2fdefault.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="POST" Guid="c63cb1b0-ec56-4b00-ada0-627ead7afa6c" Version="1.1" Url="https://phoenixqa.careworks.ie/api/security/retrieveactiveenvironmentsforuser" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/login.aspx" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFUAcwBlAHIAbgBhAG0AZQAiADoAIgBzAGUAYwB1AHIAaQB0AHkAdABlAHMAdAB1AHMAZQByAGwAZQBnAGkAdABpAG0AYQB0AGUAcgBlAGwAYQB0AGkAbwBuAHMAaABpAHAAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="8eade502-b2ca-409d-a7c1-9aa0d4585c4f" Version="1.1" Url="https://phoenixqa.careworks.ie/api/security/authenticateuser" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/login.aspx" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFUAcwBlAHIAbgBhAG0AZQAiADoAIgBzAGUAYwB1AHIAaQB0AHkAdABlAHMAdAB1AHMAZQByAGwAZQBnAGkAdABpAG0AYQB0AGUAcgBlAGwAYQB0AGkAbwBuAHMAaABpAHAAIgAsACIAUABhAHMAcwB3AG8AcgBkACIAOgAiAFAAYQBzAHMAdwAwAHIAZABfACEAIgAsACIARQBuAHYAaQByAG8AbgBtAGUAbgB0AEkAZAAiADoAIgAzAEIANAA1ADEANgBEAEMALQAzADcAMAA3AC0ANAAxADkAOQAtAEEAQQA1AEMALQBFADMARgBFAEUAQQA0ADgANAAyAEEARAAiACwAIgBSAGUAbQBlAG0AYgBlAHIARABlAHQAYQBpAGwAcwAiADoAZgBhAGwAcwBlAH0A</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="4ae5aac9-a9ec-4b0f-8a7c-d66e2a6952c5" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/login.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam8.type" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?type=" />
+            <RuleParameter Name="EndsWith" Value="'" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="GET" Guid="92e1da45-3dcd-4ab0-894a-6daca4d9044c" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/listpage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/default.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam28.type" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?type=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="type" Value="person" RecordedValue="person" CorrelationBinding="{{QueryStringParam8.type}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="4e8d8683-8117-4539-b395-549033308895" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=person" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMwAwAGYAOAA0AGIAMgBkAC0AYgAxADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADEAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="d1098725-f12b-43af-ba2e-d4108060d304" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=person" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAOABkAGYAOAA0AGIAMgBkAC0AYgAxADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAHAAZQByAHMAbwBuACIALAAiAFAAYQByAGUAbgB0AEkAZAAiADoAIgAiACwAIgBQAGEAcgBlAG4AdABUAHkAcABlAE4AYQBtAGUAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBJAGQAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBEAGkAcwBwAGwAYQB5AE4AYQBtAGUAIgA6ACIAIgAsACIAUgBlAGwAYQB0AGkAbwBuAHMAaABpAHAASQBkACIAOgAiACIALAAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMwAwAGYAOAA0AGIAMgBkAC0AYgAxADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAUgBlAGMAbwByAGQAcwBQAGUAcgBQAGEAZwBlACIAOgAiADEAMAAwACIALAAiAFYAaQBlAHcAVAB5AHAAZQAiADoAIgAxACIALAAiAFAAYQByAGUAbgB0AEkAZABGAGkAZQBsAGQATgBhAG0AZQAiADoAIgAiACwAIgBBAGwAbABvAHcATQB1AGwAdABpAFMAZQBsAGUAYwB0ACIAOgAiAHQAcgB1AGUAIgAsACIATwB0AGgAZQByAEkAZABGAGkAZQBsAGQAIgA6ACIAIgAsACIAVgBpAGUAdwBHAHIAbwB1AHAAIgA6ACIAMQAiACwAIgBQAGEAZwBpAG4AZwBJAG4AZgBvACIAOgAiACIALAAiAEQAYQB0AGEAUQB1AGUAcgB5AFgAbQBsACIAOgBuAHUAbABsAH0A</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="1206bfcb-f011-463d-9b4f-cfe7ae057e59" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/advancedsearch.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/default.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="af80157e-7293-41ae-a236-678157da6e50" Version="1.1" Url="https://phoenixqa.careworks.ie/api/advancedsearch/getbusinessobjects" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=utf-8" />
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/advancedsearch.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="92bac6e9-1d05-474f-9d37-c1df13d2588e" Version="1.1" Url="https://phoenixqa.careworks.ie/api/advancedsearch/retrieveuserdataviews/4f2f70be-4ed9-e411-9691-005056c00008" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=utf-8" />
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/advancedsearch.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="POST" Guid="3a0f558c-1928-4bc1-8da3-372f05f8ec25" Version="1.1" Url="https://phoenixqa.careworks.ie/api/conditionbuilder/GetBusinessObjectFields" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/advancedsearch.aspx" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIANABmADIAZgA3ADAAYgBlAC0ANABlAGQAOQAtAGUANAAxADEALQA5ADYAOQAxAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAQwBvAG4AZABpAHQAaQBvAG4AQgB1AGkAbABkAGUAcgBNAG8AZABlACIAOgAxAH0A</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="720a571f-8088-4a6c-9f8d-900daf612b5c" Version="1.1" Url="https://phoenixqa.careworks.ie/api/conditionbuilder/GetRelatedBusinessObjects" ThinkTime="38" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/advancedsearch.aspx" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIANABmADIAZgA3ADAAYgBlAC0ANABlAGQAOQAtAGUANAAxADEALQA5ADYAOQAxAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAQwBvAG4AZABpAHQAaQBvAG4AQgB1AGkAbABkAGUAcgBNAG8AZABlACIAOgAxAH0A</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="08237309-3228-4132-afe1-47112bb421e8" Version="1.1" Url="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/advancedsearch.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam65.winmode" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;winmode=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewtype" Value="lookup" RecordedValue="lookup" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="type" Value="person" RecordedValue="person" CorrelationBinding="{{QueryStringParam28.type}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="idfield" Value="c51e2eab-4ff9-fc8b-5932-65ed26bf08b8_rule_0_value_0_val" RecordedValue="c51e2eab-4ff9-fc8b-5932-65ed26bf08b8_rule_0_value_0_val" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="namefield" Value="c51e2eab-4ff9-fc8b-5932-65ed26bf08b8_rule_0_value_0_text" RecordedValue="c51e2eab-4ff9-fc8b-5932-65ed26bf08b8_rule_0_value_0_text" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWLookupForm" RecordedValue="CWLookupForm" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="432f0ca6-33ca-4673-8bbd-516cb3379b4a" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;type=person&amp;idfield=c51e2eab-4ff9-fc8b-5932-65ed26bf08b8_rule_0_value_0_val&amp;namefield=c51e2eab-4ff9-fc8b-5932-65ed26bf08b8_rule_0_value_0_text&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMwAwAGYAOAA0AGIAMgBkAC0AYgAxADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="f0436b9b-9ff4-4d5f-bdd6-774fc1c763b4" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="9" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;type=person&amp;idfield=c51e2eab-4ff9-fc8b-5932-65ed26bf08b8_rule_0_value_0_val&amp;namefield=c51e2eab-4ff9-fc8b-5932-65ed26bf08b8_rule_0_value_0_text&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAMQA1ADYANQA3ADMANwAiACwAIgBDAHUAcgByAGUAbgB0AFAAYQBnAGUAIgA6ACIAMQAiACwAIgBTAG8AcgB0AE8AcAB0AGkAbwBuAHMAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABWAGkAZQB3AEkAZAAiADoAIgBkAGUAZQBlADgAOAAyADQALQA0AGUAZAAxAC0AZQA4ADEAMQAtADkAYwAwADIALQAxADgANgA2AGQAYQAxAGUANAAyADAAOQAiACwAIgBUAHkAcABlAE4AYQBtAGUAIgA6ACIAcABlAHIAcwBvAG4AIgAsACIAUABhAHIAZQBuAHQASQBkACIAOgAiACIALAAiAFAAYQByAGUAbgB0AFQAeQBwAGUATgBhAG0AZQAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEkAZAAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEQAaQBzAHAAbABhAHkATgBhAG0AZQAiADoAIgAiACwAIgBSAGUAbABhAHQAaQBvAG4AcwBoAGkAcABJAGQAIgA6ACIAIgAsACIAQgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AEkAZAAiADoAIgAzADAAZgA4ADQAYgAyAGQALQBiADEANgA5AC0AZQA0ADEAMQAtAGIAZgAwADAALQAwADAANQAwADUANgBjADAAMAAwADAAOAAiACwAIgBSAGUAYwBvAHIAZABzAFAAZQByAFAAYQBnAGUAIgA6ACIAMQAwADAAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgAsACIAUABhAHIAZQBuAHQASQBkAEYAaQBlAGwAZABOAGEAbQBlACIAOgAiACIALAAiAEEAbABsAG8AdwBNAHUAbAB0AGkAUwBlAGwAZQBjAHQAIgA6ACIAZgBhAGwAcwBlACIALAAiAE8AdABoAGUAcgBJAGQARgBpAGUAbABkACIAOgAiACIALAAiAFYAaQBlAHcARwByAG8AdQBwACIAOgAiADEAIgAsACIAUABhAGcAaQBuAGcASQBuAGYAbwAiADoAIgAiAH0A</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="81245bcf-85a5-4cb1-b131-f58a127208b3" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/AdvancedSearchResult.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/advancedsearch.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam81.v" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?v=" />
+            <RuleParameter Name="EndsWith" Value=")" />
+            <RuleParameter Name="Index" Value="26" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="type" Value="personotherids" RecordedValue="email" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam65.winmode}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWDataFormDialog" RecordedValue="CWDataFormDialog" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="7996841a-fb45-4500-8970-f87c90ab537c" Version="1.1" Url="https://phoenixqa.careworks.ie/api/advancedsearch/RetrieveResults" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/AdvancedSearchResult.aspx?type=personotherids&amp;winmode=1&amp;dialogname=CWDataFormDialog" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="NO RECORDS" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="No results were found for this screen." />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="b490572f-69e3-e811-80dc-0050560502cc" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="False" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAKAAkAIgBDAHUAcgByAGUAbgB0AFAAYQBnAGUAIgA6ACAAIgAwACIALAAKAAkAIgBTAG8AcgB0AE8AcAB0AGkAbwBuAHMAIgA6ACAAIgAiACwACgAJACIAQwB1AHIAcgBlAG4AdABWAGkAZQB3AEkAZAAiADoAIAAiACIALAAKAAkAIgBUAHkAcABlAE4AYQBtAGUAIgA6ACAAIgBwAGUAcgBzAG8AbgBvAHQAaABlAHIAaQBkAHMAIgAsAAoACQAiAFAAYQByAGUAbgB0AEkAZAAiADoAIAAiACIALAAKAAkAIgBQAGEAcgBlAG4AdABUAHkAcABlAE4AYQBtAGUAIgA6ACAAIgAiACwACgAJACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBJAGQAIgA6ACAAIgAiACwACgAJACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBEAGkAcwBwAGwAYQB5AE4AYQBtAGUAIgA6ACAAIgAiACwACgAJACIAUgBlAGwAYQB0AGkAbwBuAHMAaABpAHAASQBkACIAOgAgACIAIgAsAAoACQAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACAAIgA5AEQAMgBBADAANgBBADIALQBGADQAOQAzAC0ARQA4ADEAMQAtADkAOQA1AEYALQA0ADYAMQBDAEEAOABFADIARgBGADQAQgAiACwACgAJACIAUgBlAGMAbwByAGQAcwBQAGUAcgBQAGEAZwBlACIAOgAgACIAMQAwADAAIgAsAAoACQAiAFYAaQBlAHcAVAB5AHAAZQAiADoAIAAiADEAIgAsAAoACQAiAFAAYQByAGUAbgB0AEkAZABGAGkAZQBsAGQATgBhAG0AZQAiADoAIAAiACIALAAKAAkAIgBBAGwAbABvAHcATQB1AGwAdABpAFMAZQBsAGUAYwB0ACIAOgAgACIAdAByAHUAZQAiACwACgAJACIATwB0AGgAZQByAEkAZABGAGkAZQBsAGQAIgA6ACAAIgAiACwACgAJACIAVgBpAGUAdwBHAHIAbwB1AHAAIgA6ACAAIgAxACIALAAKAAkAIgBQAGEAZwBpAG4AZwBJAG4AZgBvACIAOgAgACIAIgAsAAoACQAiAEQAYQB0AGEAUQB1AGUAcgB5ACIAOgAgAHsACgAJAAkAIgBiAHUAcwBpAG4AZQBzAHMATwBiAGoAZQBjAHQAIgA6ACAAIgA5AEQAMgBBADAANgBBADIALQBGADQAOQAzAC0ARQA4ADEAMQAtADkAOQA1AEYALQA0ADYAMQBDAEEAOABFADIARgBGADQAQgAiACwACgAJAAkAIgBiAHUAcwBpAG4AZQBzAHMATwBiAGoAZQBjAHQASQBjAG8AbgAiADoAIAAiAC4ALgAvAHIAZQBzAG8AdQByAGMAZQBmAGkAbABlAC8ASQBtAGcAcwBfAGUAbQBhAGkAbAAuAHMAdgBnACIALAAKAAkACQAiAGQAaQBzAHAAbABhAHkATgBhAG0AZQAiADoAIAAiAHAAZQByAHMAbwBuAG8AdABoAGUAcgBpAGQAcwAiACwACgAJAAkAIgByAHUAbABlAHMAIgA6ACAAewAKAAkACQAJACIAYwBvAG4AZABpAHQAaQBvAG4AIgA6ACAAIgBBAE4ARAAiACwACgAJAAkACQAiAHIAdQBsAGUAcwAiADoAIABbAHsACgAJAAkACQAJACIAaQBkACIAOgAgACIARQA4ADMARgA2ADYAMgAyAC0ANQBDADkANQAtAEUAOAAxADEALQA5ADkANQBGAC0ANAA2ADEAQwBBADgARQAyAEYARgA0AEIAIgAsAAoACQAJAAkACQAiAGYAaQBlAGwAZAAiADoAIAAiAEUAOAAzAEYANgA2ADIAMgAtADUAQwA5ADUALQBFADgAMQAxAC0AOQA5ADUARgAtADQANgAxAEMAQQA4AEUAMgBGAEYANABCACIALAAKAAkACQAJAAkAIgB0AHkAcABlACIAOgAgACIAcwB0AHIAaQBuAGcAIgAsAAoACQAJAAkACQAiAG8AcABlAHIAYQB0AG8AcgAiADoAIAAiAEUAcQB1AGEAbAAiACwACgAJAAkACQAJACIAdgBhAGwAdQBlACIAOgAgAFsAewAKAAkACQAJAAkACQAiAGsAZQB5ACIAOgAgACIARgBpAGUAbABkACIALAAKAAkACQAJAAkACQAiAHYAYQBsAHUAZQB0AHkAcABlACIAOgAgACIAVgBhAGwAdQBlACIALAAKAAkACQAJAAkACQAiAHYAYQBsAHUAZQAiADoAIAAiADkAMQBmADEAOAA5ADYAZQAtADYANQBmAGEALQA0ADQAOQAzAC0AOABlAGMAYgAtAGIAYgAzAGEAYQBhADgAZgA4ADcAYgBjACIALAAKAAkACQAJAAkACQAiAGwAYQBiAGUAbAAiADoAIAAiAEUAcgBuAGUAcwB0AGkAbgBlACAAQgBhAGwAbAAiACwACgAJAAkACQAJAAkAIgBpAHMAbABvAG8AawB1AHAAIgA6ACAAdAByAHUAZQAKAAkACQAJAAkAfQBdACwACgAJAAkACQAJACIAZABhAHQAYQAiADoAIAB7AAoACQAJAAkACQAJACIAYgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AE4AYQBtAGUAIgA6ACAAIgBwAGUAcgBzAG8AbgAiAAoACQAJAAkACQB9AAoACQAJAAkAfQBdACwACgAJAAkACQAiAHYAYQBsAGkAZAAiADoAIAB0AHIAdQBlAAoACQAJAH0ALAAKAAkACQAiAHIAZQBsAGEAdABlAGQAQgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AHMAIgA6ACAAWwBdAAoACQB9ACwACgAJACIAUQB1AGUAcgB5AEMAbwBsAHUAbQBuAHMAIgA6ACAAWwBdAAoAfQA=</StringHttpBody>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

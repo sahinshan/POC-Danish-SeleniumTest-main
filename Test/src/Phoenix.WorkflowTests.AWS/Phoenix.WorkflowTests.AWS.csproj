@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FAA8A65E-EF6C-418B-8853-6BD264AAD2C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phoenix.WorkflowTests.AWS</RootNamespace>
+    <AssemblyName>Phoenix.WorkflowTests.AWS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CareDirector.Sdk, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblie\CareDirector.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="CareWorks.Foundation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5492b30927a3c603, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblie\CareWorks.Foundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseTestClass.cs" />
+    <Compile Include="CommonWorkflowMethods.cs" />
+    <Compile Include="WorkflowTests\AsynchronousWorkflowTests_ak_Batch2.cs" />
+    <Compile Include="WorkflowTests\AsynchronousWorkflowTests_ak_Batch3.cs" />
+    <Compile Include="WorkflowTests\AsynchronousWorkflowTests_ak_Batch5.cs" />
+    <Compile Include="WorkflowTests\AsynchronousWorkflowTests_ak_Batch4.cs" />
+    <Compile Include="WorkflowTests\AsyncWorkflowDetailsSectionTests.cs" />
+    <Compile Include="WorkflowTests\AsyncWorkflowDetailsSectionTests_JB.cs" />
+    <Compile Include="WorkflowTests\AsyncWorkflowDetailsSectionTests_VJ_Batch1.cs" />
+    <Compile Include="WorkflowTests\PreSyncWorkflowDetailsSectionTests.cs" />
+    <Compile Include="WorkflowTests\WaitWorkflowDetailsSectionTests.cs" />
+    <Compile Include="WorkflowTests\WorkflowDetailsSectionTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Files\Automation - Person Form 1.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Document CDV6-8893.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Person Initial Assessment.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Async Automated Testing - Testing the Operators in Conditions.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Async Automated Testing - Validate Actions for Async workflow 2.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Async Automated Testing - Validate Actions for Async workflow.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Async Workflow Testing - Validations of complex scenarios.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Async Workflow Testing - Validations of Conditions and Steps.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Testing CDV6-15933.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - Bugs 2.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - Bugs 3.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - Bugs.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - CDV6-8527.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Person Employment Date Overlap.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Test CDV6-7678.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - CDV6-8863.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - CDV6-8893 %28Case Form%29.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - CDV6-8893.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - CDV6-9096 - Child WF %28published%29.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - CDV6-9096 - Child WF %28un-published%29.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - CDV6-9096 - Child WF - UI Test to unpublish.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - CDV6-9096 - Parent WF.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - CDV6-9097.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - Rich Text Box Updates.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S1.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S10.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S12.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S14.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S16.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S19.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S22.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S24.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S25.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S26.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S27.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S28.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S29.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S3.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S30.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S31 - Child Process.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S31.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S32.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S33.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S38.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S40.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S44.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S5.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S7.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - S8.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - Pre-Sync Workflow testing.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - Set a lookup field to a MultiSelectMultiLookup Tests and Date and Datetime related tests.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - Testing the Custom Fields Tool 2.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - Testing the Custom Fields Tool.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - Testing the Operators in Conditions.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - Validations of Conditions and Steps.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - Validations to Business Data Actions.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF CDV6-9078 %28publised - Execute After%29.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF CDV6-9078 %28published - Execute Before%29.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Person Form Testing - Jira ID CDV6-8028.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Testing Owner in Create Action - Jira ID CDV6-8283.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Workflow Test Document 1.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AtlassianServicesAPI\AtlassianServicesAPI.csproj">
+      <Project>{74795c5f-1b18-4822-9621-207fa002b17c}</Project>
+      <Name>AtlassianServicesAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phoenix.WebAPIHelper\Phoenix.WebAPIHelper.csproj">
+      <Project>{9ebe8515-226d-4d45-b92e-b6bc331ba112}</Project>
+      <Name>Phoenix.WebAPIHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phoenix.WorkflowTestFramework\Phoenix.WorkflowTestFramework.csproj">
+      <Project>{87cb72bd-a539-4049-9d7e-cc059dd8fa64}</Project>
+      <Name>Phoenix.WorkflowTestFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CaredirectorAssemblie\CareDirector.Portal.Shared.dll" />
+    <Content Include="CaredirectorAssemblie\CareDirector.Sdk.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\CareWorks.Cache.Foundation.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\CareWorks.CareDirectorApplicationCache.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\CareWorks.Foundation.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\DocumentFormat.OpenXml.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\HtmlToOpenXml.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\Ionic.Zip.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="CaredirectorAssemblie\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="CaredirectorAssemblie\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="CaredirectorAssemblie\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\Serilog.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\Serilog.Sinks.Console.dll" />
+    <Content Include="CaredirectorAssemblie\Serilog.Sinks.Debug.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\Serilog.Sinks.File.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\StackExchange.Redis.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\StackExchange.Redis.StrongName.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaredirectorAssemblie\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="CaredirectorAssemblie\System.ValueTuple.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93D0AF47-5FC8-406D-BA39-2A92DDF0F91D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phoenix.UITests</RootNamespace>
+    <AssemblyName>Phoenix.UITests</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_PUBLISH_CHROMEDRIVER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TRXExtractFailedTests, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TRX-Extract-Failed-Tests.3.0.1\lib\net472\TRXExtractFailedTests.exe</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.4.10.0\lib\net47\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.4.8.2\lib\net47\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AdvancedSearch\AdvancedSearch_UITestCases2.cs" />
+    <Compile Include="AdvancedSearch\AdvancedSearch_UITestCases.cs" />
+    <Compile Include="CareDiary\CareDiary_UITestCases.cs" />
+    <Compile Include="Cases\CaseForm\CaseForm_SDEMapping_UITestCases.cs" />
+    <Compile Include="Cases\CaseForm\CaseForm_DocumentRules_UITestCases.cs" />
+    <Compile Include="Cases\CaseForm\CaseFormReportingTable_UITestCases.cs" />
+    <Compile Include="Cases\CaseForm\CaseForm_UITestCases.cs" />
+    <Compile Include="Cases\CaseForm\Case_CaseFormAttachments_UITestCases.cs" />
+    <Compile Include="Cases\CaseForm\Case_CaseFormCaseNotes_UITestCases.cs" />
+    <Compile Include="Cases\CaseForm\Case_CaseFormFormTasks_UITestCases.cs" />
+    <Compile Include="Cases\CaseForm\Case_CaseFormFormPhoneCalls_UITestCases.cs" />
+    <Compile Include="Cases\CaseForm\Case_CaseFormFormLetters_UITestCases.cs" />
+    <Compile Include="Cases\CaseForm\Case_CaseFormFormEmails_UITestCases.cs" />
+    <Compile Include="Cases\CaseForm\DocumentTypeLookup_UITestCase.cs" />
+    <Compile Include="Cases\CaseRecord_UITestCases3.cs" />
+    <Compile Include="Cases\CaseRecord_UITestCases2.cs" />
+    <Compile Include="Cases\Case_FormsCase_UITestCases .cs" />
+    <Compile Include="Cases\Case_HealthAppointmentOutcomes_RTTTreatment_UITestCases.cs" />
+    <Compile Include="Cases\Case_HealthAppointments_UITestCases2.cs" />
+    <Compile Include="Cases\Case_InpatientCase_UITestCases.cs" />
+    <Compile Include="Cases\Case_HealthAppointmentsContactOffers_UITestCases.cs" />
+    <Compile Include="Cases\Case_RTT_Field_UITestCases.cs" />
+    <Compile Include="Cases\Case_SocialCareCases_UITestCases.cs" />
+    <Compile Include="Cases\Case_Tasks_UITestCases.cs" />
+    <Compile Include="Cases\Case_LeaveAWOL_UITestCases.cs" />
+    <Compile Include="Cases\Case_CaseNotes_UITestCases.cs" />
+    <Compile Include="Cases\Case_HealthAppointments_UITestCases.cs" />
+    <Compile Include="Cases\CaseRecord_UITestCases.cs" />
+    <Compile Include="Cases\CaseForm\Case_CaseFormFormAppointments_UITestCases.cs" />
+    <Compile Include="Cases\Case_UnscheduledHealthAppointmentsBatch02_UITestCases.cs" />
+    <Compile Include="Cases\Health\Cases_Diagonsis_UITestCases.cs" />
+    <Compile Include="Cases\Health\Case_Leave_AWOL_UITestCases.cs" />
+    <Compile Include="Cases\Health\Case_Seclusions_UITestCases.cs" />
+    <Compile Include="Cases\Related Items\CaseInvolvements_UITestCases.cs" />
+    <Compile Include="Cases\Related Items\Case_BrokerageEpisodes_RubanUITestCases3.cs" />
+    <Compile Include="Cases\Related Items\Case_BrokerageEpisodes_RubanUITestCases2.cs" />
+    <Compile Include="Cases\Related Items\Case_BrokerageEpisodes_RubanUITestCases1.cs" />
+    <Compile Include="Cases\Related Items\Case_BrokerageEpisodes_NachaUITestCases.cs" />
+    <Compile Include="Cases\Related Items\Case_BrokerageEpisodes_UITestCases.cs" />
+    <Compile Include="Cases\Related Items\CaseAttachments_UITestCases.cs" />
+    <Compile Include="Cases\Related Items\Case_RTT_Treatment_UITestCases.cs" />
+    <Compile Include="CommonMethodsDB.cs" />
+    <Compile Include="DailyCareBOs\DailyCareBO_ACC_3425_UITestCases.cs" />
+    <Compile Include="DailyCareBOs\DailyCareBO_ACC_2789_UITestCases.cs" />
+    <Compile Include="DailyCareBOs\DailyCareBO_ACC_3600_UITestCases.cs" />
+    <Compile Include="DailyCareBOs\DailyCareBO_ACC_3603_UITestCases.cs" />
+    <Compile Include="DailyCareBOs\DailyCareBO_UITestCases.cs" />
+    <Compile Include="DailyCareBOs\DailyCare_Mobility_UITestCases.cs" />
+    <Compile Include="People\CarePlan\PersonCarePlan_UITestCases.cs" />
+    <Compile Include="People\DailyCare\Conversations_UITestCases.cs" />
+    <Compile Include="People\DailyCare\PersonalSafetyAndEnvironment_UITestCases.cs" />
+    <Compile Include="People\DailyCare\FoodAndFluid_UITestCases.cs" />
+    <Compile Include="People\DailyCare\PersonPainManagement_UITestCases.cs" />
+    <Compile Include="People\DailyCare\PersonEmotionalSupport_UITestCases.cs" />
+    <Compile Include="People\DailyCare\PersonDiaryEvents_UITestCases.cs" />
+    <Compile Include="People\DailyCare\PersonActivities_UITestCases.cs" />
+    <Compile Include="People\DailyCare\ContinenceCare_UITestCases.cs" />
+    <Compile Include="People\DailyCare\DistressedBehaviour_UITestCases.cs" />
+    <Compile Include="People\DailyCare\PhysicalObservations_UITestCases.cs" />
+    <Compile Include="People\DailyCare\HeightAndWeight_UITestCases.cs" />
+    <Compile Include="People\DailyCare\Repositioning_UITestCases.cs" />
+    <Compile Include="DefaultTeam\DefaultTeam_UITestCases.cs" />
+    <Compile Include="Finance\CPFinanceTransactions\CPFinanceTransactions_JB_UITestCases.cs" />
+    <Compile Include="People\DailyCare\WelfareChecks_UITestCases.cs" />
+    <Compile Include="People\DailyCare\PersonMobility_UITestCases.cs" />
+    <Compile Include="People\DailyCare\DailyPersonalCare_UITestCases.cs" />
+    <Compile Include="People\Other\Person_OfflineBooking_UITestCases.cs" />
+    <Compile Include="People\Related Items\ChargeApportionments_UITestCases.cs" />
+    <Compile Include="People\Related Items\PersonalMoneyAccount_UITestCases.cs" />
+    <Compile Include="People\Related Items\PersonContractService_JB_UITestCases.cs" />
+    <Compile Include="People\Related Items\PersonContractService_UITestCases.cs" />
+    <Compile Include="People\Related Items\PersonContracts_ServiceRate_Period_UITestCases.cs" />
+    <Compile Include="PersonAbsence\OpenEndedAbsence_Booking_UITestCases.cs" />
+    <Compile Include="PersonAbsence\PersonAbsence_PersonContractFlag_Booking_UITestCases.cs" />
+    <Compile Include="PersonAbsence\PersonAbsence_OverlappingBooking_UITestCases.cs" />
+    <Compile Include="PersonAbsence\PersonAbsence_Booking_UITestCases.cs" />
+    <Compile Include="DiaryBook\DiaryBooking_GPSLocation_UITestCases.cs" />
+    <Compile Include="FAQs\FAQs_UITestCases.cs" />
+    <Compile Include="Finance\FinanceAdmin\FinanceInvoiceBatchSetups_UITestCases.cs" />
+    <Compile Include="Finance\FinanceAdmin\FinanceInvoice_SupplierPayments_UITestCases.cs" />
+    <Compile Include="Finance\FinanceTransactions\AdditionalFinanceTransaction_UITestCases.cs" />
+    <Compile Include="Finance\FinanceTransactions\FinanceTransactions_UITestCases.cs" />
+    <Compile Include="Finance\FinancialAssessment\FinancialAssessment_UITestCases_JB.cs" />
+    <Compile Include="Finance\Service Provisions\ServiceProvisionRatePeriod_UITestCases.cs" />
+    <Compile Include="Finance\Service Provisions\ServiceProvision_UITestCases3.cs" />
+    <Compile Include="Finance\Service Provisions\ServiceProvisionRateSchedule_UITestCases.cs" />
+    <Compile Include="Finance\Service Provisions\ServiceProvision_UITestCases_JB.cs" />
+    <Compile Include="Finance\Service Provisions\ServiceProvision_UITestCases.cs" />
+    <Compile Include="Finance\ServiceDelivery\ServiceDelivery_UITestCases_JB.cs" />
+    <Compile Include="Finance\ServiceElement1\GLCodeMappings_UITestCases_JB.cs" />
+    <Compile Include="Finance\ServiceElement1\GLCodeMappings_UITestCases_VJ.cs" />
+    <Compile Include="Finance\ServiceElement1\GLCodeMappings_UITestCases_AK.cs" />
+    <Compile Include="Finance\ServiceElement1\ServiceMappings_UITestCases_Part8.cs" />
+    <Compile Include="Finance\ServiceElement1\ServicePermission_UITestCases.cs" />
+    <Compile Include="Finance\ServiceElement1\ServiceMappings_UITestCases.cs" />
+    <Compile Include="Finance\ServiceElement1\ServiceElement1_UITestCases_Part5.cs" />
+    <Compile Include="Finance\ServiceElement1\ServiceElement1_UITestCases_Part2.cs" />
+    <Compile Include="Finance\ServiceElement1\ServiceElement1_UITestCases.cs" />
+    <Compile Include="Finance\ServiceElement2\ServiceElement2_UITestCases.cs" />
+    <Compile Include="Finance\ServiceGLCodings\ServiceGLCodings_UITestCases.cs" />
+    <Compile Include="Finance\ServicesProvided\ServiceProvidedRatePeriod_UITestCases.cs" />
+    <Compile Include="Finance\ServicesProvided\ServiceProvidedRateSchedule_UITestCases.cs" />
+    <Compile Include="FunctionalTest.cs" />
+    <Compile Include="People\Activities\Person_Appointments_UITestCases2.cs" />
+    <Compile Include="People\Other\People_UITestCases.cs" />
+    <Compile Include="People\Other\Person_Addresses_UITestCases.cs" />
+    <Compile Include="People\Other\Person_CarePlan_RegularCareTask_UITestCases.cs" />
+    <Compile Include="People\Other\Person_FinancialAssessment_UITestCases.cs" />
+    <Compile Include="People\Other\Person_PhysicalObservationCaseNotes_UITestCases.cs" />
+    <Compile Include="People\Related Items\PersonSpecificTrainings_UITestCases.cs" />
+    <Compile Include="People\Related Items\PersonContracts_UITestCases.cs" />
+    <Compile Include="People\WorkAndEducation\AttendedEducationEstablishments_UITestCases.cs" />
+    <Compile Include="Provider Schedule\ProviderSchedule2_JB_UITestCases.cs" />
+    <Compile Include="ProviderDiary\ExpressBook_ACC_6669_UITestCases.cs" />
+    <Compile Include="ProviderDiary\ProviderDiary_JB_E2E_UITestCases.cs" />
+    <Compile Include="ProviderDiary\ProviderDiary_JB_UITestCases.cs" />
+    <Compile Include="Provider Schedule\ExpressBook_JB_UITestCases.cs" />
+    <Compile Include="Provider Schedule\ProviderSchedule_JB_UITestCases.cs" />
+    <Compile Include="ProviderDiary\DiaryBooking_UpdateBookingEndTime_UITestCases.cs" />
+    <Compile Include="ProviderDiary\ProviderDiaryBooking_ACC_6578_UITestCases.cs" />
+    <Compile Include="ProviderDiary\ProviderDiary_UITestCases.cs" />
+    <Compile Include="ProviderDiary\ProviderDiary2_JB_UITestCases.cs" />
+    <Compile Include="ProviderScheduleBooking\ScheduleBooking_DoubleBookingChecks_UITestCases.cs" />
+    <Compile Include="ProviderScheduleBooking\ScheduleBooking_UpdateBookingEndTime_UITestCases.cs" />
+    <Compile Include="ProviderScheduleBooking\ScheduleBooking_ValidatePeoplePresent_UITestCases.cs" />
+    <Compile Include="ProviderScheduleBooking\StaffAvailableOptions_UITestCases.cs" />
+    <Compile Include="ProviderScheduleBooking\ProviderScheduleBooking_UITestCases.cs" />
+    <Compile Include="Providers\EmploymentContract_ACC_6693_UITestCases.cs" />
+    <Compile Include="Providers\Fee\Fees_UITestCases.cs" />
+    <Compile Include="Providers\ProviderSchedule_UITestCases.cs" />
+    <Compile Include="Providers\ProviderType_UITestCases.cs" />
+    <Compile Include="Providers\QualityAssurance\ComplaintsFeedback_UITestCases.cs" />
+    <Compile Include="Providers\ServiceFinanceSettings_UITestCases.cs" />
+    <Compile Include="Providers\ServiceProvided_UITestCases.cs" />
+    <Compile Include="Recuritments\Applicant_OrderBySurname_UITestcases.cs" />
+    <Compile Include="Recuritments\Applicant_ACC_3057_UITestCases.cs" />
+    <Compile Include="Recuritments\ComplianceItem_UITestCases.cs" />
+    <Compile Include="Recuritments\RecruitmentDocumentAttachment_UITestCases.cs" />
+    <Compile Include="Recuritments\RecruitmentDocumentOverrideIndicator_UITestCases.cs" />
+    <Compile Include="Recuritments\RecruitmentDocuments_StatusChange_UITestCases .cs" />
+    <Compile Include="Recuritments\RecruitmentDocuments_UITestCases.cs" />
+    <Compile Include="Recuritments\ApplicantLanguageAndAlias_UITestCases.cs" />
+    <Compile Include="Recuritments\RecruitmentRequirementSetup_UITestCases.cs" />
+    <Compile Include="Recuritments\RestrictedAccessToOverrideAttribute_UITestCases.cs" />
+    <Compile Include="Recuritments\RoleApplications_UITestCases.cs" />
+    <Compile Include="Recuritments\RoleApplication2_UITestCases.cs" />
+    <Compile Include="Recuritments\RoleApplication_UITestCases.cs" />
+    <Compile Include="Recuritments\ScheduleAvailability_CalendarIcon_UITestCases.cs" />
+    <Compile Include="Recuritments\Availability_Color_UIITestCases.cs" />
+    <Compile Include="Recuritments\StaffAvailability_DataUpdateWithoutRefresh_UITestCases.cs" />
+    <Compile Include="Recuritments\TrainingRequirementSetup_UITestCases.cs" />
+    <Compile Include="Regular CareTask\Person_CarePlan_ScheduleRegularCareTask_UITestCases.cs" />
+    <Compile Include="Scripts\LoadTestScripts.cs" />
+    <Compile Include="Scripts\MobileApp_Scripts.cs" />
+    <Compile Include="Scripts\ProviderDiary_Scripts.cs" />
+    <Compile Include="Settings\CareProviderSetup\BookingTypes_UITestCases.cs" />
+    <Compile Include="Settings\CareProviderSetup\CareProviderSchedulingSetup_UITestCases.cs" />
+    <Compile Include="Settings\CareProviderSetup\RecruitmentRequirement_AutoPopulate_RequiredName .cs" />
+    <Compile Include="Settings\CareProviderSetup\AvailabilityTypes_UITestCases.cs" />
+    <Compile Include="Recuritments\Applicant_UITestCases4.cs" />
+    <Compile Include="Settings\CareProviderSetup\RecruitmentRequirements_UITestCases.cs" />
+    <Compile Include="Settings\CareProviderSetup\TrainingRequirementSetup_UITestCases.cs" />
+    <Compile Include="Settings\CareProviderSetup\TrainingCourseSetup_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\CPFinanceAdmin\CPFinance_ContractServices_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\CPFinanceAdmin\CPFinance_FinanceExtractBatchSetup_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\CPFinanceAdmin\CPFinance_MpaRatesUplift_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\CPFinanceAdmin\CPFinance_ServiceMapping_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\CPFinanceAdmin\CPFinance_Services_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\CPFinanceAdmin\CPFinance_ServiceDetails_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\CPFinanceAdmin\MasterPayArrangements_JB_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\CPFinanceAdmin\FinanceInvoiceBatchSetup_JB_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\CPFinance\CPFinance_FinanceExtractBatch_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\CPFinance\CPFinance_FinanceInvoiceBatch_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\CPFinance\CPFinance_FinanceInvoicePayments_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\CPFinance\CPFinance_FinanceInvoice_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\HealthSetup\DiaryViewSetup_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\HealthSetup\RTTPathwaysSetup_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\Option Sets_RecruitmentDocumentStatus_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\RecruitmentStatus_OptionSets_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\ReferenceData\CareProviderStaffRoleTypeGroups_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\ReferenceData\ContractSchemes_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\ReferenceData\Pronouns_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\ReferenceData\RateUnits_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\ReferenceData\ReferenceData_UITestCases2.cs" />
+    <Compile Include="Settings\Configuration\ReferenceData\RTTTreatmentFunctions_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\ReferenceData\BandRateTypes_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\ReferenceData\TransportTypes_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\ReferenceData\StaffRecruitmentItems_UITestCases.cs" />
+    <Compile Include="Settings\Security\SystemUser_EmploymentContract_UITestCases2.cs" />
+    <Compile Include="Settings\Security\SystemUser_ScheduleTransport_UITestCases.cs" />
+    <Compile Include="Settings\Security\SystemUser_UITestCases2.cs" />
+    <Compile Include="Settings\Security\StaffReviewFormPage_StaffEvaluation_UITestCases.cs" />
+    <Compile Include="Settings\Security\StaffReviewFormPage_UITestCases.cs" />
+    <Compile Include="Settings\Security\StaffReview_StaffSpotCheckForms_UITestCases.cs" />
+    <Compile Include="Settings\Security\StaffReview_StaffSupervisionForms_UITestCases.cs" />
+    <Compile Include="Settings\Security\SystemUser_Availability_UITestCases.cs" />
+    <Compile Include="Settings\Security\CareSecurity_ListView_UITestCases.cs" />
+    <Compile Include="People\Activities\Person_RecurringAppointments_UITestCases.cs" />
+    <Compile Include="People\Activities\Person_Tasks_CareProviders_UITestCases.cs" />
+    <Compile Include="People\Health\Person_HealthImmunisation_UITestCases .cs" />
+    <Compile Include="People\Health\Person_RecordsOfDNAR_UITestCases.cs" />
+    <Compile Include="People\Health\Person_ClinicalRiskFactor_UITestCases.cs" />
+    <Compile Include="People\Health\Person_GestationPeriod_UITestCases.cs" />
+    <Compile Include="People\Health\Person_HealthDisabilitiesAndImpairments_UITestCases .cs" />
+    <Compile Include="People\Health\Person_HealthProfessionals_UITestCases.cs" />
+    <Compile Include="People\Health\Person_HealthDetail_UITestCases.cs" />
+    <Compile Include="People\Other\Person_AboutMe_UITestCases.cs" />
+    <Compile Include="People\Other\Person_CarePlan_CareProvider_UITestCases.cs" />
+    <Compile Include="People\Other\Person_CarePlan_UITestCases.cs" />
+    <Compile Include="People\Other\Person_Attachments_UITestCases.cs" />
+    <Compile Include="People\Other\Person_Creation_UITestCases.cs" />
+    <Compile Include="People\Other\Person_BodyMaps_UITestCases.cs" />
+    <Compile Include="People\Other\Person_PersonFormInvolvement_UITestCases.cs" />
+    <Compile Include="People\Other\Person_RecentlyViewed_UITestCase.cs" />
+    <Compile Include="People\Other\Person_Section117Entitlements_UITestCases.cs" />
+    <Compile Include="People\Other\Person_Contacts_UITestCases.cs" />
+    <Compile Include="People\Other\Person_MHALegalStatuses_UITestCases.cs" />
+    <Compile Include="People\Other\Person_HeightWeightObservations_UITestCases.cs" />
+    <Compile Include="People\Other\Person_ClinicalRiskStatuses_UITestCases.cs" />
+    <Compile Include="People\Activities\Person_Appointments_UITestCases.cs" />
+    <Compile Include="People\Activities\Person_Tasks_UITestCases.cs" />
+    <Compile Include="People\Other\Person_Letters_UITestCases.cs" />
+    <Compile Include="People\Other\Person_PhoneCalls_UITestCases.cs" />
+    <Compile Include="People\Other\Person_PersonForm_UITestCases.cs" />
+    <Compile Include="People\Other\Person_PersonFormTasks_UITestCases.cs" />
+    <Compile Include="People\Other\Person_PersonFormPhoneCalls_UITestCases.cs" />
+    <Compile Include="People\Other\Person_PersonFormLetters_UITestCases.cs" />
+    <Compile Include="People\Other\Person_PersonFormEmails_UITestCases.cs" />
+    <Compile Include="People\Other\Person_PersonFormAppointments_UITestCases.cs" />
+    <Compile Include="People\Other\Person_PersonFormCaseNotes_UITestCases.cs" />
+    <Compile Include="People\Other\Person_CaseNotes_UITestCases.cs" />
+    <Compile Include="People\Other\Person_Timeline_UITestCases.cs" />
+    <Compile Include="People\Other\Person_MailMerge_UITestCases.cs" />
+    <Compile Include="People\Other\Person_Email_UITestCases.cs" />
+    <Compile Include="People\Other\Person_CPISRecords_UITestCases.cs" />
+    <Compile Include="People\Other\Person_PhysicalObservations_UITestCases.cs" />
+    <Compile Include="People\Other\Person_Chronology_UITestCases.cs" />
+    <Compile Include="People\Other\Person_AllActivities_UITestCases.cs" />
+    <Compile Include="People\Other\Person_DocumentView_UITestCases.cs" />
+    <Compile Include="People\Other\PersonRecord_UITestCases.cs" />
+    <Compile Include="People\Related Items\PersonForms_UITestCases.cs" />
+    <Compile Include="People\Related Items\Person_AdoptionLinks_UITestCases.cs" />
+    <Compile Include="People\Related Items\Person_Allegations_AllegedVictim_UITestCases.cs" />
+    <Compile Include="People\Related Items\Person_Allegations_AllegedAbuser_UITestCases.cs" />
+    <Compile Include="People\Related Items\Person_Chronologies_UITestCases .cs" />
+    <Compile Include="People\Related Items\Person_PrimarySupportReasons_UITestCases.cs" />
+    <Compile Include="People\Related Items\Person_AlertAndHazards_UITestCases.cs" />
+    <Compile Include="PersonSearch\PersonSearch_UITestCases.cs" />
+    <Compile Include="Providers\Provider_ServiceProvided_DuplicateCheck_UITestCases.cs" />
+    <Compile Include="Providers\Provider_UITestCases.cs" />
+    <Compile Include="Providers\Provider_WebsiteMessages_UITestCases.cs" />
+    <Compile Include="QualityAndCompliance\ReportableEvents_UITestCase.cs" />
+    <Compile Include="QualityAndCompliance\OrganizationalRisks_UITestCase.cs" />
+    <Compile Include="QualityAndCompliance\OrgRisk_ActionPlans_UITestCase.cs" />
+    <Compile Include="Recuritments\Applicant_UITestCases3.cs" />
+    <Compile Include="Recuritments\Applicant_UITestCases2.cs" />
+    <Compile Include="Recuritments\Applicant_UITestCases.cs" />
+    <Compile Include="Recuritments\ScheduleAvailability_UITestCases.cs" />
+    <Compile Include="Scripts\ExpressBook.cs" />
+    <Compile Include="Scripts\LoadTestScripts_UITestCases.cs" />
+    <Compile Include="Finance\Service Provisions\ServiceProvision_UITestCases2.cs" />
+    <Compile Include="Settings\CareProviderSetup\RiskCategoriesManagement_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\AboutMeSetupPage_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\Customizations_UITestCases.cs" />
+    <Compile Include="Settings\CareProviderSetup\StaffReviewRequriment_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\Workflows_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\SystemManagement_UITestCases.cs" />
+    <Compile Include="Settings\Configuration\ReferenceData\ReferenceData_UITestCases.cs" />
+    <Compile Include="Settings\DataManagement\DuplicateRecords_UITestCases.cs" />
+    <Compile Include="Settings\QualityAndCompliance\RiskManagement\OrganisationalRiskManagement_UITestCases.cs" />
+    <Compile Include="Settings\QualityAndCompliance\RiskManagement\OrganisationalRisk_ActionPlans_UITestCases.cs" />
+    <Compile Include="Settings\Security\AdHocTransportAvailability_UITestCases.cs" />
+    <Compile Include="Settings\Security\CareProviders_SystemUser_UITestCases.cs" />
+    <Compile Include="Settings\Security\StaffReviewAppraisalForms_UITestCases.cs" />
+    <Compile Include="Settings\Security\StaffReviewDisciplinaryForms_UITestCases.cs" />
+    <Compile Include="Settings\Security\StaffReview_EmploymentContract_UITestCases.cs" />
+    <Compile Include="Settings\Security\SystemUser_EmployeeType_UITestCases2.cs" />
+    <Compile Include="Settings\Security\SystemUser_Training_TestCases.cs" />
+    <Compile Include="Settings\Security\UserWorkSchedules_UITestCases.cs" />
+    <Compile Include="Settings\Security\SystemUser_Employment_StaffReview_UITestCases.cs" />
+    <Compile Include="Settings\Security\StaffReview_UITestCases.cs" />
+    <Compile Include="Settings\Security\StaffReviewForms_UITestCases.cs" />
+    <Compile Include="Settings\Security\SystemUser_SecurityProfiles_UITestCases .cs" />
+    <Compile Include="Settings\Security\StaffReview_WorkPlace_UITestCases.cs" />
+    <Compile Include="Settings\Security\SystemUser_Regression_TestCases.cs" />
+    <Compile Include="Settings\Security\SystemUser_RelatedItems_Aliases_UITestCases_.cs" />
+    <Compile Include="Settings\Security\SystemUser_RelatedItems_EmergencyContacts_UITestCases.cs" />
+    <Compile Include="Settings\Security\SystemUser_RelatedItem_Address_UITestCases.cs" />
+    <Compile Include="Settings\Security\SecurityProfiles_UITestCases.cs" />
+    <Compile Include="Settings\Security\SystemUser_CareProviderEnvironment_UITestCases.cs" />
+    <Compile Include="Settings\Security\StaffReviewAttachments_UITestCases.cs" />
+    <Compile Include="Settings\Security\SystemUser_EmployeeType_UITestCases.cs" />
+    <Compile Include="Settings\Security\SystemUser_UITestCases.cs" />
+    <Compile Include="Settings\Security\Security_TeamMembership_UITestCases.cs" />
+    <Compile Include="Settings\BusinessObjects\BusinessObject_BulkEdit_UITestCases.cs" />
+    <Compile Include="Settings\DataManagement\FileDestructionGDPR_UITestCases.cs" />
+    <Compile Include="Settings\DataManagement\MergedRecords_UITestCases.cs" />
+    <Compile Include="Settings\FormsManagement\Documents_UITestCases.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\Portals\WebSite_UITestCases.cs" />
+    <Compile Include="Settings\Security\ViewDiaryManageAdHoc_UITestCases.cs" />
+    <Compile Include="Settings\ViewsAndDashboards\UserCharts_UITestCases.cs" />
+    <Compile Include="Settings\ViewsAndDashboards\UserDashboards_UITestCases.cs" />
+    <Compile Include="Settings\ViewsAndDashboards\SummaryDashboards_UITestCases.cs" />
+    <Compile Include="Settings\ViewsAndDashboards\SystemDashboards_UITestCases.cs" />
+    <Compile Include="SmokeTests\SmokeTests_Level1_UITestCases.cs" />
+    <Compile Include="SmokeTests\ImportDocuments_UITestCases.cs" />
+    <Compile Include="SmokeTests\SmokeTests_Level2_UITestCases.cs" />
+    <Compile Include="UnitTest2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Abbey Pain Scale - Doc Rules.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Abbey Pain Scale.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Assessment Form.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Automated Brokerage Episode From New to Sourcing - Pre Sync.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Automated UI Test Document - CMS Questions.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Automated UI Test Document 1 Rules.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Automated UI Test Document 1.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Automated UI Test Document 2.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Automation - MASH Episode Form 1.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Automation - Person Form 1.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Automation - Rules - Person Form 1.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Automation Testing Summary Dashboard.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Automation Testing System Dashboard CDV6-10189.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Automation Testing System Dashboard.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Automation Testing User Dashboard.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Brokerage Assessment Creation - Schedule Time - Brokerage Episode.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Brokerage Assessment Creation - Schedule Time.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Brokerage episode creation with Scheduling.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Brokerage Episode Request date new.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Brokerage_ObjectMapping_4 - BrokerageEpisode.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Brokerage_ObjectMapping_4.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Care Plan.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\CP Review.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Doc MR.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Document.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Document2.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\D_Flag.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Gender Change.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Health_Appointment_CDV6_17002.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\InitialAssessmentCommunication.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\InitialAssessmentCommunicationRules.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Mobile - Person Form.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Person Address.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Person Automation Form 1.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Portal -  Case Identification.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\RTT Event - Case Discharged.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\RTT Event - Consultant Episode RTT Treatment Status.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\RTT Event - Health Appointment Outcome.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\RTT Event - New RTT Case.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\SCA - Brokerage.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Social Care Assessment Demo - BrokerageEpisode.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Social Care Assessment Demo.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\SpotCheckFormDocRules.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\SpotCheckFormDocument.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\StaffEvaluationForm.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\StaffReviewFormRules.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\StaffAppraisalFormDocRules.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\StaffAppraisalFormDocument.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\StaffDisciplinary.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\StaffEvaluation.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\StaffReviewFormDocument.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\StaffSupervision.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Sum two values_minus a third.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Testing CDV6-8614.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - CDV6-10345.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - CDV6-9098.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Automated Testing - CDV6-9273.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Person Form Testing - Jira ID CDV6-5001.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Workflow Testing - Is On Demand Process - WF 1.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Workflow Testing - Is On Demand Process - WF 2.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\WF Workflow Testing - Is On Demand Process - WF 3.Zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AtlassianServicesAPI\AtlassianServicesAPI.csproj">
+      <Project>{74795c5f-1b18-4822-9621-207fa002b17c}</Project>
+      <Name>AtlassianServicesAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phoenix.DBHelper\Phoenix.DBHelper.csproj">
+      <Project>{3c4b7c69-f6d8-43ca-849f-50fa6695bc46}</Project>
+      <Name>Phoenix.DBHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phoenix.UITests.Framework\Phoenix.UITests.Framework.csproj">
+      <Project>{805ae2a7-8b6d-471c-a5a7-e6c75fd52fd0}</Project>
+      <Name>Phoenix.UITests.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\ImageFile.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Video52MB.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Doc2ToUpload.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\DocToUpload.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Document.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Document2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\FileToUpload.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\LargeDocToUpload.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\video.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.IEDriver.4.8.1\build\Selenium.WebDriver.IEDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.IEDriver.4.8.1\build\Selenium.WebDriver.IEDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.4.10.0\build\Selenium.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.4.10.0\build\Selenium.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.GeckoDriver.0.34.0\build\Selenium.WebDriver.GeckoDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.GeckoDriver.0.34.0\build\Selenium.WebDriver.GeckoDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.127.0.6533.9900\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.127.0.6533.9900\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.WebDriver.IEDriver.4.8.1\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.IEDriver.4.8.1\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.4.10.0\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.10.0\build\Selenium.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.GeckoDriver.0.34.0\build\Selenium.WebDriver.GeckoDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.GeckoDriver.0.34.0\build\Selenium.WebDriver.GeckoDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.127.0.6533.9900\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.127.0.6533.9900\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

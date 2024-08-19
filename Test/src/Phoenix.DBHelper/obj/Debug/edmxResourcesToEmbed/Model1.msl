@@ -1,0 +1,1209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CareDirectorQA_CDModelStoreContainer" CdmEntityContainer="CareDirectorQA_CDEntities">
+    <EntitySetMapping Name="AssessmentPrintRecords">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.AssessmentPrintRecord">
+        <MappingFragment StoreEntitySet="AssessmentPrintRecord">
+          <ScalarProperty Name="AssessmentPrintRecordId" ColumnName="AssessmentPrintRecordId" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="PrintTemplateName" ColumnName="PrintTemplateName" />
+          <ScalarProperty Name="AssessmentSectionId" ColumnName="AssessmentSectionId" />
+          <ScalarProperty Name="AssessmentId" ColumnName="AssessmentId" />
+          <ScalarProperty Name="AssessmentIdTableName" ColumnName="AssessmentIdTableName" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="PrintAuditOnly" ColumnName="PrintAuditOnly" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="AssessmentIdName" ColumnName="AssessmentIdName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamRestrictedDataAccesses">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.TeamRestrictedDataAccess">
+        <MappingFragment StoreEntitySet="TeamRestrictedDataAccess">
+          <ScalarProperty Name="TeamRestrictedDataAccessId" ColumnName="TeamRestrictedDataAccessId" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="DataRestrictionReferenceId" ColumnName="DataRestrictionReferenceId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRestrictedDataAccesses">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.UserRestrictedDataAccess">
+        <MappingFragment StoreEntitySet="UserRestrictedDataAccess">
+          <ScalarProperty Name="UserRestrictedDataAccessId" ColumnName="UserRestrictedDataAccessId" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="DataRestrictionReferenceId" ColumnName="DataRestrictionReferenceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Appointments">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.Appointment">
+        <MappingFragment StoreEntitySet="Appointment">
+          <ScalarProperty Name="GroupRecordId" ColumnName="GroupRecordId" />
+          <ScalarProperty Name="SyncedWithMailbox" ColumnName="SyncedWithMailbox" />
+          <ScalarProperty Name="RecurringAppointmentId" ColumnName="RecurringAppointmentId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="AllowConcurrent" ColumnName="AllowConcurrent" />
+          <ScalarProperty Name="ShowTimeAsId" ColumnName="ShowTimeAsId" />
+          <ScalarProperty Name="AppointmentTypeId" ColumnName="AppointmentTypeId" />
+          <ScalarProperty Name="ResponsibleUserId" ColumnName="ResponsibleUserId" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="SignificantEventDate" ColumnName="SignificantEventDate" />
+          <ScalarProperty Name="SignificantEventSubCategoryId" ColumnName="SignificantEventSubCategoryId" />
+          <ScalarProperty Name="SignificantEventCategoryId" ColumnName="SignificantEventCategoryId" />
+          <ScalarProperty Name="IsSignificantEvent" ColumnName="IsSignificantEvent" />
+          <ScalarProperty Name="InformationByThirdParty" ColumnName="InformationByThirdParty" />
+          <ScalarProperty Name="ActivityPriorityId" ColumnName="ActivityPriorityId" />
+          <ScalarProperty Name="RegardingIdName" ColumnName="RegardingIdName" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="PriorityId" ColumnName="PriorityId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="ActivityReasonId" ColumnName="ActivityReasonId" />
+          <ScalarProperty Name="ActivityOutcomeId" ColumnName="ActivityOutcomeId" />
+          <ScalarProperty Name="ActivitySubCategoryId" ColumnName="ActivitySubCategoryId" />
+          <ScalarProperty Name="ActivityCategoryId" ColumnName="ActivityCategoryId" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="RegardingIdTableName" ColumnName="RegardingIdTableName" />
+          <ScalarProperty Name="RegardingId" ColumnName="RegardingId" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="AppointmentId" ColumnName="AppointmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttachDocumentTypes">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.AttachDocumentType">
+        <MappingFragment StoreEntitySet="AttachDocumentType">
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ValidForExport" ColumnName="ValidForExport" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="GovCode" ColumnName="GovCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="AttachDocumentTypeId" ColumnName="AttachDocumentTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cases">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.Case">
+        <MappingFragment StoreEntitySet="Case">
+          <ScalarProperty Name="followupteamidname" ColumnName="followupteamidname" />
+          <ScalarProperty Name="followupteamidtablename" ColumnName="followupteamidtablename" />
+          <ScalarProperty Name="FollowUpTeamId" ColumnName="FollowUpTeamId" />
+          <ScalarProperty Name="CaseReopenReasonId" ColumnName="CaseReopenReasonId" />
+          <ScalarProperty Name="MasterId" ColumnName="MasterId" />
+          <ScalarProperty Name="actualdischargedestinationid" ColumnName="actualdischargedestinationid" />
+          <ScalarProperty Name="ClonedFromCase" ColumnName="ClonedFromCase" />
+          <ScalarProperty Name="CommunityHealthCaseTransferReasonId" ColumnName="CommunityHealthCaseTransferReasonId" />
+          <ScalarProperty Name="MHASectionOnAdmissionId" ColumnName="MHASectionOnAdmissionId" />
+          <ScalarProperty Name="CarerNokNotified" ColumnName="CarerNokNotified" />
+          <ScalarProperty Name="PlannedDischargeDate" ColumnName="PlannedDischargeDate" />
+          <ScalarProperty Name="InpatientDischargeDestinationId" ColumnName="InpatientDischargeDestinationId" />
+          <ScalarProperty Name="ActualTransferDateTime" ColumnName="ActualTransferDateTime" />
+          <ScalarProperty Name="InpatientTransferOfCareReasonId" ColumnName="InpatientTransferOfCareReasonId" />
+          <ScalarProperty Name="HealthPathwayKeyId" ColumnName="HealthPathwayKeyId" />
+          <ScalarProperty Name="PathwayKeySourceId" ColumnName="PathwayKeySourceId" />
+          <ScalarProperty Name="IsSwappingInpatient" ColumnName="IsSwappingInpatient" />
+          <ScalarProperty Name="IsPersonOnLeave" ColumnName="IsPersonOnLeave" />
+          <ScalarProperty Name="InpatientCaseStatusId" ColumnName="InpatientCaseStatusId" />
+          <ScalarProperty Name="DaysAsInpatient" ColumnName="DaysAsInpatient" />
+          <ScalarProperty Name="WishesContactFromImhaId" ColumnName="WishesContactFromImhaId" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="AddressWardId" ColumnName="AddressWardId" />
+          <ScalarProperty Name="AddressLine5" ColumnName="AddressLine5" />
+          <ScalarProperty Name="AddressBoroughId" ColumnName="AddressBoroughId" />
+          <ScalarProperty Name="AddressLine4" ColumnName="AddressLine4" />
+          <ScalarProperty Name="UPRN" ColumnName="UPRN" />
+          <ScalarProperty Name="AddressLine3" ColumnName="AddressLine3" />
+          <ScalarProperty Name="AddressPropertyTypeId" ColumnName="AddressPropertyTypeId" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+          <ScalarProperty Name="DischargedToHomeAddressId" ColumnName="DischargedToHomeAddressId" />
+          <ScalarProperty Name="Section117AftercareEntitlement" ColumnName="Section117AftercareEntitlement" />
+          <ScalarProperty Name="DischargeInformation" ColumnName="DischargeInformation" />
+          <ScalarProperty Name="ActualDischargeDateTime" ColumnName="ActualDischargeDateTime" />
+          <ScalarProperty Name="InpatientResponsibleWardId" ColumnName="InpatientResponsibleWardId" />
+          <ScalarProperty Name="InpatientBayId" ColumnName="InpatientBayId" />
+          <ScalarProperty Name="ProviderId" ColumnName="ProviderId" />
+          <ScalarProperty Name="FitForDischageDate" ColumnName="FitForDischageDate" />
+          <ScalarProperty Name="EstimatedDischargeDate" ColumnName="EstimatedDischargeDate" />
+          <ScalarProperty Name="DateIntendedAdmissionChanged" ColumnName="DateIntendedAdmissionChanged" />
+          <ScalarProperty Name="InpatientChangeIntendedAdmissionReasonId" ColumnName="InpatientChangeIntendedAdmissionReasonId" />
+          <ScalarProperty Name="IntendedAdmissionDate" ColumnName="IntendedAdmissionDate" />
+          <ScalarProperty Name="DecisionToAdmitAgreedDateTime" ColumnName="DecisionToAdmitAgreedDateTime" />
+          <ScalarProperty Name="AdmissionDateTime" ColumnName="AdmissionDateTime" />
+          <ScalarProperty Name="NamedProfessionalId" ColumnName="NamedProfessionalId" />
+          <ScalarProperty Name="DolsConcernId" ColumnName="DolsConcernId" />
+          <ScalarProperty Name="CurrentConsultantId" ColumnName="CurrentConsultantId" />
+          <ScalarProperty Name="InpatientAdmissionMethodId" ColumnName="InpatientAdmissionMethodId" />
+          <ScalarProperty Name="WhoWasNotifiedId" ColumnName="WhoWasNotifiedId" />
+          <ScalarProperty Name="WishNokCarerNotifiedAdmissionId" ColumnName="WishNokCarerNotifiedAdmissionId" />
+          <ScalarProperty Name="InpatientIntendedManagementId" ColumnName="InpatientIntendedManagementId" />
+          <ScalarProperty Name="InpatientPatientClassificationId" ColumnName="InpatientPatientClassificationId" />
+          <ScalarProperty Name="InpatientAdmissionSourceId" ColumnName="InpatientAdmissionSourceId" />
+          <ScalarProperty Name="InpatientBedId" ColumnName="InpatientBedId" />
+          <ScalarProperty Name="InpatientWardId" ColumnName="InpatientWardId" />
+          <ScalarProperty Name="CaseOriginId" ColumnName="CaseOriginId" />
+          <ScalarProperty Name="ContactWithTrainedStaffDate" ColumnName="ContactWithTrainedStaffDate" />
+          <ScalarProperty Name="NonMigratedWorkerName" ColumnName="NonMigratedWorkerName" />
+          <ScalarProperty Name="ResponseMadeToContact" ColumnName="ResponseMadeToContact" />
+          <ScalarProperty Name="ReferringAgencyCaseId" ColumnName="ReferringAgencyCaseId" />
+          <ScalarProperty Name="ReReferral" ColumnName="ReReferral" />
+          <ScalarProperty Name="PoliceNotes" ColumnName="PoliceNotes" />
+          <ScalarProperty Name="PoliceNotifiedDate" ColumnName="PoliceNotifiedDate" />
+          <ScalarProperty Name="PoliceNotified" ColumnName="PoliceNotified" />
+          <ScalarProperty Name="ArchiveDate" ColumnName="ArchiveDate" />
+          <ScalarProperty Name="ClosureAcceptedById" ColumnName="ClosureAcceptedById" />
+          <ScalarProperty Name="ReviewDate" ColumnName="ReviewDate" />
+          <ScalarProperty Name="ChildInNeedCodeId" ColumnName="ChildInNeedCodeId" />
+          <ScalarProperty Name="PersonAge" ColumnName="PersonAge" />
+          <ScalarProperty Name="ContactSourceId" ColumnName="ContactSourceId" />
+          <ScalarProperty Name="CaseNumber" ColumnName="CaseNumber" />
+          <ScalarProperty Name="DataFormId" ColumnName="DataFormId" />
+          <ScalarProperty Name="EndDateTime" ColumnName="EndDateTime" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+          <ScalarProperty Name="ContactMadeByIdName" ColumnName="ContactMadeByIdName" />
+          <ScalarProperty Name="ContactMadeByIdTableName" ColumnName="ContactMadeByIdTableName" />
+          <ScalarProperty Name="ContactMadeById" ColumnName="ContactMadeById" />
+          <ScalarProperty Name="ProfessionalTypeId" ColumnName="ProfessionalTypeId" />
+          <ScalarProperty Name="CaseAcceptedId" ColumnName="CaseAcceptedId" />
+          <ScalarProperty Name="NextOfKinAwareOfContactId" ColumnName="NextOfKinAwareOfContactId" />
+          <ScalarProperty Name="CarerSupportContactId" ColumnName="CarerSupportContactId" />
+          <ScalarProperty Name="CarerAwareOfContactId" ColumnName="CarerAwareOfContactId" />
+          <ScalarProperty Name="PersonSupportContactId" ColumnName="PersonSupportContactId" />
+          <ScalarProperty Name="PersonAwareOfContactId" ColumnName="PersonAwareOfContactId" />
+          <ScalarProperty Name="ServiceTypeRequestedId" ColumnName="ServiceTypeRequestedId" />
+          <ScalarProperty Name="AdministrativeCategoryId" ColumnName="AdministrativeCategoryId" />
+          <ScalarProperty Name="CaseTransferredTeamFromId" ColumnName="CaseTransferredTeamFromId" />
+          <ScalarProperty Name="PresentingPriorityId" ColumnName="PresentingPriorityId" />
+          <ScalarProperty Name="ContactReasonId" ColumnName="ContactReasonId" />
+          <ScalarProperty Name="OtherRelatedContactId" ColumnName="OtherRelatedContactId" />
+          <ScalarProperty Name="InitialContactId" ColumnName="InitialContactId" />
+          <ScalarProperty Name="CaseClosureReasonId" ColumnName="CaseClosureReasonId" />
+          <ScalarProperty Name="CaseStatusId" ColumnName="CaseStatusId" />
+          <ScalarProperty Name="CaseRejectedReasonId" ColumnName="CaseRejectedReasonId" />
+          <ScalarProperty Name="CasePriorityId" ColumnName="CasePriorityId" />
+          <ScalarProperty Name="SecondaryCaseReasonId" ColumnName="SecondaryCaseReasonId" />
+          <ScalarProperty Name="ResponsibleUserId" ColumnName="ResponsibleUserId" />
+          <ScalarProperty Name="CaseTransferredDateTime" ColumnName="CaseTransferredDateTime" />
+          <ScalarProperty Name="TeamTransferredToId" ColumnName="TeamTransferredToId" />
+          <ScalarProperty Name="CommunityAndClinicTeamTransferredToId" ColumnName="CommunityAndClinicTeamTransferredToId" />
+          <ScalarProperty Name="DischargeDateTime" ColumnName="DischargeDateTime" />
+          <ScalarProperty Name="AdditionalDischargeInformation" ColumnName="AdditionalDischargeInformation" />
+          <ScalarProperty Name="DischargingProfessionalId" ColumnName="DischargingProfessionalId" />
+          <ScalarProperty Name="DischargePerson" ColumnName="DischargePerson" />
+          <ScalarProperty Name="DNACount" ColumnName="DNACount" />
+          <ScalarProperty Name="CNACount" ColumnName="CNACount" />
+          <ScalarProperty Name="MoreInformationResponseDateTime" ColumnName="MoreInformationResponseDateTime" />
+          <ScalarProperty Name="MoreInformationResponse" ColumnName="MoreInformationResponse" />
+          <ScalarProperty Name="InformationFormReferrer" ColumnName="InformationFormReferrer" />
+          <ScalarProperty Name="CaseAcceptedDateTime" ColumnName="CaseAcceptedDateTime" />
+          <ScalarProperty Name="CommunityAndClinicTeamId" ColumnName="CommunityAndClinicTeamId" />
+          <ScalarProperty Name="ContactMadeByName" ColumnName="ContactMadeByName" />
+          <ScalarProperty Name="AdditionalInformation" ColumnName="AdditionalInformation" />
+          <ScalarProperty Name="PresentingNeedDetails" ColumnName="PresentingNeedDetails" />
+          <ScalarProperty Name="RequestReceivedDateTime" ColumnName="RequestReceivedDateTime" />
+          <ScalarProperty Name="ContactReceivedById" ColumnName="ContactReceivedById" />
+          <ScalarProperty Name="ContactReceivedDateTime" ColumnName="ContactReceivedDateTime" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CaseActions">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.CaseAction">
+        <MappingFragment StoreEntitySet="CaseAction">
+          <ScalarProperty Name="TargetDate" ColumnName="TargetDate" />
+          <ScalarProperty Name="TimePeriodId" ColumnName="TimePeriodId" />
+          <ScalarProperty Name="NextAppointmentDay" ColumnName="NextAppointmentDay" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="CaseActionStatusId" ColumnName="CaseActionStatusId" />
+          <ScalarProperty Name="ActionDetails" ColumnName="ActionDetails" />
+          <ScalarProperty Name="CasePriorityId" ColumnName="CasePriorityId" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="CaseActionTypeId" ColumnName="CaseActionTypeId" />
+          <ScalarProperty Name="HealthAppointmentId" ColumnName="HealthAppointmentId" />
+          <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="ResponsibleUserId" ColumnName="ResponsibleUserId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="CaseActionId" ColumnName="CaseActionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CaseAttachments">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.CaseAttachment">
+        <MappingFragment StoreEntitySet="CaseAttachment">
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="DocumentSubTypeId" ColumnName="DocumentSubTypeId" />
+          <ScalarProperty Name="DocumentTypeId" ColumnName="DocumentTypeId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="CaseAttachmentId" ColumnName="CaseAttachmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CaseForms">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.CaseForm">
+        <MappingFragment StoreEntitySet="CaseForm">
+          <ScalarProperty Name="ClonedFromId" ColumnName="ClonedFromId" />
+          <ScalarProperty Name="FormDelayReasonId" ColumnName="FormDelayReasonId" />
+          <ScalarProperty Name="TriggerDate" ColumnName="TriggerDate" />
+          <ScalarProperty Name="TerminatedDate" ColumnName="TerminatedDate" />
+          <ScalarProperty Name="TargetStartDate" ColumnName="TargetStartDate" />
+          <ScalarProperty Name="JointCarerId" ColumnName="JointCarerId" />
+          <ScalarProperty Name="NewPerson" ColumnName="NewPerson" />
+          <ScalarProperty Name="CarerDeclinedJointAssessment" ColumnName="CarerDeclinedJointAssessment" />
+          <ScalarProperty Name="SeparateAssessment" ColumnName="SeparateAssessment" />
+          <ScalarProperty Name="JointCarerAssessment" ColumnName="JointCarerAssessment" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="ResponsibleUserId" ColumnName="ResponsibleUserId" />
+          <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="FormCancellationReasonId" ColumnName="FormCancellationReasonId" />
+          <ScalarProperty Name="AnswersInitialized" ColumnName="AnswersInitialized" />
+          <ScalarProperty Name="SDEExecuted" ColumnName="SDEExecuted" />
+          <ScalarProperty Name="DocumentModifiedOn" ColumnName="DocumentModifiedOn" />
+          <ScalarProperty Name="DocumentModifiedById" ColumnName="DocumentModifiedById" />
+          <ScalarProperty Name="SignOffDate" ColumnName="SignOffDate" />
+          <ScalarProperty Name="SignedOffById" ColumnName="SignedOffById" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="CompletedById" ColumnName="CompletedById" />
+          <ScalarProperty Name="ReviewDate" ColumnName="ReviewDate" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="AssessmentStatusId" ColumnName="AssessmentStatusId" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="CaseFormId" ColumnName="CaseFormId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CaseFormOutcomes">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.CaseFormOutcome">
+        <MappingFragment StoreEntitySet="CaseFormOutcome">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="OutcomeDate" ColumnName="OutcomeDate" />
+          <ScalarProperty Name="CaseFormOutcomeTypeId" ColumnName="CaseFormOutcomeTypeId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+          <ScalarProperty Name="CaseFormId" ColumnName="CaseFormId" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="CaseFormOutcomeId" ColumnName="CaseFormOutcomeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.Document">
+        <MappingFragment StoreEntitySet="Document">
+          <ScalarProperty Name="EdmsDocumentSubTypeId" ColumnName="EdmsDocumentSubTypeId" />
+          <ScalarProperty Name="EdmsDocumentTypeId" ColumnName="EdmsDocumentTypeId" />
+          <ScalarProperty Name="IsReportingTableInSync" ColumnName="IsReportingTableInSync" />
+          <ScalarProperty Name="ReportingLastSyncDateTime" ColumnName="ReportingLastSyncDateTime" />
+          <ScalarProperty Name="ReportingTableName" ColumnName="ReportingTableName" />
+          <ScalarProperty Name="EnableReporting" ColumnName="EnableReporting" />
+          <ScalarProperty Name="RecordAssessmentFactor" ColumnName="RecordAssessmentFactor" />
+          <ScalarProperty Name="ProtectiveMarkingSchemeId" ColumnName="ProtectiveMarkingSchemeId" />
+          <ScalarProperty Name="CaseClosureBeforeFormCompletedClosedDate" ColumnName="CaseClosureBeforeFormCompletedClosedDate" />
+          <ScalarProperty Name="StartDateallowedBeforeCaseStartDate" ColumnName="StartDateallowedBeforeCaseStartDate" />
+          <ScalarProperty Name="SignOffDateAllowedBeforeCaseDate" ColumnName="SignOffDateAllowedBeforeCaseDate" />
+          <ScalarProperty Name="ReviewDateAllowedBeforeStartDate" ColumnName="ReviewDateAllowedBeforeStartDate" />
+          <ScalarProperty Name="SignOffDateAllowedBeforeStartDate" ColumnName="SignOffDateAllowedBeforeStartDate" />
+          <ScalarProperty Name="SignOffDateAllowedBeforeCompletion" ColumnName="SignOffDateAllowedBeforeCompletion" />
+          <ScalarProperty Name="CompletionDateAllowedBeforeStartDate" ColumnName="CompletionDateAllowedBeforeStartDate" />
+          <ScalarProperty Name="TypeOfDaysId" ColumnName="TypeOfDaysId" />
+          <ScalarProperty Name="AllowFormStatusCloning" ColumnName="AllowFormStatusCloning" />
+          <ScalarProperty Name="MultipleOpenFormsAllowed" ColumnName="MultipleOpenFormsAllowed" />
+          <ScalarProperty Name="AutomaticallyCloseOnCompletion" ColumnName="AutomaticallyCloseOnCompletion" />
+          <ScalarProperty Name="ResponsibleUserSelfSignOffAllowed" ColumnName="ResponsibleUserSelfSignOffAllowed" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="DisableAutoSave" ColumnName="DisableAutoSave" />
+          <ScalarProperty Name="DisplayPageNumber" ColumnName="DisplayPageNumber" />
+          <ScalarProperty Name="AvailableInMobile" ColumnName="AvailableInMobile" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="RuleEvents" ColumnName="RuleEvents" />
+          <ScalarProperty Name="SDEMappingModeId" ColumnName="SDEMappingModeId" />
+          <ScalarProperty Name="TableHeaderFontSizeId" ColumnName="TableHeaderFontSizeId" />
+          <ScalarProperty Name="TableHeaderFontColorId" ColumnName="TableHeaderFontColorId" />
+          <ScalarProperty Name="TableHeaderBackgroundColorId" ColumnName="TableHeaderBackgroundColorId" />
+          <ScalarProperty Name="TableBorderColorId" ColumnName="TableBorderColorId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="SectionHeadingBackgroundColorId" ColumnName="SectionHeadingBackgroundColorId" />
+          <ScalarProperty Name="SectionFontSizeId" ColumnName="SectionFontSizeId" />
+          <ScalarProperty Name="SectionFontColorId" ColumnName="SectionFontColorId" />
+          <ScalarProperty Name="QuestionSubHeadingFontSizeId" ColumnName="QuestionSubHeadingFontSizeId" />
+          <ScalarProperty Name="QuestionNumberingId" ColumnName="QuestionNumberingId" />
+          <ScalarProperty Name="QuestionFontSizeId" ColumnName="QuestionFontSizeId" />
+          <ScalarProperty Name="PrimaryQuestionFontSizeId" ColumnName="PrimaryQuestionFontSizeId" />
+          <ScalarProperty Name="PrimaryQuestionFontColorId" ColumnName="PrimaryQuestionFontColorId" />
+          <ScalarProperty Name="PrimaryQuestionBackgroundColorId" ColumnName="PrimaryQuestionBackgroundColorId" />
+          <ScalarProperty Name="InstructionFontSizeId" ColumnName="InstructionFontSizeId" />
+          <ScalarProperty Name="InstructionFontColorId" ColumnName="InstructionFontColorId" />
+          <ScalarProperty Name="InstructionBackgroundColorId" ColumnName="InstructionBackgroundColorId" />
+          <ScalarProperty Name="FontStyleId" ColumnName="FontStyleId" />
+          <ScalarProperty Name="CommentFontSizeId" ColumnName="CommentFontSizeId" />
+          <ScalarProperty Name="AnswerFontSizeId" ColumnName="AnswerFontSizeId" />
+          <ScalarProperty Name="DocumentNameLocalizedStringId" ColumnName="DocumentNameLocalizedStringId" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="SyncQuestionIds" ColumnName="SyncQuestionIds" />
+          <ScalarProperty Name="SubHeadingUnderline" ColumnName="SubHeadingUnderline" />
+          <ScalarProperty Name="SubHeadingItalic" ColumnName="SubHeadingItalic" />
+          <ScalarProperty Name="SubHeadingBold" ColumnName="SubHeadingBold" />
+          <ScalarProperty Name="SectionUnderline" ColumnName="SectionUnderline" />
+          <ScalarProperty Name="SectionItalic" ColumnName="SectionItalic" />
+          <ScalarProperty Name="SectionBold" ColumnName="SectionBold" />
+          <ScalarProperty Name="QuestionUnderline" ColumnName="QuestionUnderline" />
+          <ScalarProperty Name="QuestionItalic" ColumnName="QuestionItalic" />
+          <ScalarProperty Name="QuestionBold" ColumnName="QuestionBold" />
+          <ScalarProperty Name="PrimaryQuestionUnderline" ColumnName="PrimaryQuestionUnderline" />
+          <ScalarProperty Name="PrimaryQuestionItalic" ColumnName="PrimaryQuestionItalic" />
+          <ScalarProperty Name="PrimaryQuestionBold" ColumnName="PrimaryQuestionBold" />
+          <ScalarProperty Name="LastUpgradedOn" ColumnName="LastUpgradedOn" />
+          <ScalarProperty Name="InstructionUnderline" ColumnName="InstructionUnderline" />
+          <ScalarProperty Name="InstructionItalic" ColumnName="InstructionItalic" />
+          <ScalarProperty Name="InstructionBold" ColumnName="InstructionBold" />
+          <ScalarProperty Name="TableHeaderUnderline" ColumnName="TableHeaderUnderline" />
+          <ScalarProperty Name="TableHeaderItalic" ColumnName="TableHeaderItalic" />
+          <ScalarProperty Name="TableHeaderBold" ColumnName="TableHeaderBold" />
+          <ScalarProperty Name="DoesNotRequireManagerSignOff" ColumnName="DoesNotRequireManagerSignOff" />
+          <ScalarProperty Name="DocumentTypeId" ColumnName="DocumentTypeId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DaysToComplete" ColumnName="DaysToComplete" />
+          <ScalarProperty Name="CommentUnderline" ColumnName="CommentUnderline" />
+          <ScalarProperty Name="CommentItalic" ColumnName="CommentItalic" />
+          <ScalarProperty Name="DocumentCategoryId" ColumnName="DocumentCategoryId" />
+          <ScalarProperty Name="CommentBold" ColumnName="CommentBold" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentAnswers">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.DocumentAnswer">
+        <MappingFragment StoreEntitySet="DocumentAnswer">
+          <ScalarProperty Name="AssessmentIdName" ColumnName="AssessmentIdName" />
+          <ScalarProperty Name="LookupObjectTitle" ColumnName="LookupObjectTitle" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ImageId" ColumnName="ImageId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="QuestionTypeId" ColumnName="QuestionTypeId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="GridRowId" ColumnName="GridRowId" />
+          <ScalarProperty Name="UserSaved" ColumnName="UserSaved" />
+          <ScalarProperty Name="OriginAnswerId" ColumnName="OriginAnswerId" />
+          <ScalarProperty Name="LinkedRecordTypeName" ColumnName="LinkedRecordTypeName" />
+          <ScalarProperty Name="LinkedRecordId" ColumnName="LinkedRecordId" />
+          <ScalarProperty Name="ManagerOverrideReason" ColumnName="ManagerOverrideReason" />
+          <ScalarProperty Name="LookupObjectTypeName" ColumnName="LookupObjectTypeName" />
+          <ScalarProperty Name="LookupObjectId" ColumnName="LookupObjectId" />
+          <ScalarProperty Name="AssessmentIdTableName" ColumnName="AssessmentIdTableName" />
+          <ScalarProperty Name="AssessmentId" ColumnName="AssessmentId" />
+          <ScalarProperty Name="DocumentQuestionIdentifierId" ColumnName="DocumentQuestionIdentifierId" />
+          <ScalarProperty Name="PicklistValueId" ColumnName="PicklistValueId" />
+          <ScalarProperty Name="TrueFalseAnswer" ColumnName="TrueFalseAnswer" />
+          <ScalarProperty Name="ShortAnswer" ColumnName="ShortAnswer" />
+          <ScalarProperty Name="ParagraphAnswer" ColumnName="ParagraphAnswer" />
+          <ScalarProperty Name="NumericAnswer" ColumnName="NumericAnswer" />
+          <ScalarProperty Name="MultichoiceAnswerId" ColumnName="MultichoiceAnswerId" />
+          <ScalarProperty Name="DecimalAnswer" ColumnName="DecimalAnswer" />
+          <ScalarProperty Name="DateAndTimeAnswer" ColumnName="DateAndTimeAnswer" />
+          <ScalarProperty Name="DateAnswer" ColumnName="DateAnswer" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DocumentAnswerId" ColumnName="DocumentAnswerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Emails">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.Email">
+        <MappingFragment StoreEntitySet="Email">
+          <ScalarProperty Name="GroupRecordId" ColumnName="GroupRecordId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="FailureMessage" ColumnName="FailureMessage" />
+          <ScalarProperty Name="ProtectiveMarkingSchemeId" ColumnName="ProtectiveMarkingSchemeId" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="EmailFromId" ColumnName="EmailFromId" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="ResponsibleUserId" ColumnName="ResponsibleUserId" />
+          <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="ActivitySubCategoryId" ColumnName="ActivitySubCategoryId" />
+          <ScalarProperty Name="ActivityCategoryId" ColumnName="ActivityCategoryId" />
+          <ScalarProperty Name="ActivityOutcomeId" ColumnName="ActivityOutcomeId" />
+          <ScalarProperty Name="ActivityReasonId" ColumnName="ActivityReasonId" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="SignificantEventDate" ColumnName="SignificantEventDate" />
+          <ScalarProperty Name="SignificantEventSubCategoryId" ColumnName="SignificantEventSubCategoryId" />
+          <ScalarProperty Name="SignificantEventCategoryId" ColumnName="SignificantEventCategoryId" />
+          <ScalarProperty Name="IsSignificantEvent" ColumnName="IsSignificantEvent" />
+          <ScalarProperty Name="InformationByThirdParty" ColumnName="InformationByThirdParty" />
+          <ScalarProperty Name="ActivityPriorityId" ColumnName="ActivityPriorityId" />
+          <ScalarProperty Name="RegardingIdName" ColumnName="RegardingIdName" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="LastFailDate" ColumnName="LastFailDate" />
+          <ScalarProperty Name="SentDate" ColumnName="SentDate" />
+          <ScalarProperty Name="RegardingIdTableName" ColumnName="RegardingIdTableName" />
+          <ScalarProperty Name="RegardingId" ColumnName="RegardingId" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Letters">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.Letter">
+        <MappingFragment StoreEntitySet="Letter">
+          <ScalarProperty Name="GroupRecordId" ColumnName="GroupRecordId" />
+          <ScalarProperty Name="IsCaseNote" ColumnName="IsCaseNote" />
+          <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+          <ScalarProperty Name="DirectionId" ColumnName="DirectionId" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="LetterDate" ColumnName="LetterDate" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="RecipientIdName" ColumnName="RecipientIdName" />
+          <ScalarProperty Name="RecipientIdTableName" ColumnName="RecipientIdTableName" />
+          <ScalarProperty Name="RecipientId" ColumnName="RecipientId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="SenderIdName" ColumnName="SenderIdName" />
+          <ScalarProperty Name="SenderIdTableName" ColumnName="SenderIdTableName" />
+          <ScalarProperty Name="SenderId" ColumnName="SenderId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="SignificantEventSubCategoryId" ColumnName="SignificantEventSubCategoryId" />
+          <ScalarProperty Name="SignificantEventCategoryId" ColumnName="SignificantEventCategoryId" />
+          <ScalarProperty Name="SignificantEventDate" ColumnName="SignificantEventDate" />
+          <ScalarProperty Name="IsSignificantEvent" ColumnName="IsSignificantEvent" />
+          <ScalarProperty Name="InformationByThirdParty" ColumnName="InformationByThirdParty" />
+          <ScalarProperty Name="ActivityPriorityId" ColumnName="ActivityPriorityId" />
+          <ScalarProperty Name="ResponsibleUserId" ColumnName="ResponsibleUserId" />
+          <ScalarProperty Name="RegardingIdName" ColumnName="RegardingIdName" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="ActivityReasonId" ColumnName="ActivityReasonId" />
+          <ScalarProperty Name="ActivityOutcomeId" ColumnName="ActivityOutcomeId" />
+          <ScalarProperty Name="ActivitySubCategoryId" ColumnName="ActivitySubCategoryId" />
+          <ScalarProperty Name="ActivityCategoryId" ColumnName="ActivityCategoryId" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="RegardingIdTableName" ColumnName="RegardingIdTableName" />
+          <ScalarProperty Name="RegardingId" ColumnName="RegardingId" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="LetterId" ColumnName="LetterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="NHSNumberStatusId" ColumnName="NHSNumberStatusId" />
+          <ScalarProperty Name="PDSNHSNoSuperseded" ColumnName="PDSNHSNoSuperseded" />
+          <ScalarProperty Name="LeavingCareEligibilityId" ColumnName="LeavingCareEligibilityId" />
+          <ScalarProperty Name="PDSLastSyncDateTime" ColumnName="PDSLastSyncDateTime" />
+          <ScalarProperty Name="PDSIsDeferred" ColumnName="PDSIsDeferred" />
+          <ScalarProperty Name="AllowSMS" ColumnName="AllowSMS" />
+          <ScalarProperty Name="LinkedAddressId" ColumnName="LinkedAddressId" />
+          <ScalarProperty Name="UpdatePersonAddress" ColumnName="UpdatePersonAddress" />
+          <ScalarProperty Name="LowerSuperOutputAreaId" ColumnName="LowerSuperOutputAreaId" />
+          <ScalarProperty Name="CCGBoundaryId" ColumnName="CCGBoundaryId" />
+          <ScalarProperty Name="AddressStartDate" ColumnName="AddressStartDate" />
+          <ScalarProperty Name="ExBritishForcesId" ColumnName="ExBritishForcesId" />
+          <ScalarProperty Name="IsLookedAfterChild" ColumnName="IsLookedAfterChild" />
+          <ScalarProperty Name="AccommodationTypeId" ColumnName="AccommodationTypeId" />
+          <ScalarProperty Name="RecordedInError" ColumnName="RecordedInError" />
+          <ScalarProperty Name="RelatedAdultSafeguardingFlag" ColumnName="RelatedAdultSafeguardingFlag" />
+          <ScalarProperty Name="AdultSafeguardingFlag" ColumnName="AdultSafeguardingFlag" />
+          <ScalarProperty Name="RelatedChildProtectionFlag" ColumnName="RelatedChildProtectionFlag" />
+          <ScalarProperty Name="ChildProtectionFlag" ColumnName="ChildProtectionFlag" />
+          <ScalarProperty Name="InterpreterRequired" ColumnName="InterpreterRequired" />
+          <ScalarProperty Name="NoKnownAllergies" ColumnName="NoKnownAllergies" />
+          <ScalarProperty Name="KnownAllergies" ColumnName="KnownAllergies" />
+          <ScalarProperty Name="AllergiesNotRecorded" ColumnName="AllergiesNotRecorded" />
+          <ScalarProperty Name="RepresentAlertOrHazard" ColumnName="RepresentAlertOrHazard" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="UniquePupilNumber" ColumnName="UniquePupilNumber" />
+          <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+          <ScalarProperty Name="SuppressStatementInvoices" ColumnName="SuppressStatementInvoices" />
+          <ScalarProperty Name="DebtorNumber4" ColumnName="DebtorNumber4" />
+          <ScalarProperty Name="DebtorNumber3" ColumnName="DebtorNumber3" />
+          <ScalarProperty Name="DebtorNumber2" ColumnName="DebtorNumber2" />
+          <ScalarProperty Name="DebtorNumber1" ColumnName="DebtorNumber1" />
+          <ScalarProperty Name="ReferenceCode" ColumnName="ReferenceCode" />
+          <ScalarProperty Name="CreditorNumber" ColumnName="CreditorNumber" />
+          <ScalarProperty Name="UPNUnknownReasonId" ColumnName="UPNUnknownReasonId" />
+          <ScalarProperty Name="HomeOfficeRegistrationNumber" ColumnName="HomeOfficeRegistrationNumber" />
+          <ScalarProperty Name="FormerUniquePupilNumber" ColumnName="FormerUniquePupilNumber" />
+          <ScalarProperty Name="IsExternalPerson" ColumnName="IsExternalPerson" />
+          <ScalarProperty Name="BirthCertificateNumber" ColumnName="BirthCertificateNumber" />
+          <ScalarProperty Name="NHSNumberPre1995" ColumnName="NHSNumberPre1995" />
+          <ScalarProperty Name="NationalInsuranceNumber" ColumnName="NationalInsuranceNumber" />
+          <ScalarProperty Name="CourtCaseNumber" ColumnName="CourtCaseNumber" />
+          <ScalarProperty Name="SSDNumber" ColumnName="SSDNumber" />
+          <ScalarProperty Name="ExternalNumber" ColumnName="ExternalNumber" />
+          <ScalarProperty Name="PersonTargetGroupId" ColumnName="PersonTargetGroupId" />
+          <ScalarProperty Name="AgeGroupId" ColumnName="AgeGroupId" />
+          <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+          <ScalarProperty Name="MaidenName" ColumnName="MaidenName" />
+          <ScalarProperty Name="NHSCardLocation" ColumnName="NHSCardLocation" />
+          <ScalarProperty Name="ReligionId" ColumnName="ReligionId" />
+          <ScalarProperty Name="ImmigrationStatusId" ColumnName="ImmigrationStatusId" />
+          <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+          <ScalarProperty Name="CountryOfOriginId" ColumnName="CountryOfOriginId" />
+          <ScalarProperty Name="SexualOrientationId" ColumnName="SexualOrientationId" />
+          <ScalarProperty Name="PreferredContactDayId" ColumnName="PreferredContactDayId" />
+          <ScalarProperty Name="PreferredContactTimeId" ColumnName="PreferredContactTimeId" />
+          <ScalarProperty Name="AllowPhone" ColumnName="AllowPhone" />
+          <ScalarProperty Name="DocumentFormatId" ColumnName="DocumentFormatId" />
+          <ScalarProperty Name="AllowMail" ColumnName="AllowMail" />
+          <ScalarProperty Name="AllowEmail" ColumnName="AllowEmail" />
+          <ScalarProperty Name="ContactMethodId" ColumnName="ContactMethodId" />
+          <ScalarProperty Name="ModeOfCommunicationId" ColumnName="ModeOfCommunicationId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="RetainInformationConcern" ColumnName="RetainInformationConcern" />
+          <ScalarProperty Name="SecondaryEmail" ColumnName="SecondaryEmail" />
+          <ScalarProperty Name="PrimaryEmail" ColumnName="PrimaryEmail" />
+          <ScalarProperty Name="Telephone3" ColumnName="Telephone3" />
+          <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+          <ScalarProperty Name="BusinessPhone" ColumnName="BusinessPhone" />
+          <ScalarProperty Name="LivesAloneTypeId" ColumnName="LivesAloneTypeId" />
+          <ScalarProperty Name="AccommodationStatusId" ColumnName="AccommodationStatusId" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="AddressWardId" ColumnName="AddressWardId" />
+          <ScalarProperty Name="AddressLine5" ColumnName="AddressLine5" />
+          <ScalarProperty Name="AddressBoroughId" ColumnName="AddressBoroughId" />
+          <ScalarProperty Name="AddressLine4" ColumnName="AddressLine4" />
+          <ScalarProperty Name="UPRN" ColumnName="UPRN" />
+          <ScalarProperty Name="AddressLine3" ColumnName="AddressLine3" />
+          <ScalarProperty Name="AddressPropertyTypeId" ColumnName="AddressPropertyTypeId" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AddressTypeId" ColumnName="AddressTypeId" />
+          <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+          <ScalarProperty Name="FullAddress" ColumnName="FullAddress" />
+          <ScalarProperty Name="PlaceOfDeath" ColumnName="PlaceOfDeath" />
+          <ScalarProperty Name="CauseOfDeathId" ColumnName="CauseOfDeathId" />
+          <ScalarProperty Name="Deceased" ColumnName="Deceased" />
+          <ScalarProperty Name="ExpectedDateOfBirth" ColumnName="ExpectedDateOfBirth" />
+          <ScalarProperty Name="MaritalStatusId" ColumnName="MaritalStatusId" />
+          <ScalarProperty Name="SameAsBirthGenderId" ColumnName="SameAsBirthGenderId" />
+          <ScalarProperty Name="EthnicityId" ColumnName="EthnicityId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="NoNHSNumberReasonId" ColumnName="NoNHSNumberReasonId" />
+          <ScalarProperty Name="NHSNumber" ColumnName="NHSNumber" />
+          <ScalarProperty Name="PersonNumber" ColumnName="PersonNumber" />
+          <ScalarProperty Name="MasterId" ColumnName="MasterId" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="PreferredName" ColumnName="PreferredName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="PersonPhotoId" ColumnName="PersonPhotoId" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="DOBAndAgeTypeId" ColumnName="DOBAndAgeTypeId" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="DateOfDeath" ColumnName="DateOfDeath" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonAbsenceHospitalStayReasons">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.PersonAbsenceHospitalStayReason">
+        <MappingFragment StoreEntitySet="PersonAbsenceHospitalStayReason">
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ValidForExport" ColumnName="ValidForExport" />
+          <ScalarProperty Name="GovCode" ColumnName="GovCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="personabsencehospitalstayreasonid" ColumnName="personabsencehospitalstayreasonid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonAttendedEducationEstablishments">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.PersonAttendedEducationEstablishment">
+        <MappingFragment StoreEntitySet="PersonAttendedEducationEstablishment">
+          <ScalarProperty Name="SENCOAssistantId" ColumnName="SENCOAssistantId" />
+          <ScalarProperty Name="SENCOId" ColumnName="SENCOId" />
+          <ScalarProperty Name="SchoolNurseId" ColumnName="SchoolNurseId" />
+          <ScalarProperty Name="HeadTeacherId" ColumnName="HeadTeacherId" />
+          <ScalarProperty Name="ReasonEndedDescription" ColumnName="ReasonEndedDescription" />
+          <ScalarProperty Name="EducationEndReasonId" ColumnName="EducationEndReasonId" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="AttendedEducationEstablishmentStatusId" ColumnName="AttendedEducationEstablishmentStatusId" />
+          <ScalarProperty Name="EducationEnrolmentStatusId" ColumnName="EducationEnrolmentStatusId" />
+          <ScalarProperty Name="EducationEstablishmentTypeId" ColumnName="EducationEstablishmentTypeId" />
+          <ScalarProperty Name="CurrentYear" ColumnName="CurrentYear" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ProviderId" ColumnName="ProviderId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="personattendededucationestablishmentid" ColumnName="personattendededucationestablishmentid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonCaseNotes">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.PersonCaseNote">
+        <MappingFragment StoreEntitySet="PersonCaseNote">
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="CaseNoteDate" ColumnName="CaseNoteDate" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="SignificantEventDate" ColumnName="SignificantEventDate" />
+          <ScalarProperty Name="SignificantEventSubCategoryId" ColumnName="SignificantEventSubCategoryId" />
+          <ScalarProperty Name="SignificantEventCategoryId" ColumnName="SignificantEventCategoryId" />
+          <ScalarProperty Name="IsSignificantEvent" ColumnName="IsSignificantEvent" />
+          <ScalarProperty Name="InformationByThirdParty" ColumnName="InformationByThirdParty" />
+          <ScalarProperty Name="ActivityPriorityId" ColumnName="ActivityPriorityId" />
+          <ScalarProperty Name="ActivityReasonId" ColumnName="ActivityReasonId" />
+          <ScalarProperty Name="ActivityOutcomeId" ColumnName="ActivityOutcomeId" />
+          <ScalarProperty Name="ActivitySubCategoryId" ColumnName="ActivitySubCategoryId" />
+          <ScalarProperty Name="ActivityCategoryId" ColumnName="ActivityCategoryId" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="ResponsibleUserId" ColumnName="ResponsibleUserId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="PersonCaseNoteId" ColumnName="PersonCaseNoteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonSignificantEvents">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.PersonSignificantEvent">
+        <MappingFragment StoreEntitySet="PersonSignificantEvent">
+          <ScalarProperty Name="SourceActivityIdName" ColumnName="SourceActivityIdName" />
+          <ScalarProperty Name="SourceActivityIdTableName" ColumnName="SourceActivityIdTableName" />
+          <ScalarProperty Name="SourceActivityId" ColumnName="SourceActivityId" />
+          <ScalarProperty Name="SignificantEventSubCategoryId" ColumnName="SignificantEventSubCategoryId" />
+          <ScalarProperty Name="SignificantEventCategoryId" ColumnName="SignificantEventCategoryId" />
+          <ScalarProperty Name="EventDetails" ColumnName="EventDetails" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="PersonSignificantEventId" ColumnName="PersonSignificantEventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhoneCalls">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.PhoneCall">
+        <MappingFragment StoreEntitySet="PhoneCall">
+          <ScalarProperty Name="GroupRecordId" ColumnName="GroupRecordId" />
+          <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+          <ScalarProperty Name="IsCaseNote" ColumnName="IsCaseNote" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="PhoneCallDate" ColumnName="PhoneCallDate" />
+          <ScalarProperty Name="DirectionId" ColumnName="DirectionId" />
+          <ScalarProperty Name="RecipientIdName" ColumnName="RecipientIdName" />
+          <ScalarProperty Name="RecipientIdTableName" ColumnName="RecipientIdTableName" />
+          <ScalarProperty Name="RecipientId" ColumnName="RecipientId" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="CallerIdName" ColumnName="CallerIdName" />
+          <ScalarProperty Name="CallerIdTableName" ColumnName="CallerIdTableName" />
+          <ScalarProperty Name="CallerId" ColumnName="CallerId" />
+          <ScalarProperty Name="SignificantEventDate" ColumnName="SignificantEventDate" />
+          <ScalarProperty Name="SignificantEventSubCategoryId" ColumnName="SignificantEventSubCategoryId" />
+          <ScalarProperty Name="SignificantEventCategoryId" ColumnName="SignificantEventCategoryId" />
+          <ScalarProperty Name="IsSignificantEvent" ColumnName="IsSignificantEvent" />
+          <ScalarProperty Name="InformationByThirdParty" ColumnName="InformationByThirdParty" />
+          <ScalarProperty Name="ActivityPriorityId" ColumnName="ActivityPriorityId" />
+          <ScalarProperty Name="ActivityReasonId" ColumnName="ActivityReasonId" />
+          <ScalarProperty Name="ActivityOutcomeId" ColumnName="ActivityOutcomeId" />
+          <ScalarProperty Name="ActivitySubCategoryId" ColumnName="ActivitySubCategoryId" />
+          <ScalarProperty Name="ActivityCategoryId" ColumnName="ActivityCategoryId" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="RegardingIdName" ColumnName="RegardingIdName" />
+          <ScalarProperty Name="RegardingIdTableName" ColumnName="RegardingIdTableName" />
+          <ScalarProperty Name="RegardingId" ColumnName="RegardingId" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="ResponsibleUserId" ColumnName="ResponsibleUserId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="PhoneCallId" ColumnName="PhoneCallId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tasks">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.Task">
+        <MappingFragment StoreEntitySet="Task">
+          <ScalarProperty Name="GroupRecordId" ColumnName="GroupRecordId" />
+          <ScalarProperty Name="MHASectionReminderSetupId" ColumnName="MHASectionReminderSetupId" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+          <ScalarProperty Name="IsCaseNote" ColumnName="IsCaseNote" />
+          <ScalarProperty Name="DataRestrictionId" ColumnName="DataRestrictionId" />
+          <ScalarProperty Name="ResponsibleUserId" ColumnName="ResponsibleUserId" />
+          <ScalarProperty Name="SignificantEventDate" ColumnName="SignificantEventDate" />
+          <ScalarProperty Name="SignificantEventSubCategoryId" ColumnName="SignificantEventSubCategoryId" />
+          <ScalarProperty Name="SignificantEventCategoryId" ColumnName="SignificantEventCategoryId" />
+          <ScalarProperty Name="IsSignificantEvent" ColumnName="IsSignificantEvent" />
+          <ScalarProperty Name="InformationByThirdParty" ColumnName="InformationByThirdParty" />
+          <ScalarProperty Name="ActivityPriorityId" ColumnName="ActivityPriorityId" />
+          <ScalarProperty Name="RegardingIdName" ColumnName="RegardingIdName" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="ActivityReasonId" ColumnName="ActivityReasonId" />
+          <ScalarProperty Name="ActivityOutcomeId" ColumnName="ActivityOutcomeId" />
+          <ScalarProperty Name="ActivitySubCategoryId" ColumnName="ActivitySubCategoryId" />
+          <ScalarProperty Name="ActivityCategoryId" ColumnName="ActivityCategoryId" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="RegardingIdTableName" ColumnName="RegardingIdTableName" />
+          <ScalarProperty Name="RegardingId" ColumnName="RegardingId" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="OwningBusinessUnitId" ColumnName="OwningBusinessUnitId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentQuestionIdentifiers">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.DocumentQuestionIdentifier">
+        <MappingFragment StoreEntitySet="DocumentQuestionIdentifier">
+          <ScalarProperty Name="ReportingColumnAlias" ColumnName="ReportingColumnAlias" />
+          <ScalarProperty Name="IsReportingColumnSearchable" ColumnName="IsReportingColumnSearchable" />
+          <ScalarProperty Name="LegacyId" ColumnName="LegacyId" />
+          <ScalarProperty Name="ApplicableToSnapshot" ColumnName="ApplicableToSnapshot" />
+          <ScalarProperty Name="VersionStamp" ColumnName="VersionStamp" />
+          <ScalarProperty Name="ParentQuestionTypeId" ColumnName="ParentQuestionTypeId" />
+          <ScalarProperty Name="QuestionTypeId" ColumnName="QuestionTypeId" />
+          <ScalarProperty Name="HideQuestionText" ColumnName="HideQuestionText" />
+          <ScalarProperty Name="ImportUpdateSequence" ColumnName="ImportUpdateSequence" />
+          <ScalarProperty Name="ImportCreateSequence" ColumnName="ImportCreateSequence" />
+          <ScalarProperty Name="LinkedSubQuestionId" ColumnName="LinkedSubQuestionId" />
+          <ScalarProperty Name="SDELinkSectionMode" ColumnName="SDELinkSectionMode" />
+          <ScalarProperty Name="ShowSDELink" ColumnName="ShowSDELink" />
+          <ScalarProperty Name="TableQuestionCellId" ColumnName="TableQuestionCellId" />
+          <ScalarProperty Name="MandatoryOnCompletion" ColumnName="MandatoryOnCompletion" />
+          <ScalarProperty Name="ManagerOverrideAllowed" ColumnName="ManagerOverrideAllowed" />
+          <ScalarProperty Name="IsMandatory" ColumnName="IsMandatory" />
+          <ScalarProperty Name="QuestionViewId" ColumnName="QuestionViewId" />
+          <ScalarProperty Name="DocumentSectionId" ColumnName="DocumentSectionId" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="SecondaryQuestionId" ColumnName="SecondaryQuestionId" />
+          <ScalarProperty Name="PrimaryQuestionId" ColumnName="PrimaryQuestionId" />
+          <ScalarProperty Name="QuestionCatalogueId" ColumnName="QuestionCatalogueId" />
+          <ScalarProperty Name="DocumentSectionQuestionId" ColumnName="DocumentSectionQuestionId" />
+          <ScalarProperty Name="RowId" ColumnName="RowId" />
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DocumentQuestionIdentifierId" ColumnName="DocumentQuestionIdentifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Audits">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.Audit">
+        <MappingFragment StoreEntitySet="Audit">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ErrorManagementReasonId" ColumnName="ErrorManagementReasonId" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="RecordTitle" ColumnName="RecordTitle" />
+          <ScalarProperty Name="RecordId" ColumnName="RecordId" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Audit_2018">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.Audit_2018">
+        <MappingFragment StoreEntitySet="Audit_2018">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ErrorManagementReasonId" ColumnName="ErrorManagementReasonId" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="RecordTitle" ColumnName="RecordTitle" />
+          <ScalarProperty Name="RecordId" ColumnName="RecordId" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Audit_2019">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.Audit_2019">
+        <MappingFragment StoreEntitySet="Audit_2019">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ErrorManagementReasonId" ColumnName="ErrorManagementReasonId" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="RecordTitle" ColumnName="RecordTitle" />
+          <ScalarProperty Name="RecordId" ColumnName="RecordId" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Audit_2020">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.Audit_2020">
+        <MappingFragment StoreEntitySet="Audit_2020">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ErrorManagementReasonId" ColumnName="ErrorManagementReasonId" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="RecordTitle" ColumnName="RecordTitle" />
+          <ScalarProperty Name="RecordId" ColumnName="RecordId" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditChangeSets">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.AuditChangeSet">
+        <MappingFragment StoreEntitySet="AuditChangeSet">
+          <ScalarProperty Name="NewChecklistValue" ColumnName="NewChecklistValue" />
+          <ScalarProperty Name="PreviousChecklistValue" ColumnName="PreviousChecklistValue" />
+          <ScalarProperty Name="FieldType" ColumnName="FieldType" />
+          <ScalarProperty Name="NewTimeValue" ColumnName="NewTimeValue" />
+          <ScalarProperty Name="PreviousTimeValue" ColumnName="PreviousTimeValue" />
+          <ScalarProperty Name="NewDateTimeValue" ColumnName="NewDateTimeValue" />
+          <ScalarProperty Name="PreviousDateTimeValue" ColumnName="PreviousDateTimeValue" />
+          <ScalarProperty Name="NewGuidValue" ColumnName="NewGuidValue" />
+          <ScalarProperty Name="PreviousGuidValue" ColumnName="PreviousGuidValue" />
+          <ScalarProperty Name="NewIntValue" ColumnName="NewIntValue" />
+          <ScalarProperty Name="PreviousIntValue" ColumnName="PreviousIntValue" />
+          <ScalarProperty Name="NewDecimalValue" ColumnName="NewDecimalValue" />
+          <ScalarProperty Name="PreviousDecimalValue" ColumnName="PreviousDecimalValue" />
+          <ScalarProperty Name="NewDateValue" ColumnName="NewDateValue" />
+          <ScalarProperty Name="PreviousDateValue" ColumnName="PreviousDateValue" />
+          <ScalarProperty Name="NewBooleanValue" ColumnName="NewBooleanValue" />
+          <ScalarProperty Name="PreviousBooleanValue" ColumnName="PreviousBooleanValue" />
+          <ScalarProperty Name="PreviousValue" ColumnName="PreviousValue" />
+          <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+          <ScalarProperty Name="AuditChangeSetId" ColumnName="AuditChangeSetId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditChangeSet_2018">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.AuditChangeSet_2018">
+        <MappingFragment StoreEntitySet="AuditChangeSet_2018">
+          <ScalarProperty Name="NewChecklistValue" ColumnName="NewChecklistValue" />
+          <ScalarProperty Name="PreviousChecklistValue" ColumnName="PreviousChecklistValue" />
+          <ScalarProperty Name="FieldType" ColumnName="FieldType" />
+          <ScalarProperty Name="NewTimeValue" ColumnName="NewTimeValue" />
+          <ScalarProperty Name="PreviousTimeValue" ColumnName="PreviousTimeValue" />
+          <ScalarProperty Name="NewDateTimeValue" ColumnName="NewDateTimeValue" />
+          <ScalarProperty Name="PreviousDateTimeValue" ColumnName="PreviousDateTimeValue" />
+          <ScalarProperty Name="NewGuidValue" ColumnName="NewGuidValue" />
+          <ScalarProperty Name="PreviousGuidValue" ColumnName="PreviousGuidValue" />
+          <ScalarProperty Name="NewIntValue" ColumnName="NewIntValue" />
+          <ScalarProperty Name="PreviousIntValue" ColumnName="PreviousIntValue" />
+          <ScalarProperty Name="NewDecimalValue" ColumnName="NewDecimalValue" />
+          <ScalarProperty Name="PreviousDecimalValue" ColumnName="PreviousDecimalValue" />
+          <ScalarProperty Name="NewDateValue" ColumnName="NewDateValue" />
+          <ScalarProperty Name="PreviousDateValue" ColumnName="PreviousDateValue" />
+          <ScalarProperty Name="NewBooleanValue" ColumnName="NewBooleanValue" />
+          <ScalarProperty Name="PreviousBooleanValue" ColumnName="PreviousBooleanValue" />
+          <ScalarProperty Name="PreviousValue" ColumnName="PreviousValue" />
+          <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+          <ScalarProperty Name="AuditChangeSetId" ColumnName="AuditChangeSetId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditChangeSet_2019">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.AuditChangeSet_2019">
+        <MappingFragment StoreEntitySet="AuditChangeSet_2019">
+          <ScalarProperty Name="NewChecklistValue" ColumnName="NewChecklistValue" />
+          <ScalarProperty Name="PreviousChecklistValue" ColumnName="PreviousChecklistValue" />
+          <ScalarProperty Name="FieldType" ColumnName="FieldType" />
+          <ScalarProperty Name="NewTimeValue" ColumnName="NewTimeValue" />
+          <ScalarProperty Name="PreviousTimeValue" ColumnName="PreviousTimeValue" />
+          <ScalarProperty Name="NewDateTimeValue" ColumnName="NewDateTimeValue" />
+          <ScalarProperty Name="PreviousDateTimeValue" ColumnName="PreviousDateTimeValue" />
+          <ScalarProperty Name="NewGuidValue" ColumnName="NewGuidValue" />
+          <ScalarProperty Name="PreviousGuidValue" ColumnName="PreviousGuidValue" />
+          <ScalarProperty Name="NewIntValue" ColumnName="NewIntValue" />
+          <ScalarProperty Name="PreviousIntValue" ColumnName="PreviousIntValue" />
+          <ScalarProperty Name="NewDecimalValue" ColumnName="NewDecimalValue" />
+          <ScalarProperty Name="PreviousDecimalValue" ColumnName="PreviousDecimalValue" />
+          <ScalarProperty Name="NewDateValue" ColumnName="NewDateValue" />
+          <ScalarProperty Name="PreviousDateValue" ColumnName="PreviousDateValue" />
+          <ScalarProperty Name="NewBooleanValue" ColumnName="NewBooleanValue" />
+          <ScalarProperty Name="PreviousBooleanValue" ColumnName="PreviousBooleanValue" />
+          <ScalarProperty Name="PreviousValue" ColumnName="PreviousValue" />
+          <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+          <ScalarProperty Name="AuditChangeSetId" ColumnName="AuditChangeSetId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditChangeSet_2020">
+      <EntityTypeMapping TypeName="CareDirectorQA_CDModel.AuditChangeSet_2020">
+        <MappingFragment StoreEntitySet="AuditChangeSet_2020">
+          <ScalarProperty Name="NewChecklistValue" ColumnName="NewChecklistValue" />
+          <ScalarProperty Name="PreviousChecklistValue" ColumnName="PreviousChecklistValue" />
+          <ScalarProperty Name="FieldType" ColumnName="FieldType" />
+          <ScalarProperty Name="NewTimeValue" ColumnName="NewTimeValue" />
+          <ScalarProperty Name="PreviousTimeValue" ColumnName="PreviousTimeValue" />
+          <ScalarProperty Name="NewDateTimeValue" ColumnName="NewDateTimeValue" />
+          <ScalarProperty Name="PreviousDateTimeValue" ColumnName="PreviousDateTimeValue" />
+          <ScalarProperty Name="NewGuidValue" ColumnName="NewGuidValue" />
+          <ScalarProperty Name="PreviousGuidValue" ColumnName="PreviousGuidValue" />
+          <ScalarProperty Name="NewIntValue" ColumnName="NewIntValue" />
+          <ScalarProperty Name="PreviousIntValue" ColumnName="PreviousIntValue" />
+          <ScalarProperty Name="NewDecimalValue" ColumnName="NewDecimalValue" />
+          <ScalarProperty Name="PreviousDecimalValue" ColumnName="PreviousDecimalValue" />
+          <ScalarProperty Name="NewDateValue" ColumnName="NewDateValue" />
+          <ScalarProperty Name="PreviousDateValue" ColumnName="PreviousDateValue" />
+          <ScalarProperty Name="NewBooleanValue" ColumnName="NewBooleanValue" />
+          <ScalarProperty Name="PreviousBooleanValue" ColumnName="PreviousBooleanValue" />
+          <ScalarProperty Name="PreviousValue" ColumnName="PreviousValue" />
+          <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+          <ScalarProperty Name="AuditChangeSetId" ColumnName="AuditChangeSetId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

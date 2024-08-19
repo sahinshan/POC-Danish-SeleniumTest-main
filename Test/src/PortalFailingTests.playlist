@@ -1,0 +1,204 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="Phoenix.Portal.UITests" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="PortalWebsite_UITestCases" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.AddingAttachmentToPersonViaPortal_TestMethod05" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="AddingAttachmentToPersonViaPortal_TestMethod05" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.AddingAttachmentToPersonViaPortal_TestMethod06" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="AddingAttachmentToPersonViaPortal_TestMethod06" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.AddingAttachmentToPersonViaPortal_TestMethod07" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="AddingAttachmentToPersonViaPortal_TestMethod07" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.AddingAttachmentToPersonViaPortal_TestMethod08" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="AddingAttachmentToPersonViaPortal_TestMethod08" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.AddingAttachmentToPersonViaPortal_TestMethod09" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="AddingAttachmentToPersonViaPortal_TestMethod09" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.AddingAttachmentToPersonViaPortal_TestMethod10" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="AddingAttachmentToPersonViaPortal_TestMethod10" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.ExposeAttachments_DownloadingFile_TestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExposeAttachments_DownloadingFile_TestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.FormSubmission_TestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="FormSubmission_TestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.LoggedInHomepageChangePassword_TestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="LoggedInHomepageChangePassword_TestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.PasswordRules_MaximumPasswordAge_TestMethod07" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PasswordRules_MaximumPasswordAge_TestMethod07" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.PasswordRules_MinimumLowercaseCharacters_TestMethod04" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PasswordRules_MinimumLowercaseCharacters_TestMethod04" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.PortalHealthAppointments_TestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PortalHealthAppointments_TestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.PortalHealthAppointments_TestMethod04" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PortalHealthAppointments_TestMethod04" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.PortalHealthAppointments_TestMethod12" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PortalHealthAppointments_TestMethod12" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.PortalHealthAppointments_TestMethod13" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="PortalHealthAppointments_TestMethod13" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.StartAssessmentOnDemand_TestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="StartAssessmentOnDemand_TestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.StartAssessmentOnDemand_TestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="StartAssessmentOnDemand_TestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.ToDoList_PortalTaskAction_RunWorkflow_TestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ToDoList_PortalTaskAction_RunWorkflow_TestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.ToDoList_PortalTaskAction_UploadFile_TestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ToDoList_PortalTaskAction_UploadFile_TestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.ToDoList_PortalTaskAction_ViewRecord_TestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ToDoList_PortalTaskAction_ViewRecord_TestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.TwoFactorAuthenticationExpiredPin_TestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TwoFactorAuthenticationExpiredPin_TestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.TwoFactorAuthenticationResetPin_TestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TwoFactorAuthenticationResetPin_TestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.WebsiteFAQS_TestMethod01" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="WebsiteFAQS_TestMethod01" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.WebsiteFAQS_TestMethod02" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="WebsiteFAQS_TestMethod02" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.WebsiteFAQS_TestMethod03" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="WebsiteFAQS_TestMethod03" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.WebsiteFAQS_TestMethod04" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="WebsiteFAQS_TestMethod04" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.WebsiteFAQS_TestMethod05" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="WebsiteFAQS_TestMethod05" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.WebsiteFAQS_TestMethod06" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="WebsiteFAQS_TestMethod06" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.WebsiteFAQS_TestMethod07" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="WebsiteFAQS_TestMethod07" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Phoenix.Portal.UITests.Websites.StaffordshireCitizenPortal.PortalWebsite_UITestCases.WebsiteFAQS_TestMethod08" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="WebsiteFAQS_TestMethod08" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>

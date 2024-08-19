@@ -1,0 +1,628 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Phoenix.S3.CreatePersonSocialCareCase" Id="3e449d35-03b2-4f2b-a460-650780a3545c" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.202de8d5-51bd-4784-8602-9fc99d1ec28d.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="d128347a-ccd5-4ba5-ac09-b364b58c175b" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/editpage.aspx" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=case" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam3.type" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?type=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam4.dialogdepth" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;dialogdepth=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam5.winmode" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;winmode=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam6.dialogname" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;dialogname=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="type" Value="case" RecordedValue="case" CorrelationBinding="{{QueryStringParam434.type}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogdepth" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam444.dialogdepth}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42" RecordedValue="CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="da9e2566-d5c1-4aad-8820-d31c6b2e9c4a" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/editpage.aspx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam506.winmode" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;winmode=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam588.winmode" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;winmode=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam622.winmode" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;winmode=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam646.winmode" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;winmode=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam682.winmode" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;winmode=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam719.winmode" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;winmode=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="type" Value="case" RecordedValue="case" CorrelationBinding="{{QueryStringParam3.type}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogdepth" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam4.dialogdepth}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam5.winmode}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42" RecordedValue="CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42" CorrelationBinding="{{QueryStringParam6.dialogname}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dataformid" Value="edf4efc4-bfb1-e811-80dc-0050560502cc" RecordedValue="edf4efc4-bfb1-e811-80dc-0050560502cc" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="84a031e2-8382-4f11-bd95-e112ea058fae" Version="1.1" Url="https://phoenixqa.careworks.ie/api/metadata/getsystemsetting/ContactRequiredForSocialCareCase" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=utf-8" />
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42&amp;dataformid=edf4efc4-bfb1-e811-80dc-0050560502cc" />
+      </Headers>
+    </Request>
+    <Request Method="POST" Guid="b29564f6-2881-4289-b944-fdfd904628f9" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdata/ExecuteXmlQuery" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42&amp;dataformid=edf4efc4-bfb1-e811-80dc-0050560502cc" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFEAdQBlAHIAeQAiADoAIgA8AEQAYQB0AGEAUQB1AGUAcgB5ACAAVABhAGIAbABlAE4AYQBtAGUAPQAnAGMAYQBzAGUAcwB0AGEAdAB1AHMAJwAgAFQAYQBiAGwAZQBBAGwAaQBhAHMAPQAnAEMAQQBTAEUAUwBUAEEAVABVAFMAJwAgAEkAbQBwAGUAcgBzAG8AbgBhAHQAZQA9ACcAZgBhAGwAcwBlACcAPgA8AEYAaQBlAGwAZABzAD4APABEAGEAdABhAEYAaQBlAGwAZAAgAFQAYQBiAGwAZQBBAGwAaQBhAHMAPQAnAEMAYQBzAGUAUwB0AGEAdAB1AHMAJwAgAE4AYQBtAGUAPQAnAEMAYQBzAGUAUwB0AGEAdAB1AHMASQBkACcAIABGAGkAZQBsAGQAQQBsAGkAYQBzAD0AJwBDAGEAcwBlAFMAdABhAHQAdQBzAEkAZAAnACAALwA+ADwARABhAHQAYQBGAGkAZQBsAGQAIABUAGEAYgBsAGUAQQBsAGkAYQBzAD0AJwBDAGEAcwBlAFMAdABhAHQAdQBzACcAIABOAGEAbQBlAD0AJwBOAGEAbQBlACcAIABGAGkAZQBsAGQAQQBsAGkAYQBzAD0AJwBOAGEAbQBlACcAIAAvAD4APAAvAEYAaQBlAGwAZABzAD4APABGAGkAbAB0AGUAcgAgAEYAaQBsAHQAZQByAFQAeQBwAGUAPQAnAEEAbgBkACcAPgA8AEYAaQBsAHQAZQByAHMAPgA8AEQAYQB0AGEARgBpAGwAdABlAHIAIABGAGkAbAB0AGUAcgBUAHkAcABlAD0AJwBPAHIAJwA+ADwAQwBvAG4AZABpAHQAaQBvAG4AcwA+ADwAQwBvAG4AZABpAHQAaQBvAG4AIABUAGEAYgBsAGUAQQBsAGkAYQBzAD0AJwBDAEEAUwBFAFMAVABBAFQAVQBTACcAIABGAGkAZQBsAGQAPQAnAFMAVABBAFIAVABEAEEAVABFACcAIABPAHAAZQByAGEAdABvAHIAPQAnAEkAcwBMAGUAcwBzAFQAaABhAG4AVABvAGQAYQB5AHMARABhAHQAZQAnACAAVgBhAGwAdQBlAFQAeQBwAGUAPQAnAE4AbwBuAGUAJwAgAC8APgA8AEMAbwBuAGQAaQB0AGkAbwBuACAAVABhAGIAbABlAEEAbABpAGEAcwA9ACcAQwBBAFMARQBTAFQAQQBUAFUAUwAnACAARgBpAGUAbABkAD0AJwBTAFQAQQBSAFQARABBAFQARQAnACAATwBwAGUAcgBhAHQAbwByAD0AJwBUAG8AZABhAHkAJwAgAFYAYQBsAHUAZQBUAHkAcABlAD0AJwBOAG8AbgBlACcAIAAvAD4APAAvAEMAbwBuAGQAaQB0AGkAbwBuAHMAPgA8AC8ARABhAHQAYQBGAGkAbAB0AGUAcgA+ADwARABhAHQAYQBGAGkAbAB0AGUAcgAgAEYAaQBsAHQAZQByAFQAeQBwAGUAPQAnAE8AcgAnAD4APABDAG8AbgBkAGkAdABpAG8AbgBzAD4APABDAG8AbgBkAGkAdABpAG8AbgAgAFQAYQBiAGwAZQBBAGwAaQBhAHMAPQAnAEMAQQBTAEUAUwBUAEEAVABVAFMAJwAgAEYAaQBlAGwAZAA9ACcARQBOAEQARABBAFQARQAnACAATwBwAGUAcgBhAHQAbwByAD0AJwBJAHMARwByAGUAYQB0AGUAcgBUAGgAYQBuAFQAbwBkAGEAeQBzAEQAYQB0AGUAJwAgAFYAYQBsAHUAZQBUAHkAcABlAD0AJwBOAG8AbgBlACcAIAAvAD4APABDAG8AbgBkAGkAdABpAG8AbgAgAFQAYQBiAGwAZQBBAGwAaQBhAHMAPQAnAEMAQQBTAEUAUwBUAEEAVABVAFMAJwAgAEYAaQBlAGwAZAA9ACcARQBOAEQARABBAFQARQAnACAATwBwAGUAcgBhAHQAbwByAD0AJwBUAG8AZABhAHkAJwAgAFYAYQBsAHUAZQBUAHkAcABlAD0AJwBOAG8AbgBlACcAIAAvAD4APABDAG8AbgBkAGkAdABpAG8AbgAgAFQAYQBiAGwAZQBBAGwAaQBhAHMAPQAnAEMAQQBTAEUAUwBUAEEAVABVAFMAJwAgAEYAaQBlAGwAZAA9ACcARQBOAEQARABBAFQARQAnACAATwBwAGUAcgBhAHQAbwByAD0AJwBOAHUAbABsACcAIABWAGEAbAB1AGUAVAB5AHAAZQA9ACcATgBvAG4AZQAnACAALwA+ADwALwBDAG8AbgBkAGkAdABpAG8AbgBzAD4APAAvAEQAYQB0AGEARgBpAGwAdABlAHIAPgA8AC8ARgBpAGwAdABlAHIAcwA+ADwAQwBvAG4AZABpAHQAaQBvAG4AcwA+ADwAQwBvAG4AZABpAHQAaQBvAG4AIABUAGEAYgBsAGUAQQBsAGkAYQBzAD0AJwBDAEEAUwBFAFMAVABBAFQAVQBTACcAIABGAGkAZQBsAGQAPQAnAEkATgBBAEMAVABJAFYARQAnACAATwBwAGUAcgBhAHQAbwByAD0AJwBFAHEAdQBhAGwAJwAgAFYAYQBsAHUAZQBUAHkAcABlAD0AJwBTAGkAbgBnAGwAZQBWAGEAbAB1AGUAJwA+ADwAQwBvAG4AZABpAHQAaQBvAG4AVgBhAGwAdQBlACAARABiAFQAeQBwAGUAPQAnAEIAaQB0ACcAIABCAG8AbwBsAFYAYQBsAHUAZQA9ACcAZgBhAGwAcwBlACcAIAAvAD4APAAvAEMAbwBuAGQAaQB0AGkAbwBuAD4APABDAG8AbgBkAGkAdABpAG8AbgAgAFQAYQBiAGwAZQBBAGwAaQBhAHMAPQAnAEMAQQBTAEUAUwBUAEEAVABVAFMAJwAgAEYAaQBlAGwAZAA9ACcAQgBVAFMASQBOAEUAUwBTAFQAWQBQAEUASQBEACcAIABPAHAAZQByAGEAdABvAHIAPQAnAEUAcQB1AGEAbAAnACAAVgBhAGwAdQBlAFQAeQBwAGUAPQAnAFMAaQBuAGcAbABlAFYAYQBsAHUAZQAnAD4APABDAG8AbgBkAGkAdABpAG8AbgBWAGEAbAB1AGUAIABEAGIAVAB5AHAAZQA9ACcASQBuAHQAJwAgAEkAbgB0AFYAYQBsAHUAZQA9ACcAMQAxADAAMAAwADAAMAAwADAAJwAgAC8APgA8AC8AQwBvAG4AZABpAHQAaQBvAG4APgA8AEMAbwBuAGQAaQB0AGkAbwBuACAAVABhAGIAbABlAEEAbABpAGEAcwA9ACcAQwBBAFMARQBTAFQAQQBUAFUAUwAnACAARgBpAGUAbABkAD0AJwBWAEEATABJAEQARgBPAFIATgBFAFcAUgBFAEMATwBSAEQAJwAgAE8AcABlAHIAYQB0AG8AcgA9ACcARQBxAHUAYQBsACcAIABWAGEAbAB1AGUAVAB5AHAAZQA9ACcAUwBpAG4AZwBsAGUAVgBhAGwAdQBlACcAPgA8AEMAbwBuAGQAaQB0AGkAbwBuAFYAYQBsAHUAZQAgAEQAYgBUAHkAcABlAD0AJwBCAGkAdAAnACAAQgBvAG8AbABWAGEAbAB1AGUAPQAnAHQAcgB1AGUAJwAgAC8APgA8AC8AQwBvAG4AZABpAHQAaQBvAG4APgA8AC8AQwBvAG4AZABpAHQAaQBvAG4AcwA+ADwALwBGAGkAbAB0AGUAcgA+ADwALwBEAGEAdABhAFEAdQBlAHIAeQA+ACIAfQA=</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="471eedf8-7a1f-4bad-82f7-b098b052053e" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdata/GetBusinessData/casestatus/bc156ac3-bafe-e811-80dc-0050560502cc" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="https://phoenixqa.careworks.ie/api/businessdata/GetBusinessData/casestatus/" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=utf-8" />
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42&amp;dataformid=edf4efc4-bfb1-e811-80dc-0050560502cc" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="c6c768f2-8f8c-4a86-90e2-a63febfe059d" Version="1.1" Url="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42&amp;dataformid=edf4efc4-bfb1-e811-80dc-0050560502cc" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam594.viewtype" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?viewtype=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam595.multiselect" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;multiselect=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam597.dialogname" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;dialogname=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewtype" Value="lookup" RecordedValue="lookup" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="multiselect" Value="false" RecordedValue="false" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="type" Value="person" RecordedValue="person" CorrelationBinding="{{QueryStringParam550.type}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam506.winmode}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWLookupForm" RecordedValue="CWLookupForm" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="5028861b-711c-450a-911c-0309b4434ff7" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;multiselect=false&amp;type=person&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMwAwAGYAOAA0AGIAMgBkAC0AYgAxADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="765d6150-2c51-4f55-b6db-f8b3c0a4c5bd" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;multiselect=false&amp;type=person&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIANQAyADQAYQA0ADQAMwAzAC0AYgAxADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAHAAZQByAHMAbwBuACIALAAiAFAAYQByAGUAbgB0AEkAZAAiADoAIgAiACwAIgBQAGEAcgBlAG4AdABUAHkAcABlAE4AYQBtAGUAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBJAGQAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBEAGkAcwBwAGwAYQB5AE4AYQBtAGUAIgA6ACIAIgAsACIAUgBlAGwAYQB0AGkAbwBuAHMAaABpAHAASQBkACIAOgAiACIALAAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMwAwAGYAOAA0AGIAMgBkAC0AYgAxADYAOQAtAGUANAAxADEALQBiAGYAMAAwAC0AMAAwADUAMAA1ADYAYwAwADAAMAAwADgAIgAsACIAUgBlAGMAbwByAGQAcwBQAGUAcgBQAGEAZwBlACIAOgAiADEAMAAwACIALAAiAFYAaQBlAHcAVAB5AHAAZQAiADoAIgA0ACIALAAiAFAAYQByAGUAbgB0AEkAZABGAGkAZQBsAGQATgBhAG0AZQAiADoAIgAiACwAIgBBAGwAbABvAHcATQB1AGwAdABpAFMAZQBsAGUAYwB0ACIAOgAiAGYAYQBsAHMAZQAiACwAIgBPAHQAaABlAHIASQBkAEYAaQBlAGwAZAAiADoAIgAiACwAIgBWAGkAZQB3AEcAcgBvAHUAcAAiADoAIgAxACIALAAiAEQAYQB0AGEAUQB1AGUAcgB5AFgAbQBsACIAOgBuAHUAbABsAH0A</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="d8f2023d-0124-4fb4-8ba5-f68528e87aec" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdata/GetBusinessData/person/{{PersonDS.PhoenixS3PeopleInfo#csv.PersonID}}" ThinkTime="14" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="https://phoenixqa.careworks.ie/api/businessdata/GetBusinessData/person/" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=utf-8" />
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42&amp;dataformid=edf4efc4-bfb1-e811-80dc-0050560502cc" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="68a6785a-66fd-4468-a8f4-7a76aab7e1fb" Version="1.1" Url="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42&amp;dataformid=edf4efc4-bfb1-e811-80dc-0050560502cc" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam628.viewtype" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?viewtype=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam629.multiselect" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;multiselect=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam631.dialogname" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;dialogname=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewtype" Value="lookup" RecordedValue="lookup" CorrelationBinding="{{QueryStringParam594.viewtype}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="multiselect" Value="false" RecordedValue="false" CorrelationBinding="{{QueryStringParam595.multiselect}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="type" Value="contact" RecordedValue="contact" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam588.winmode}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWLookupForm" RecordedValue="CWLookupForm" CorrelationBinding="{{QueryStringParam597.dialogname}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="8595154c-882d-4c8f-b375-089529a034fc" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;multiselect=false&amp;type=contact&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAYgAxAGUAMAA1AGMAYQA2AC0AYQBjAGIAMQAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="d3bd4772-5fcd-42ee-a3b5-9a6ed927acb8" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="7" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;multiselect=false&amp;type=contact&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIANwA1AGUAMQA1AGMAYQA2AC0AYQBjAGIAMQAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAGMAbwBuAHQAYQBjAHQAIgAsACIAUABhAHIAZQBuAHQASQBkACIAOgAiACIALAAiAFAAYQByAGUAbgB0AFQAeQBwAGUATgBhAG0AZQAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEkAZAAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEQAaQBzAHAAbABhAHkATgBhAG0AZQAiADoAIgAiACwAIgBSAGUAbABhAHQAaQBvAG4AcwBoAGkAcABJAGQAIgA6ACIAIgAsACIAQgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AEkAZAAiADoAIgBiADEAZQAwADUAYwBhADYALQBhAGMAYgAxAC0AZQA4ADEAMQAtADgAMABkAGMALQAwADAANQAwADUANgAwADUAMAAyAGMAYwAiACwAIgBSAGUAYwBvAHIAZABzAFAAZQByAFAAYQBnAGUAIgA6ACIAMQAwADAAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgAsACIAUABhAHIAZQBuAHQASQBkAEYAaQBlAGwAZABOAGEAbQBlACIAOgAiACIALAAiAEEAbABsAG8AdwBNAHUAbAB0AGkAUwBlAGwAZQBjAHQAIgA6ACIAZgBhAGwAcwBlACIALAAiAE8AdABoAGUAcgBJAGQARgBpAGUAbABkACIAOgAiACIALAAiAFYAaQBlAHcARwByAG8AdQBwACIAOgAiADEAIgAsACIARABhAHQAYQBRAHUAZQByAHkAWABtAGwAIgA6AG4AdQBsAGwAfQA=</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="06549fc2-6713-4ba2-aff4-b9a4973669b4" Version="1.1" Url="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42&amp;dataformid=edf4efc4-bfb1-e811-80dc-0050560502cc" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam652.viewtype" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?viewtype=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam653.multiselect" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;multiselect=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam655.dialogname" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;dialogname=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewtype" Value="lookup" RecordedValue="lookup" CorrelationBinding="{{QueryStringParam628.viewtype}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="multiselect" Value="false" RecordedValue="false" CorrelationBinding="{{QueryStringParam629.multiselect}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="type" Value="systemuser" RecordedValue="systemuser" CorrelationBinding="{{QueryStringParam642.type}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam622.winmode}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWLookupForm" RecordedValue="CWLookupForm" CorrelationBinding="{{QueryStringParam631.dialogname}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="815919f8-0753-45a4-9330-8c64909e591e" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;multiselect=false&amp;type=systemuser&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIANABhADgAMQA4ADcAMABmAC0AZgA2ADkANgAtADQAYgBiADgALQBiADQAOAA3AC0AMQA1ADQANgA3ADgAOQAyAGUAZAA4ADYAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="27127959-5f06-4d92-91e2-314e40495686" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="17" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;multiselect=false&amp;type=systemuser&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIANQA4ADkAMgBmADgAYgBiAC0ANABlAGQAMQAtAGUAOAAxADEALQA5AGMAMAAyAC0AMQA4ADYANgBkAGEAMQBlADQAMgAwADkAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAHMAeQBzAHQAZQBtAHUAcwBlAHIAIgAsACIAUABhAHIAZQBuAHQASQBkACIAOgAiACIALAAiAFAAYQByAGUAbgB0AFQAeQBwAGUATgBhAG0AZQAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEkAZAAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEQAaQBzAHAAbABhAHkATgBhAG0AZQAiADoAIgAiACwAIgBSAGUAbABhAHQAaQBvAG4AcwBoAGkAcABJAGQAIgA6ACIAIgAsACIAQgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AEkAZAAiADoAIgA0AGEAOAAxADgANwAwAGYALQBmADYAOQA2AC0ANABiAGIAOAAtAGIANAA4ADcALQAxADUANAA2ADcAOAA5ADIAZQBkADgANgAiACwAIgBSAGUAYwBvAHIAZABzAFAAZQByAFAAYQBnAGUAIgA6ACIAMQAwADAAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgAsACIAUABhAHIAZQBuAHQASQBkAEYAaQBlAGwAZABOAGEAbQBlACIAOgAiACIALAAiAEEAbABsAG8AdwBNAHUAbAB0AGkAUwBlAGwAZQBjAHQAIgA6ACIAZgBhAGwAcwBlACIALAAiAE8AdABoAGUAcgBJAGQARgBpAGUAbABkACIAOgAiACIALAAiAFYAaQBlAHcARwByAG8AdQBwACIAOgAiADEAIgAsACIARABhAHQAYQBRAHUAZQByAHkAWABtAGwAIgA6AG4AdQBsAGwAfQA=</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="61b779bb-3f39-44ca-91ab-f97961f08e0c" Version="1.1" Url="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42&amp;dataformid=edf4efc4-bfb1-e811-80dc-0050560502cc" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam688.viewtype" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?viewtype=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam689.multiselect" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;multiselect=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam691.dialogname" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;dialogname=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewtype" Value="lookup" RecordedValue="lookup" CorrelationBinding="{{QueryStringParam652.viewtype}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="multiselect" Value="false" RecordedValue="false" CorrelationBinding="{{QueryStringParam653.multiselect}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="type" Value="contactreason" RecordedValue="contactreason" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam646.winmode}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWLookupForm" RecordedValue="CWLookupForm" CorrelationBinding="{{QueryStringParam655.dialogname}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="033fb862-3698-4f06-bed1-d7a71452303d" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;multiselect=false&amp;type=contactreason&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMABkADAAOQBlADgANQAyAC0AYwA5AGMAMAAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="16d9276b-5c8c-466c-a84e-f40dbbb4a14c" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="32" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;multiselect=false&amp;type=contactreason&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAZQAzADAAOQBlADgANQAyAC0AYwA5AGMAMAAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAGMAbwBuAHQAYQBjAHQAcgBlAGEAcwBvAG4AIgAsACIAUABhAHIAZQBuAHQASQBkACIAOgAiACIALAAiAFAAYQByAGUAbgB0AFQAeQBwAGUATgBhAG0AZQAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEkAZAAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEQAaQBzAHAAbABhAHkATgBhAG0AZQAiADoAIgAiACwAIgBSAGUAbABhAHQAaQBvAG4AcwBoAGkAcABJAGQAIgA6ACIAIgAsACIAQgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AEkAZAAiADoAIgAwAGQAMAA5AGUAOAA1ADIALQBjADkAYwAwAC0AZQA4ADEAMQAtADgAMABkAGMALQAwADAANQAwADUANgAwADUAMAAyAGMAYwAiACwAIgBSAGUAYwBvAHIAZABzAFAAZQByAFAAYQBnAGUAIgA6ACIAMQAwADAAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgAsACIAUABhAHIAZQBuAHQASQBkAEYAaQBlAGwAZABOAGEAbQBlACIAOgAiACIALAAiAEEAbABsAG8AdwBNAHUAbAB0AGkAUwBlAGwAZQBjAHQAIgA6ACIAZgBhAGwAcwBlACIALAAiAE8AdABoAGUAcgBJAGQARgBpAGUAbABkACIAOgAiACIALAAiAFYAaQBlAHcARwByAG8AdQBwACIAOgAiADEAIgAsACIARABhAHQAYQBRAHUAZQByAHkAWABtAGwAIgA6AG4AdQBsAGwAfQA=</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="c6ef755b-9479-4995-8c42-345a6ee86b27" Version="1.1" Url="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42&amp;dataformid=edf4efc4-bfb1-e811-80dc-0050560502cc" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam725.viewtype" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?viewtype=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam726.multiselect" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;multiselect=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam728.dialogname" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;dialogname=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewtype" Value="lookup" RecordedValue="lookup" CorrelationBinding="{{QueryStringParam688.viewtype}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="multiselect" Value="false" RecordedValue="false" CorrelationBinding="{{QueryStringParam689.multiselect}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="type" Value="contactsource" RecordedValue="contactsource" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam682.winmode}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWLookupForm" RecordedValue="CWLookupForm" CorrelationBinding="{{QueryStringParam691.dialogname}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="98c80c5b-dab7-40d4-896b-1b1d768d72b5" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;multiselect=false&amp;type=contactsource&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAZgAxAGUAYQA0AGMANAA2AC0AZgAwAGMANgAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="d22eaddb-4b74-461e-b1f0-9924b8fa88b0" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="19" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;multiselect=false&amp;type=contactsource&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAYwA3AGUAYgA0AGMANAA2AC0AZgAwAGMANgAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAGMAbwBuAHQAYQBjAHQAcwBvAHUAcgBjAGUAIgAsACIAUABhAHIAZQBuAHQASQBkACIAOgAiACIALAAiAFAAYQByAGUAbgB0AFQAeQBwAGUATgBhAG0AZQAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEkAZAAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEQAaQBzAHAAbABhAHkATgBhAG0AZQAiADoAIgAiACwAIgBSAGUAbABhAHQAaQBvAG4AcwBoAGkAcABJAGQAIgA6ACIAIgAsACIAQgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AEkAZAAiADoAIgBmADEAZQBhADQAYwA0ADYALQBmADAAYwA2AC0AZQA4ADEAMQAtADgAMABkAGMALQAwADAANQAwADUANgAwADUAMAAyAGMAYwAiACwAIgBSAGUAYwBvAHIAZABzAFAAZQByAFAAYQBnAGUAIgA6ACIAMQAwADAAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgAsACIAUABhAHIAZQBuAHQASQBkAEYAaQBlAGwAZABOAGEAbQBlACIAOgAiACIALAAiAEEAbABsAG8AdwBNAHUAbAB0AGkAUwBlAGwAZQBjAHQAIgA6ACIAZgBhAGwAcwBlACIALAAiAE8AdABoAGUAcgBJAGQARgBpAGUAbABkACIAOgAiACIALAAiAFYAaQBlAHcARwByAG8AdQBwACIAOgAiADEAIgAsACIARABhAHQAYQBRAHUAZQByAHkAWABtAGwAIgA6AG4AdQBsAGwAfQA=</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="9bd7d73c-df7f-46a6-ad53-9c90bd384b22" Version="1.1" Url="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42&amp;dataformid=edf4efc4-bfb1-e811-80dc-0050560502cc" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewtype" Value="lookup" RecordedValue="lookup" CorrelationBinding="{{QueryStringParam725.viewtype}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="multiselect" Value="false" RecordedValue="false" CorrelationBinding="{{QueryStringParam726.multiselect}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="type" Value="casepriority" RecordedValue="casepriority" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="winmode" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam719.winmode}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="dialogname" Value="CWLookupForm" RecordedValue="CWLookupForm" CorrelationBinding="{{QueryStringParam728.dialogname}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="81d9784d-6df9-4244-ae81-7fb5e26aa2d9" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;multiselect=false&amp;type=casepriority&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMQA0ADAAZgAxADIANwBiAC0AYQAwAGMAMAAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADQAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="f81060c5-f454-47fa-a86a-0c84a1c7af2d" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="25" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/dialogs/lookuppage.aspx?viewtype=lookup&amp;multiselect=false&amp;type=casepriority&amp;winmode=1&amp;dialogname=CWLookupForm" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAZQBhADAAZgAxADIANwBiAC0AYQAwAGMAMAAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAGMAYQBzAGUAcAByAGkAbwByAGkAdAB5ACIALAAiAFAAYQByAGUAbgB0AEkAZAAiADoAIgAiACwAIgBQAGEAcgBlAG4AdABUAHkAcABlAE4AYQBtAGUAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBJAGQAIgA6ACIAIgAsACIAUwBlAGEAcgBjAGgAVgBpAGUAdwBEAGkAcwBwAGwAYQB5AE4AYQBtAGUAIgA6ACIAIgAsACIAUgBlAGwAYQB0AGkAbwBuAHMAaABpAHAASQBkACIAOgAiACIALAAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIAMQA0ADAAZgAxADIANwBiAC0AYQAwAGMAMAAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAUgBlAGMAbwByAGQAcwBQAGUAcgBQAGEAZwBlACIAOgAiADEAMAAwACIALAAiAFYAaQBlAHcAVAB5AHAAZQAiADoAIgA0ACIALAAiAFAAYQByAGUAbgB0AEkAZABGAGkAZQBsAGQATgBhAG0AZQAiADoAIgAiACwAIgBBAGwAbABvAHcATQB1AGwAdABpAFMAZQBsAGUAYwB0ACIAOgAiAGYAYQBsAHMAZQAiACwAIgBPAHQAaABlAHIASQBkAEYAaQBlAGwAZAAiADoAIgAiACwAIgBWAGkAZQB3AEcAcgBvAHUAcAAiADoAIgAxACIALAAiAEQAYQB0AGEAUQB1AGUAcgB5AFgAbQBsACIAOgBuAHUAbABsAH0A</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="b0e3cbf6-fcd9-44ea-8f09-302cad7db0a4" Version="1.1" Url="https://phoenixqa.careworks.ie/api/dataform/Create" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_275a7dc8-384b-33cc-c5ce-ab7bbe292c42&amp;dataformid=edf4efc4-bfb1-e811-80dc-0050560502cc" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&quot;Success&quot;:true" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="CaseID" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&quot;Id&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;," />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="ExtractRandomMatch" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="SearchInHeaders" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewANAAoACQAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABOAGEAbQBlACIAOgAgACIAYwBhAHMAZQAiACwADQAKAAkAIgBQAHIAaQBtAGEAcgB5AEsAZQB5AE4AYQBtAGUAIgA6ACAAIgBjAGEAcwBlAGkAZAAiACwADQAKAAkAIgBNAGUAdABhAGQAYQB0AGEAVAB5AHAAZQAiADoAIAAiADAAIgAsAA0ACgAJACIAUABhAHIAZQBuAHQASQBkACIAOgAgACIAIgAsAA0ACgAJACIAUABhAHIAZQBuAHQAVAB5AHAAZQAiADoAIAAiACIALAANAAoACQAiAFIAZQBsAGEAdABpAG8AbgBzAGgAaQBwAEkAZAAiADoAIAAiACIALAANAAoACQAiAEgAYQBzAFAAYQByAGUAbgB0AEYAaQBlAGwAZAAiADoAIAAiAGYAYQBsAHMAZQAiACwADQAKAAkAIgBDAHUAbAB0AHUAcgBlAE4AYQBtAGUAIgA6ACAAIgBlAG4ALQBHAEIAIgAsAA0ACgAJACIASQBnAG4AbwByAGUARAB1AHAAbABpAGMAYQB0AGUAcwAiADoAIABmAGEAbABzAGUALAANAAoACQAiAEQAYQB0AGEAIgA6ACAAIgA8AFIAZQBjAG8AcgBkAD4ADQAKAAkAPABGAGkAZQBsAGQAcwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGQAYQB0AGEAZgBvAHIAbQBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADcAXAAiACAAVgBhAGwAdQBlAD0AXAAiAGUAZABmADQAZQBmAGMANAAtAGIAZgBiADEALQBlADgAMQAxAC0AOAAwAGQAYwAtADAAMAA1ADAANQA2ADAANQAwADIAYwBjAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBhAHMAZQBuAHUAbQBiAGUAcgBcACIAIABUAHkAcABlAD0AXAAiADIAMABcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBwAGUAcgBzAG8AbgBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADkAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHsAewBQAGUAcgBzAG8AbgBEAFMALgBQAGgAbwBlAG4AaQB4AFMAMwBQAGUAbwBwAGwAZQBJAG4AZgBvACMAYwBzAHYALgBQAGUAcgBzAG8AbgBJAEQAfQB9AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcABlAHIAcwBvAG4AaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHsAewBQAGUAcgBzAG8AbgBEAFMALgBQAGgAbwBlAG4AaQB4AFMAMwBQAGUAbwBwAGwAZQBJAG4AZgBvACMAYwBzAHYALgBQAGUAcgBzAG8AbgBOAGEAbQBlAH0AfQBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAHMAdABhAHIAdABkAGEAdABlAHQAaQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADAAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHsAewBDAHUAcgByAGUAbgB0AEQAYQB0AGUAfQB9AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAEwAaQBuAGsAZQBkAEYAaQBlAGwAZAA9AFwAIgBzAHQAYQByAHQAZABhAHQAZQB0AGkAbQBlAFwAIgAgAE4AYQBtAGUAPQBcACIAdQBuAGQAZQBmAGkAbgBlAGQAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiADEAMAA6ADAAMABcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGkAbgBpAHQAaQBhAGwAYwBvAG4AdABhAGMAdABpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADkAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAaQBuAGkAdABpAGEAbABjAG8AbgB0AGEAYwB0AGkAZABfAGMAdwBuAGEAbQBlAFwAIgAgAFQAeQBwAGUAPQBcACIAMQAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAbwBuAHQAYQBjAHQAcgBlAGMAZQBpAHYAZQBkAGQAYQB0AGUAdABpAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMABcACIAIABEAGkAcgB0AHkAPQBcACIAdAByAHUAZQBcACIAIABWAGEAbAB1AGUAPQBcACIAewB7AEMAdQByAHIAZQBuAHQARABhAHQAZQB9AH0AXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATABpAG4AawBlAGQARgBpAGUAbABkAD0AXAAiAGMAbwBuAHQAYQBjAHQAcgBlAGMAZQBpAHYAZQBkAGQAYQB0AGUAdABpAG0AZQBcACIAIABOAGEAbQBlAD0AXAAiAHUAbgBkAGUAZgBpAG4AZQBkAFwAIgAgAEQAaQByAHQAeQA9AFwAIgB0AHIAdQBlAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgAxADAAOgAzADAAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBwAGUAcgBzAG8AbgBhAGcAZQBcACIAIABUAHkAcABlAD0AXAAiADUAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBvAG4AdABhAGMAdAByAGUAYwBlAGkAdgBlAGQAYgB5AGkAZABcACIAIABUAHkAcABlAD0AXAAiADEAOQBcACIAIABEAGkAcgB0AHkAPQBcACIAdAByAHUAZQBcACIAIABWAGEAbAB1AGUAPQBcACIAewB7AEwAbwBnAGkAbgBJAG4AZgBvAC4AUABoAG8AZQBuAGkAeABTADMATABvAGcAaQBuAEkAbgBmAG8AIwBjAHMAdgAuAFUAcwBlAHIASQBEAH0AfQBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAbwBuAHQAYQBjAHQAcgBlAGMAZQBpAHYAZQBkAGIAeQBpAGQAXwBjAHcAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABEAGkAcgB0AHkAPQBcACIAdAByAHUAZQBcACIAIABWAGEAbAB1AGUAPQBcACIAewB7AEwAbwBnAGkAbgBJAG4AZgBvAC4AUABoAG8AZQBuAGkAeABTADMATABvAGcAaQBuAEkAbgBmAG8AIwBjAHMAdgAuAE4AYQBtAGUAfQB9AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBvAG4AdABhAGMAdAByAGUAYQBzAG8AbgBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADkAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiADkANgAzADEAMABiADkAMAAtAGYANQAzADQALQBlADkAMQAxAC0AYQAyAGMANQAtADAAMAA1ADAANQA2ADkAMgA2AGYAZQA0AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBvAG4AdABhAGMAdAByAGUAYQBzAG8AbgBpAGQAXwBjAHcAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABEAGkAcgB0AHkAPQBcACIAdAByAHUAZQBcACIAIABWAGEAbAB1AGUAPQBcACIAVABlAHMAdABfAEMAbwBuAHQAYQBjAHQAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBwAHIAZQBzAGUAbgB0AGkAbgBnAHAAcgBpAG8AcgBpAHQAeQBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADkAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcAByAGUAcwBlAG4AdABpAG4AZwBwAHIAaQBvAHIAaQB0AHkAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBoAGkAbABkAGkAbgBuAGUAZQBkAGMAbwBkAGUAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMQA5AFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAaABpAGwAZABpAG4AbgBlAGUAZABjAG8AZABlAGkAZABfAGMAdwBuAGEAbQBlAFwAIgAgAFQAeQBwAGUAPQBcACIAMQAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGEAZABkAGkAdABpAG8AbgBhAGwAaQBuAGYAbwByAG0AYQB0AGkAbwBuAFwAIgAgAFQAeQBwAGUAPQBcACIAMQAyAFwAIgAgAEQAaQByAHQAeQA9AFwAIgB0AHIAdQBlAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBBAGQAZABpAHQAaQBvAG4AYQBsACAASQBuAGYAbwByAG0AYQB0AGkAbwBuACAAcwBoAG8AdQBsAGQAIABiAGUAIABwAGwAYQBjAGUAZAAgAGkAbgAgAHQAaABpAHMAIAB0AGUAeAB0AGIAbwB4ACAALQAgAHsAewBSAGEAbgBkAG8AbQBHAHUAaQBkAH0AfQBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAbwBuAHQAYQBjAHQAbQBhAGQAZQBiAHkAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMgA2AFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAbwBuAHQAYQBjAHQAbQBhAGQAZQBiAHkAaQBkAG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBvAG4AdABhAGMAdABtAGEAZABlAGIAeQBpAGQAdABhAGIAbABlAG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBvAG4AdABhAGMAdABtAGEAZABlAGIAeQBuAGEAbQBlAFwAIgAgAFQAeQBwAGUAPQBcACIAMQAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAYQBzAGUAbwByAGkAZwBpAG4AaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMwAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBcACIAIABEAGkAcwBwAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBvAG4AdABhAGMAdABzAG8AdQByAGMAZQBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADkAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiADkANABjAGYAMQAwADQAYwAtAGMANwAzAGEALQBlADkAMQAxAC0AYQAyAGMANQAtADAAMAA1ADAANQA2ADkAMgA2AGYAZQA0AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBvAG4AdABhAGMAdABzAG8AdQByAGMAZQBpAGQAXwBjAHcAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABEAGkAcgB0AHkAPQBcACIAdAByAHUAZQBcACIAIABWAGEAbAB1AGUAPQBcACIATwB0AGgAZQByAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcABlAHIAcwBvAG4AYQB3AGEAcgBlAG8AZgBjAG8AbgB0AGEAYwB0AGkAZABcACIAIABUAHkAcABlAD0AXAAiADMAMQBcACIAIABEAGkAcgB0AHkAPQBcACIAdAByAHUAZQBcACIAIABWAGEAbAB1AGUAPQBcACIAMQBcACIAIABEAGkAcwBwAD0AXAAiAFkAZQBzAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcABlAHIAcwBvAG4AcwB1AHAAcABvAHIAdABjAG8AbgB0AGEAYwB0AGkAZABcACIAIABUAHkAcABlAD0AXAAiADMAMQBcACIAIABEAGkAcgB0AHkAPQBcACIAdAByAHUAZQBcACIAIABWAGEAbAB1AGUAPQBcACIAMQBcACIAIABEAGkAcwBwAD0AXAAiAFkAZQBzAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBhAHIAZQByAGEAdwBhAHIAZQBvAGYAYwBvAG4AdABhAGMAdABpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAzADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAEQAaQBzAHAAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAGEAcgBlAHIAcwB1AHAAcABvAHIAdABjAG8AbgB0AGEAYwB0AGkAZABcACIAIABUAHkAcABlAD0AXAAiADMAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAARABpAHMAcAA9AFwAIgBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAG4AZQB4AHQAbwBmAGsAaQBuAGEAdwBhAHIAZQBvAGYAYwBvAG4AdABhAGMAdABpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAzADEAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiADEAXAAiACAARABpAHMAcAA9AFwAIgBZAGUAcwBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAYQBzAGUAcwB0AGEAdAB1AHMAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMQA5AFwAIgAgAEQAaQByAHQAeQA9AFwAIgB0AHIAdQBlAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBiAGMAMQA1ADYAYQBjADMALQBiAGEAZgBlAC0AZQA4ADEAMQAtADgAMABkAGMALQAwADAANQAwADUANgAwADUAMAAyAGMAYwBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAYQBzAGUAcwB0AGEAdAB1AHMAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiAEEAbABsAG8AYwBhAHQAZQAgAHQAbwAgAFQAZQBhAG0AXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAGEAcwBlAHAAcgBpAG8AcgBpAHQAeQBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADkAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiAGEAMwA5ADEAMAA1ADkANgAtAGMANwAzAGEALQBlADkAMQAxAC0AYQAyAGMANQAtADAAMAA1ADAANQA2ADkAMgA2AGYAZQA0AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBhAHMAZQBwAHIAaQBvAHIAaQB0AHkAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiAE4AbwByAG0AYQBsAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcgBlAHMAcABvAG4AcwBpAGIAbABlAHUAcwBlAHIAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMQA5AFwAIgAgAEQAaQByAHQAeQA9AFwAIgB0AHIAdQBlAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgB7AHsATABvAGcAaQBuAEkAbgBmAG8ALgBQAGgAbwBlAG4AaQB4AFMAMwBMAG8AZwBpAG4ASQBuAGYAbwAjAGMAcwB2AC4AVQBzAGUAcgBJAEQAfQB9AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcgBlAHMAcABvAG4AcwBpAGIAbABlAHUAcwBlAHIAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHsAewBMAG8AZwBpAG4ASQBuAGYAbwAuAFAAaABvAGUAbgBpAHgAUwAzAEwAbwBnAGkAbgBJAG4AZgBvACMAYwBzAHYALgBOAGEAbQBlAH0AfQBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAG8AdwBuAGUAcgBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAyADIAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHsAewBUAGUAYQBtAEkARAB9AH0AXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBvAHcAbgBlAHIAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHsAewBUAGUAYQBtAE4AYQBtAGUAfQB9AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcgBlAHYAaQBlAHcAZABhAHQAZQBcACIAIABUAHkAcABlAD0AXAAiADIAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAZQBuAGQAZABhAHQAZQB0AGkAbQBlAFwAIgAgAFQAeQBwAGUAPQBcACIAMQAwAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABMAGkAbgBrAGUAZABGAGkAZQBsAGQAPQBcACIAZQBuAGQAZABhAHQAZQB0AGkAbQBlAFwAIgAgAE4AYQBtAGUAPQBcACIAdQBuAGQAZQBmAGkAbgBlAGQAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBhAHMAZQBjAGwAbwBzAHUAcgBlAHIAZQBhAHMAbwBuAGkAZABcACIAIABUAHkAcABlAD0AXAAiADEAOQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAGEAcwBlAGMAbABvAHMAdQByAGUAcgBlAGEAcwBvAG4AaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBsAG8AcwB1AHIAZQBhAGMAYwBlAHAAdABlAGQAYgB5AGkAZABcACIAIABUAHkAcABlAD0AXAAiADEAOQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAGwAbwBzAHUAcgBlAGEAYwBjAGUAcAB0AGUAZABiAHkAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYQByAGMAaABpAHYAZQBkAGEAdABlAFwAIgAgAFQAeQBwAGUAPQBcACIAMgBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBpAG4AYQBjAHQAaQB2AGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBmAGEAbABzAGUAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATABpAG4AawBlAGQARgBpAGUAbABkAD0AXAAiAGkAbgBhAGMAdABpAHYAZQBcACIAIABOAGEAbQBlAD0AXAAiAHUAbgBkAGUAZgBpAG4AZQBkAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgB0AHIAdQBlAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcgBlAHIAZQBmAGUAcgByAGEAbABcACIAIABUAHkAcABlAD0AXAAiADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAGYAYQBsAHMAZQBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABMAGkAbgBrAGUAZABGAGkAZQBsAGQAPQBcACIAcgBlAHIAZQBmAGUAcgByAGEAbABcACIAIABOAGEAbQBlAD0AXAAiAHUAbgBkAGUAZgBpAG4AZQBkAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgB0AHIAdQBlAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcgBlAGYAZQByAHIAaQBuAGcAYQBnAGUAbgBjAHkAYwBhAHMAZQBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcgBlAHMAcABvAG4AcwBlAG0AYQBkAGUAdABvAGMAbwBuAHQAYQBjAHQAXAAiACAAVAB5AHAAZQA9AFwAIgAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBmAGEAbABzAGUAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATABpAG4AawBlAGQARgBpAGUAbABkAD0AXAAiAHIAZQBzAHAAbwBuAHMAZQBtAGEAZABlAHQAbwBjAG8AbgB0AGEAYwB0AFwAIgAgAE4AYQBtAGUAPQBcACIAdQBuAGQAZQBmAGkAbgBlAGQAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHQAcgB1AGUAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBuAG8AbgBtAGkAZwByAGEAdABlAGQAdwBvAHIAawBlAHIAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAG8AbgB0AGEAYwB0AHcAaQB0AGgAdAByAGEAaQBuAGUAZABzAHQAYQBmAGYAZABhAHQAZQBcACIAIABUAHkAcABlAD0AXAAiADEAMABcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATABpAG4AawBlAGQARgBpAGUAbABkAD0AXAAiAGMAbwBuAHQAYQBjAHQAdwBpAHQAaAB0AHIAYQBpAG4AZQBkAHMAdABhAGYAZgBkAGEAdABlAFwAIgAgAE4AYQBtAGUAPQBcACIAdQBuAGQAZQBmAGkAbgBlAGQAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcABvAGwAaQBjAGUAbgBvAHQAaQBmAGkAZQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAZgBhAGwAcwBlAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAEwAaQBuAGsAZQBkAEYAaQBlAGwAZAA9AFwAIgBwAG8AbABpAGMAZQBuAG8AdABpAGYAaQBlAGQAXAAiACAATgBhAG0AZQA9AFwAIgB1AG4AZABlAGYAaQBuAGUAZABcACIAIABWAGEAbAB1AGUAPQBcACIAdAByAHUAZQBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAHAAbwBsAGkAYwBlAG4AbwB0AGkAZgBpAGUAZABkAGEAdABlAFwAIgAgAFQAeQBwAGUAPQBcACIAMgBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBwAG8AbABpAGMAZQBuAG8AdABlAHMAXAAiACAAVAB5AHAAZQA9AFwAIgAxADIAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkAPAAvAEYAaQBlAGwAZABzAD4ADQAKADwALwBSAGUAYwBvAHIAZAA+ACIADQAKAH0A</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="79cbfeea-f9b7-4218-b5ad-33aa8fa3460c" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=case" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiAFsAewBcACIAVABhAGIAbABlAEEAbABpAGEAcwBcACIAOgBcACIAcABlAHIAcwBvAG4AaQBkAF8AcABlAHIAcwBvAG4AXAAiACwAXAAiAEYAaQBlAGwAZABOAGEAbQBlAFwAIgA6AFwAIgBmAHUAbABsAG4AYQBtAGUAXAAiACwAXAAiAFMAbwByAHQATwByAGQAZQByAFwAIgA6ADAAfQBdACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAZgA0ADQAMgA2ADkAOABlAC0AZABmAGUAYgAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAGMAYQBzAGUAIgAsACIAUABhAHIAZQBuAHQASQBkACIAOgAiACIALAAiAFAAYQByAGUAbgB0AFQAeQBwAGUATgBhAG0AZQAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEkAZAAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEQAaQBzAHAAbABhAHkATgBhAG0AZQAiADoAIgAiACwAIgBSAGUAbABhAHQAaQBvAG4AcwBoAGkAcABJAGQAIgA6ACIAIgAsACIAQgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AEkAZAAiADoAIgA3ADkAZgA0AGUAZgBjADQALQBiAGYAYgAxAC0AZQA4ADEAMQAtADgAMABkAGMALQAwADAANQAwADUANgAwADUAMAAyAGMAYwAiACwAIgBSAGUAYwBvAHIAZABzAFAAZQByAFAAYQBnAGUAIgA6ACIAMQAwADAAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADEAIgAsACIAUABhAHIAZQBuAHQASQBkAEYAaQBlAGwAZABOAGEAbQBlACIAOgAiACIALAAiAEEAbABsAG8AdwBNAHUAbAB0AGkAUwBlAGwAZQBjAHQAIgA6ACIAdAByAHUAZQAiACwAIgBPAHQAaABlAHIASQBkAEYAaQBlAGwAZAAiADoAIgAiACwAIgBWAGkAZQB3AEcAcgBvAHUAcAAiADoAIgAxACIALAAiAEQAYQB0AGEAUQB1AGUAcgB5AFgAbQBsACIAOgBuAHUAbABsAH0A</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="2e965e7c-8a8e-4aa8-a673-ae15d59ab043" Version="1.1" Url="https://phoenixqa.careworks.ie/api/dataform/Update" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/editpage.aspx?type=case&amp;id={{CaseID}}&amp;dialogdepth=1&amp;winmode=1&amp;dialogname=CWDialog_5e95c37a-6e3b-e911-a2c5-005056926fe4" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&quot;Success&quot;:true" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewANAAoACQAiAEkAZAAiADoAIAAiAHsAewBDAGEAcwBlAEkARAB9AH0AIgAsAA0ACgAJACIAQgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AE4AYQBtAGUAIgA6ACAAIgBjAGEAcwBlACIALAANAAoACQAiAFAAcgBpAG0AYQByAHkASwBlAHkATgBhAG0AZQAiADoAIAAiAGMAYQBzAGUAaQBkACIALAANAAoACQAiAE0AZQB0AGEAZABhAHQAYQBUAHkAcABlACIAOgAgACIAMAAiACwADQAKAAkAIgBQAGEAcgBlAG4AdABJAGQAIgA6ACAAIgAiACwADQAKAAkAIgBQAGEAcgBlAG4AdABUAHkAcABlACIAOgAgACIAIgAsAA0ACgAJACIAUgBlAGwAYQB0AGkAbwBuAHMAaABpAHAASQBkACIAOgAgACIAIgAsAA0ACgAJACIASABhAHMAUABhAHIAZQBuAHQARgBpAGUAbABkACIAOgAgACIAZgBhAGwAcwBlACIALAANAAoACQAiAEMAdQBsAHQAdQByAGUATgBhAG0AZQAiADoAIAAiAGUAbgAtAEcAQgAiACwADQAKAAkAIgBJAGcAbgBvAHIAZQBEAHUAcABsAGkAYwBhAHQAZQBzACIAOgAgAGYAYQBsAHMAZQAsAA0ACgAJACIARABhAHQAYQAiADoAIAAiADwAUgBlAGMAbwByAGQAPgANAAoACQA8AEYAaQBlAGwAZABzAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAZABhAHQAYQBmAG8AcgBtAGkAZABcACIAIABUAHkAcABlAD0AXAAiADEANwBcACIAIABWAGEAbAB1AGUAPQBcACIAZQBkAGYANABlAGYAYwA0AC0AYgBmAGIAMQAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAZQBkAGYANABlAGYAYwA0AC0AYgBmAGIAMQAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBwAGUAcgBzAG8AbgBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADkAXAAiACAAVgBhAGwAdQBlAD0AXAAiAGIAYwBjADUAZAAwADAAYgAtAGEAOAAzADQALQA0ADMAZQAxAC0AOABiADkAMAAtAGMAZABiADYAMABjADkAMwA2ADUAYQBjAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAHsAewBQAGUAcgBzAG8AbgBEAFMALgBQAGgAbwBlAG4AaQB4AFMAMwBQAGUAbwBwAGwAZQBJAG4AZgBvACMAYwBzAHYALgBQAGUAcgBzAG8AbgBJAEQAfQB9AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcABlAHIAcwBvAG4AaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAEEAZwBuAGUAcwAgAEEAYgBiAG8AdAB0AFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAHsAewBQAGUAcgBzAG8AbgBEAFMALgBQAGgAbwBlAG4AaQB4AFMAMwBQAGUAbwBwAGwAZQBJAG4AZgBvACMAYwBzAHYALgBQAGUAcgBzAG8AbgBOAGEAbQBlAH0AfQBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAHMAdABhAHIAdABkAGEAdABlAHQAaQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADAAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHsAewBDAHUAcgByAGUAbgB0AEQAYQB0AGUAfQB9AFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAHsAewBDAHUAcgByAGUAbgB0AEQAYQB0AGUAfQB9AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAEwAaQBuAGsAZQBkAEYAaQBlAGwAZAA9AFwAIgBzAHQAYQByAHQAZABhAHQAZQB0AGkAbQBlAFwAIgAgAE4AYQBtAGUAPQBcACIAdQBuAGQAZQBmAGkAbgBlAGQAXAAiACAAVgBhAGwAdQBlAD0AXAAiADEAMAA6ADAAMABcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgAxADAAOgAwADAAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBpAG4AaQB0AGkAYQBsAGMAbwBuAHQAYQBjAHQAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMQA5AFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGkAbgBpAHQAaQBhAGwAYwBvAG4AdABhAGMAdABpAGQAXwBjAHcAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAG8AbgB0AGEAYwB0AHIAZQBjAGUAaQB2AGUAZABkAGEAdABlAHQAaQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADAAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHsAewBDAHUAcgByAGUAbgB0AEQAYQB0AGUAfQB9AFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAHsAewBDAHUAcgByAGUAbgB0AEQAYQB0AGUAfQB9AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAEwAaQBuAGsAZQBkAEYAaQBlAGwAZAA9AFwAIgBjAG8AbgB0AGEAYwB0AHIAZQBjAGUAaQB2AGUAZABkAGEAdABlAHQAaQBtAGUAXAAiACAATgBhAG0AZQA9AFwAIgB1AG4AZABlAGYAaQBuAGUAZABcACIAIABWAGEAbAB1AGUAPQBcACIAMQAwADoAMwAwAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiADEAMAA6ADMAMABcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAHAAZQByAHMAbwBuAGEAZwBlAFwAIgAgAFQAeQBwAGUAPQBcACIANQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAG8AbgB0AGEAYwB0AHIAZQBjAGUAaQB2AGUAZABiAHkAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMQA5AFwAIgAgAFYAYQBsAHUAZQA9AFwAIgB7AHsATABvAGcAaQBuAEkAbgBmAG8ALgBQAGgAbwBlAG4AaQB4AFMAMwBMAG8AZwBpAG4ASQBuAGYAbwAjAGMAcwB2AC4AVQBzAGUAcgBJAEQAfQB9AFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAHsAewBMAG8AZwBpAG4ASQBuAGYAbwAuAFAAaABvAGUAbgBpAHgAUwAzAEwAbwBnAGkAbgBJAG4AZgBvACMAYwBzAHYALgBVAHMAZQByAEkARAB9AH0AXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAG8AbgB0AGEAYwB0AHIAZQBjAGUAaQB2AGUAZABiAHkAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHsAewBMAG8AZwBpAG4ASQBuAGYAbwAuAFAAaABvAGUAbgBpAHgAUwAzAEwAbwBnAGkAbgBJAG4AZgBvACMAYwBzAHYALgBOAGEAbQBlAH0AfQBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgB7AHsATABvAGcAaQBuAEkAbgBmAG8ALgBQAGgAbwBlAG4AaQB4AFMAMwBMAG8AZwBpAG4ASQBuAGYAbwAjAGMAcwB2AC4ATgBhAG0AZQB9AH0AXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAG8AbgB0AGEAYwB0AHIAZQBhAHMAbwBuAGkAZABcACIAIABUAHkAcABlAD0AXAAiADEAOQBcACIAIABWAGEAbAB1AGUAPQBcACIAOQA2ADMAMQAwAGIAOQAwAC0AZgA1ADMANAAtAGUAOQAxADEALQBhADIAYwA1AC0AMAAwADUAMAA1ADYAOQAyADYAZgBlADQAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAOQA2ADMAMQAwAGIAOQAwAC0AZgA1ADMANAAtAGUAOQAxADEALQBhADIAYwA1AC0AMAAwADUAMAA1ADYAOQAyADYAZgBlADQAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAG8AbgB0AGEAYwB0AHIAZQBhAHMAbwBuAGkAZABfAGMAdwBuAGEAbQBlAFwAIgAgAFQAeQBwAGUAPQBcACIAMQAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBUAGUAcwB0AF8AQwBvAG4AdABhAGMAdABcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBUAGUAcwB0AF8AQwBvAG4AdABhAGMAdABcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAHAAcgBlAHMAZQBuAHQAaQBuAGcAcAByAGkAbwByAGkAdAB5AGkAZABcACIAIABUAHkAcABlAD0AXAAiADEAOQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBwAHIAZQBzAGUAbgB0AGkAbgBnAHAAcgBpAG8AcgBpAHQAeQBpAGQAXwBjAHcAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAGgAaQBsAGQAaQBuAG4AZQBlAGQAYwBvAGQAZQBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADkAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBoAGkAbABkAGkAbgBuAGUAZQBkAGMAbwBkAGUAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYQBkAGQAaQB0AGkAbwBuAGEAbABpAG4AZgBvAHIAbQBhAHQAaQBvAG4AXAAiACAAVAB5AHAAZQA9AFwAIgAxADIAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiAEEAZABkAGkAdABpAG8AbgBhAGwAIABJAG4AZgBvAHIAbQBhAHQAaQBvAG4AIABzAGgAbwB1AGwAZAAgAGIAZQAgAHAAbABhAGMAZQBkACAAaQBuACAAdABoAGkAcwAgAHQAZQB4AHQAYgBvAHgAIAAtACAAewB7AFIAYQBuAGQAbwBtAEcAdQBpAGQAfQB9ACAAXABuAFQASABJAFMAIABJAFMAIABBAE4AIABVAFAARABBAFQARQAgAFQATwAgAFQASABFACAAQwBBAFMARQAgAFIARQBDAE8AUgBEACAAJiAuAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAEEAZABkAGkAdABpAG8AbgBhAGwAIABJAG4AZgBvAHIAbQBhAHQAaQBvAG4AIABzAGgAbwB1AGwAZAAgAGIAZQAgAHAAbABhAGMAZQBkACAAaQBuACAAdABoAGkAcwAgAHQAZQB4AHQAYgBvAHgAJiAuAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBvAG4AdABhAGMAdABtAGEAZABlAGIAeQBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAyADYAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBvAG4AdABhAGMAdABtAGEAZABlAGIAeQBpAGQAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAG8AbgB0AGEAYwB0AG0AYQBkAGUAYgB5AGkAZAB0AGEAYgBsAGUAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAG8AbgB0AGEAYwB0AG0AYQBkAGUAYgB5AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAARABpAHIAdAB5AD0AXAAiAHQAcgB1AGUAXAAiACAAVgBhAGwAdQBlAD0AXAAiAEMAbwBuAHQAYQBjAHQAIABtAGEAZABlACAAYgB5ACAAdABoAGUAIAB1AHMAZQByACAAaQB0AHMAZQBsAGYAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAGEAcwBlAG8AcgBpAGcAaQBuAGkAZABcACIAIABUAHkAcABlAD0AXAAiADMAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAARABpAHMAcAA9AFwAIgBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAbwBuAHQAYQBjAHQAcwBvAHUAcgBjAGUAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMQA5AFwAIgAgAFYAYQBsAHUAZQA9AFwAIgA5ADQAYwBmADEAMAA0AGMALQBjADcAMwBhAC0AZQA5ADEAMQAtAGEAMgBjADUALQAwADAANQAwADUANgA5ADIANgBmAGUANABcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgA5ADQAYwBmADEAMAA0AGMALQBjADcAMwBhAC0AZQA5ADEAMQAtAGEAMgBjADUALQAwADAANQAwADUANgA5ADIANgBmAGUANABcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAbwBuAHQAYQBjAHQAcwBvAHUAcgBjAGUAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAE8AdABoAGUAcgBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBPAHQAaABlAHIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBwAGUAcgBzAG8AbgBhAHcAYQByAGUAbwBmAGMAbwBuAHQAYQBjAHQAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMwAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgAxAFwAIgAgAEQAaQBzAHAAPQBcACIAWQBlAHMAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAMQBcACIAIABQAHIAZQB2AEQAaQBzAHAAPQBcACIAWQBlAHMAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBwAGUAcgBzAG8AbgBzAHUAcABwAG8AcgB0AGMAbwBuAHQAYQBjAHQAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMwAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgAxAFwAIgAgAEQAaQBzAHAAPQBcACIAWQBlAHMAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAMQBcACIAIABQAHIAZQB2AEQAaQBzAHAAPQBcACIAWQBlAHMAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAGEAcgBlAHIAYQB3AGEAcgBlAG8AZgBjAG8AbgB0AGEAYwB0AGkAZABcACIAIABUAHkAcABlAD0AXAAiADMAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAARABpAHMAcAA9AFwAIgBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAYQByAGUAcgBzAHUAcABwAG8AcgB0AGMAbwBuAHQAYQBjAHQAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMwAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBcACIAIABEAGkAcwBwAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAbgBlAHgAdABvAGYAawBpAG4AYQB3AGEAcgBlAG8AZgBjAG8AbgB0AGEAYwB0AGkAZABcACIAIABUAHkAcABlAD0AXAAiADMAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAMQBcACIAIABEAGkAcwBwAD0AXAAiAFkAZQBzAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiADEAXAAiACAAUAByAGUAdgBEAGkAcwBwAD0AXAAiAFkAZQBzAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBhAHMAZQBzAHQAYQB0AHUAcwBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADkAXAAiACAAVgBhAGwAdQBlAD0AXAAiAGIAYwAxADUANgBhAGMAMwAtAGIAYQBmAGUALQBlADgAMQAxAC0AOAAwAGQAYwAtADAAMAA1ADAANQA2ADAANQAwADIAYwBjAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAGIAYwAxADUANgBhAGMAMwAtAGIAYQBmAGUALQBlADgAMQAxAC0AOAAwAGQAYwAtADAAMAA1ADAANQA2ADAANQAwADIAYwBjAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBhAHMAZQBzAHQAYQB0AHUAcwBpAGQAXwBjAHcAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAQQBsAGwAbwBjAGEAdABlACAAdABvACAAVABlAGEAbQBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBBAGwAbABvAGMAYQB0AGUAIAB0AG8AIABUAGUAYQBtAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBhAHMAZQBwAHIAaQBvAHIAaQB0AHkAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMQA5AFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBhADMAOQAxADAANQA5ADYALQBjADcAMwBhAC0AZQA5ADEAMQAtAGEAMgBjADUALQAwADAANQAwADUANgA5ADIANgBmAGUANABcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBhADMAOQAxADAANQA5ADYALQBjADcAMwBhAC0AZQA5ADEAMQAtAGEAMgBjADUALQAwADAANQAwADUANgA5ADIANgBmAGUANABcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAGMAYQBzAGUAcAByAGkAbwByAGkAdAB5AGkAZABfAGMAdwBuAGEAbQBlAFwAIgAgAFQAeQBwAGUAPQBcACIAMQAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBOAG8AcgBtAGEAbABcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBOAG8AcgBtAGEAbABcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAHIAZQBzAHAAbwBuAHMAaQBiAGwAZQB1AHMAZQByAGkAZABcACIAIABUAHkAcABlAD0AXAAiADEAOQBcACIAIABWAGEAbAB1AGUAPQBcACIAewB7AEwAbwBnAGkAbgBJAG4AZgBvAC4AUABoAG8AZQBuAGkAeABTADMATABvAGcAaQBuAEkAbgBmAG8AIwBjAHMAdgAuAFUAcwBlAHIASQBEAH0AfQBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgB7AHsATABvAGcAaQBuAEkAbgBmAG8ALgBQAGgAbwBlAG4AaQB4AFMAMwBMAG8AZwBpAG4ASQBuAGYAbwAjAGMAcwB2AC4AVQBzAGUAcgBJAEQAfQB9AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcgBlAHMAcABvAG4AcwBpAGIAbABlAHUAcwBlAHIAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHsAewBMAG8AZwBpAG4ASQBuAGYAbwAuAFAAaABvAGUAbgBpAHgAUwAzAEwAbwBnAGkAbgBJAG4AZgBvACMAYwBzAHYALgBOAGEAbQBlAH0AfQBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgB7AHsATABvAGcAaQBuAEkAbgBmAG8ALgBQAGgAbwBlAG4AaQB4AFMAMwBMAG8AZwBpAG4ASQBuAGYAbwAjAGMAcwB2AC4ATgBhAG0AZQB9AH0AXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBvAHcAbgBlAHIAaQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMgAyAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgB7AHsAVABlAGEAbQBJAEQAfQB9AFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAHsAewBUAGUAYQBtAEkARAB9AH0AXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBvAHcAbgBlAHIAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHsAewBUAGUAYQBtAE4AYQBtAGUAfQB9AFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAHsAewBUAGUAYQBtAE4AYQBtAGUAfQB9AFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcgBlAHYAaQBlAHcAZABhAHQAZQBcACIAIABUAHkAcABlAD0AXAAiADIAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAZQBuAGQAZABhAHQAZQB0AGkAbQBlAFwAIgAgAFQAeQBwAGUAPQBcACIAMQAwAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABMAGkAbgBrAGUAZABGAGkAZQBsAGQAPQBcACIAZQBuAGQAZABhAHQAZQB0AGkAbQBlAFwAIgAgAE4AYQBtAGUAPQBcACIAdQBuAGQAZQBmAGkAbgBlAGQAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBhAHMAZQBjAGwAbwBzAHUAcgBlAHIAZQBhAHMAbwBuAGkAZABcACIAIABUAHkAcABlAD0AXAAiADEAOQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAGEAcwBlAGMAbABvAHMAdQByAGUAcgBlAGEAcwBvAG4AaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYwBsAG8AcwB1AHIAZQBhAGMAYwBlAHAAdABlAGQAYgB5AGkAZABcACIAIABUAHkAcABlAD0AXAAiADEAOQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAGwAbwBzAHUAcgBlAGEAYwBjAGUAcAB0AGUAZABiAHkAaQBkAF8AYwB3AG4AYQBtAGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAYQByAGMAaABpAHYAZQBkAGEAdABlAFwAIgAgAFQAeQBwAGUAPQBcACIAMgBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBpAG4AYQBjAHQAaQB2AGUAXAAiACAAVAB5AHAAZQA9AFwAIgAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBmAGEAbABzAGUAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAZgBhAGwAcwBlAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAEwAaQBuAGsAZQBkAEYAaQBlAGwAZAA9AFwAIgBpAG4AYQBjAHQAaQB2AGUAXAAiACAATgBhAG0AZQA9AFwAIgB1AG4AZABlAGYAaQBuAGUAZABcACIAIABWAGEAbAB1AGUAPQBcACIAdAByAHUAZQBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgB0AHIAdQBlAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcgBlAHIAZQBmAGUAcgByAGEAbABcACIAIABUAHkAcABlAD0AXAAiADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAGYAYQBsAHMAZQBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgBmAGEAbABzAGUAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATABpAG4AawBlAGQARgBpAGUAbABkAD0AXAAiAHIAZQByAGUAZgBlAHIAcgBhAGwAXAAiACAATgBhAG0AZQA9AFwAIgB1AG4AZABlAGYAaQBuAGUAZABcACIAIABWAGEAbAB1AGUAPQBcACIAdAByAHUAZQBcACIAIABQAHIAZQB2AFYAYQBsAHUAZQA9AFwAIgB0AHIAdQBlAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcgBlAGYAZQByAHIAaQBuAGcAYQBnAGUAbgBjAHkAYwBhAHMAZQBpAGQAXAAiACAAVAB5AHAAZQA9AFwAIgAxADEAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcgBlAHMAcABvAG4AcwBlAG0AYQBkAGUAdABvAGMAbwBuAHQAYQBjAHQAXAAiACAAVAB5AHAAZQA9AFwAIgAxAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgBmAGEAbABzAGUAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAZgBhAGwAcwBlAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAEwAaQBuAGsAZQBkAEYAaQBlAGwAZAA9AFwAIgByAGUAcwBwAG8AbgBzAGUAbQBhAGQAZQB0AG8AYwBvAG4AdABhAGMAdABcACIAIABOAGEAbQBlAD0AXAAiAHUAbgBkAGUAZgBpAG4AZQBkAFwAIgAgAFYAYQBsAHUAZQA9AFwAIgB0AHIAdQBlAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAHQAcgB1AGUAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBuAG8AbgBtAGkAZwByAGEAdABlAGQAdwBvAHIAawBlAHIAbgBhAG0AZQBcACIAIABUAHkAcABlAD0AXAAiADEAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBjAG8AbgB0AGEAYwB0AHcAaQB0AGgAdAByAGEAaQBuAGUAZABzAHQAYQBmAGYAZABhAHQAZQBcACIAIABUAHkAcABlAD0AXAAiADEAMABcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATABpAG4AawBlAGQARgBpAGUAbABkAD0AXAAiAGMAbwBuAHQAYQBjAHQAdwBpAHQAaAB0AHIAYQBpAG4AZQBkAHMAdABhAGYAZgBkAGEAdABlAFwAIgAgAE4AYQBtAGUAPQBcACIAdQBuAGQAZQBmAGkAbgBlAGQAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkACQA8AFIAZQBjAG8AcgBkAEYAaQBlAGwAZAAgAE4AYQBtAGUAPQBcACIAcABvAGwAaQBjAGUAbgBvAHQAaQBmAGkAZQBkAFwAIgAgAFQAeQBwAGUAPQBcACIAMQBcACIAIABWAGEAbAB1AGUAPQBcACIAZgBhAGwAcwBlAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAGYAYQBsAHMAZQBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABMAGkAbgBrAGUAZABGAGkAZQBsAGQAPQBcACIAcABvAGwAaQBjAGUAbgBvAHQAaQBmAGkAZQBkAFwAIgAgAE4AYQBtAGUAPQBcACIAdQBuAGQAZQBmAGkAbgBlAGQAXAAiACAAVgBhAGwAdQBlAD0AXAAiAHQAcgB1AGUAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAdAByAHUAZQBcACIALwA+AA0ACgAJAAkAPABSAGUAYwBvAHIAZABGAGkAZQBsAGQAIABOAGEAbQBlAD0AXAAiAHAAbwBsAGkAYwBlAG4AbwB0AGkAZgBpAGUAZABkAGEAdABlAFwAIgAgAFQAeQBwAGUAPQBcACIAMgBcACIAIABWAGEAbAB1AGUAPQBcACIAXAAiACAAUAByAGUAdgBWAGEAbAB1AGUAPQBcACIAXAAiAC8APgANAAoACQAJADwAUgBlAGMAbwByAGQARgBpAGUAbABkACAATgBhAG0AZQA9AFwAIgBwAG8AbABpAGMAZQBuAG8AdABlAHMAXAAiACAAVAB5AHAAZQA9AFwAIgAxADIAXAAiACAAVgBhAGwAdQBlAD0AXAAiAFwAIgAgAFAAcgBlAHYAVgBhAGwAdQBlAD0AXAAiAFwAIgAvAD4ADQAKAAkAPAAvAEYAaQBlAGwAZABzAD4ADQAKADwALwBSAGUAYwBvAHIAZAA+ACIADQAKAH0A</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="745491b6-ca76-4a5e-a5c3-addd4adb342a" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?dialogdepth=1&amp;db=1&amp;viewgroup=system&amp;dataviewid=f442698e-dfeb-e811-80dc-0050560502cc" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiAFsAewBcACIAVABhAGIAbABlAEEAbABpAGEAcwBcACIAOgBcACIAcABlAHIAcwBvAG4AaQBkAF8AcABlAHIAcwBvAG4AXAAiACwAXAAiAEYAaQBlAGwAZABOAGEAbQBlAFwAIgA6AFwAIgBmAHUAbABsAG4AYQBtAGUAXAAiACwAXAAiAFMAbwByAHQATwByAGQAZQByAFwAIgA6ADAAfQBdACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAZgA0ADQAMgA2ADkAOABlAC0AZABmAGUAYgAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAGMAYQBzAGUAIgAsACIAUABhAHIAZQBuAHQASQBkACIAOgAiACIALAAiAFAAYQByAGUAbgB0AFQAeQBwAGUATgBhAG0AZQAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEkAZAAiADoAIgAiACwAIgBTAGUAYQByAGMAaABWAGkAZQB3AEQAaQBzAHAAbABhAHkATgBhAG0AZQAiADoAIgAiACwAIgBSAGUAbABhAHQAaQBvAG4AcwBoAGkAcABJAGQAIgA6ACIAIgAsACIAQgB1AHMAaQBuAGUAcwBzAE8AYgBqAGUAYwB0AEkAZAAiADoAIgA3ADkAZgA0AGUAZgBjADQALQBiAGYAYgAxAC0AZQA4ADEAMQAtADgAMABkAGMALQAwADAANQAwADUANgAwADUAMAAyAGMAYwAiACwAIgBSAGUAYwBvAHIAZABzAFAAZQByAFAAYQBnAGUAIgA6ACIAMQAwADAAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADEAIgAsACIAUABhAHIAZQBuAHQASQBkAEYAaQBlAGwAZABOAGEAbQBlACIAOgAiACIALAAiAEEAbABsAG8AdwBNAHUAbAB0AGkAUwBlAGwAZQBjAHQAIgA6ACIAdAByAHUAZQAiACwAIgBPAHQAaABlAHIASQBkAEYAaQBlAGwAZAAiADoAIgAiACwAIgBWAGkAZQB3AEcAcgBvAHUAcAAiADoAIgAxACIALAAiAEQAYQB0AGEAUQB1AGUAcgB5AFgAbQBsACIAOgBuAHUAbABsAH0A</StringHttpBody>
+    </Request>
+  </Items>
+  <DataSources>
+    <DataSource Name="PersonDS" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\PhoenixS3PeopleInfo.csv">
+      <Tables>
+        <DataSourceTable Name="PhoenixS3PeopleInfo#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Random" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="TeamName" Value="Bridgend - Advice" />
+    <ContextParameter Name="TeamID" Value="4E499406-3D4B-49DF-966A-129E7085CD94" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="Microsoft.VisualStudio.TestTools.WebTesting.RequestPlugins.DateTimeWebTestPlugin, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Date Time Plugin" Description="Composes date and time in the specified format and assigns it to a given context parameter.">
+      <RuleParameters>
+        <RuleParameter Name="AddDays" Value="0" />
+        <RuleParameter Name="AddHours" Value="0" />
+        <RuleParameter Name="AddMilliseconds" Value="0" />
+        <RuleParameter Name="AddMinutes" Value="0" />
+        <RuleParameter Name="AddMonths" Value="0" />
+        <RuleParameter Name="AddSeconds" Value="0" />
+        <RuleParameter Name="AddYears" Value="0" />
+        <RuleParameter Name="ContextParameterName" Value="CurrentDate" />
+        <RuleParameter Name="InputDateTime" Value="" />
+        <RuleParameter Name="OutputFormat" Value="dd/MM/yyyy" />
+        <RuleParameter Name="OutputJsonDateTime" Value="False" />
+        <RuleParameter Name="UseCurrentTime" Value="True" />
+        <RuleParameter Name="UseLocalTime" Value="False" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="Microsoft.SystemCenter.Cloud.GsmPlugins.GuidGeneratorWebTestPlugin, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Generate Guid" Description="Generates a new guid.">
+      <RuleParameters>
+        <RuleParameter Name="ContextParameterName" Value="RandomGuid" />
+        <RuleParameter Name="OutputFormat" Value="N" />
+      </RuleParameters>
+    </WebTestPlugin>
+  </WebTestPlugins>
+</WebTest>

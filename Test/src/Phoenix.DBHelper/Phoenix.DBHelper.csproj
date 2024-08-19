@@ -1,0 +1,956 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C4B7C69-F6D8-43CA-849F-50FA6695BC46}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phoenix.DBHelper</RootNamespace>
+    <AssemblyName>Phoenix.DBHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWS.Logger.Core, Version=3.2.1.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblies\AWS.Logger.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWS.Logger.SeriLog, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblies\AWS.Logger.SeriLog.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CloudWatchLogs, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblies\AWSSDK.CloudWatchLogs.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblies\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CareDirector.Sdk, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblies\CareDirector.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="CareWorks.Foundation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5492b30927a3c603, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblies\CareWorks.Foundation.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblies\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Formatting.Compact, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblies\Serilog.Formatting.Compact.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Console, Version=5.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblies\Serilog.Sinks.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Debug, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblies\Serilog.Sinks.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=5.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CaredirectorAssemblies\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Appointment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AssessmentPrintRecord.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AttachDocumentType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Audit.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuditChangeSet.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuditChangeSet_2018.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuditChangeSet_2019.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuditChangeSet_2020.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Audit_2018.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Audit_2019.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Audit_2020.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HttpRestClient.cs" />
+    <Compile Include="Models\AccommodationType.cs" />
+    <Compile Include="Models\AllergyType.cs" />
+    <Compile Include="Models\CarePhysicalLocationDailyCare.cs" />
+    <Compile Include="Models\CPSystemUserShiftPayment.cs" />
+    <Compile Include="Models\CareProviderPayrollBatch.cs" />
+    <Compile Include="Models\ProviderHolidayYear.cs" />
+    <Compile Include="Models\CPPersonPersonalSafetyandEnvironment.cs" />
+    <Compile Include="Models\CPPersonPainManagement.cs" />
+    <Compile Include="Models\CpPersonFoodAndFluid.cs" />
+    <Compile Include="Models\FluidAmountOffered.cs" />
+    <Compile Include="Models\MotionSensorType.cs" />
+    <Compile Include="Models\NonOralFluidDelivery.cs" />
+    <Compile Include="Models\TypeOfFluid.cs" />
+    <Compile Include="Models\FoodAmountEaten.cs" />
+    <Compile Include="Models\FoodAmountOffered.cs" />
+    <Compile Include="Models\FoodAndFluidMealType.cs" />
+    <Compile Include="Models\PersonConversations.cs" />
+    <Compile Include="Models\CPPersonEmotional.cs" />
+    <Compile Include="Models\CpPersonBehaviourIncident.cs" />
+    <Compile Include="Models\IncidentTrigger.cs" />
+    <Compile Include="Models\CPPersonDiaryEvent.cs" />
+    <Compile Include="Models\CPPersonActivities.cs" />
+    <Compile Include="Models\PersonActivities.cs" />
+    <Compile Include="Models\TypeOfEmotionalSupport.cs" />
+    <Compile Include="Models\PersonDiaryEventType.cs" />
+    <Compile Include="Models\UrineColour.cs" />
+    <Compile Include="Models\CpPersonCarePreferences.cs" />
+    <Compile Include="Models\CarePlanAgreedBy.cs" />
+    <Compile Include="Models\CareProviderAccountingPeriod.cs" />
+    <Compile Include="Models\CPDailyPersonalCareAttachment.cs" />
+    <Compile Include="Models\PersonalCareBodyArea.cs" />
+    <Compile Include="Models\PersonalCareOther.cs" />
+    <Compile Include="Models\PersonalCareClothes.cs" />
+    <Compile Include="Models\PersonalCareOralCare.cs" />
+    <Compile Include="Models\PersonalCareWash.cs" />
+    <Compile Include="Models\CareProviderFinanceInvoicePaymentReportType.cs" />
+    <Compile Include="Models\CareProviderMasterPayArrangement.cs" />
+    <Compile Include="Models\CareProviderFinanceInvoicePayment.cs" />
+    <Compile Include="Models\CPPersonKeyworkerNote.cs" />
+    <Compile Include="Models\CPPersonToileting.cs" />
+    <Compile Include="Models\CPPersonPersonalCareDailyRecord.cs" />
+    <Compile Include="Models\CareProviderPersonHandoverDetail.cs" />
+    <Compile Include="Models\CPPersonDayNightCheck.cs" />
+    <Compile Include="Models\CPPersonTurning.cs" />
+    <Compile Include="Models\CareProviderCarePlanSkinCondition.cs" />
+    <Compile Include="Models\CpMobilityAttachment.cs" />
+    <Compile Include="Models\SpecialistMattress.cs" />
+    <Compile Include="Models\CPPersonDayNightCheckObservations.cs" />
+    <Compile Include="Models\CareProviderFinanceTransactionTrigger.cs" />
+    <Compile Include="Models\CareProviderVATCodeSetup.cs" />
+    <Compile Include="Models\CareWellbeing.cs" />
+    <Compile Include="Models\CareEquipment.cs" />
+    <Compile Include="Models\CareAssistanceNeeded.cs" />
+    <Compile Include="Models\CPPersonMobility.cs" />
+    <Compile Include="Models\MobilityDistanceUnit.cs" />
+    <Compile Include="Models\CarePlanReviewOutcome.cs" />
+    <Compile Include="Models\CareProviderBandRateSchedule.cs" />
+    <Compile Include="Models\CareProviderCarePeriodSetUp.cs" />
+    <Compile Include="Models\CareProviderBankHolidayType.cs" />
+    <Compile Include="Models\CareProviderChargeApportionment.cs" />
+    <Compile Include="Models\CareProviderChargeApportionmentDetail.cs" />
+    <Compile Include="Models\CareProviderContractServiceBandedRates.cs" />
+    <Compile Include="Models\CareProviderExtractName.cs" />
+    <Compile Include="Models\CareProviderExtractType.cs" />
+    <Compile Include="Models\CareProviderFinanceExtractBatch.cs" />
+    <Compile Include="Models\CareProviderFinanceExtractBatchSetup.cs" />
+    <Compile Include="Models\CareProviderFinanceCodeMapping.cs" />
+    <Compile Include="Models\CareProviderFinanceInvoice.cs" />
+    <Compile Include="Models\CareProviderFinanceInvoiceBatch.cs" />
+    <Compile Include="Models\CareProviderFinanceTransaction.cs" />
+    <Compile Include="Models\CareProviderPersonContractServiceChargePerWk.cs" />
+    <Compile Include="Models\CareProviderPersonContractServiceRatePeriod.cs" />
+    <Compile Include="Models\CareProviderBandRateType.cs" />
+    <Compile Include="Models\CarePhysicalLocation.cs" />
+    <Compile Include="Models\CPBookingDiaryDeletionReason.cs" />
+    <Compile Include="Models\CPPersonDailyRecord.cs" />
+    <Compile Include="Models\CPBands.cs" />
+    <Compile Include="Models\CPBookingTypeClashAction.cs" />
+    <Compile Include="Models\CPRegularCareTaskDiary.cs" />
+    <Compile Include="Models\CPRegularCareTaskSchedule.cs" />
+    <Compile Include="Models\CPBookingScheduleDeletionReason.cs" />
+    <Compile Include="Models\CPExpressBookingResult.cs" />
+    <Compile Include="Models\CPTimeband.cs" />
+    <Compile Include="Models\CPTimebandSet.cs" />
+    <Compile Include="Models\cpPersonalMoneyAccountDetailAttachment.cs" />
+    <Compile Include="Models\CareProviderPersonalMoneyAccountDetail.cs" />
+    <Compile Include="Models\CareProviderPersonalMoneyAccountEntryType.cs" />
+    <Compile Include="Models\CareProviderPersonalMoneyAccountType.cs" />
+    <Compile Include="Models\CareProviderPersonalMoneyAccount.cs" />
+    <Compile Include="Models\CareProviderServiceDetail.cs" />
+    <Compile Include="Models\CareProviderServiceMapping.cs" />
+    <Compile Include="Models\CareProviderFinanceCodeLocation.cs" />
+    <Compile Include="Models\CareProviderFinanceInvoiceBatchSetup.cs" />
+    <Compile Include="Models\MailMerge.cs" />
+    <Compile Include="Models\CPBankHolidayChargingCalendar.cs" />
+    <Compile Include="Models\CPBankHolidayDate.cs" />
+    <Compile Include="Models\CPBookingRegularCareTaskStaff.cs" />
+    <Compile Include="Models\CPBookingRegularCareTask.cs" />
+    <Compile Include="Models\CPExpressBookingProcessed.cs" />
+    <Compile Include="Models\CPExpressBookingCriteria.cs" />
+    <Compile Include="Models\CareProviderFinanceCode.cs" />
+    <Compile Include="Models\CPSuspendDebtorInvoicesReason.cs" />
+    <Compile Include="Models\OpenEndedAbsence.cs" />
+    <Compile Include="Models\CareProviderStaffRoleTypeGroup.cs" />
+    <Compile Include="Models\CareProviderPersonalMoneyAccountAttachment.cs" />
+    <Compile Include="Models\PaymentMethod.cs" />
+    <Compile Include="Models\PersonKeyworkerNoteAttachment.cs" />
+    <Compile Include="Models\PersonCarePlanReview.cs" />
+    <Compile Include="Models\InpatientConsultantEpisodeEndReason.cs" />
+    <Compile Include="Models\Pronouns.cs" />
+    <Compile Include="Models\ComplianceManagement.cs" />
+    <Compile Include="Models\CareProviderContractServiceRatePeriod.cs" />
+    <Compile Include="Models\SocialWorkerChangeReason.cs" />
+    <Compile Include="Models\AdultSafeguardingCategoryOfAbuse.cs" />
+    <Compile Include="Models\AdultSafeguardingStatus.cs" />
+    <Compile Include="Models\AlertAndHazardEndReason.cs" />
+    <Compile Include="Models\AlertAndHazardReviewOutcome.cs" />
+    <Compile Include="Models\AlertAndHazardType.cs" />
+    <Compile Include="Models\AllegationCategory.cs" />
+    <Compile Include="Models\CareProviderPersonContractServiceEndReason.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\CPPersonAbsenceReason.cs" />
+    <Compile Include="Models\CareProviderPersonContractService.cs" />
+    <Compile Include="Models\CPPersonAbsence.cs" />
+    <Compile Include="Models\CPSchedulingSetup.cs" />
+    <Compile Include="Models\CareTask.cs" />
+    <Compile Include="Models\CareProviderPersonContractEndReason.cs" />
+    <Compile Include="Models\ImmigrationStatus.cs" />
+    <Compile Include="Models\LeavingCareEligibility.cs" />
+    <Compile Include="Models\LowerSuperOutputArea.cs" />
+    <Compile Include="Models\ModeOfCommunication.cs" />
+    <Compile Include="Models\PersonDocumentFormat.cs" />
+    <Compile Include="Models\Religion.cs" />
+    <Compile Include="Models\ScheduleBookingToPeople.cs" />
+    <Compile Include="Models\DuplicateDetectionRule.cs" />
+    <Compile Include="Models\FinanceTransactionTrigger.cs" />
+    <Compile Include="Models\LACReviewType.cs" />
+    <Compile Include="Models\LACReview.cs" />
+    <Compile Include="Models\MASHStatus.cs" />
+    <Compile Include="Models\MhaRecordOfAppeal.cs" />
+    <Compile Include="Models\MhaRecordOfAppealCaseNote.cs" />
+    <Compile Include="Models\PersonalMoneyAccountTransactionType.cs" />
+    <Compile Include="Models\AssessmentFactorType.cs" />
+    <Compile Include="Models\BrokerageEpisodeCancellationReason.cs" />
+    <Compile Include="Case.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CaseAction.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CaseAttachment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CaseForm.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CaseFormOutcome.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentQuestionIdentifier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AboutMeSetup.cs" />
+    <Compile Include="Models\CaseReopenReason.cs" />
+    <Compile Include="Models\CaseFormOutcomeType.cs" />
+    <Compile Include="Models\CasePriority.cs" />
+    <Compile Include="Models\ChildInNeedCode.cs" />
+    <Compile Include="Models\ClinicalRiskfactorEndReason.cs" />
+    <Compile Include="Models\ClinicalRiskFactorSubType.cs" />
+    <Compile Include="Models\ClinicalRiskFactorType.cs" />
+    <Compile Include="Models\ClinicalRiskLevel.cs" />
+    <Compile Include="Models\ClinicalRiskStatus.cs" />
+    <Compile Include="Models\CommunityClinicRestriction.cs" />
+    <Compile Include="Models\ContactCaseNote.cs" />
+    <Compile Include="Models\DebtorHeaderText.cs" />
+    <Compile Include="Models\DebtorRecoveryText.cs" />
+    <Compile Include="Models\DebtorTransactionText.cs" />
+    <Compile Include="Models\DisabilityType.cs" />
+    <Compile Include="Models\FinanceGeneralSettings.cs" />
+    <Compile Include="Models\FinanceInvoiceStatus.cs" />
+    <Compile Include="Models\ContractEndReason.cs" />
+    <Compile Include="Models\GestationPeriodEndReason.cs" />
+    <Compile Include="Models\ImmunisationType.cs" />
+    <Compile Include="Models\ImpairmentType.cs" />
+    <Compile Include="Models\JobRoleType.cs" />
+    <Compile Include="Models\MHAAftercareEntitlement.cs" />
+    <Compile Include="Models\MHAAftercareEntitlementCaseNote.cs" />
+    <Compile Include="Models\MHACourtDateOutcomeCaseNote.cs" />
+    <Compile Include="Models\MHARightsAndRequests.cs" />
+    <Compile Include="Models\MHARightsAndRequestsCaseNote.cs" />
+    <Compile Include="Models\MHASectionSetup.cs" />
+    <Compile Include="Models\PersonCarePlanCaseNote.cs" />
+    <Compile Include="Models\PersonClinicalRiskStatus.cs" />
+    <Compile Include="Models\PersonClinicalRiskStatusCaseNote.cs" />
+    <Compile Include="Models\PersonFormOutcomeType.cs" />
+    <Compile Include="Models\PersonHeightAndWeight.cs" />
+    <Compile Include="Models\PersonHeightAndWeightCaseNote.cs" />
+    <Compile Include="Models\PersonMhaAppeal.cs" />
+    <Compile Include="Models\PersonMHALegalStatusCaseNote.cs" />
+    <Compile Include="Models\CaseRejectedReason.cs" />
+    <Compile Include="Models\PersonSignificantEventChronology.cs" />
+    <Compile Include="Models\PrimarySupportReasonType.cs" />
+    <Compile Include="Models\PrivateFosteringArrangement.cs" />
+    <Compile Include="Models\PrivateFosteringArrangementCaseNote.cs" />
+    <Compile Include="Models\ProtectiveMarkingScheme.cs" />
+    <Compile Include="Models\RegularCareTask.cs" />
+    <Compile Include="Models\RTTPathwaySetup.cs" />
+    <Compile Include="Models\CPFee.cs" />
+    <Compile Include="Models\CPFeeSetup.cs" />
+    <Compile Include="Models\CPFeeType.cs" />
+    <Compile Include="Models\BankHoliday.cs" />
+    <Compile Include="Models\BrokerageCarePackageType.cs" />
+    <Compile Include="Models\BrokerageEpisodeRejectionReason.cs" />
+    <Compile Include="Models\BrokerageEpisodeCancellationReason.cs" />
+    <Compile Include="Models\BrokerageEpisodeTargetSetup.cs" />
+    <Compile Include="Models\BrokerageEpisodeTrackingStatus.cs" />
+    <Compile Include="Models\BrokerageExistingCarePackage.cs" />
+    <Compile Include="Models\BrokerageOfferAwaitingCommunicationFrom.cs" />
+    <Compile Include="Models\BrokerageOfferCancellationReason.cs" />
+    <Compile Include="Models\BrokerageOfferCommunicationOutcome.cs" />
+    <Compile Include="Models\BrokerageOfferRejectionReason.cs" />
+    <Compile Include="Models\BrokerageTargetTrackingStatusSetup.cs" />
+    <Compile Include="Models\ApprovedCareType.cs" />
+    <Compile Include="Models\CPAllowance.cs" />
+    <Compile Include="Models\Decision.cs" />
+    <Compile Include="Models\CarerBatchGrouping.cs" />
+    <Compile Include="Models\CPCarerRateUnit.cs" />
+    <Compile Include="Models\ContactMethod.cs" />
+    <Compile Include="Models\CPAllowanceSetup.cs" />
+    <Compile Include="Models\CPAllowanceType.cs" />
+    <Compile Include="Models\DocumentBusinessObjectMapping.cs" />
+    <Compile Include="Models\DocumentOutcomeType.cs" />
+    <Compile Include="Models\ErrorManagementReason.cs" />
+    <Compile Include="Models\FormDelayReason.cs" />
+    <Compile Include="Models\FosteringExperience.cs" />
+    <Compile Include="Models\GLCodeMapping.cs" />
+    <Compile Include="Models\InpatientBedType.cs" />
+    <Compile Include="Models\InpatientLeaveAwolCaseNote.cs" />
+    <Compile Include="Models\InpatientWardSpecialty.cs" />
+    <Compile Include="Models\AppointmentType.cs" />
+    <Compile Include="Models\CareProviderContractService.cs" />
+    <Compile Include="Models\CareProviderPersonContract.cs" />
+    <Compile Include="Models\CareProviderVatCode.cs" />
+    <Compile Include="Models\CareProviderBatchGrouping.cs" />
+    <Compile Include="Models\CareProviderService.cs" />
+    <Compile Include="Models\DiaryBookingToPeople.cs" />
+    <Compile Include="Models\CPBookingDiaryStaff.cs" />
+    <Compile Include="Models\CPBookingDiary.cs" />
+    <Compile Include="Models\BrokerageEpisodePauseReason.cs" />
+    <Compile Include="Models\BrokerageEpisodePriority.cs" />
+    <Compile Include="Models\BrokerageRequestSource.cs" />
+    <Compile Include="Models\ExtractName.cs" />
+    <Compile Include="Models\FinanceInvoiceBatchSetup.cs" />
+    <Compile Include="Models\FormCancellationReason.cs" />
+    <Compile Include="Models\InvoiceBy.cs" />
+    <Compile Include="Models\InvoiceFrequency.cs" />
+    <Compile Include="Models\InpatientDischargeDestination.cs" />
+    <Compile Include="Models\CaseClosureReason.cs" />
+    <Compile Include="Models\LACLocationCode.cs" />
+    <Compile Include="Models\LACLegalStatusEndReason.cs" />
+    <Compile Include="Models\LACPlacementProvider.cs" />
+    <Compile Include="Models\LACPlacement.cs" />
+    <Compile Include="Models\LACLegalStatus.cs" />
+    <Compile Include="Models\LACLegalStatusReason.cs" />
+    <Compile Include="Models\FinancialAssessmentCaseNote.cs" />
+    <Compile Include="Models\PersonalBudgetType.cs" />
+    <Compile Include="Models\PersonFormAttachment.cs" />
+    <Compile Include="Models\PersonAttendedEducationEstablishment.cs" />
+    <Compile Include="Models\PersonTargetGroup.cs" />
+    <Compile Include="Models\PersonPhysicalObservationCaseNote.cs" />
+    <Compile Include="Models\PersonPhysicalObservation.cs" />
+    <Compile Include="Models\ProfessionType.cs" />
+    <Compile Include="Models\CaseActionType.cs" />
+    <Compile Include="Models\CareProviderRateUnit.cs" />
+    <Compile Include="Models\CarerApprovalDecision.cs" />
+    <Compile Include="Models\ProviderComplaintNature.cs" />
+    <Compile Include="Models\ProviderComplaintOutcome.cs" />
+    <Compile Include="Models\ProviderComplaintStage.cs" />
+    <Compile Include="Models\RTTEvent.cs" />
+    <Compile Include="Models\RTTWaitTime.cs" />
+    <Compile Include="Models\RTTTreatmentStatus.cs" />
+    <Compile Include="Models\RTTTreatmentFunctionCode.cs" />
+    <Compile Include="Models\ReferralPriority.cs" />
+    <Compile Include="Models\ContactOutcome.cs" />
+    <Compile Include="Models\DocumentPickListValue.cs" />
+    <Compile Include="Models\DocumentPickList.cs" />
+    <Compile Include="Models\EmploymentStatus.cs" />
+    <Compile Include="Models\EmploymentWeeklyHoursWorked.cs" />
+    <Compile Include="Models\OptionSet.cs" />
+    <Compile Include="Models\OptionsetValue.cs" />
+    <Compile Include="Models\PersonEmployment.cs" />
+    <Compile Include="Models\DataRestriction.cs" />
+    <Compile Include="Models\ActivityOutcome.cs" />
+    <Compile Include="Models\ActivityPriority.cs" />
+    <Compile Include="Models\ActivitySubCategory.cs" />
+    <Compile Include="Models\ActivityCategory.cs" />
+    <Compile Include="Models\AddressWard.cs" />
+    <Compile Include="Models\AddressBorough.cs" />
+    <Compile Include="Models\ApplicantAlias.cs" />
+    <Compile Include="Models\ApplicantLanguage.cs" />
+    <Compile Include="Models\ApplicationSource.cs" />
+    <Compile Include="Models\AvailabilityTypes.cs" />
+    <Compile Include="Models\CarePlanInterventionType.cs" />
+    <Compile Include="Models\CarePlanGoalType.cs" />
+    <Compile Include="Models\CarePlanNeedDomain.cs" />
+    <Compile Include="Models\CareproviderReportableEventBehaviour.cs" />
+    <Compile Include="Models\CareproviderReportableEventBehaviourType.cs" />
+    <Compile Include="Models\Compliance.cs" />
+    <Compile Include="Models\ComplianceItemAttachment.cs" />
+    <Compile Include="Models\CPReportableEventBehaviourActionType.cs" />
+    <Compile Include="Models\CareProviderReportableEventSubCategory.cs" />
+    <Compile Include="Models\CareproviderReportableEventInjurySeverity.cs" />
+    <Compile Include="Models\CareProviderReportableEventCategory.cs" />
+    <Compile Include="Models\CareProviderReportableEventRole.cs" />
+    <Compile Include="Models\CareType.cs" />
+    <Compile Include="Models\ActivityReason.cs" />
+    <Compile Include="Models\PersonCarePlanIntervention.cs" />
+    <Compile Include="Models\PersonCarePlanGoal.cs" />
+    <Compile Include="Models\PersonCarePlanForm.cs" />
+    <Compile Include="Models\PersonCarePlanNeed.cs" />
+    <Compile Include="Models\PersonFormInvolvement.cs" />
+    <Compile Include="Models\InvolvementRole.cs" />
+    <Compile Include="Models\CPBookingScheduleStaff.cs" />
+    <Compile Include="Models\ProviderAllowableBookingTypes.cs" />
+    <Compile Include="Models\PersonRelationshipType.cs" />
+    <Compile Include="Models\ChildProtectionStatusType.cs" />
+    <Compile Include="Models\ChildProtectionEndReasonType.cs" />
+    <Compile Include="Models\ChildProtectionCategoryOfAbuse.cs" />
+    <Compile Include="Models\ProviderBatchGrouping.cs" />
+    <Compile Include="Models\RecruitmentRequirement.cs" />
+    <Compile Include="Models\RecruitmentRequirementStaffRole.cs" />
+    <Compile Include="Models\RejectedReason.cs" />
+    <Compile Include="Models\RequirementLastChasedOutcome.cs" />
+    <Compile Include="Models\ServicePackage.cs" />
+    <Compile Include="Models\ServicePackageType.cs" />
+    <Compile Include="Models\ServicePermission.cs" />
+    <Compile Include="Models\ServiceProvisionRatePeriod.cs" />
+    <Compile Include="Models\ServiceProvisionRateSchedule.cs" />
+    <Compile Include="Models\ServiceUprate.cs" />
+    <Compile Include="Models\ServiceUprateDetail.cs" />
+    <Compile Include="Models\SexualOrientation.cs" />
+    <Compile Include="Models\SignificantEventCategory.cs" />
+    <Compile Include="Models\SignificantEventSubCategory.cs" />
+    <Compile Include="Models\StaffMembership.cs" />
+    <Compile Include="Models\StaffRecruitmentItem.cs" />
+    <Compile Include="Models\StaffTrainingItem.cs" />
+    <Compile Include="Models\CareProviderContractScheme.cs" />
+    <Compile Include="Models\SystemUserSuspensionContract.cs" />
+    <Compile Include="Models\SystemUserSuspensionReason.cs" />
+    <Compile Include="Models\CPBookingSchedule.cs" />
+    <Compile Include="Models\SystemUserEmploymentContractTeam.cs" />
+    <Compile Include="Models\SystemUserEmploymentContractCPBookingType.cs" />
+    <Compile Include="Models\SystemUserTraining.cs" />
+    <Compile Include="Models\ProviderComplaintFeedback.cs" />
+    <Compile Include="Models\TrainingRequirement.cs" />
+    <Compile Include="Models\TrainingRequirementSetup.cs" />
+    <Compile Include="Models\ProviderComplaintFeedBackType.cs" />
+    <Compile Include="Models\UPNUnknownReason.cs" />
+    <Compile Include="Models\UserFavouriteRecord.cs" />
+    <Compile Include="Models\VATCode.cs" />
+    <Compile Include="Models\PaymentTypeCode.cs" />
+    <Compile Include="Models\ServiceFinanceSettings.cs" />
+    <Compile Include="Models\ServiceProvidedRateSchedule.cs" />
+    <Compile Include="Models\ServiceProvidedRatePeriod.cs" />
+    <Compile Include="Models\TableQuestionCell.cs" />
+    <Compile Include="Models\MultiOptionAnswer.cs" />
+    <Compile Include="Models\RateType.cs" />
+    <Compile Include="Models\ServiceElement3.cs" />
+    <Compile Include="Models\ServiceGLCoding.cs" />
+    <Compile Include="Models\ServiceElement1ValidRateUnits.cs" />
+    <Compile Include="Models\ServiceMapping.cs" />
+    <Compile Include="Models\UserTransportationSchedule.cs" />
+    <Compile Include="Models\RecruitmentRoleApllicant.cs" />
+    <Compile Include="Models\Applicant.cs" />
+    <Compile Include="Models\Application.cs" />
+    <Compile Include="Models\BusinessObjectField.cs" />
+    <Compile Include="Models\CareproviderReportableEventAction.cs" />
+    <Compile Include="Models\CareproviderReportableEventImpact.cs" />
+    <Compile Include="Models\CareproviderReportableEventStatus.cs" />
+    <Compile Include="Models\CareproviderReportableEventType.cs" />
+    <Compile Include="Models\CareproviderReportableEventSeverity.cs" />
+    <Compile Include="Models\CareproviderReportableEvent.cs" />
+    <Compile Include="Models\ClinicBookedSlot.cs" />
+    <Compile Include="Models\ClinicSlot.cs" />
+    <Compile Include="Models\CommunityClinicLinkedProfessional.cs" />
+    <Compile Include="Models\ContactAttachment.cs" />
+    <Compile Include="Models\ContactStatus.cs" />
+    <Compile Include="Models\ContactPresentingPriority.cs" />
+    <Compile Include="Models\ContactType.cs" />
+    <Compile Include="Models\CommunityClinicCareIntervention.cs" />
+    <Compile Include="Models\HealthAppointmentAttendingAdvocate.cs" />
+    <Compile Include="Models\HealthAppointmentOutcomeType.cs" />
+    <Compile Include="Models\HealthAppointmentAttendeeAdvocateType.cs" />
+    <Compile Include="Models\OrganisationalRiskActionPlan.cs" />
+    <Compile Include="Models\CPBookingType.cs" />
+    <Compile Include="Models\OrganisationalRiskCategory.cs" />
+    <Compile Include="Models\OrganisationalRiskType.cs" />
+    <Compile Include="Models\InpatientSeclusionAttachment.cs" />
+    <Compile Include="Models\InpatientSeclusionReview.cs" />
+    <Compile Include="Models\InpatientSeclusionReason.cs" />
+    <Compile Include="Models\CarePlanType.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\PersonAboutMe.cs" />
+    <Compile Include="Models\PersonCarePlan.cs" />
+    <Compile Include="Models\InpatientBedOccupancyHistory.cs" />
+    <Compile Include="Models\InpatientSeclusion.cs" />
+    <Compile Include="Models\InpatientLeaveAwolAttachment.cs" />
+    <Compile Include="Models\CarePlanType.cs" />
+    <Compile Include="Models\PersonCarePlan.cs" />
+    <Compile Include="Models\CommunityClinicDiaryViewSetup.cs" />
+    <Compile Include="Models\CaseServiceTypeRequested.cs" />
+    <Compile Include="Models\ContactAdministrativeCategory.cs" />
+    <Compile Include="Models\InpatientLeaveEndReason.cs" />
+    <Compile Include="Models\MissingPerson.cs" />
+    <Compile Include="Models\InpatientLeaveType.cs" />
+    <Compile Include="Models\InpatientLeaveCancellationReason.cs" />
+    <Compile Include="Models\InpatientLeaveAwol.cs" />
+    <Compile Include="Models\PersonAbsenceType.cs" />
+    <Compile Include="Models\PersonDiagnosisEndReason.cs" />
+    <Compile Include="Models\PersonDiagnosis.cs" />
+    <Compile Include="Models\HealthAppointmentLocationType.cs" />
+    <Compile Include="Models\HealthAppointmentReason.cs" />
+    <Compile Include="Models\HealthAppointmentContactType.cs" />
+    <Compile Include="Models\DebtorBatchGrouping.cs" />
+    <Compile Include="Models\CommunityAndClinicTeam.cs" />
+    <Compile Include="Models\Diagnosis.cs" />
+    <Compile Include="Models\ClinicRoom.cs" />
+    <Compile Include="Models\ProviderRoom.cs" />
+    <Compile Include="Models\RecoveryMethod.cs" />
+    <Compile Include="Models\ContributionType.cs" />
+    <Compile Include="Models\FinancialAssessmentType.cs" />
+    <Compile Include="Models\FinanceScheduleType.cs" />
+    <Compile Include="Models\IncomeSupportTypeChargingRuleTypes.cs" />
+    <Compile Include="Models\FinancialAssessmentStatus.cs" />
+    <Compile Include="Models\IncomeSupportType.cs" />
+    <Compile Include="Models\PlacementRoomType.cs" />
+    <Compile Include="Models\CurrentRanking.cs" />
+    <Compile Include="Models\ChargingRuleType.cs" />
+    <Compile Include="Models\RateUnit.cs" />
+    <Compile Include="Models\GLCodeLocation.cs" />
+    <Compile Include="Models\GLCode.cs" />
+    <Compile Include="Models\FinanceClientCategory.cs" />
+    <Compile Include="Models\AwaitingCommunicationFromBrokerageOffer.cs" />
+    <Compile Include="Models\BrokerageEpisodePausePeriod.cs" />
+    <Compile Include="Models\BrokerageOfferAttachment.cs" />
+    <Compile Include="Models\BrokerageEpisodeEscalation.cs" />
+    <Compile Include="Models\BrokerageOfferCommunication.cs" />
+    <Compile Include="Models\BrokerageOffer.cs" />
+    <Compile Include="Models\BusinessObject.cs" />
+    <Compile Include="Models\SecondaryCaseReason.cs" />
+    <Compile Include="Models\ServiceElement2.cs" />
+    <Compile Include="Models\ServiceElement1.cs" />
+    <Compile Include="Models\ServiceProvided.cs" />
+    <Compile Include="Models\InpatientAdmissionMethod.cs" />
+    <Compile Include="Models\InpatientAdmissionSource.cs" />
+    <Compile Include="Models\LanguageFluency.cs" />
+    <Compile Include="Models\CareProviderReportableEventAttachment.cs" />
+    <Compile Include="Models\StaffReviewForm.cs" />
+    <Compile Include="Models\StaffReviewRequirement.cs" />
+    <Compile Include="Models\StaffReviewSetup.cs" />
+    <Compile Include="Models\EmploymentContractType.cs" />
+    <Compile Include="Models\CWLookupBtn_roleid.cs" />
+    <Compile Include="Models\CareProviderStaffRoleType.cs" />
+    <Compile Include="Models\OrganisationalRisk.cs" />
+    <Compile Include="Models\SystemUserSuspension.cs" />
+    <Compile Include="Models\SystemUserEmploymentContract.cs" />
+    <Compile Include="Models\StaffReviewAttachments.cs" />
+    <Compile Include="Models\StaffReview.cs" />
+    <Compile Include="Models\AddressGazetteer.cs" />
+    <Compile Include="Models\SystemUserEmergencyContacts.cs" />
+    <Compile Include="Models\TransportType.cs" />
+    <Compile Include="Models\DemographicsTitle.cs" />
+    <Compile Include="Models\BusinessUnit.cs" />
+    <Compile Include="Models\CaseFormAssessmentFactor.cs" />
+    <Compile Include="Models\CaseFormMember.cs" />
+    <Compile Include="Models\BrokerageEpisodeAttachment.cs" />
+    <Compile Include="Models\DataForm.cs" />
+    <Compile Include="Models\CaseStatus.cs" />
+    <Compile Include="Models\ContactSource.cs" />
+    <Compile Include="Models\ContactReason.cs" />
+    <Compile Include="Models\QuestionCatalogue.cs" />
+    <Compile Include="Models\ContactSource.cs" />
+    <Compile Include="Models\ContactReason.cs" />
+    <Compile Include="Models\DocumentType.cs" />
+    <Compile Include="Models\DocumentCategory.cs" />
+    <Compile Include="Models\InpatientConsultantEpisode.cs" />
+    <Compile Include="Models\InpatientBedStatusHistory.cs" />
+    <Compile Include="Models\InpatientBed.cs" />
+    <Compile Include="Models\InpatientBay.cs" />
+    <Compile Include="Models\PersonNameHistory.cs" />
+    <Compile Include="Models\PersonLanguage.cs" />
+    <Compile Include="Models\BusinessModule.cs" />
+    <Compile Include="Models\PersonAllergicReaction.cs" />
+    <Compile Include="Models\PersonImmunisation.cs" />
+    <Compile Include="Models\PersonDNAR.cs" />
+    <Compile Include="Models\InpatientWard.cs" />
+    <Compile Include="Models\ProviderAddress.cs" />
+    <Compile Include="Models\RecurringAppointmentRequiredAttendee.cs" />
+    <Compile Include="Models\RecurringAppointmentOptionalAttendee.cs" />
+    <Compile Include="Models\RecurringAppointment.cs" />
+    <Compile Include="Models\AppointmentOptionalAttendee.cs" />
+    <Compile Include="Models\AppointmentRequiredAttendee.cs" />
+    <Compile Include="Models\AttachDocumentSubType.cs" />
+    <Compile Include="Models\PersonFormOutcome.cs" />
+    <Compile Include="Models\HealthIssueType.cs" />
+    <Compile Include="Models\PersonGestationPeriod.cs" />
+    <Compile Include="Models\PersonDisabilityImpairments.cs" />
+    <Compile Include="Models\PersonHealthProfessional.cs" />
+    <Compile Include="Models\ImageFile.cs" />
+    <Compile Include="Models\EmailCc.cs" />
+    <Compile Include="Models\MashEpisode.cs" />
+    <Compile Include="Models\PersonChronologySnapshot.cs" />
+    <Compile Include="Models\PersonHealthDetail.cs" />
+    <Compile Include="Models\ServiceDelivery.cs" />
+    <Compile Include="Models\ServiceProvisionEndReason.cs" />
+    <Compile Include="Models\ServiceProvisionStartReason.cs" />
+    <Compile Include="Models\SignificantEventSubCategoryPersonChronology.cs" />
+    <Compile Include="Models\SignificantEventCategoryPersonChronology.cs" />
+    <Compile Include="Models\AdoptionLink.cs" />
+    <Compile Include="Models\AlertAndHazardReview.cs" />
+    <Compile Include="Models\PersonClinicalRiskFactorHistory.cs" />
+    <Compile Include="Models\PersonClinicalRiskFactor.cs" />
+    <Compile Include="Models\PersonPrimarySupportReason.cs" />
+    <Compile Include="Models\PersonChronologies.cs" />
+    <Compile Include="Models\Provider.cs" />
+    <Compile Include="Models\MASHEpisodeForm.cs" />
+    <Compile Include="Models\ProviderForm.cs" />
+    <Compile Include="Models\CaseStatusHistory.cs" />
+    <Compile Include="Models\CaseInvolvement.cs" />
+    <Compile Include="Models\DocumentPrintTemplateLinkedApplication.cs" />
+    <Compile Include="Models\DocumentPrintTemplate.cs" />
+    <Compile Include="Models\DocumentAnswerChecklist.cs" />
+    <Compile Include="Models\DocumentQuestionIdentifier.cs" />
+    <Compile Include="Models\DocumentSectionQuestion.cs" />
+    <Compile Include="Models\DocumentSection.cs" />
+    <Compile Include="Models\DocumentSectionQuestionApplicationAccess.cs" />
+    <Compile Include="Models\DocumentSectionApplicationAccess.cs" />
+    <Compile Include="Models\CaseFormAttachment.cs" />
+    <Compile Include="Models\SubordinateDuplicate.cs" />
+    <Compile Include="Models\PersonAddress.cs" />
+    <Compile Include="Models\DocumentFile.cs" />
+    <Compile Include="Models\CaseFormCaseNote.cs" />
+    <Compile Include="Models\CaseCaseNote.cs" />
+    <Compile Include="Models\SMS.cs" />
+    <Compile Include="Models\EmailTo.cs" />
+    <Compile Include="Models\FAQCategory.cs" />
+    <Compile Include="Models\FAQ.cs" />
+    <Compile Include="Models\AssessmentPrintRecord.cs" />
+    <Compile Include="Models\AssessmentSectionQuestionComment.cs" />
+    <Compile Include="Models\AttachDocumentType.cs" />
+    <Compile Include="Models\AddressPropertyType.cs" />
+    <Compile Include="Models\AdultSafeguarding.cs" />
+    <Compile Include="Models\Allegation.cs" />
+    <Compile Include="Models\AllegationInvestigator.cs" />
+    <Compile Include="Models\AssessmentSection.cs" />
+    <Compile Include="Models\Audit.cs" />
+    <Compile Include="Models\AuditChangeSet.cs" />
+    <Compile Include="Models\AuditChangeSet_2019.cs" />
+    <Compile Include="Models\Audit_2019.cs" />
+    <Compile Include="Models\Automated_UI_Test_Document_1.cs" />
+    <Compile Include="BaseClass.cs" />
+    <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\BreakGlass.cs" />
+    <Compile Include="Models\LocalizedStringValue.cs" />
+    <Compile Include="Models\ProductLanguage.cs" />
+    <Compile Include="Models\DuplicateRecord.cs" />
+    <Compile Include="Models\BrokerageEpisode.cs" />
+    <Compile Include="Models\PersonConsentToTreatment.cs" />
+    <Compile Include="Models\AuthorisationLevel.cs" />
+    <Compile Include="Models\AuthenticationProvider.cs" />
+    <Compile Include="Models\SystemUserAliasType.cs" />
+    <Compile Include="Models\SystemUserAlias.cs" />
+    <Compile Include="Models\UserApplication.cs" />
+    <Compile Include="Models\SystemUserAddress.cs" />
+    <Compile Include="Models\SystemUserLanguage.cs" />
+    <Compile Include="Models\SystemUser.cs" />
+    <Compile Include="Models\UserChart.cs" />
+    <Compile Include="Models\Nationality.cs" />
+    <Compile Include="Models\PersonFormCaseNote.cs" />
+    <Compile Include="Models\EDMSRepository.cs" />
+    <Compile Include="Models\DuplicateDetectionCondition.cs" />
+    <Compile Include="Models\RecurrencePattern.cs" />
+    <Compile Include="Models\HomeScreen.cs" />
+    <Compile Include="Models\UserDataView.cs" />
+    <Compile Include="Models\UserDairy.cs" />
+    <Compile Include="Models\UserWorkSchedule.cs" />
+    <Compile Include="Models\WebsiteOnDemandWorkflow.cs" />
+    <Compile Include="Models\WebsiteSplashScreenItem.cs" />
+    <Compile Include="Models\WebsiteSplashScreen.cs" />
+    <Compile Include="Models\WebsiteHandler.cs" />
+    <Compile Include="Models\WebsitePageFile.cs" />
+    <Compile Include="Models\WebsiteSecurityProfile.cs" />
+    <Compile Include="Models\WebsiteResourceFile.cs" />
+    <Compile Include="Models\WebsiteRecordType.cs" />
+    <Compile Include="Models\WebsiteLocalizedStringValue.cs" />
+    <Compile Include="Models\WebsiteLocalizedString.cs" />
+    <Compile Include="Models\WebsiteContact.cs" />
+    <Compile Include="Models\DocumentApplicationAccess.cs" />
+    <Compile Include="Models\WebsitePointOfContact.cs" />
+    <Compile Include="Models\WebsiteFeedback.cs" />
+    <Compile Include="Models\WebsiteSitemap.cs" />
+    <Compile Include="Models\LocalizedString.cs" />
+    <Compile Include="Models\PersonAttachment.cs" />
+    <Compile Include="Models\WebsiteUserEmailVerification.cs" />
+    <Compile Include="Models\WebsiteMessage.cs" />
+    <Compile Include="Models\WebsiteUserPasswordReset.cs" />
+    <Compile Include="Models\WebsiteUserPasswordHistory.cs" />
+    <Compile Include="Models\WebsiteUser.cs" />
+    <Compile Include="Models\PortalTask.cs" />
+    <Compile Include="Models\WebsiteUserPin.cs" />
+    <Compile Include="Models\WebsiteAnnouncement.cs" />
+    <Compile Include="Models\WebsiteSetting.cs" />
+    <Compile Include="Models\WebsitePage.cs" />
+    <Compile Include="Models\Website.cs" />
+    <Compile Include="Models\SDEMap.cs" />
+    <Compile Include="Models\CaseFormOutcome.cs" />
+    <Compile Include="Models\Document.cs" />
+    <Compile Include="Models\DocumentAnswerAudit.cs" />
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\PersonCaseNote.cs" />
+    <Compile Include="Models\PhoneCall.cs" />
+    <Compile Include="Models\PersonSignificantEvent.cs" />
+    <Compile Include="Models\CaseAttachment.cs" />
+    <Compile Include="Models\CaseAction.cs" />
+    <Compile Include="Models\BusinessObjectDashboard.cs" />
+    <Compile Include="Models\ApplicationComponent.cs" />
+    <Compile Include="Models\UserDashboard.cs" />
+    <Compile Include="Models\TeamRestrictedDataAccess.cs" />
+    <Compile Include="Models\UserRestrictedDataAccess.cs" />
+    <Compile Include="Models\SystemDashboard.cs" />
+    <Compile Include="Models\WorkflowJob.cs" />
+    <Compile Include="Models\Workflow.cs" />
+    <Compile Include="Models\Case.cs" />
+    <Compile Include="Models\CaseForm.cs" />
+    <Compile Include="Models\ChargeforServicesSetup.cs" />
+    <Compile Include="Models\ChargingRuleSetup.cs" />
+    <Compile Include="Models\ChildProtection.cs" />
+    <Compile Include="Models\CPIS.cs" />
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="Models\DocumentAnswer.cs" />
+    <Compile Include="Models\EmailAttachment.cs" />
+    <Compile Include="Models\Ethnicity.cs" />
+    <Compile Include="Models\FACalculationTrigger.cs" />
+    <Compile Include="Models\FAContribution.cs" />
+    <Compile Include="Models\FAContributionException.cs" />
+    <Compile Include="Models\FileDestruction.cs" />
+    <Compile Include="Models\FinanceExtract.cs" />
+    <Compile Include="Models\FinanceExtractSetup.cs" />
+    <Compile Include="Models\FinanceInvoice.cs" />
+    <Compile Include="Models\FinanceInvoiceBatch.cs" />
+    <Compile Include="Models\FinanceTransaction.cs" />
+    <Compile Include="Models\FinancialAssessment.cs" />
+    <Compile Include="Models\FinancialAssessmentCharge.cs" />
+    <Compile Include="Models\FinancialAssessmentChargeDetail.cs" />
+    <Compile Include="Models\FinancialAssessmentChargeTotal.cs" />
+    <Compile Include="Models\FinancialDetail.cs" />
+    <Compile Include="Models\FinancialDetailDisregard.cs" />
+    <Compile Include="Models\FinancialDetailDisregardChargingRuleType.cs" />
+    <Compile Include="Models\FinancialDetailRateSetup.cs" />
+    <Compile Include="Models\HealthAppointment.cs" />
+    <Compile Include="Models\HealthAppointmentAdditionalProfessional.cs" />
+    <Compile Include="Models\HealthAppointmentCaseNote.cs" />
+    <Compile Include="Models\IncomeSupportSetup.cs" />
+    <Compile Include="Models\LACEpisode.cs" />
+    <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\Letter.cs" />
+    <Compile Include="Models\MaritalStatus.cs" />
+    <Compile Include="Models\MergedRecord.cs" />
+    <Compile Include="Models\MHACourtDateOutcome.cs" />
+    <Compile Include="Models\NonResidentialPolicyRateSetup.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\PersonAlertAndHazard.cs" />
+    <Compile Include="Models\PersonAllergy.cs" />
+    <Compile Include="Models\PersonFinancialDetail.cs" />
+    <Compile Include="Models\PersonForm.cs" />
+    <Compile Include="Models\PersonLACLegalStatus.cs" />
+    <Compile Include="Models\PersonMHALegalStatus.cs" />
+    <Compile Include="Models\PersonRelationship.cs" />
+    <Compile Include="Models\Professional.cs" />
+    <Compile Include="Models\ScheduledJob.cs" />
+    <Compile Include="Models\ScheduleSetup.cs" />
+    <Compile Include="Models\SecurityProfile.cs" />
+    <Compile Include="Models\ServiceProvision.cs" />
+    <Compile Include="Models\ServiceProvisionCostPerWeek.cs" />
+    <Compile Include="Models\ServiceProvisionStatus.cs" />
+    <Compile Include="Models\SystemSetting.cs" />
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\Team.cs" />
+    <Compile Include="Models\TeamMember.cs" />
+    <Compile Include="Models\TeamSecurityProfile.cs" />
+    <Compile Include="Models\UserSecurityProfile.cs" />
+    <Compile Include="Document.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentAnswer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Email.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Letter.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonAbsenceHospitalStayReason.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonAttendedEducationEstablishment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonCaseNote.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonSignificantEvent.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneCall.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeamRestrictedDataAccess.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRestrictedDataAccess.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CaredirectorAssemblies\AWS.Logger.Core.dll" />
+    <Content Include="CaredirectorAssemblies\AWS.Logger.SeriLog.dll" />
+    <Content Include="CaredirectorAssemblies\AWSSDK.CloudWatchLogs.dll" />
+    <Content Include="CaredirectorAssemblies\AWSSDK.Core.dll" />
+    <Content Include="CaredirectorAssemblies\CareDirector.Portal.Shared.dll" />
+    <Content Include="CaredirectorAssemblies\CareDirector.Sdk.dll" />
+    <Content Include="CaredirectorAssemblies\CareWorks.Cache.Foundation.dll" />
+    <Content Include="CaredirectorAssemblies\CareWorks.CareDirectorApplicationCache.dll" />
+    <Content Include="CaredirectorAssemblies\CareWorks.Foundation.dll" />
+    <Content Include="CaredirectorAssemblies\DocumentFormat.OpenXml.dll" />
+    <Content Include="CaredirectorAssemblies\HtmlToOpenXml.dll" />
+    <Content Include="CaredirectorAssemblies\Ionic.Zip.dll" />
+    <Content Include="CaredirectorAssemblies\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="CaredirectorAssemblies\Microsoft.Extensions.Configuration.Abstractions.dll" />
+    <Content Include="CaredirectorAssemblies\Microsoft.Extensions.Primitives.dll" />
+    <Content Include="CaredirectorAssemblies\Microsoft.IdentityModel.Abstractions.dll" />
+    <Content Include="CaredirectorAssemblies\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="CaredirectorAssemblies\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="CaredirectorAssemblies\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="CaredirectorAssemblies\Newtonsoft.Json.dll" />
+    <Content Include="CaredirectorAssemblies\Serilog.dll" />
+    <Content Include="CaredirectorAssemblies\Serilog.Formatting.Compact.dll" />
+    <Content Include="CaredirectorAssemblies\Serilog.Sinks.Console.dll" />
+    <Content Include="CaredirectorAssemblies\Serilog.Sinks.Debug.dll" />
+    <Content Include="CaredirectorAssemblies\Serilog.Sinks.File.dll" />
+    <Content Include="CaredirectorAssemblies\StackExchange.Redis.dll" />
+    <Content Include="CaredirectorAssemblies\StackExchange.Redis.StrongName.dll" />
+    <Content Include="CaredirectorAssemblies\System.Buffers.dll" />
+    <Content Include="CaredirectorAssemblies\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="CaredirectorAssemblies\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="CaredirectorAssemblies\System.Memory.dll" />
+    <Content Include="CaredirectorAssemblies\System.Numerics.Vectors.dll" />
+    <Content Include="CaredirectorAssemblies\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="CaredirectorAssemblies\System.Text.Encodings.Web.dll" />
+    <Content Include="CaredirectorAssemblies\System.Text.Json.dll" />
+    <Content Include="CaredirectorAssemblies\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="CaredirectorAssemblies\System.ValueTuple.dll" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Phoenix\DBHelper\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.UITest.3.2.9\build\Xamarin.UITest.props" Condition="Exists('..\packages\Xamarin.UITest.3.2.9\build\Xamarin.UITest.props')" />
+  <Import Project="..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7A3D950-B4AC-4D0F-967B-75D57BB2092C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CareDirectorApp.TestFramework</RootNamespace>
+    <AssemblyName>CareDirectorApp.TestFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CareDirector.Sdk, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CarediirectorAssemblies\CareDirector.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="CareWorks.Foundation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5492b30927a3c603, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CarediirectorAssemblies\CareWorks.Foundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.3.0.2\lib\net462\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.3.0.2\lib\net462\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.UITest, Version=3.2.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.UITest.3.2.9\lib\net45\Xamarin.UITest.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PageObjects\Appointments\AppointmentsPage.cs" />
+    <Compile Include="PageObjects\Cases\HealthAppointmentCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\HealthAppointmentCaseNotesPage.cs" />
+    <Compile Include="PageObjects\Cases\HealthAppointmentTaskRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\HealthAppointmentTasksPage.cs" />
+    <Compile Include="PageObjects\Cases\CommunityClinicAdditionalHealthProfessionalRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CommunityClinicAdditionalHealthProfessionals.cs" />
+    <Compile Include="PageObjects\Cases\CaseHealthAppointmentsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseInvolvementRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseInvolvementsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseAttachmentsPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseHealthAppointmentRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseTaskRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseTasksPage.cs" />
+    <Compile Include="PageObjects\Cases\CasesPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseCaseNotesPage.cs" />
+    <Compile Include="PageObjects\Cases\CaseCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\Cases\MobileCaseFormEditAssessmentPage.cs" />
+    <Compile Include="PageObjects\CommonMethods.cs" />
+    <Compile Include="PageObjects\People\BodyAreaLookupPopup.cs" />
+    <Compile Include="PageObjects\LookupPopup.cs" />
+    <Compile Include="PageObjects\People\MobilePersonFormDocumentRulesEditAssessmentPage.cs" />
+    <Compile Include="PageObjects\People\MobilePersonFormTableQuestionsEditAssessmentPage.cs" />
+    <Compile Include="PageObjects\People\MobilePersonFormEditAssessmentPage.cs" />
+    <Compile Include="PageObjects\People\PersonAllergicReactionsPage.cs" />
+    <Compile Include="PageObjects\People\PersonAllergicReactionRecordPage.cs" />
+    <Compile Include="PageObjects\People\CaseFormsPage.cs" />
+    <Compile Include="PageObjects\People\CaseFormRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonDNARActiveNInactiveRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonDNARRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonFinancialDetailAttachmentsPage.cs" />
+    <Compile Include="PageObjects\People\PersonFinancialDetailAttachmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonFinancialAssessmentsPage.cs" />
+    <Compile Include="PageObjects\People\PersonFinancialAssessmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonFinancialDetailsPage.cs" />
+    <Compile Include="PageObjects\People\PersonFinancialDetailRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonRelationshipRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonRelationshipsPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonFormsPage.cs" />
+    <Compile Include="PageObjects\People\PersonAlertsAndHazardsPage.cs" />
+    <Compile Include="PageObjects\People\PersonAlertsAndHazardRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonDisabilityImpairmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonDisabilityImpairmentsPage.cs" />
+    <Compile Include="PageObjects\People\PersonAllergyRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonAppointmentRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonTaskRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonAllergyPage.cs" />
+    <Compile Include="PageObjects\People\PersonAppointmentsPage.cs" />
+    <Compile Include="PageObjects\People\PersonTasksPage.cs" />
+    <Compile Include="PageObjects\People\PersonBodyInjuryDescriptionPopup.cs" />
+    <Compile Include="PageObjects\People\PersonCaseNoteRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonBodyMapReviewPopup.cs" />
+    <Compile Include="PageObjects\People\PersonBodyMapRecordPage.cs" />
+    <Compile Include="PageObjects\People\PersonCaseNotesPage.cs" />
+    <Compile Include="PageObjects\People\PersonBodyMapsPage.cs" />
+    <Compile Include="PageObjects\Cases\CasePage.cs" />
+    <Compile Include="PageObjects\ActivityOutcome.cs" />
+    <Compile Include="PageObjects\SystemUserPage.cs" />
+    <Compile Include="PageObjects\ProviderPage.cs" />
+    <Compile Include="PageObjects\ProfessionalPage.cs" />
+    <Compile Include="PageObjects\PickList.cs" />
+    <Compile Include="PageObjects\TasksPage.cs" />
+    <Compile Include="PageObjects\TeamPage.cs" />
+    <Compile Include="PageObjects\People\PersonPage.cs" />
+    <Compile Include="PageObjects\People\PeoplePage.cs" />
+    <Compile Include="PageObjects\ForgotPinPage.cs" />
+    <Compile Include="PageObjects\GenericPicklistPopup.cs" />
+    <Compile Include="PageObjects\AboutPage.cs" />
+    <Compile Include="PageObjects\Home\HomePage.cs" />
+    <Compile Include="PageObjects\PinPage.cs" />
+    <Compile Include="PageObjects\Settings\SettingsPage.cs" />
+    <Compile Include="PageObjects\WarningPopup.cs" />
+    <Compile Include="PageObjects\ErrorPopup.cs" />
+    <Compile Include="PageObjects\MainMenu.cs" />
+    <Compile Include="PageObjects\LoginPage.cs" />
+    <Compile Include="PageObjects\ServiceEndpointEditPage.cs" />
+    <Compile Include="PageObjects\ServiceEndpointsPage.cs" />
+    <Compile Include="PlatformServicesHelper\AttachDocumentSubType.cs" />
+    <Compile Include="PlatformServicesHelper\AttachDocumentType.cs" />
+    <Compile Include="PlatformServicesHelper\CaseAction.cs" />
+    <Compile Include="PlatformServicesHelper\CaseFormOutcome.cs" />
+    <Compile Include="PlatformServicesHelper\FinancialAssessment.cs" />
+    <Compile Include="PlatformServicesHelper\PersonDNAR.cs" />
+    <Compile Include="PlatformServicesHelper\PersonFinancialDetailAttachment.cs" />
+    <Compile Include="PlatformServicesHelper\PropertyDisregardType.cs" />
+    <Compile Include="PlatformServicesHelper\FrequencyOfReceipt.cs" />
+    <Compile Include="PlatformServicesHelper\FinancialDetail.cs" />
+    <Compile Include="PlatformServicesHelper\PersonFinancialDetail.cs" />
+    <Compile Include="PlatformServicesHelper\SignificantEventCategory.cs" />
+    <Compile Include="PlatformServicesHelper\UserFavouriteRecord.cs" />
+    <Compile Include="PlatformServicesHelper\UserDevice.cs" />
+    <Compile Include="PlatformServicesHelper\ApplicationLinkedBusinessModule.cs" />
+    <Compile Include="PlatformServicesHelper\BusinessModule.cs" />
+    <Compile Include="PlatformServicesHelper\SystemUser.cs" />
+    <Compile Include="PlatformServicesHelper\SecurityProfile.cs" />
+    <Compile Include="PlatformServicesHelper\TeamSecurityProfile.cs" />
+    <Compile Include="PlatformServicesHelper\UserSecurityProfile.cs" />
+    <Compile Include="PlatformServicesHelper\AppointmentOptionalAttendee.cs" />
+    <Compile Include="PlatformServicesHelper\AppointmentRequiredAttendee.cs" />
+    <Compile Include="PlatformServicesHelper\HealthAppointmentCaseNote.cs" />
+    <Compile Include="PlatformServicesHelper\CaseInvolvement.cs" />
+    <Compile Include="PlatformServicesHelper\CaseAttachment.cs" />
+    <Compile Include="PlatformServicesHelper\HealthAppointmentAdditionalProfessional.cs" />
+    <Compile Include="PlatformServicesHelper\PersonAlertAndHazardReview.cs" />
+    <Compile Include="PlatformServicesHelper\PersonAlertAndHazard.cs" />
+    <Compile Include="PlatformServicesHelper\CaseForm.cs" />
+    <Compile Include="PlatformServicesHelper\Appointment.cs" />
+    <Compile Include="PlatformServicesHelper\PersonRelationship.cs" />
+    <Compile Include="PlatformServicesHelper\PersonDisabilityImpairments.cs" />
+    <Compile Include="PlatformServicesHelper\PersonAllergy.cs" />
+    <Compile Include="PlatformServicesHelper\PersonForm.cs" />
+    <Compile Include="PlatformServicesHelper\HealthAppointment.cs" />
+    <Compile Include="PlatformServicesHelper\Case.cs" />
+    <Compile Include="PlatformServicesHelper\Task.cs" />
+    <Compile Include="PlatformServicesHelper\CaseCaseNote.cs" />
+    <Compile Include="PlatformServicesHelper\PersonCaseNote.cs" />
+    <Compile Include="PlatformServicesHelper\PersonBodyMapReview.cs" />
+    <Compile Include="PlatformServicesHelper\PersonBodyMapInjuryDescription.cs" />
+    <Compile Include="PlatformServicesHelper\PersonBodyMap.cs" />
+    <Compile Include="PlatformServicesHelper\PersonAddress.cs" />
+    <Compile Include="PlatformServicesHelper\RecordLevelAccess.cs" />
+    <Compile Include="PlatformServicesHelper\DataChangeTracker.cs" />
+    <Compile Include="PlatformServicesHelper\Application.cs" />
+    <Compile Include="PlatformServicesHelper\BaseClass.cs" />
+    <Compile Include="PlatformServicesHelper\ApplicationComponent.cs" />
+    <Compile Include="PlatformServicesHelper\SystemDashboard.cs" />
+    <Compile Include="PlatformServicesHelper\Team.cs" />
+    <Compile Include="PlatformServicesHelper\PersonLanguage.cs" />
+    <Compile Include="PlatformServicesHelper\AddressPropertyType.cs" />
+    <Compile Include="PlatformServicesHelper\Language.cs" />
+    <Compile Include="PlatformServicesHelper\MaritalStatus.cs" />
+    <Compile Include="PlatformServicesHelper\Ethnicity.cs" />
+    <Compile Include="PlatformServicesHelper\Person.cs" />
+    <Compile Include="PlatformServicesHelper\PlatformServicesHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIHelper\UIHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="CarediirectorAssemblies\CareDirector.Portal.Shared.dll" />
+    <Content Include="CarediirectorAssemblies\CareDirector.Sdk.dll" />
+    <Content Include="CarediirectorAssemblies\CareWorks.Cache.Foundation.dll" />
+    <Content Include="CarediirectorAssemblies\CareWorks.CareDirectorApplicationCache.dll" />
+    <Content Include="CarediirectorAssemblies\CareWorks.Foundation.dll" />
+    <Content Include="CarediirectorAssemblies\DocumentFormat.OpenXml.dll" />
+    <Content Include="CarediirectorAssemblies\HtmlToOpenXml.dll" />
+    <Content Include="CarediirectorAssemblies\Ionic.Zip.dll" />
+    <Content Include="CarediirectorAssemblies\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="CarediirectorAssemblies\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="CarediirectorAssemblies\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="CarediirectorAssemblies\Newtonsoft.Json.dll" />
+    <Content Include="CarediirectorAssemblies\Serilog.dll" />
+    <Content Include="CarediirectorAssemblies\Serilog.Sinks.Console.dll" />
+    <Content Include="CarediirectorAssemblies\Serilog.Sinks.Debug.dll" />
+    <Content Include="CarediirectorAssemblies\Serilog.Sinks.File.dll" />
+    <Content Include="CarediirectorAssemblies\StackExchange.Redis.StrongName.dll" />
+    <Content Include="CarediirectorAssemblies\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="CarediirectorAssemblies\System.ValueTuple.dll" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.targets'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.UITest.3.2.9\build\Xamarin.UITest.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.UITest.3.2.9\build\Xamarin.UITest.props'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.targets')" />
+</Project>

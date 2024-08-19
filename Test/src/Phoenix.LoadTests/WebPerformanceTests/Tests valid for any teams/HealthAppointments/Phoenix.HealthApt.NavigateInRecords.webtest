@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Phoenix.HealthApt.NavigateInRecords" Id="55c547a9-0a1b-4d92-b03b-a7549a854c76" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.85e5eb82-749f-4178-9b3b-4fbbc8b2ea9b.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="6d885070-8fa4-4b66-956e-8d331c818272" Version="1.1" Url="https://phoenixqa.careworks.ie/pages/listpage.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/default.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="type" Value="healthappointment" RecordedValue="healthappointment" CorrelationBinding="{{QueryStringParam4.type}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="2fad9bb0-8932-434f-92b8-3246e9e4fedb" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveDataViews" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=healthappointment" />
+      </Headers>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAEIAdQBzAGkAbgBlAHMAcwBPAGIAagBlAGMAdABJAGQAIgA6ACIANQA1ADQANgA5ADYAYwA1AC0AZAA4AGEANAAtAGUANgAxADEALQA4ADAAZAAzAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVgBpAGUAdwBUAHkAcABlACIAOgAiADEAIgB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="f1e7a285-7a48-4c8c-8abe-86c1f79b0b09" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="12" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="api/businessdataview/RetrieveResults/Page1" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=healthappointment" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&quot;HasErrors&quot;:true" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="False" />
+          </RuleParameters>
+        </ValidationRule>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&quot;UnauthorisedAccess&quot;:false" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADEAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAZgBlAGEAOAA1ADcAZABmAC0AYgBmAGUAYwAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAGgAZQBhAGwAdABoAGEAcABwAG8AaQBuAHQAbQBlAG4AdAAiACwAIgBQAGEAcgBlAG4AdABJAGQAIgA6ACIAIgAsACIAUABhAHIAZQBuAHQAVAB5AHAAZQBOAGEAbQBlACIAOgAiACIALAAiAFMAZQBhAHIAYwBoAFYAaQBlAHcASQBkACIAOgAiACIALAAiAFMAZQBhAHIAYwBoAFYAaQBlAHcARABpAHMAcABsAGEAeQBOAGEAbQBlACIAOgAiACIALAAiAFIAZQBsAGEAdABpAG8AbgBzAGgAaQBwAEkAZAAiADoAIgAiACwAIgBCAHUAcwBpAG4AZQBzAHMATwBiAGoAZQBjAHQASQBkACIAOgAiADUANQA0ADYAOQA2AGMANQAtAGQAOABhADQALQBlADYAMQAxAC0AOAAwAGQAMwAtADAAMAA1ADAANQA2ADAANQAwADIAYwBjACIALAAiAFIAZQBjAG8AcgBkAHMAUABlAHIAUABhAGcAZQAiADoAIgAxADAAMAAiACwAIgBWAGkAZQB3AFQAeQBwAGUAIgA6ACIAMQAiACwAIgBQAGEAcgBlAG4AdABJAGQARgBpAGUAbABkAE4AYQBtAGUAIgA6ACIAIgAsACIAQQBsAGwAbwB3AE0AdQBsAHQAaQBTAGUAbABlAGMAdAAiADoAIgB0AHIAdQBlACIALAAiAE8AdABoAGUAcgBJAGQARgBpAGUAbABkACIAOgAiACIALAAiAFYAaQBlAHcARwByAG8AdQBwACIAOgAiADEAIgAsACIAUABhAGcAaQBuAGcASQBuAGYAbwAiADoAIgAiACwAIgBEAGEAdABhAFEAdQBlAHIAeQBYAG0AbAAiADoAbgB1AGwAbAB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="cd952f2c-f826-4e66-af39-fccb98b8f8f1" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="api/businessdataview/RetrieveResults/Page2" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=healthappointment" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&quot;HasErrors&quot;:true" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="False" />
+          </RuleParameters>
+        </ValidationRule>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&quot;UnauthorisedAccess&quot;:false" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADIAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiAFsAewBcACIAVABhAGIAbABlAEEAbABpAGEAcwBcACIAOgBcACIASABFAEEATABUAEgAQQBQAFAATwBJAE4AVABNAEUATgBUAFwAIgAsAFwAIgBGAGkAZQBsAGQATgBhAG0AZQBcACIAOgBcACIAcwB0AGEAcgB0AGQAYQB0AGUAXAAiACwAXAAiAFMAbwByAHQATwByAGQAZQByAFwAIgA6ADEAfQAsAHsAXAAiAFQAYQBiAGwAZQBBAGwAaQBhAHMAXAAiADoAXAAiAEgARQBBAEwAVABIAEEAUABQAE8ASQBOAFQATQBFAE4AVABcACIALABcACIARgBpAGUAbABkAE4AYQBtAGUAXAAiADoAXAAiAGgAZQBhAGwAdABoAGEAcABwAG8AaQBuAHQAbQBlAG4AdABpAGQAXAAiACwAXAAiAFMAbwByAHQATwByAGQAZQByAFwAIgA6ADAAfQBdACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAZgBlAGEAOAA1ADcAZABmAC0AYgBmAGUAYwAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAGgAZQBhAGwAdABoAGEAcABwAG8AaQBuAHQAbQBlAG4AdAAiACwAIgBQAGEAcgBlAG4AdABJAGQAIgA6ACIAIgAsACIAUABhAHIAZQBuAHQAVAB5AHAAZQBOAGEAbQBlACIAOgAiACIALAAiAFMAZQBhAHIAYwBoAFYAaQBlAHcASQBkACIAOgAiACIALAAiAFMAZQBhAHIAYwBoAFYAaQBlAHcARABpAHMAcABsAGEAeQBOAGEAbQBlACIAOgAiACIALAAiAFIAZQBsAGEAdABpAG8AbgBzAGgAaQBwAEkAZAAiADoAIgAiACwAIgBCAHUAcwBpAG4AZQBzAHMATwBiAGoAZQBjAHQASQBkACIAOgAiADUANQA0ADYAOQA2AGMANQAtAGQAOABhADQALQBlADYAMQAxAC0AOAAwAGQAMwAtADAAMAA1ADAANQA2ADAANQAwADIAYwBjACIALAAiAFIAZQBjAG8AcgBkAHMAUABlAHIAUABhAGcAZQAiADoAIgAxADAAMAAiACwAIgBWAGkAZQB3AFQAeQBwAGUAIgA6ACIAMQAiACwAIgBQAGEAcgBlAG4AdABJAGQARgBpAGUAbABkAE4AYQBtAGUAIgA6ACIAIgAsACIAQQBsAGwAbwB3AE0AdQBsAHQAaQBTAGUAbABlAGMAdAAiADoAIgB0AHIAdQBlACIALAAiAE8AdABoAGUAcgBJAGQARgBpAGUAbABkACIAOgAiACIALAAiAFYAaQBlAHcARwByAG8AdQBwACIAOgAiADEAIgAsACIAUABhAGcAaQBuAGcASQBuAGYAbwAiADoAIgB7AFwAIgBwAG4AXAAiADoAMQAsAFwAIgBQAGEAZwBlAHMAXAAiADoAWwB7AFwAIgBwAG4AXAAiADoAMQAsAFwAIgB0AGEAXAAiADoAXAAiAEgARQBBAEwAVABIAEEAUABQAE8ASQBOAFQATQBFAE4AVABcACIALABcACIAZgBuAFwAIgA6AFwAIgBzAHQAYQByAHQAZABhAHQAZQBcACIALABcACIAZAB0AFwAIgA6ADQALABcACIAZAB0AHYAXAAiADoAXAAiADIAMAAyADAALQAxADAALQAyADcAVAAwADAAOgAwADAAOgAwADAAXAAiACwAXAAiAHMAbwBcACIAOgAxAH0ALAB7AFwAIgBwAG4AXAAiADoAMQAsAFwAIgB0AGEAXAAiADoAXAAiAEgARQBBAEwAVABIAEEAUABQAE8ASQBOAFQATQBFAE4AVABcACIALABcACIAZgBuAFwAIgA6AFwAIgBoAGUAYQBsAHQAaABhAHAAcABvAGkAbgB0AG0AZQBuAHQAaQBkAFwAIgAsAFwAIgBkAHQAXAAiADoAMQA0ACwAXAAiAGcAdgBcACIAOgBcACIAZAA0AGEAZQAxADEANgAxAC0AZAA5AGYAZQAtAGUAOAAxADEALQA5AGMANAA3AC0AZgA4AGIAMQA1ADYAYQBmADQAZgA5ADkAXAAiACwAXAAiAHMAbwBcACIAOgAwAH0AXQB9ACIALAAiAEQAYQB0AGEAUQB1AGUAcgB5AFgAbQBsACIAOgBuAHUAbABsAH0A</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="211e2ed4-6275-4811-8615-724217de8904" Version="1.1" Url="https://phoenixqa.careworks.ie/api/businessdataview/RetrieveResults" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="api/businessdataview/RetrieveResults/Page3" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="https://phoenixqa.careworks.ie/pages/listpage.aspx?type=healthappointment" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&quot;HasErrors&quot;:true" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="False" />
+          </RuleParameters>
+        </ValidationRule>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="&quot;UnauthorisedAccess&quot;:false" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <StringHttpBody ContentType="application/json; charset=utf-8" InsertByteOrderMark="False">ewAiAFMAZQBhAHIAYwBoAFQAZQB4AHQAIgA6ACIAIgAsACIAQwB1AHIAcgBlAG4AdABQAGEAZwBlACIAOgAiADMAIgAsACIAUwBvAHIAdABPAHAAdABpAG8AbgBzACIAOgAiAFsAewBcACIAVABhAGIAbABlAEEAbABpAGEAcwBcACIAOgBcACIASABFAEEATABUAEgAQQBQAFAATwBJAE4AVABNAEUATgBUAFwAIgAsAFwAIgBGAGkAZQBsAGQATgBhAG0AZQBcACIAOgBcACIAcwB0AGEAcgB0AGQAYQB0AGUAXAAiACwAXAAiAFMAbwByAHQATwByAGQAZQByAFwAIgA6ADEAfQAsAHsAXAAiAFQAYQBiAGwAZQBBAGwAaQBhAHMAXAAiADoAXAAiAEgARQBBAEwAVABIAEEAUABQAE8ASQBOAFQATQBFAE4AVABcACIALABcACIARgBpAGUAbABkAE4AYQBtAGUAXAAiADoAXAAiAGgAZQBhAGwAdABoAGEAcABwAG8AaQBuAHQAbQBlAG4AdABpAGQAXAAiACwAXAAiAFMAbwByAHQATwByAGQAZQByAFwAIgA6ADAAfQBdACIALAAiAEMAdQByAHIAZQBuAHQAVgBpAGUAdwBJAGQAIgA6ACIAZgBlAGEAOAA1ADcAZABmAC0AYgBmAGUAYwAtAGUAOAAxADEALQA4ADAAZABjAC0AMAAwADUAMAA1ADYAMAA1ADAAMgBjAGMAIgAsACIAVAB5AHAAZQBOAGEAbQBlACIAOgAiAGgAZQBhAGwAdABoAGEAcABwAG8AaQBuAHQAbQBlAG4AdAAiACwAIgBQAGEAcgBlAG4AdABJAGQAIgA6ACIAIgAsACIAUABhAHIAZQBuAHQAVAB5AHAAZQBOAGEAbQBlACIAOgAiACIALAAiAFMAZQBhAHIAYwBoAFYAaQBlAHcASQBkACIAOgAiACIALAAiAFMAZQBhAHIAYwBoAFYAaQBlAHcARABpAHMAcABsAGEAeQBOAGEAbQBlACIAOgAiACIALAAiAFIAZQBsAGEAdABpAG8AbgBzAGgAaQBwAEkAZAAiADoAIgAiACwAIgBCAHUAcwBpAG4AZQBzAHMATwBiAGoAZQBjAHQASQBkACIAOgAiADUANQA0ADYAOQA2AGMANQAtAGQAOABhADQALQBlADYAMQAxAC0AOAAwAGQAMwAtADAAMAA1ADAANQA2ADAANQAwADIAYwBjACIALAAiAFIAZQBjAG8AcgBkAHMAUABlAHIAUABhAGcAZQAiADoAIgAxADAAMAAiACwAIgBWAGkAZQB3AFQAeQBwAGUAIgA6ACIAMQAiACwAIgBQAGEAcgBlAG4AdABJAGQARgBpAGUAbABkAE4AYQBtAGUAIgA6ACIAIgAsACIAQQBsAGwAbwB3AE0AdQBsAHQAaQBTAGUAbABlAGMAdAAiADoAIgB0AHIAdQBlACIALAAiAE8AdABoAGUAcgBJAGQARgBpAGUAbABkACIAOgAiACIALAAiAFYAaQBlAHcARwByAG8AdQBwACIAOgAiADEAIgAsACIAUABhAGcAaQBuAGcASQBuAGYAbwAiADoAIgB7AFwAIgBwAG4AXAAiADoAMgAsAFwAIgBQAGEAZwBlAHMAXAAiADoAWwB7AFwAIgBwAG4AXAAiADoAMQAsAFwAIgB0AGEAXAAiADoAXAAiAEgARQBBAEwAVABIAEEAUABQAE8ASQBOAFQATQBFAE4AVABcACIALABcACIAZgBuAFwAIgA6AFwAIgBzAHQAYQByAHQAZABhAHQAZQBcACIALABcACIAZAB0AFwAIgA6ADQALABcACIAZAB0AHYAXAAiADoAXAAiADIAMAAyADAALQAxADAALQAyADcAVAAwADAAOgAwADAAOgAwADAAXAAiACwAXAAiAHMAbwBcACIAOgAxAH0ALAB7AFwAIgBwAG4AXAAiADoAMQAsAFwAIgB0AGEAXAAiADoAXAAiAEgARQBBAEwAVABIAEEAUABQAE8ASQBOAFQATQBFAE4AVABcACIALABcACIAZgBuAFwAIgA6AFwAIgBoAGUAYQBsAHQAaABhAHAAcABvAGkAbgB0AG0AZQBuAHQAaQBkAFwAIgAsAFwAIgBkAHQAXAAiADoAMQA0ACwAXAAiAGcAdgBcACIAOgBcACIAZAA0AGEAZQAxADEANgAxAC0AZAA5AGYAZQAtAGUAOAAxADEALQA5AGMANAA3AC0AZgA4AGIAMQA1ADYAYQBmADQAZgA5ADkAXAAiACwAXAAiAHMAbwBcACIAOgAwAH0ALAB7AFwAIgBwAG4AXAAiADoAMgAsAFwAIgB0AGEAXAAiADoAXAAiAEgARQBBAEwAVABIAEEAUABQAE8ASQBOAFQATQBFAE4AVABcACIALABcACIAZgBuAFwAIgA6AFwAIgBzAHQAYQByAHQAZABhAHQAZQBcACIALABcACIAZAB0AFwAIgA6ADQALABcACIAZAB0AHYAXAAiADoAXAAiADIAMAAyADAALQAwADkALQAyADgAVAAwADAAOgAwADAAOgAwADAAXAAiACwAXAAiAHMAbwBcACIAOgAxAH0ALAB7AFwAIgBwAG4AXAAiADoAMgAsAFwAIgB0AGEAXAAiADoAXAAiAEgARQBBAEwAVABIAEEAUABQAE8ASQBOAFQATQBFAE4AVABcACIALABcACIAZgBuAFwAIgA6AFwAIgBoAGUAYQBsAHQAaABhAHAAcABvAGkAbgB0AG0AZQBuAHQAaQBkAFwAIgAsAFwAIgBkAHQAXAAiADoAMQA0ACwAXAAiAGcAdgBcACIAOgBcACIAOQBhAGQAYgAzADcAMwBkAC0AZAA5AGYAZQAtAGUAOAAxADEALQA5AGMANAA3AC0AZgA4AGIAMQA1ADYAYQBmADQAZgA5ADkAXAAiACwAXAAiAHMAbwBcACIAOgAwAH0AXQB9ACIALAAiAEQAYQB0AGEAUQB1AGUAcgB5AFgAbQBsACIAOgBuAHUAbABsAH0A</StringHttpBody>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

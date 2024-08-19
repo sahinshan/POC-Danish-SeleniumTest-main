@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.UITest.3.2.9\build\Xamarin.UITest.props" Condition="Exists('..\packages\Xamarin.UITest.3.2.9\build\Xamarin.UITest.props')" />
+  <Import Project="..\packages\NUnitTestAdapter.2.3.0\build\NUnitTestAdapter.props" Condition="Exists('..\packages\NUnitTestAdapter.2.3.0\build\NUnitTestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85145914-3365-4154-B8EF-0CC16C70E4F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CareDirectorApp.UITests</RootNamespace>
+    <AssemblyName>CareDirectorApp.UITests</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CareDirector.Sdk">
+      <HintPath>..\CareDirectorApp.TestFramework\CarediirectorAssemblies\CareDirector.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="CareWorks.Foundation">
+      <HintPath>..\CareDirectorApp.TestFramework\CarediirectorAssemblies\CareWorks.Foundation.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Security" />
+    <Reference Include="Xamarin.UITest, Version=3.2.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.UITest.3.2.9\lib\net45\Xamarin.UITest.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutPage\AboutPageTests.cs" />
+    <Compile Include="AppointmentsPage\AppointmentsPage_OfflineTabletModeTests.cs" />
+    <Compile Include="AppointmentsPage\AppointmentsPage_TabletModeTests.cs" />
+    <Compile Include="CasesPage\Activities\CaseCaseNotes_OfflineTabletModeTests.cs" />
+    <Compile Include="CasesPage\Activities\CaseCaseNotes_BusinessRules_TabletModeTests.cs" />
+    <Compile Include="CasesPage\Activities\CaseTasks_OfflineTabletModeTests.cs" />
+    <Compile Include="CasesPage\Activities\CaseTasks_TabletModeTests.cs" />
+    <Compile Include="CasesPage\Activities\CaseCaseNotes_TabletModeTests.cs" />
+    <Compile Include="CasesPage\CasesPage_OfflineTableModeTests.cs" />
+    <Compile Include="CasesPage\CasesPage_TableModeTests.cs" />
+    <Compile Include="CasesPage\Health\AdditionalHealthProfessionals_OfflineTabletModeTests.cs" />
+    <Compile Include="CasesPage\Health\AdditionalHealthProfessionals_TabletModeTests.cs" />
+    <Compile Include="CasesPage\Health\CaseHealthAppointmentCaseNotes_OfflineTabletModeTests.cs" />
+    <Compile Include="CasesPage\Health\CaseHealthAppointmentCaseNotes_TabletModeTests.cs" />
+    <Compile Include="CasesPage\Health\CaseHealthAppointments_OfflineTabletModeTests.cs" />
+    <Compile Include="CasesPage\Health\CaseHealthAppointments_TabletModeTests.cs" />
+    <Compile Include="CasesPage\Health\CaseHealthAppointmentTasks_OfflineTabletModeTests.cs" />
+    <Compile Include="CasesPage\Health\CaseHealthAppointmentTasks_TabletModeTests.cs" />
+    <Compile Include="CasesPage\RelatedItems\CaseAttachments_OfflineTabletModeTests.cs" />
+    <Compile Include="CasesPage\RelatedItems\CaseInvolvements_OfflineTabletModeTests.cs" />
+    <Compile Include="CasesPage\RelatedItems\CaseInvolvements_TabletModeTests.cs" />
+    <Compile Include="CasesPage\RelatedItems\CaseAttachments_TabletModeTests.cs" />
+    <Compile Include="CasesPage\RelatedItems\CaseForms_TabletModeTests.cs" />
+    <Compile Include="Home Page\DashboardTests.cs" />
+    <Compile Include="LoginPage\LoginPageTests.cs" />
+    <Compile Include="PeoplePage\Activities\PersonAppointments_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\Activities\PersonAppointments_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\Activities\PersonCaseNotes_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\Activities\PersonTasks_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\Activities\PersonTasks_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\Finance\PersonFinancialAssessments_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\Finance\PersonFinancialDetailAttachments_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\Finance\PersonFinancialDetails_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\Finance\PersonFinancialDetailAttachments_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\Finance\PersonFinancialAssessments_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\Finance\PersonFinancialDetails_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\Finance\BusinessModuleActivation_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\Health\PersonAllergicReactions_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\Health\PersonAllergicReactions_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\Health\PersonAllergy_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\Health\PersonBodyMaps_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\Health\PersonDisabilityImpairments_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\Health\PersonDisabilityImpairments_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\Health\PersonDNARRecords_OfflineModeTests.cs" />
+    <Compile Include="PeoplePage\Health\PersonDNARRecords_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\Health\PersonAllergy_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\PeoplePage_OfflineTableModeTests.cs" />
+    <Compile Include="PeoplePage\PeoplePageTests3.cs" />
+    <Compile Include="PeoplePage\PeoplePageTests2.cs" />
+    <Compile Include="PeoplePage\Activities\PersonCaseNotes_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\Health\PersonBodyMaps_MobileModeTests.cs" />
+    <Compile Include="PeoplePage\Health\PersonBodyMaps_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\RelatedItems\PersonAlertsAndHazards_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\RelatedItems\PersonAlertsAndHazards_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\RelatedItems\PersonForms_DocumentRulesTests_OfflineTabletMode.cs" />
+    <Compile Include="PeoplePage\RelatedItems\PersonForms_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\RelatedItems\PersonRelationships_OfflineTabletModeTests.cs" />
+    <Compile Include="PeoplePage\RelatedItems\PersonRelationships_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\RelatedItems\PersonFormsTableQuestions_TabletModeTests.cs" />
+    <Compile Include="PeoplePage\RelatedItems\PersonForms_DocumentRulesTests1_TabletMode.cs" />
+    <Compile Include="PeoplePage\RelatedItems\PersonForms_DocumentRulesTests_TabletMode.cs" />
+    <Compile Include="PeoplePage\RelatedItems\PersonForms_TabletModeTests.cs" />
+    <Compile Include="PinPage\PinPageTest2.cs" />
+    <Compile Include="PinPage\PinPageTests.cs" />
+    <Compile Include="PeoplePage\PeoplePage_TableModeTests.cs" />
+    <Compile Include="Security\UserSecurityProfiles\DataRestrictions.cs" />
+    <Compile Include="Security\UserSecurityProfiles\TeamSecurityProfilesOfflineModeTests.cs" />
+    <Compile Include="Security\UserSecurityProfiles\TeamSecurityProfiles.cs" />
+    <Compile Include="Security\UserSecurityProfiles\SharedRecords.cs" />
+    <Compile Include="Security\UserSecurityProfiles\UserSecurityProfilesOfflineModeTests.cs" />
+    <Compile Include="Security\UserSecurityProfiles\UserSecurityProfiles.cs" />
+    <Compile Include="GenericTests.cs" />
+    <Compile Include="TestBase.cs" />
+    <Compile Include="ServiceEndpoints\ServiceEndpointsTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="com.careworks.caredirector.apk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Test Cases - V6 Mobile app.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AtlassianServicesAPI\AtlassianServicesAPI.csproj">
+      <Project>{74795c5f-1b18-4822-9621-207fa002b17c}</Project>
+      <Name>AtlassianServicesAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CareDirectorApp.TestFramework\CareDirectorApp.TestFramework.csproj">
+      <Project>{b7a3d950-b4ac-4d0f-967b-75d57bb2092c}</Project>
+      <Name>CareDirectorApp.TestFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Settings\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets')" />
+  <Import Project="..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets')" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnitTestAdapter.2.3.0\build\NUnitTestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnitTestAdapter.2.3.0\build\NUnitTestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.UITest.3.2.9\build\Xamarin.UITest.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.UITest.3.2.9\build\Xamarin.UITest.props'))" />
+  </Target>
+</Project>

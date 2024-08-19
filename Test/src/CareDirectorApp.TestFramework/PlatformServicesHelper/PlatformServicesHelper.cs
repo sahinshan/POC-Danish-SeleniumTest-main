@@ -1,0 +1,200 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Xamarin.UITest;
+using Xamarin.UITest.Configuration;
+using System.Configuration;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CareWorks.Foundation.Enums;
+using CareDirector.Sdk.Query;
+using CareDirector.Sdk.SystemEntities;
+using CareDirector.Sdk.Enums;
+
+namespace CareDirectorApp.TestFramework
+{
+    public class PlatformServicesHelper: BaseClass
+    {
+        public Guid LoggedUserID;
+
+        public UserFavouriteRecord userFavouriteRecord;
+        public AddressPropertyType addressPropertyType;
+        public Ethnicity ethnicity;
+        public Language language;
+        public MaritalStatus maritalStatus;
+        public Person person;
+        public FrequencyOfReceipt frequencyOfReceipt;
+        public FinancialDetail financialDetail;
+        public PropertyDisregardType propertyDisregardType;
+        public PersonFinancialDetail personFinancialDetail;
+        public PersonLanguage personLanguage;
+        public PersonAddress personAddress;
+        public PersonDNAR personDNAR;
+        public Team team;
+        public SystemDashboard systemDashboard;
+        public Case Case;
+        public ApplicationComponent applicationComponent;
+        public Application application;
+        public DataChangeTracker dataChangeTracker;
+        public RecordLevelAccess recordLevelAccess;
+        public PersonBodyMap personBodyMap;
+        public PersonBodyMapInjuryDescription personBodyMapInjuryDescription;
+        public PersonBodyMapReview personBodyMapReview;
+        public PersonCaseNote personCaseNote;
+        public CaseCaseNote caseCaseNote;
+        public SignificantEventCategory SignificantEventCategory;
+        public Task task;
+        public PersonAlertAndHazard personAlertAndHazard;
+        public PersonAlertAndHazardReview personAlertAndHazardReview;
+        public PersonAllergy personAllergy;
+        public PersonDisabilityImpairments personDisabilityImpairments;
+        public PersonForm personForm;
+        public CaseAttachment caseAttachment;
+        public CaseInvolvement caseInvolvement;
+        public PersonRelationship personRelationship;
+        public CaseForm caseForm;
+        public CaseFormOutcome caseFormOutcome;
+        public Appointment appointment;
+        public AppointmentOptionalAttendee appointmentOptionalAttendee;
+        public AppointmentRequiredAttendee appointmentRequiredAttendee;
+        public HealthAppointment healthAppointment;
+        public HealthAppointmentAdditionalProfessional healthAppointmentAdditionalProfessional;
+        public HealthAppointmentCaseNote healthAppointmentCaseNote;
+        public UserSecurityProfile userSecurityProfile;
+        public SecurityProfile securityProfile;
+        public TeamSecurityProfile teamSecurityProfile;
+        public ApplicationLinkedBusinessModule applicationLinkedBusinessModule;
+        public BusinessModule businessModule;
+        public SystemUser systemUser;
+        public UserDevice userDevice;
+        public PersonFinancialDetailAttachment personFinancialDetailAttachment;
+        public AttachDocumentType attachDocumentType;
+        public AttachDocumentSubType attachDocumentSubType;
+        public CaseAction caseAction;
+        public FinancialAssessment financialAssessment;
+
+        public PlatformServicesHelper()
+        {
+            this.AuthenticateUser();
+
+            userFavouriteRecord = new UserFavouriteRecord(this.AccessToken);
+            addressPropertyType = new AddressPropertyType(this.AccessToken);
+            ethnicity = new Ethnicity(this.AccessToken);
+            language = new Language(this.AccessToken);
+            maritalStatus = new MaritalStatus(this.AccessToken);
+            person = new Person(this.AccessToken);
+            frequencyOfReceipt = new FrequencyOfReceipt(this.AccessToken);
+            propertyDisregardType = new PropertyDisregardType(this.AccessToken);
+            financialDetail = new FinancialDetail(this.AccessToken);
+            personFinancialDetail = new PersonFinancialDetail(this.AccessToken);
+            personLanguage = new PersonLanguage(this.AccessToken);
+            team = new Team(this.AccessToken);
+            systemDashboard = new SystemDashboard(this.AccessToken);
+            Case = new Case(this.AccessToken);
+            applicationComponent = new ApplicationComponent(this.AccessToken);
+            application = new Application(this.AccessToken);
+            dataChangeTracker = new DataChangeTracker(this.AccessToken);
+            recordLevelAccess = new RecordLevelAccess(this.AccessToken);
+            personBodyMap = new PersonBodyMap(this.AccessToken);
+            personBodyMapInjuryDescription = new PersonBodyMapInjuryDescription(this.AccessToken);
+            personBodyMapReview = new PersonBodyMapReview(this.AccessToken);
+            personAddress = new PersonAddress(this.AccessToken);
+            personDNAR = new PersonDNAR(this.AccessToken);
+            personCaseNote = new PersonCaseNote(this.AccessToken);
+            caseCaseNote = new CaseCaseNote(this.AccessToken);
+            SignificantEventCategory = new SignificantEventCategory(this.AccessToken);
+            task = new Task(this.AccessToken);
+            personAlertAndHazard = new PersonAlertAndHazard(this.AccessToken);
+            personAlertAndHazardReview = new PersonAlertAndHazardReview(this.AccessToken);
+            personAllergy = new PersonAllergy(this.AccessToken);
+            personDisabilityImpairments = new PersonDisabilityImpairments(this.AccessToken);
+            personForm = new PersonForm(this.AccessToken);
+            caseAttachment = new CaseAttachment(this.AccessToken);
+            caseInvolvement = new CaseInvolvement(this.AccessToken);
+            personRelationship = new PersonRelationship(this.AccessToken);
+            caseForm = new CaseForm(this.AccessToken);
+            caseFormOutcome = new CaseFormOutcome(this.AccessToken);
+            appointment = new Appointment(this.AccessToken);
+            appointmentOptionalAttendee = new AppointmentOptionalAttendee(this.AccessToken);
+            appointmentRequiredAttendee = new AppointmentRequiredAttendee(this.AccessToken);
+            healthAppointment = new HealthAppointment(this.AccessToken);
+            healthAppointmentAdditionalProfessional = new HealthAppointmentAdditionalProfessional(this.AccessToken);
+            healthAppointmentCaseNote = new HealthAppointmentCaseNote(this.AccessToken);
+            userSecurityProfile = new UserSecurityProfile(this.AccessToken);
+            securityProfile = new SecurityProfile(this.AccessToken);
+            teamSecurityProfile = new TeamSecurityProfile(this.AccessToken);
+            applicationLinkedBusinessModule = new ApplicationLinkedBusinessModule(this.AccessToken);
+            businessModule = new BusinessModule(this.AccessToken);
+            systemUser = new SystemUser(this.AccessToken);
+            userDevice = new UserDevice(this.AccessToken);
+            personFinancialDetailAttachment = new PersonFinancialDetailAttachment(this.AccessToken);
+            attachDocumentType = new AttachDocumentType(this.AccessToken);
+            attachDocumentSubType = new AttachDocumentSubType(this.AccessToken);
+            caseAction = new CaseAction(this.AccessToken);
+            financialAssessment = new FinancialAssessment(this.AccessToken);
+        }
+
+        public PlatformServicesHelper(string UserName, string Password)
+        {
+            this.AuthenticateUser(UserName, Password);
+
+            userFavouriteRecord = new UserFavouriteRecord(this.AccessToken);
+            addressPropertyType = new AddressPropertyType(this.AccessToken);
+            ethnicity = new Ethnicity(this.AccessToken);
+            language = new Language(this.AccessToken);
+            maritalStatus = new MaritalStatus(this.AccessToken);
+            person = new Person(this.AccessToken);
+            frequencyOfReceipt = new FrequencyOfReceipt(this.AccessToken);
+            propertyDisregardType = new PropertyDisregardType(this.AccessToken);
+            financialDetail = new FinancialDetail(this.AccessToken);
+            personFinancialDetail = new PersonFinancialDetail(this.AccessToken);
+            personLanguage = new PersonLanguage(this.AccessToken);
+            team = new Team(this.AccessToken);
+            systemDashboard = new SystemDashboard(this.AccessToken);
+            Case = new Case(this.AccessToken);
+            applicationComponent = new ApplicationComponent(this.AccessToken);
+            application = new Application(this.AccessToken);
+            dataChangeTracker = new DataChangeTracker(this.AccessToken);
+            recordLevelAccess = new RecordLevelAccess(this.AccessToken);
+            personBodyMap = new PersonBodyMap(this.AccessToken);
+            personBodyMapInjuryDescription = new PersonBodyMapInjuryDescription(this.AccessToken);
+            personBodyMapReview = new PersonBodyMapReview(this.AccessToken);
+            personAddress = new PersonAddress(this.AccessToken);
+            personCaseNote = new PersonCaseNote(this.AccessToken);
+            caseCaseNote = new CaseCaseNote(this.AccessToken);
+            task = new Task(this.AccessToken);
+            personAlertAndHazard = new PersonAlertAndHazard(this.AccessToken);
+            personAlertAndHazardReview = new PersonAlertAndHazardReview(this.AccessToken);
+            personAllergy = new PersonAllergy(this.AccessToken);
+            personDisabilityImpairments = new PersonDisabilityImpairments(this.AccessToken);
+            personForm = new PersonForm(this.AccessToken);
+            caseAttachment = new CaseAttachment(this.AccessToken);
+            caseInvolvement = new CaseInvolvement(this.AccessToken);
+            personRelationship = new PersonRelationship(this.AccessToken);
+            personDNAR = new PersonDNAR(this.AccessToken);
+            caseForm = new CaseForm(this.AccessToken);
+            caseFormOutcome = new CaseFormOutcome(this.AccessToken);
+            appointment = new Appointment(this.AccessToken);
+            appointmentOptionalAttendee = new AppointmentOptionalAttendee(this.AccessToken);
+            appointmentRequiredAttendee = new AppointmentRequiredAttendee(this.AccessToken);
+            healthAppointment = new HealthAppointment(this.AccessToken);
+            healthAppointmentAdditionalProfessional = new HealthAppointmentAdditionalProfessional(this.AccessToken);
+            healthAppointmentCaseNote = new HealthAppointmentCaseNote(this.AccessToken);
+            userSecurityProfile = new UserSecurityProfile(this.AccessToken);
+            securityProfile = new SecurityProfile(this.AccessToken);
+            teamSecurityProfile = new TeamSecurityProfile(this.AccessToken);
+            applicationLinkedBusinessModule = new ApplicationLinkedBusinessModule(this.AccessToken);
+            businessModule = new BusinessModule(this.AccessToken);
+            systemUser = new SystemUser(this.AccessToken);
+            userDevice = new UserDevice(this.AccessToken);
+            personFinancialDetailAttachment = new PersonFinancialDetailAttachment(this.AccessToken);
+            attachDocumentType = new AttachDocumentType(this.AccessToken);
+            attachDocumentSubType = new AttachDocumentSubType(this.AccessToken);
+            caseAction = new CaseAction(this.AccessToken);
+            financialAssessment = new FinancialAssessment(this.AccessToken);
+            SignificantEventCategory = new SignificantEventCategory(this.AccessToken);
+        }
+
+    }
+}

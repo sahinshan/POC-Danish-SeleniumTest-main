@@ -1,0 +1,1430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D2411A7-817C-4353-9318-83FFE6577E26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phoenix.LoadTests</RootNamespace>
+    <AssemblyName>Phoenix.LoadTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TestProjectType>WebTest</TestProjectType>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>True</IsCodedUITest>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.LoadTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecuritySPWU3Case14Coded.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Security\Data Restriction\Other Tests\Test Cases info.txt" />
+    <Content Include="Security\Legitimate Relationship\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Phoenix Security - Data Restriction- Decision Tree Matrix.xlsx" />
+    <None Include="Phoenix Security - Sharing function - Decision Tree.xlsx" />
+    <None Include="Phoenix Security - Decision Tree V2.xlsx" />
+    <None Include="LoadTest1.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Phoenix.LoadTesting - Forms.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Phoenix.LoadTesting.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\DataRestrictionTests.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_01_Case1.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_01_Case2.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_01_Case3.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case16.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case15.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case14.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case6.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case1.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case8.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_02_Case10.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Other Tests\CD_DR_03_Case1.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Security.DR.Case14.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Security.DR.Case13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Security.DR.Case12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Security.DR.Case10.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Security.DR.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Security.DR.Case9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Security.DR.Case8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Security.DR.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Security.DR.Case6.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Security.DR.Case5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Security.DR.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Data Restriction\Security.DR.Case4.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Other Information\CD_Security_008_BR10_Case28.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Other Information\CD_Security_008_BR10_Case27.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Other Information\CD_Security_008_BR10_Case26.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Other Information\CD_Security_008_BR10_Case25.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Other Information\CD_Security_008_BR10_Case24.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Other Information\CD_Security_008_BR10_Case23.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Other Information\CD_Security_008_BR10_Case22.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Other Information\CD_Security_008_BR10_Case21.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Other Information\CD_Security_008_BR10_Case20.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Health Items\CD_Security_008_BR10_Case19.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Health Items\CD_Security_008_BR10_Case18.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Health Items\CD_Security_008_BR10_Case17.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Health Items\CD_Security_008_BR10_Case16.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Health Items\CD_Security_008_BR10_Case15.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Health Items\CD_Security_008_BR10_Case14.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Health Items\CD_Security_008_BR10_Case13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Health Items\CD_Security_008_BR10_Case12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Health Items\CD_Security_008_BR10_Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Related Items\CD_Security_008_BR10_Case10.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Related Items\CD_Security_008_BR10_Case9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Related Items\CD_Security_008_BR10_Case8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Related Items\CD_Security_008_BR10_Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Activities\CD_Security_008_BR10_Case6.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Activities\CD_Security_008_BR10_Case5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Activities\CD_Security_008_BR10_Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Activities\CD_Security_008_BR10_Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Activities\CD_Security_008_BR10_Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Legitimate Relationship\Advanced Search Person Activities\CD_Security_008_BR10_Case1.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\UserAccessingRecordsTests.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Login\Security.SPWT1.Login13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Login\Security.SPWT1.Login12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Login\Security.SPWT1.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Login\Security.SPWT1.Login9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Login\Security.SPWT1.Login8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Login\Security.SPWT1.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Login\Security.SPWT1.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Login\Security.SPWT1.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Login\Security.SPWT1.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Security.SPWT1.Case13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Security.SPWT1.Case12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Security.SPWT1.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Security.SPWT1.Case9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Security.SPWT1.Case8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Security.SPWT1.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Security.SPWT1.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Security.SPWT1.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 1\Security.SPWT1.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Login\Security.SPWT2.Login8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Login\Security.SPWT2.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Login\Security.SPWT2.Login9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Login\Security.SPWT2.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Login\Security.SPWT2.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Login\Security.SPWT2.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Login\Security.SPWT2.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Security.SPWT2.Case13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Security.SPWT2.Case12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Security.SPWT2.Case8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Security.SPWT2.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Security.SPWT2.Case9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Security.SPWT2.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Security.SPWT2.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Security.SPWT2.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 2\Security.SPWT2.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 3\Login\Security.SPWT3.Login13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 3\Login\Security.SPWT3.Login12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 3\Login\Security.SPWT3.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 3\Security.SPWT3.Case12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 3\Security.SPWT3.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 3\Login\Security.SPWT3.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 3\Login\Security.SPWT3.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 3\Security.SPWT3.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 3\Security.SPWT3.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 4\Login\Security.SPWT4.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 4\Login\Security.SPWT4.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 4\Login\Security.SPWT4.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 4\Login\Security.SPWT4.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 4\Login\Security.SPWT4.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 4\Security.SPWT4.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 4\Security.SPWT4.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 4\Security.SPWT4.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 4\Security.SPWT4.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 4\Security.SPWT4.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 5\Login\Security.SPWT5.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 5\Login\Security.SPWT5.Login9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 5\Login\Security.SPWT5.Login8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 5\Login\Security.SPWT5.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 5\Login\Security.SPWT5.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 5\Security.SPWT5.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 5\Security.SPWT5.Case9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 5\Security.SPWT5.Case8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 5\Security.SPWT5.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 5\Security.SPWT5.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 6\Login\Security.SPWT6.Login12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 6\Login\Security.SPWT6.Login13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 6\Login\Security.SPWT6.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 6\Login\Security.SPWT6.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 6\Login\Security.SPWT6.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 6\Security.SPWT6.Case12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 6\Security.SPWT6.Case13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 6\Security.SPWT6.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 6\Security.SPWT6.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With Team 6\Security.SPWT6.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Login\Security.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Login\Security.Login10.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Login\Security.Login9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Login\Security.Login8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Login\Security.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Login\Security.Login5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Login\Security.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Login\Security.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Login\Security.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Login\Security.Login1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Security.SPWU1.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Security.SPWU1.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Security.SPWU1.Case1.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Security.SPWU1.Case10.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Security.SPWU1.Case9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Security.SPWU1.Case8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Security.SPWU1.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Security.SPWU1.Case5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Security.SPWU1.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\Security.SPWU1.Case3.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User1\WebTest1.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Login\Security.SPWU2.Login12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Login\Security.SPWU2.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Login\Security.SPWU2.Login10.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Login\Security.SPWU2.Login9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Login\Security.SPWU2.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Login\Security.SPWU2.Login5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Login\Security.SPWU2.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Login\Security.SPWU2.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Login\Security.SPWU2.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Security.SPWU2.Case12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Security.SPWU2.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Security.SPWU2.Case10.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Security.SPWU2.Case9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Security.SPWU2.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Security.SPWU2.Case5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Security.SPWU2.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Security.SPWU2.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User2\Security.SPWU2.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User3\Login\Security.SPWU3.Login14.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User3\Login\Security.SPWU3.Login13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User3\Login\Security.SPWU3.Login12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User3\Login\Security.SPWU3.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User3\Login\Security.SPWU3.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User3\Login\Security.SPWU3.Login8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User3\Security.SPWU3.Case14.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User3\Security.SPWU3.Case13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User3\Security.SPWU3.Case12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User3\Security.SPWU3.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User3\Security.SPWU3.Case8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User3\Security.SPWU3.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User4\Login\Security.SPWU4.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User4\Login\Security.SPWU4.Login8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User4\Login\Security.SPWU4.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User4\Login\Security.SPWU4.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User4\Login\Security.SPWU4.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User4\Security.SPWU4.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User4\Security.SPWU4.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User4\Security.SPWU4.Case8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User4\Security.SPWU4.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User4\Security.SPWU4.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User4\Security.SPWU4.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User4\Login\Security.SPWU4.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User5\Login\Security.SPWU5.Login14.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User5\Login\Security.SPWU5.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User5\Login\Security.SPWU5.Login8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User5\Login\Security.SPWU5.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User5\Login\Security.SPWU5.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User5\Security.SPWU5.Case14.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User5\Security.SPWU5.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User5\Security.SPWU5.Case8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User5\Security.SPWU5.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User5\Security.SPWU5.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User6\Login\Security.SPWU6.Login13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User6\Login\Security.SPWU6.Login12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User6\Login\Security.SPWU6.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User6\Login\Security.SPWU6.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User6\Login\Security.SPWU6.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User6\Security.SPWU6.Case13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User6\Security.SPWU6.Case12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User6\Security.SPWU6.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User6\Security.SPWU6.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Sharing Provider With User6\Security.SPWU6.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login16.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login15.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login14.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login10.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Login\Security.TSPP.Login2.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case10.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case16.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case15.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case14.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\Team Security Profile Previleges\Security.TSPP.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login18.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login17.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login16.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login15.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login14.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login10.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Login\Security.USPP.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case11.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case10.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case12.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case14.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case13.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case15.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case16.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case18.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case9.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case8.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case7.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case2.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User accessing records\User Security Profile Previleges\Security.USPP.Case17.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\UserSharingRecordsTests.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 10\Login\Security.SSR10.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 10\Security.SSR10.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 11\Security.SSR11.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 11\Login\Security.SSR11.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 12\Login\Security.SSR12.Login1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 12\Login\Security.SSR12.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 12\Login\Security.SSR12.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 12\Login\Security.SSR12.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 12\Login\Security.SSR12.Login5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 12\Security.SSR12.Case1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 12\Security.SSR12.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 12\Security.SSR12.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 12\Security.SSR12.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 12\Security.SSR12.Case5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 13\Login\Security.SSR13.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 13\Login\Security.SSR13.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 13\Login\Security.SSR13.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 13\Login\Security.SSR13.Login5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 13\Login\Security.SSR13.Login1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 13\Security.SSR13.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 13\Security.SSR13.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 13\Security.SSR13.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 13\Security.SSR13.Case5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 13\Security.SSR13.Case1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 14\Login\Security.SSR14.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 14\Security.SSR14.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 15\Login\Security.SSR15.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 16\Login\Security.SSR16.Login1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 16\Login\Security.SSR16.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 16\Login\Security.SSR16.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 16\Login\Security.SSR16.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 16\Security.SSR16.Case1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 16\Security.SSR16.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 16\Security.SSR16.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 16\Security.SSR16.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 15\Security.SSR15.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 5\Login\Security.SSR5.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 5\Login\Security.SSR5.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 5\Login\Security.SSR5.Login5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 5\Login\Security.SSR5.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 5\Login\Security.SSR5.Login1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 5\Security.SSR5.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 5\Security.SSR5.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 5\Security.SSR5.Case5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 5\Security.SSR5.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 5\Security.SSR5.Case1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 1\Login\Security.SSR1.Login5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 1\Login\Security.SSR1.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 1\Login\Security.SSR1.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 1\Login\Security.SSR1.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 1\Login\Security.SSR1.Login1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 1\Security.SSR1.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 1\Security.SSR1.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 1\Security.SSR1.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 1\Security.SSR1.Case5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 1\Security.SSR1.Case1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 2\Login\Security.SSR2.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 2\Security.SSR2.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 3\Login\Security.SSR3.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 3\Security.SSR3.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 4\Login\Security.SSR4.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 4\Login\Security.SSR4.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 4\Login\Security.SSR4.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 4\Login\Security.SSR4.Login1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 4\Security.SSR4.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 4\Security.SSR4.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 4\Security.SSR4.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 4\Security.SSR4.Case1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 6\Login\Security.SSR6.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 6\Security.SSR6.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 7\Login\Security.SSR7.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 7\Security.SSR7.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 8\Login\Security.SSR8.Login1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 8\Login\Security.SSR8.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 8\Login\Security.SSR8.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 8\Login\Security.SSR8.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 8\Security.SSR8.Case1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 8\Security.SSR8.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 8\Security.SSR8.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 8\Security.SSR8.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 9\Login\Security.SSR9.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 9\Login\Security.SSR9.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 9\Login\Security.SSR9.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 9\Login\Security.SSR9.Login5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 9\Login\Security.SSR9.Login1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 9\Security.SSR9.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 9\Security.SSR9.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 9\Security.SSR9.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 9\Security.SSR9.Case5.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Sharing Shared Records 9\Security.SSR9.Case1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Team Sharing Previleges\Login\Security.TSP.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Team Sharing Previleges\Login\Security.TSP.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Team Sharing Previleges\Login\Security.TSP.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Team Sharing Previleges\Security.TSP.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Team Sharing Previleges\Security.TSP.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\Team Sharing Previleges\Security.TSP.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\User Sharing Previleges\Login\Security.USP.Login4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\User Sharing Previleges\Login\Security.USP.Login3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\User Sharing Previleges\Login\Security.USP.Login2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\User Sharing Previleges\Security.USP.Case4.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\User Sharing Previleges\Security.USP.Case3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\User Sharing Records\User Sharing Previleges\Security.USP.Case2.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\Cases\PhoenixS1QuickSearchCaseQueries.csv" />
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\Cases\PhoenixS1HealthAptData.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\Cases\PhoenixS1CasesInfo.csv" />
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\Cases\Phoenix.S1.CUDCaseAttachment.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\Cases\Phoenix.S1.QuickSearchCaseRecords.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\Cases\Phoenix.S1.CreateHealthAppointment.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\Cases\Phoenix.S1.CUCaseCaseNote.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\Cases\Phoenix.S1.DownloadCaseAttachmentFile.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\People\Phoenix.S1.CUDPersonCaseNote.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\People\Phoenix.S1.CUDPersonTask.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\People\Phoenix.S1.CUDPersonPhoneCall.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\People\Phoenix.S1.OpenPersonRecord.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\People\Phoenix.S1.CreatePersonSocialCareCase.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\Cases\Phoenix.S2.CUCaseCaseNote.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\Cases\Phoenix.S2.CreateHealthAppointment.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\Cases\Phoenix.S2.CUDCaseAttachment.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\Cases\PhoenixS2QuickSearchCaseQueries.csv" />
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\Cases\Phoenix.S2.QuickSearchCaseRecords.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\Cases\PhoenixS2FormsInfo.csv" />
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\Cases\PhoenixS2HealthAptData.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\Cases\PhoenixS2CasesInfo.csv" />
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\Login\PhoenixS2LoginInfo.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\People\Phoenix.S2.CreatePersonSocialCareCase.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\People\Phoenix.S2.OpenPersonRecord.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\People\Phoenix.S2.CUDPersonPhoneCall.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\People\Phoenix.S2.CUDPersonTask.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\People\Phoenix.S2.CUDPersonCaseNote.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\People\PhoenixS2PeopleInfo.csv" />
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\Cases\Phoenix.S3.CUCaseCaseNote.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\Cases\Phoenix.S3.CreateHealthAppointment.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\Cases\Phoenix.S3.CUDCaseAttachment.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\Cases\PhoenixS3QuickSearchCaseQueries.csv" />
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\Cases\Phoenix.S3.QuickSearchCaseRecords.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\Cases\PhoenixS3FormsInfo.csv" />
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\Cases\PhoenixS3HealthAptData.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\Cases\PhoenixS3CasesInfo.csv" />
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\Login\Phoenix.S3.Login.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\Login\PhoenixS3LoginInfo.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\People\Phoenix.S3.CreatePersonSocialCareCase.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\People\Phoenix.S3.OpenPersonRecord.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\People\Phoenix.S3.CUDPersonPhoneCall.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\People\Phoenix.S3.CUDPersonTask.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\People\Phoenix.S3.CUDPersonCaseNote.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario3 __ Bridgend - Advice\People\PhoenixS3PeopleInfo.csv" />
+    <None Include="WebPerformanceTests\Tests valid for any teams\Advanced Search\AppointmentsSearchQueries.csv" />
+    <None Include="WebPerformanceTests\Tests valid for any teams\Advanced Search\TasksSearchQueries.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\Advanced Search\Phoenix.AS.SearchAppointmentsBySubject.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\Advanced Search\Phoenix.AS.SearchPersonCaseNotesBySubject.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\Advanced Search\Phoenix.AS.SearchTasksBySubject.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\ClinicDiary\PhoenixProviderInfo.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\HealthAppointments\HealthAppointmentsQueries.csv" />
+    <None Include="WebPerformanceTests\Tests valid for any teams\HealthAppointments\Phoenix.HealthApt.NavigateInRecords.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\HealthAppointments\Phoenix.HealthApt.SelectViews.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\ClinicDiary\Phoenix.ClinicDiary.Search.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\HealthAppointments\Phoenix.HealthApt.QuickSearch.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\People Page\Phoenix.PeoplePage.NavigateInRecords.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\People\PhoenixS1PeopleInfo.csv" />
+    <None Include="WebPerformanceTests\Tests valid for any teams\Login\LoginInfo.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\SearchQueries.csv" />
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\Login\PhoenixS1LoginInfo.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario1 __ Blaenau Gwent - Primary Health Social Worker\Login\Phoenix.S1.Login.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Scenario2 __ Bridgend - Adoption\Login\Phoenix.S2.Login.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\Advanced Search\CaseNotesSearchQueries.csv" />
+    <None Include="WebPerformanceTests\Tests valid for any teams\Login\Phoenix.Login.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\People Page\PeopleInfo.csv" />
+    <None Include="WebPerformanceTests\Tests valid for any teams\People Page\Phoenix.OpenPeoplePage.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\People Page\Phoenix.SearchForPersonRecords.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPerformanceTests\Tests valid for any teams\People Page\Phoenix.PeoplePage.AllRecords.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Phoenix.LoadTest.plugins\Phoenix.LoadTest.plugins.csproj">
+      <Project>{48684a91-b549-43b4-910f-369681c9967c}</Project>
+      <Name>Phoenix.LoadTest.plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

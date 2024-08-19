@@ -1,0 +1,90 @@
+﻿Test Name: CD_DR_01_Case1.webtest
+Description: This test will access 2 records (Person record and Email record) where the 1st have the option "Data Restrictions enabled?" set to true and the 2nd have the option "Data Restrictions enabled?" set to false. The "Restrict Access" link should be displayed in the 1st records but must not be displayed in the 2nd record
+(UPDATE): Email records can be restricted now
+
+Test Name: CD_DR_01_Case2.webtest
+Description: It should not be possible to update the Access Type property for a data restriction record. this test will for a call to the update method ("/api/dataform/Update") and send a change in the Access Type of the data restriction.
+
+Test Name: CD_DR_01_Case3.webtest
+Description: This test is validating that the Data Restrictions page contains all 4 main views. it also calls the "/api/businessdataview/RetrieveResults" methods for all 4 view ids and validate the returned results
+
+
+
+
+Test Bame: CD_DR_02_Case1.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "User Restricted Data Accesses" record. No overlapping of dates (either start or end date) can occurr. In this test case the user will try to add a "User Restricted Data Accesses" record where the end date equals the main record start date. Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case2.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "User Restricted Data Accesses" record. No overlapping of dates (either start or end date) can occurr. In this test case the user will try to add a "User Restricted Data Accesses" record where the end date is set between the main record start and end dates. Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case3.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "User Restricted Data Accesses" record. No overlapping of dates (either start or end date) can occurr. In this test case the user will try to add a "User Restricted Data Accesses" record where the start date is prior to the main record start date and the end date is after the main record end date. Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case4.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "User Restricted Data Accesses" record. No overlapping of dates (either start or end date) can occurr. In this test case the user will try to add a "User Restricted Data Accesses" record where the start date equals the main record start date and the end date is between the main record start and end date. Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case5.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "User Restricted Data Accesses" record. No overlapping of dates (either start or end date) can occurr. In this test case the user will try to add a "User Restricted Data Accesses" record where the start date equals the main record start date and the end date equals the main record end date. Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case6.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "User Restricted Data Accesses" record. No overlapping of dates (either start or end date) can occurr. In this test case the user will try to add a "User Restricted Data Accesses" record where the start date equals the main record start date and the end date is set after the main record end date. Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case7.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "User Restricted Data Accesses" record. No overlapping of dates (either start or end date) can occurr. In this test case the user will try to add a "User Restricted Data Accesses" record where the start date equals the main record end date and the end date is after the main record end date. Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case8.webtest
+Description: This test is trying to validate that the options "User Restricted Data Accesses" and "Team Restricted Data Accesses" are the only options visible for the "Allow User or Team to view this data" access type.
+
+
+
+
+Test Bame: CD_DR_02_Case10.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "Team Restricted Data Accesses" record. 
+No overlapping of dates (either start or end date) can occurr. 
+In this test case the user will try to add a "Team Restricted Data Accesses" record where the end date equals the main record start date. 
+Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case11.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "Team Restricted Data Accesses" record. 
+No overlapping of dates (either start or end date) can occurr. 
+In this test case the user will try to add a "Team Restricted Data Accesses" record where the end date is set between the main record start and end dates. 
+Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case12.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "Team Restricted Data Accesses" record. 
+No overlapping of dates (either start or end date) can occurr. 
+In this test case the user will try to add a "Team Restricted Data Accesses" record where the start date is prior to the main record start date and the end date is after the main record end date. 
+Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case13.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "Team Restricted Data Accesses" record. 
+No overlapping of dates (either start or end date) can occurr. 
+In this test case the user will try to add a "Team Restricted Data Accesses" record where the start date equals the main record start date and the end date is between the main record start and end date. 
+Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case14.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "Team Restricted Data Accesses" record. 
+No overlapping of dates (either start or end date) can occurr. 
+In this test case the user will try to add a "Team Restricted Data Accesses" record where the start date equals the main record start date and the end date equals the main record end date. 
+Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case15.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "Team Restricted Data Accesses" record. 
+No overlapping of dates (either start or end date) can occurr. 
+In this test case the user will try to add a "Team Restricted Data Accesses" record where the start date equals the main record start date and the end date is set after the main record end date. 
+Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+Test Bame: CD_DR_02_Case16.webtest
+Description: This test is trying to validate the overlapping scenarios when adding a "Team Restricted Data Accesses" record. 
+No overlapping of dates (either start or end date) can occurr. 
+In this test case the user will try to add a "Team Restricted Data Accesses" record where the start date equals the main record end date and the end date is after the main record end date. 
+Look in the "Phoenix Security - Data Restriction- Descision Tree Matrix.xlsx" file (CD_DR_02 Dates Overlap sheet) for more details
+
+
+
+
+
+Test Bame: CD_DR_03_Case1.webtest
+Description: This test case is trying to validate the use case path "1-2-3a1-3a2". 
+If the Business Object Configuration setting “Data Restriction Enabled?” = 'No' then the System excludes "Restrict Access" option from the menu.
+(UPDATE): Email records can be restricted now

@@ -1,0 +1,1753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CareDirectorQA_CDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="AppointmentId" />
+    </Key>
+    <Property Name="AppointmentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="200" />
+    <Property Name="RegardingId" Type="uniqueidentifier" />
+    <Property Name="RegardingIdTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ActivityCategoryId" Type="uniqueidentifier" />
+    <Property Name="ActivitySubCategoryId" Type="uniqueidentifier" />
+    <Property Name="ActivityOutcomeId" Type="uniqueidentifier" />
+    <Property Name="ActivityReasonId" Type="uniqueidentifier" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="PriorityId" Type="int" />
+    <Property Name="PersonId" Type="uniqueidentifier" />
+    <Property Name="Location" Type="nvarchar" MaxLength="300" />
+    <Property Name="Duration" Type="nvarchar" MaxLength="100" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="RegardingIdName" Type="nvarchar" MaxLength="450" />
+    <Property Name="ActivityPriorityId" Type="uniqueidentifier" />
+    <Property Name="InformationByThirdParty" Type="bit" />
+    <Property Name="IsSignificantEvent" Type="bit" />
+    <Property Name="SignificantEventCategoryId" Type="uniqueidentifier" />
+    <Property Name="SignificantEventSubCategoryId" Type="uniqueidentifier" />
+    <Property Name="SignificantEventDate" Type="date" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="ResponsibleUserId" Type="uniqueidentifier" />
+    <Property Name="AppointmentTypeId" Type="uniqueidentifier" />
+    <Property Name="ShowTimeAsId" Type="int" />
+    <Property Name="AllowConcurrent" Type="bit" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="StartTime" Type="time" Precision="7" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="EndTime" Type="time" Precision="7" />
+    <Property Name="CaseId" Type="uniqueidentifier" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="RecurringAppointmentId" Type="uniqueidentifier" />
+    <Property Name="SyncedWithMailbox" Type="bit" />
+    <Property Name="GroupRecordId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="AssessmentPrintRecord">
+    <Key>
+      <PropertyRef Name="AssessmentPrintRecordId" />
+    </Key>
+    <Property Name="AssessmentPrintRecordId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="Title" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="4000" />
+    <Property Name="FileId" Type="uniqueidentifier" />
+    <Property Name="PrintTemplateName" Type="nvarchar" MaxLength="200" />
+    <Property Name="AssessmentSectionId" Type="uniqueidentifier" />
+    <Property Name="AssessmentId" Type="uniqueidentifier" />
+    <Property Name="AssessmentIdTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PrintAuditOnly" Type="bit" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="AssessmentIdName" Type="nvarchar" MaxLength="450" />
+  </EntityType>
+  <EntityType Name="AttachDocumentType">
+    <Key>
+      <PropertyRef Name="AttachDocumentTypeId" />
+    </Key>
+    <Property Name="AttachDocumentTypeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="Code" Type="int" />
+    <Property Name="GovCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="Name" Type="nvarchar" MaxLength="450" />
+    <Property Name="ValidForExport" Type="bit" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+  </EntityType>
+  <EntityType Name="Audit">
+    <Key>
+      <PropertyRef Name="AuditId" />
+    </Key>
+    <Property Name="AuditId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TableName" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Operation" Type="int" Nullable="false" />
+    <Property Name="RecordId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RecordTitle" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ErrorManagementReasonId" Type="uniqueidentifier" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Audit_2018">
+    <Key>
+      <PropertyRef Name="AuditId" />
+    </Key>
+    <Property Name="AuditId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TableName" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Operation" Type="int" Nullable="false" />
+    <Property Name="RecordId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RecordTitle" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ErrorManagementReasonId" Type="uniqueidentifier" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Audit_2019">
+    <Key>
+      <PropertyRef Name="AuditId" />
+    </Key>
+    <Property Name="AuditId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TableName" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Operation" Type="int" Nullable="false" />
+    <Property Name="RecordId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RecordTitle" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ErrorManagementReasonId" Type="uniqueidentifier" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Audit_2020">
+    <Key>
+      <PropertyRef Name="AuditId" />
+    </Key>
+    <Property Name="AuditId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TableName" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Operation" Type="int" Nullable="false" />
+    <Property Name="RecordId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RecordTitle" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ErrorManagementReasonId" Type="uniqueidentifier" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="AuditChangeSet">
+    <Key>
+      <PropertyRef Name="AuditChangeSetId" />
+    </Key>
+    <Property Name="AuditChangeSetId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AuditId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FieldName" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="NewValue" Type="nvarchar(max)" />
+    <Property Name="PreviousValue" Type="nvarchar(max)" />
+    <Property Name="PreviousBooleanValue" Type="bit" />
+    <Property Name="NewBooleanValue" Type="bit" />
+    <Property Name="PreviousDateValue" Type="date" />
+    <Property Name="NewDateValue" Type="date" />
+    <Property Name="PreviousDecimalValue" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="NewDecimalValue" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="PreviousIntValue" Type="int" />
+    <Property Name="NewIntValue" Type="int" />
+    <Property Name="PreviousGuidValue" Type="uniqueidentifier" />
+    <Property Name="NewGuidValue" Type="uniqueidentifier" />
+    <Property Name="PreviousDateTimeValue" Type="datetime" />
+    <Property Name="NewDateTimeValue" Type="datetime" />
+    <Property Name="PreviousTimeValue" Type="time" Precision="7" />
+    <Property Name="NewTimeValue" Type="time" Precision="7" />
+    <Property Name="FieldType" Type="int" Nullable="false" />
+    <Property Name="PreviousChecklistValue" Type="nvarchar(max)" />
+    <Property Name="NewChecklistValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AuditChangeSet_2018">
+    <Key>
+      <PropertyRef Name="AuditChangeSetId" />
+    </Key>
+    <Property Name="AuditChangeSetId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AuditId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FieldName" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="NewValue" Type="nvarchar(max)" />
+    <Property Name="PreviousValue" Type="nvarchar(max)" />
+    <Property Name="PreviousBooleanValue" Type="bit" />
+    <Property Name="NewBooleanValue" Type="bit" />
+    <Property Name="PreviousDateValue" Type="date" />
+    <Property Name="NewDateValue" Type="date" />
+    <Property Name="PreviousDecimalValue" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="NewDecimalValue" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="PreviousIntValue" Type="int" />
+    <Property Name="NewIntValue" Type="int" />
+    <Property Name="PreviousGuidValue" Type="uniqueidentifier" />
+    <Property Name="NewGuidValue" Type="uniqueidentifier" />
+    <Property Name="PreviousDateTimeValue" Type="datetime" />
+    <Property Name="NewDateTimeValue" Type="datetime" />
+    <Property Name="PreviousTimeValue" Type="time" Precision="7" />
+    <Property Name="NewTimeValue" Type="time" Precision="7" />
+    <Property Name="FieldType" Type="int" Nullable="false" />
+    <Property Name="PreviousChecklistValue" Type="nvarchar(max)" />
+    <Property Name="NewChecklistValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AuditChangeSet_2019">
+    <Key>
+      <PropertyRef Name="AuditChangeSetId" />
+    </Key>
+    <Property Name="AuditChangeSetId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AuditId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FieldName" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="NewValue" Type="nvarchar(max)" />
+    <Property Name="PreviousValue" Type="nvarchar(max)" />
+    <Property Name="PreviousBooleanValue" Type="bit" />
+    <Property Name="NewBooleanValue" Type="bit" />
+    <Property Name="PreviousDateValue" Type="date" />
+    <Property Name="NewDateValue" Type="date" />
+    <Property Name="PreviousDecimalValue" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="NewDecimalValue" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="PreviousIntValue" Type="int" />
+    <Property Name="NewIntValue" Type="int" />
+    <Property Name="PreviousGuidValue" Type="uniqueidentifier" />
+    <Property Name="NewGuidValue" Type="uniqueidentifier" />
+    <Property Name="PreviousDateTimeValue" Type="datetime" />
+    <Property Name="NewDateTimeValue" Type="datetime" />
+    <Property Name="PreviousTimeValue" Type="time" Precision="7" />
+    <Property Name="NewTimeValue" Type="time" Precision="7" />
+    <Property Name="FieldType" Type="int" Nullable="false" />
+    <Property Name="PreviousChecklistValue" Type="nvarchar(max)" />
+    <Property Name="NewChecklistValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AuditChangeSet_2020">
+    <Key>
+      <PropertyRef Name="AuditChangeSetId" />
+    </Key>
+    <Property Name="AuditChangeSetId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AuditId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FieldName" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="NewValue" Type="nvarchar(max)" />
+    <Property Name="PreviousValue" Type="nvarchar(max)" />
+    <Property Name="PreviousBooleanValue" Type="bit" />
+    <Property Name="NewBooleanValue" Type="bit" />
+    <Property Name="PreviousDateValue" Type="date" />
+    <Property Name="NewDateValue" Type="date" />
+    <Property Name="PreviousDecimalValue" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="NewDecimalValue" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="PreviousIntValue" Type="int" />
+    <Property Name="NewIntValue" Type="int" />
+    <Property Name="PreviousGuidValue" Type="uniqueidentifier" />
+    <Property Name="NewGuidValue" Type="uniqueidentifier" />
+    <Property Name="PreviousDateTimeValue" Type="datetime" />
+    <Property Name="NewDateTimeValue" Type="datetime" />
+    <Property Name="PreviousTimeValue" Type="time" Precision="7" />
+    <Property Name="NewTimeValue" Type="time" Precision="7" />
+    <Property Name="FieldType" Type="int" Nullable="false" />
+    <Property Name="PreviousChecklistValue" Type="nvarchar(max)" />
+    <Property Name="NewChecklistValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Case">
+    <Key>
+      <PropertyRef Name="CaseId" />
+    </Key>
+    <Property Name="CaseId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="450" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="PersonId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="ContactReceivedDateTime" Type="datetime" />
+    <Property Name="ContactReceivedById" Type="uniqueidentifier" />
+    <Property Name="RequestReceivedDateTime" Type="datetime" />
+    <Property Name="PresentingNeedDetails" Type="nvarchar" MaxLength="4000" />
+    <Property Name="AdditionalInformation" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ContactMadeByName" Type="nvarchar" MaxLength="300" />
+    <Property Name="CommunityAndClinicTeamId" Type="uniqueidentifier" />
+    <Property Name="CaseAcceptedDateTime" Type="datetime" />
+    <Property Name="InformationFormReferrer" Type="nvarchar" MaxLength="4000" />
+    <Property Name="MoreInformationResponse" Type="nvarchar" MaxLength="4000" />
+    <Property Name="MoreInformationResponseDateTime" Type="datetime" />
+    <Property Name="CNACount" Type="int" />
+    <Property Name="DNACount" Type="int" />
+    <Property Name="DischargePerson" Type="bit" />
+    <Property Name="DischargingProfessionalId" Type="uniqueidentifier" />
+    <Property Name="AdditionalDischargeInformation" Type="nvarchar" MaxLength="4000" />
+    <Property Name="DischargeDateTime" Type="datetime" />
+    <Property Name="CommunityAndClinicTeamTransferredToId" Type="uniqueidentifier" />
+    <Property Name="TeamTransferredToId" Type="uniqueidentifier" />
+    <Property Name="CaseTransferredDateTime" Type="datetime" />
+    <Property Name="ResponsibleUserId" Type="uniqueidentifier" />
+    <Property Name="SecondaryCaseReasonId" Type="uniqueidentifier" />
+    <Property Name="CasePriorityId" Type="uniqueidentifier" />
+    <Property Name="CaseRejectedReasonId" Type="uniqueidentifier" />
+    <Property Name="CaseStatusId" Type="uniqueidentifier" />
+    <Property Name="CaseClosureReasonId" Type="uniqueidentifier" />
+    <Property Name="InitialContactId" Type="uniqueidentifier" />
+    <Property Name="OtherRelatedContactId" Type="uniqueidentifier" />
+    <Property Name="ContactReasonId" Type="uniqueidentifier" />
+    <Property Name="PresentingPriorityId" Type="uniqueidentifier" />
+    <Property Name="CaseTransferredTeamFromId" Type="uniqueidentifier" />
+    <Property Name="AdministrativeCategoryId" Type="uniqueidentifier" />
+    <Property Name="ServiceTypeRequestedId" Type="uniqueidentifier" />
+    <Property Name="PersonAwareOfContactId" Type="int" />
+    <Property Name="PersonSupportContactId" Type="int" />
+    <Property Name="CarerAwareOfContactId" Type="int" />
+    <Property Name="CarerSupportContactId" Type="int" />
+    <Property Name="NextOfKinAwareOfContactId" Type="int" />
+    <Property Name="CaseAcceptedId" Type="int" />
+    <Property Name="ProfessionalTypeId" Type="uniqueidentifier" />
+    <Property Name="ContactMadeById" Type="uniqueidentifier" />
+    <Property Name="ContactMadeByIdTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="ContactMadeByIdName" Type="nvarchar" MaxLength="450" />
+    <Property Name="StartDateTime" Type="datetime" />
+    <Property Name="EndDateTime" Type="datetime" />
+    <Property Name="DataFormId" Type="uniqueidentifier" />
+    <Property Name="CaseNumber" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="ContactSourceId" Type="uniqueidentifier" />
+    <Property Name="PersonAge" Type="int" />
+    <Property Name="ChildInNeedCodeId" Type="uniqueidentifier" />
+    <Property Name="ReviewDate" Type="date" />
+    <Property Name="ClosureAcceptedById" Type="uniqueidentifier" />
+    <Property Name="ArchiveDate" Type="date" />
+    <Property Name="PoliceNotified" Type="bit" />
+    <Property Name="PoliceNotifiedDate" Type="date" />
+    <Property Name="PoliceNotes" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ReReferral" Type="bit" />
+    <Property Name="ReferringAgencyCaseId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ResponseMadeToContact" Type="bit" />
+    <Property Name="NonMigratedWorkerName" Type="nvarchar" MaxLength="150" />
+    <Property Name="ContactWithTrainedStaffDate" Type="datetime" />
+    <Property Name="CaseOriginId" Type="int" />
+    <Property Name="InpatientWardId" Type="uniqueidentifier" />
+    <Property Name="InpatientBedId" Type="uniqueidentifier" />
+    <Property Name="InpatientAdmissionSourceId" Type="uniqueidentifier" />
+    <Property Name="InpatientPatientClassificationId" Type="uniqueidentifier" />
+    <Property Name="InpatientIntendedManagementId" Type="uniqueidentifier" />
+    <Property Name="WishNokCarerNotifiedAdmissionId" Type="int" />
+    <Property Name="WhoWasNotifiedId" Type="uniqueidentifier" />
+    <Property Name="InpatientAdmissionMethodId" Type="uniqueidentifier" />
+    <Property Name="CurrentConsultantId" Type="uniqueidentifier" />
+    <Property Name="DolsConcernId" Type="int" />
+    <Property Name="NamedProfessionalId" Type="uniqueidentifier" />
+    <Property Name="AdmissionDateTime" Type="datetime" />
+    <Property Name="DecisionToAdmitAgreedDateTime" Type="datetime" />
+    <Property Name="IntendedAdmissionDate" Type="date" />
+    <Property Name="InpatientChangeIntendedAdmissionReasonId" Type="uniqueidentifier" />
+    <Property Name="DateIntendedAdmissionChanged" Type="date" />
+    <Property Name="EstimatedDischargeDate" Type="date" />
+    <Property Name="FitForDischageDate" Type="date" />
+    <Property Name="ProviderId" Type="uniqueidentifier" />
+    <Property Name="InpatientBayId" Type="uniqueidentifier" />
+    <Property Name="InpatientResponsibleWardId" Type="uniqueidentifier" />
+    <Property Name="ActualDischargeDateTime" Type="datetime" />
+    <Property Name="DischargeInformation" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Section117AftercareEntitlement" Type="bit" />
+    <Property Name="DischargedToHomeAddressId" Type="int" />
+    <Property Name="PropertyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddressLine1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Country" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddressLine2" Type="nvarchar" MaxLength="250" />
+    <Property Name="AddressPropertyTypeId" Type="uniqueidentifier" />
+    <Property Name="AddressLine3" Type="nvarchar" MaxLength="250" />
+    <Property Name="UPRN" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddressLine4" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddressBoroughId" Type="uniqueidentifier" />
+    <Property Name="AddressLine5" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddressWardId" Type="uniqueidentifier" />
+    <Property Name="PostCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="WishesContactFromImhaId" Type="int" />
+    <Property Name="DaysAsInpatient" Type="int" />
+    <Property Name="InpatientCaseStatusId" Type="int" />
+    <Property Name="IsPersonOnLeave" Type="bit" />
+    <Property Name="IsSwappingInpatient" Type="bit" />
+    <Property Name="PathwayKeySourceId" Type="int" />
+    <Property Name="HealthPathwayKeyId" Type="uniqueidentifier" />
+    <Property Name="InpatientTransferOfCareReasonId" Type="uniqueidentifier" />
+    <Property Name="ActualTransferDateTime" Type="datetime" />
+    <Property Name="InpatientDischargeDestinationId" Type="uniqueidentifier" />
+    <Property Name="PlannedDischargeDate" Type="date" />
+    <Property Name="CarerNokNotified" Type="bit" />
+    <Property Name="MHASectionOnAdmissionId" Type="uniqueidentifier" />
+    <Property Name="CommunityHealthCaseTransferReasonId" Type="uniqueidentifier" />
+    <Property Name="ClonedFromCase" Type="uniqueidentifier" />
+    <Property Name="actualdischargedestinationid" Type="uniqueidentifier" />
+    <Property Name="MasterId" Type="uniqueidentifier" />
+    <Property Name="CaseReopenReasonId" Type="uniqueidentifier" />
+    <Property Name="FollowUpTeamId" Type="uniqueidentifier" />
+    <Property Name="followupteamidtablename" Type="nvarchar" MaxLength="128" />
+    <Property Name="followupteamidname" Type="nvarchar" MaxLength="450" />
+  </EntityType>
+  <EntityType Name="CaseAction">
+    <Key>
+      <PropertyRef Name="CaseActionId" />
+    </Key>
+    <Property Name="CaseActionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ResponsibleUserId" Type="uniqueidentifier" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="450" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="PersonId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CaseId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HealthAppointmentId" Type="uniqueidentifier" />
+    <Property Name="CaseActionTypeId" Type="uniqueidentifier" />
+    <Property Name="DueDate" Type="date" />
+    <Property Name="CasePriorityId" Type="uniqueidentifier" />
+    <Property Name="ActionDetails" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CaseActionStatusId" Type="uniqueidentifier" />
+    <Property Name="CompletionDate" Type="date" />
+    <Property Name="NextAppointmentDay" Type="int" />
+    <Property Name="TimePeriodId" Type="int" />
+    <Property Name="TargetDate" Type="date" />
+  </EntityType>
+  <EntityType Name="CaseAttachment">
+    <Key>
+      <PropertyRef Name="CaseAttachmentId" />
+    </Key>
+    <Property Name="CaseAttachmentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="450" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="DocumentTypeId" Type="uniqueidentifier" />
+    <Property Name="DocumentSubTypeId" Type="uniqueidentifier" />
+    <Property Name="FileId" Type="uniqueidentifier" />
+    <Property Name="CaseId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PersonId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CaseForm">
+    <Key>
+      <PropertyRef Name="CaseFormId" />
+    </Key>
+    <Property Name="CaseFormId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="450" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="DocumentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AssessmentStatusId" Type="int" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="DueDate" Type="date" />
+    <Property Name="ReviewDate" Type="date" />
+    <Property Name="CompletedById" Type="uniqueidentifier" />
+    <Property Name="CompletionDate" Type="date" />
+    <Property Name="SignedOffById" Type="uniqueidentifier" />
+    <Property Name="SignOffDate" Type="date" />
+    <Property Name="DocumentModifiedById" Type="uniqueidentifier" />
+    <Property Name="DocumentModifiedOn" Type="datetime" />
+    <Property Name="SDEExecuted" Type="bit" />
+    <Property Name="AnswersInitialized" Type="bit" />
+    <Property Name="FormCancellationReasonId" Type="uniqueidentifier" />
+    <Property Name="PersonId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CaseId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ResponsibleUserId" Type="uniqueidentifier" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="JointCarerAssessment" Type="bit" />
+    <Property Name="SeparateAssessment" Type="bit" />
+    <Property Name="CarerDeclinedJointAssessment" Type="bit" />
+    <Property Name="NewPerson" Type="bit" />
+    <Property Name="JointCarerId" Type="uniqueidentifier" />
+    <Property Name="TargetStartDate" Type="date" />
+    <Property Name="TerminatedDate" Type="date" />
+    <Property Name="TriggerDate" Type="date" />
+    <Property Name="FormDelayReasonId" Type="uniqueidentifier" />
+    <Property Name="ClonedFromId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="CaseFormOutcome">
+    <Key>
+      <PropertyRef Name="CaseFormOutcomeId" />
+    </Key>
+    <Property Name="CaseFormOutcomeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="450" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="CaseFormId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CaseId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PersonId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CaseFormOutcomeTypeId" Type="uniqueidentifier" />
+    <Property Name="OutcomeDate" Type="date" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="Document">
+    <Key>
+      <PropertyRef Name="DocumentId" />
+    </Key>
+    <Property Name="DocumentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Name" Type="nvarchar" MaxLength="450" Nullable="false" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="CommentBold" Type="bit" />
+    <Property Name="DocumentCategoryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CommentItalic" Type="bit" />
+    <Property Name="CommentUnderline" Type="bit" />
+    <Property Name="DaysToComplete" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="DocumentTypeId" Type="uniqueidentifier" />
+    <Property Name="DoesNotRequireManagerSignOff" Type="bit" />
+    <Property Name="TableHeaderBold" Type="bit" />
+    <Property Name="TableHeaderItalic" Type="bit" />
+    <Property Name="TableHeaderUnderline" Type="bit" />
+    <Property Name="InstructionBold" Type="bit" />
+    <Property Name="InstructionItalic" Type="bit" />
+    <Property Name="InstructionUnderline" Type="bit" />
+    <Property Name="LastUpgradedOn" Type="datetime" />
+    <Property Name="PrimaryQuestionBold" Type="bit" />
+    <Property Name="PrimaryQuestionItalic" Type="bit" />
+    <Property Name="PrimaryQuestionUnderline" Type="bit" />
+    <Property Name="QuestionBold" Type="bit" />
+    <Property Name="QuestionItalic" Type="bit" />
+    <Property Name="QuestionUnderline" Type="bit" />
+    <Property Name="SectionBold" Type="bit" />
+    <Property Name="SectionItalic" Type="bit" />
+    <Property Name="SectionUnderline" Type="bit" />
+    <Property Name="SubHeadingBold" Type="bit" />
+    <Property Name="SubHeadingItalic" Type="bit" />
+    <Property Name="SubHeadingUnderline" Type="bit" />
+    <Property Name="SyncQuestionIds" Type="bit" />
+    <Property Name="Version" Type="decimal" Precision="18" Scale="1" />
+    <Property Name="DocumentNameLocalizedStringId" Type="uniqueidentifier" />
+    <Property Name="AnswerFontSizeId" Type="int" />
+    <Property Name="CommentFontSizeId" Type="int" />
+    <Property Name="FontStyleId" Type="int" />
+    <Property Name="InstructionBackgroundColorId" Type="int" />
+    <Property Name="InstructionFontColorId" Type="int" />
+    <Property Name="InstructionFontSizeId" Type="int" />
+    <Property Name="PrimaryQuestionBackgroundColorId" Type="int" />
+    <Property Name="PrimaryQuestionFontColorId" Type="int" />
+    <Property Name="PrimaryQuestionFontSizeId" Type="int" />
+    <Property Name="QuestionFontSizeId" Type="int" />
+    <Property Name="QuestionNumberingId" Type="int" />
+    <Property Name="QuestionSubHeadingFontSizeId" Type="int" />
+    <Property Name="SectionFontColorId" Type="int" />
+    <Property Name="SectionFontSizeId" Type="int" />
+    <Property Name="SectionHeadingBackgroundColorId" Type="int" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="TableBorderColorId" Type="int" />
+    <Property Name="TableHeaderBackgroundColorId" Type="int" />
+    <Property Name="TableHeaderFontColorId" Type="int" />
+    <Property Name="TableHeaderFontSizeId" Type="int" />
+    <Property Name="SDEMappingModeId" Type="int" />
+    <Property Name="RuleEvents" Type="int" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AvailableInMobile" Type="bit" />
+    <Property Name="DisplayPageNumber" Type="bit" />
+    <Property Name="DisableAutoSave" Type="bit" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="ResponsibleUserSelfSignOffAllowed" Type="bit" />
+    <Property Name="AutomaticallyCloseOnCompletion" Type="bit" />
+    <Property Name="MultipleOpenFormsAllowed" Type="bit" />
+    <Property Name="AllowFormStatusCloning" Type="bit" />
+    <Property Name="TypeOfDaysId" Type="int" />
+    <Property Name="CompletionDateAllowedBeforeStartDate" Type="bit" />
+    <Property Name="SignOffDateAllowedBeforeCompletion" Type="bit" />
+    <Property Name="SignOffDateAllowedBeforeStartDate" Type="bit" />
+    <Property Name="ReviewDateAllowedBeforeStartDate" Type="bit" />
+    <Property Name="SignOffDateAllowedBeforeCaseDate" Type="bit" />
+    <Property Name="StartDateallowedBeforeCaseStartDate" Type="bit" />
+    <Property Name="CaseClosureBeforeFormCompletedClosedDate" Type="bit" />
+    <Property Name="ProtectiveMarkingSchemeId" Type="uniqueidentifier" />
+    <Property Name="RecordAssessmentFactor" Type="bit" />
+    <Property Name="EnableReporting" Type="bit" />
+    <Property Name="ReportingTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="ReportingLastSyncDateTime" Type="datetime" />
+    <Property Name="IsReportingTableInSync" Type="bit" />
+    <Property Name="EdmsDocumentTypeId" Type="uniqueidentifier" />
+    <Property Name="EdmsDocumentSubTypeId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="DocumentAnswer">
+    <Key>
+      <PropertyRef Name="DocumentAnswerId" />
+    </Key>
+    <Property Name="DocumentAnswerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="DateAnswer" Type="date" />
+    <Property Name="DateAndTimeAnswer" Type="datetime" />
+    <Property Name="DecimalAnswer" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MultichoiceAnswerId" Type="uniqueidentifier" />
+    <Property Name="NumericAnswer" Type="int" />
+    <Property Name="ParagraphAnswer" Type="nvarchar(max)" />
+    <Property Name="ShortAnswer" Type="nvarchar" MaxLength="4000" />
+    <Property Name="TrueFalseAnswer" Type="bit" />
+    <Property Name="PicklistValueId" Type="uniqueidentifier" />
+    <Property Name="DocumentQuestionIdentifierId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AssessmentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AssessmentIdTableName" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="LookupObjectId" Type="uniqueidentifier" />
+    <Property Name="LookupObjectTypeName" Type="nvarchar" MaxLength="128" />
+    <Property Name="ManagerOverrideReason" Type="nvarchar" MaxLength="500" />
+    <Property Name="LinkedRecordId" Type="uniqueidentifier" />
+    <Property Name="LinkedRecordTypeName" Type="nvarchar" MaxLength="128" />
+    <Property Name="OriginAnswerId" Type="uniqueidentifier" />
+    <Property Name="UserSaved" Type="bit" />
+    <Property Name="GridRowId" Type="int" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="QuestionTypeId" Type="int" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ImageId" Type="uniqueidentifier" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="LookupObjectTitle" Type="nvarchar" MaxLength="450" />
+    <Property Name="AssessmentIdName" Type="nvarchar" MaxLength="450" />
+  </EntityType>
+  <EntityType Name="DocumentQuestionIdentifier">
+    <Key>
+      <PropertyRef Name="DocumentQuestionIdentifierId" />
+    </Key>
+    <Property Name="DocumentQuestionIdentifierId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="Identifier" Type="nvarchar" MaxLength="200" />
+    <Property Name="RowId" Type="int" />
+    <Property Name="DocumentSectionQuestionId" Type="uniqueidentifier" />
+    <Property Name="QuestionCatalogueId" Type="uniqueidentifier" />
+    <Property Name="PrimaryQuestionId" Type="uniqueidentifier" />
+    <Property Name="SecondaryQuestionId" Type="uniqueidentifier" />
+    <Property Name="DocumentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DocumentSectionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="QuestionViewId" Type="uniqueidentifier" />
+    <Property Name="IsMandatory" Type="bit" />
+    <Property Name="ManagerOverrideAllowed" Type="bit" />
+    <Property Name="MandatoryOnCompletion" Type="bit" />
+    <Property Name="TableQuestionCellId" Type="uniqueidentifier" />
+    <Property Name="ShowSDELink" Type="bit" />
+    <Property Name="SDELinkSectionMode" Type="bit" />
+    <Property Name="LinkedSubQuestionId" Type="uniqueidentifier" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="HideQuestionText" Type="bit" />
+    <Property Name="QuestionTypeId" Type="int" />
+    <Property Name="ParentQuestionTypeId" Type="int" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="ApplicableToSnapshot" Type="bit" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsReportingColumnSearchable" Type="bit" />
+    <Property Name="ReportingColumnAlias" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="EmailId" />
+    </Key>
+    <Property Name="EmailId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="200" />
+    <Property Name="RegardingId" Type="uniqueidentifier" />
+    <Property Name="RegardingIdTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="SentDate" Type="datetime" />
+    <Property Name="LastFailDate" Type="datetime" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="RegardingIdName" Type="nvarchar" MaxLength="450" />
+    <Property Name="ActivityPriorityId" Type="uniqueidentifier" />
+    <Property Name="InformationByThirdParty" Type="bit" />
+    <Property Name="IsSignificantEvent" Type="bit" />
+    <Property Name="SignificantEventCategoryId" Type="uniqueidentifier" />
+    <Property Name="SignificantEventSubCategoryId" Type="uniqueidentifier" />
+    <Property Name="SignificantEventDate" Type="date" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ActivityReasonId" Type="uniqueidentifier" />
+    <Property Name="ActivityOutcomeId" Type="uniqueidentifier" />
+    <Property Name="ActivityCategoryId" Type="uniqueidentifier" />
+    <Property Name="ActivitySubCategoryId" Type="uniqueidentifier" />
+    <Property Name="PersonId" Type="uniqueidentifier" />
+    <Property Name="CaseId" Type="uniqueidentifier" />
+    <Property Name="ResponsibleUserId" Type="uniqueidentifier" />
+    <Property Name="DueDate" Type="datetime" />
+    <Property Name="EmailFromId" Type="uniqueidentifier" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="ProtectiveMarkingSchemeId" Type="uniqueidentifier" />
+    <Property Name="FailureMessage" Type="nvarchar(max)" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="GroupRecordId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Letter">
+    <Key>
+      <PropertyRef Name="LetterId" />
+    </Key>
+    <Property Name="LetterId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="450" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="RegardingId" Type="uniqueidentifier" />
+    <Property Name="RegardingIdTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ActivityCategoryId" Type="uniqueidentifier" />
+    <Property Name="ActivitySubCategoryId" Type="uniqueidentifier" />
+    <Property Name="ActivityOutcomeId" Type="uniqueidentifier" />
+    <Property Name="ActivityReasonId" Type="uniqueidentifier" />
+    <Property Name="FileId" Type="uniqueidentifier" />
+    <Property Name="RegardingIdName" Type="nvarchar" MaxLength="450" />
+    <Property Name="ResponsibleUserId" Type="uniqueidentifier" />
+    <Property Name="ActivityPriorityId" Type="uniqueidentifier" />
+    <Property Name="InformationByThirdParty" Type="bit" />
+    <Property Name="IsSignificantEvent" Type="bit" />
+    <Property Name="SignificantEventDate" Type="date" />
+    <Property Name="SignificantEventCategoryId" Type="uniqueidentifier" />
+    <Property Name="SignificantEventSubCategoryId" Type="uniqueidentifier" />
+    <Property Name="PersonId" Type="uniqueidentifier" />
+    <Property Name="SenderId" Type="uniqueidentifier" />
+    <Property Name="SenderIdTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="SenderIdName" Type="nvarchar" MaxLength="450" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="RecipientId" Type="uniqueidentifier" />
+    <Property Name="RecipientIdTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="RecipientIdName" Type="nvarchar" MaxLength="450" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="LetterDate" Type="date" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="DirectionId" Type="int" />
+    <Property Name="CaseId" Type="uniqueidentifier" />
+    <Property Name="IsCaseNote" Type="bit" />
+    <Property Name="GroupRecordId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="DateOfDeath" Type="date" />
+    <Property Name="GenderId" Type="int" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOBAndAgeTypeId" Type="int" />
+    <Property Name="Age" Type="int" />
+    <Property Name="PersonPhotoId" Type="uniqueidentifier" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="400" />
+    <Property Name="PreferredName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="MasterId" Type="uniqueidentifier" />
+    <Property Name="PersonNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NHSNumber" Type="nvarchar" MaxLength="12" />
+    <Property Name="NoNHSNumberReasonId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="EthnicityId" Type="uniqueidentifier" />
+    <Property Name="SameAsBirthGenderId" Type="uniqueidentifier" />
+    <Property Name="MaritalStatusId" Type="uniqueidentifier" />
+    <Property Name="ExpectedDateOfBirth" Type="date" />
+    <Property Name="Deceased" Type="bit" />
+    <Property Name="CauseOfDeathId" Type="uniqueidentifier" />
+    <Property Name="PlaceOfDeath" Type="nvarchar" MaxLength="100" />
+    <Property Name="FullAddress" Type="nvarchar" MaxLength="1000" />
+    <Property Name="PropertyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddressTypeId" Type="int" />
+    <Property Name="AddressLine1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Country" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddressLine2" Type="nvarchar" MaxLength="250" />
+    <Property Name="AddressPropertyTypeId" Type="uniqueidentifier" />
+    <Property Name="AddressLine3" Type="nvarchar" MaxLength="250" />
+    <Property Name="UPRN" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddressLine4" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddressBoroughId" Type="uniqueidentifier" />
+    <Property Name="AddressLine5" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddressWardId" Type="uniqueidentifier" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="20" />
+    <Property Name="AccommodationStatusId" Type="int" />
+    <Property Name="LivesAloneTypeId" Type="int" />
+    <Property Name="BusinessPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone3" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrimaryEmail" Type="nvarchar" MaxLength="254" />
+    <Property Name="SecondaryEmail" Type="nvarchar" MaxLength="254" />
+    <Property Name="RetainInformationConcern" Type="bit" />
+    <Property Name="LanguageId" Type="uniqueidentifier" />
+    <Property Name="ModeOfCommunicationId" Type="uniqueidentifier" />
+    <Property Name="ContactMethodId" Type="uniqueidentifier" />
+    <Property Name="AllowEmail" Type="bit" />
+    <Property Name="AllowMail" Type="bit" />
+    <Property Name="DocumentFormatId" Type="uniqueidentifier" />
+    <Property Name="AllowPhone" Type="bit" />
+    <Property Name="PreferredContactTimeId" Type="int" />
+    <Property Name="PreferredContactDayId" Type="int" />
+    <Property Name="SexualOrientationId" Type="uniqueidentifier" />
+    <Property Name="CountryOfOriginId" Type="uniqueidentifier" />
+    <Property Name="NationalityId" Type="uniqueidentifier" />
+    <Property Name="ImmigrationStatusId" Type="uniqueidentifier" />
+    <Property Name="ReligionId" Type="uniqueidentifier" />
+    <Property Name="NHSCardLocation" Type="nvarchar" MaxLength="200" />
+    <Property Name="MaidenName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PlaceOfBirth" Type="nvarchar" MaxLength="100" />
+    <Property Name="AgeGroupId" Type="int" />
+    <Property Name="PersonTargetGroupId" Type="uniqueidentifier" />
+    <Property Name="ExternalNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="SSDNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="CourtCaseNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="NationalInsuranceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="NHSNumberPre1995" Type="nvarchar" MaxLength="50" />
+    <Property Name="BirthCertificateNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="IsExternalPerson" Type="bit" />
+    <Property Name="FormerUniquePupilNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="HomeOfficeRegistrationNumber" Type="nvarchar" MaxLength="100" />
+    <Property Name="UPNUnknownReasonId" Type="uniqueidentifier" />
+    <Property Name="CreditorNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReferenceCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="DebtorNumber1" Type="nvarchar" MaxLength="50" />
+    <Property Name="DebtorNumber2" Type="nvarchar" MaxLength="50" />
+    <Property Name="DebtorNumber3" Type="nvarchar" MaxLength="50" />
+    <Property Name="DebtorNumber4" Type="nvarchar" MaxLength="50" />
+    <Property Name="SuppressStatementInvoices" Type="bit" />
+    <Property Name="Telephone1" Type="nvarchar" MaxLength="50" />
+    <Property Name="UniquePupilNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="RepresentAlertOrHazard" Type="bit" />
+    <Property Name="AllergiesNotRecorded" Type="bit" />
+    <Property Name="KnownAllergies" Type="bit" />
+    <Property Name="NoKnownAllergies" Type="bit" />
+    <Property Name="InterpreterRequired" Type="bit" />
+    <Property Name="ChildProtectionFlag" Type="bit" />
+    <Property Name="RelatedChildProtectionFlag" Type="bit" />
+    <Property Name="AdultSafeguardingFlag" Type="bit" />
+    <Property Name="RelatedAdultSafeguardingFlag" Type="bit" />
+    <Property Name="RecordedInError" Type="bit" />
+    <Property Name="AccommodationTypeId" Type="uniqueidentifier" />
+    <Property Name="IsLookedAfterChild" Type="bit" />
+    <Property Name="ExBritishForcesId" Type="int" />
+    <Property Name="AddressStartDate" Type="date" />
+    <Property Name="CCGBoundaryId" Type="uniqueidentifier" />
+    <Property Name="LowerSuperOutputAreaId" Type="uniqueidentifier" />
+    <Property Name="UpdatePersonAddress" Type="bit" />
+    <Property Name="LinkedAddressId" Type="uniqueidentifier" />
+    <Property Name="AllowSMS" Type="bit" />
+    <Property Name="PDSIsDeferred" Type="bit" />
+    <Property Name="PDSLastSyncDateTime" Type="datetime" />
+    <Property Name="LeavingCareEligibilityId" Type="uniqueidentifier" />
+    <Property Name="PDSNHSNoSuperseded" Type="bit" />
+    <Property Name="NHSNumberStatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="PersonAbsenceHospitalStayReason">
+    <Key>
+      <PropertyRef Name="personabsencehospitalstayreasonid" />
+    </Key>
+    <Property Name="personabsencehospitalstayreasonid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="450" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="Code" Type="int" />
+    <Property Name="GovCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="ValidForExport" Type="bit" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+  </EntityType>
+  <EntityType Name="PersonAttendedEducationEstablishment">
+    <Key>
+      <PropertyRef Name="personattendededucationestablishmentid" />
+    </Key>
+    <Property Name="personattendededucationestablishmentid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="450" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="PersonId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProviderId" Type="uniqueidentifier" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="CurrentYear" Type="nvarchar" MaxLength="450" />
+    <Property Name="EducationEstablishmentTypeId" Type="uniqueidentifier" />
+    <Property Name="EducationEnrolmentStatusId" Type="uniqueidentifier" />
+    <Property Name="AttendedEducationEstablishmentStatusId" Type="int" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="EducationEndReasonId" Type="uniqueidentifier" />
+    <Property Name="ReasonEndedDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="HeadTeacherId" Type="uniqueidentifier" />
+    <Property Name="SchoolNurseId" Type="uniqueidentifier" />
+    <Property Name="SENCOId" Type="uniqueidentifier" />
+    <Property Name="SENCOAssistantId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="PersonCaseNote">
+    <Key>
+      <PropertyRef Name="PersonCaseNoteId" />
+    </Key>
+    <Property Name="PersonCaseNoteId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ResponsibleUserId" Type="uniqueidentifier" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="450" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ActivityCategoryId" Type="uniqueidentifier" />
+    <Property Name="ActivitySubCategoryId" Type="uniqueidentifier" />
+    <Property Name="ActivityOutcomeId" Type="uniqueidentifier" />
+    <Property Name="ActivityReasonId" Type="uniqueidentifier" />
+    <Property Name="ActivityPriorityId" Type="uniqueidentifier" />
+    <Property Name="InformationByThirdParty" Type="bit" />
+    <Property Name="IsSignificantEvent" Type="bit" />
+    <Property Name="SignificantEventCategoryId" Type="uniqueidentifier" />
+    <Property Name="SignificantEventSubCategoryId" Type="uniqueidentifier" />
+    <Property Name="SignificantEventDate" Type="date" />
+    <Property Name="PersonId" Type="uniqueidentifier" />
+    <Property Name="CaseNoteDate" Type="datetime" />
+    <Property Name="StatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="PersonSignificantEvent">
+    <Key>
+      <PropertyRef Name="PersonSignificantEventId" />
+    </Key>
+    <Property Name="PersonSignificantEventId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="450" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="PersonId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EventDate" Type="date" />
+    <Property Name="EventDetails" Type="nvarchar" MaxLength="4000" />
+    <Property Name="SignificantEventCategoryId" Type="uniqueidentifier" />
+    <Property Name="SignificantEventSubCategoryId" Type="uniqueidentifier" />
+    <Property Name="SourceActivityId" Type="uniqueidentifier" />
+    <Property Name="SourceActivityIdTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="SourceActivityIdName" Type="nvarchar" MaxLength="450" />
+  </EntityType>
+  <EntityType Name="PhoneCall">
+    <Key>
+      <PropertyRef Name="PhoneCallId" />
+    </Key>
+    <Property Name="PhoneCallId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ResponsibleUserId" Type="uniqueidentifier" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="450" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="RegardingId" Type="uniqueidentifier" />
+    <Property Name="RegardingIdTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="RegardingIdName" Type="nvarchar" MaxLength="450" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ActivityCategoryId" Type="uniqueidentifier" />
+    <Property Name="ActivitySubCategoryId" Type="uniqueidentifier" />
+    <Property Name="ActivityOutcomeId" Type="uniqueidentifier" />
+    <Property Name="ActivityReasonId" Type="uniqueidentifier" />
+    <Property Name="ActivityPriorityId" Type="uniqueidentifier" />
+    <Property Name="InformationByThirdParty" Type="bit" />
+    <Property Name="IsSignificantEvent" Type="bit" />
+    <Property Name="SignificantEventCategoryId" Type="uniqueidentifier" />
+    <Property Name="SignificantEventSubCategoryId" Type="uniqueidentifier" />
+    <Property Name="SignificantEventDate" Type="date" />
+    <Property Name="CallerId" Type="uniqueidentifier" />
+    <Property Name="CallerIdTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="CallerIdName" Type="nvarchar" MaxLength="450" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecipientId" Type="uniqueidentifier" />
+    <Property Name="RecipientIdTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="RecipientIdName" Type="nvarchar" MaxLength="450" />
+    <Property Name="DirectionId" Type="int" />
+    <Property Name="PhoneCallDate" Type="datetime" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="PersonId" Type="uniqueidentifier" />
+    <Property Name="IsCaseNote" Type="bit" />
+    <Property Name="CaseId" Type="uniqueidentifier" />
+    <Property Name="GroupRecordId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="TaskId" />
+    </Key>
+    <Property Name="TaskId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="450" />
+    <Property Name="RegardingId" Type="uniqueidentifier" />
+    <Property Name="RegardingIdTableName" Type="nvarchar" MaxLength="128" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ActivityCategoryId" Type="uniqueidentifier" />
+    <Property Name="ActivitySubCategoryId" Type="uniqueidentifier" />
+    <Property Name="ActivityOutcomeId" Type="uniqueidentifier" />
+    <Property Name="ActivityReasonId" Type="uniqueidentifier" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="DueDate" Type="datetime" />
+    <Property Name="PersonId" Type="uniqueidentifier" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="RegardingIdName" Type="nvarchar" MaxLength="450" />
+    <Property Name="ActivityPriorityId" Type="uniqueidentifier" />
+    <Property Name="InformationByThirdParty" Type="bit" />
+    <Property Name="IsSignificantEvent" Type="bit" />
+    <Property Name="SignificantEventCategoryId" Type="uniqueidentifier" />
+    <Property Name="SignificantEventSubCategoryId" Type="uniqueidentifier" />
+    <Property Name="SignificantEventDate" Type="date" />
+    <Property Name="ResponsibleUserId" Type="uniqueidentifier" />
+    <Property Name="DataRestrictionId" Type="uniqueidentifier" />
+    <Property Name="IsCaseNote" Type="bit" />
+    <Property Name="CaseId" Type="uniqueidentifier" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="MHASectionReminderSetupId" Type="uniqueidentifier" />
+    <Property Name="GroupRecordId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="TeamRestrictedDataAccess">
+    <Key>
+      <PropertyRef Name="TeamRestrictedDataAccessId" />
+    </Key>
+    <Property Name="TeamRestrictedDataAccessId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="TeamId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DataRestrictionReferenceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="EndDate" Type="date" />
+  </EntityType>
+  <EntityType Name="UserRestrictedDataAccess">
+    <Key>
+      <PropertyRef Name="UserRestrictedDataAccessId" />
+    </Key>
+    <Property Name="UserRestrictedDataAccessId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="ImportCreateSequence" Type="int" />
+    <Property Name="ImportUpdateSequence" Type="int" />
+    <Property Name="LegacyId" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="DataRestrictionReferenceId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AttachDocumentType_CaseAttachment_DocumentTypeId">
+    <End Role="AttachDocumentType" Type="Self.AttachDocumentType" Multiplicity="0..1" />
+    <End Role="CaseAttachment" Type="Self.CaseAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AttachDocumentType">
+        <PropertyRef Name="AttachDocumentTypeId" />
+      </Principal>
+      <Dependent Role="CaseAttachment">
+        <PropertyRef Name="DocumentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttachDocumentType_Document_EdmsDocumentTypeId">
+    <End Role="AttachDocumentType" Type="Self.AttachDocumentType" Multiplicity="0..1" />
+    <End Role="Document" Type="Self.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AttachDocumentType">
+        <PropertyRef Name="AttachDocumentTypeId" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="EdmsDocumentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Audit_AuditChangeSet_2018_AuditId">
+    <End Role="Audit_2018" Type="Self.Audit_2018" Multiplicity="1" />
+    <End Role="AuditChangeSet_2018" Type="Self.AuditChangeSet_2018" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Audit_2018">
+        <PropertyRef Name="AuditId" />
+      </Principal>
+      <Dependent Role="AuditChangeSet_2018">
+        <PropertyRef Name="AuditId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Audit_AuditChangeSet_2019_AuditId">
+    <End Role="Audit_2019" Type="Self.Audit_2019" Multiplicity="1" />
+    <End Role="AuditChangeSet_2019" Type="Self.AuditChangeSet_2019" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Audit_2019">
+        <PropertyRef Name="AuditId" />
+      </Principal>
+      <Dependent Role="AuditChangeSet_2019">
+        <PropertyRef Name="AuditId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Audit_AuditChangeSet_2020_AuditId">
+    <End Role="Audit_2020" Type="Self.Audit_2020" Multiplicity="1" />
+    <End Role="AuditChangeSet_2020" Type="Self.AuditChangeSet_2020" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Audit_2020">
+        <PropertyRef Name="AuditId" />
+      </Principal>
+      <Dependent Role="AuditChangeSet_2020">
+        <PropertyRef Name="AuditId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Audit_AuditChangeSet_AuditId">
+    <End Role="Audit" Type="Self.Audit" Multiplicity="1" />
+    <End Role="AuditChangeSet" Type="Self.AuditChangeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Audit">
+        <PropertyRef Name="AuditId" />
+      </Principal>
+      <Dependent Role="AuditChangeSet">
+        <PropertyRef Name="AuditId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_Appointment_CaseId">
+    <End Role="Case" Type="Self.Case" Multiplicity="0..1" />
+    <End Role="Appointment" Type="Self.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_CaseAction_CaseId">
+    <End Role="Case" Type="Self.Case" Multiplicity="1" />
+    <End Role="CaseAction" Type="Self.CaseAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="CaseAction">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_CaseAttachment_CaseId">
+    <End Role="Case" Type="Self.Case" Multiplicity="1" />
+    <End Role="CaseAttachment" Type="Self.CaseAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="CaseAttachment">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_CaseForm_CaseId">
+    <End Role="Case" Type="Self.Case" Multiplicity="1" />
+    <End Role="CaseForm" Type="Self.CaseForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="CaseForm">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_CaseFormOutcome_CaseId">
+    <End Role="Case" Type="Self.Case" Multiplicity="1" />
+    <End Role="CaseFormOutcome" Type="Self.CaseFormOutcome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="CaseFormOutcome">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_Email_CaseId">
+    <End Role="Case" Type="Self.Case" Multiplicity="0..1" />
+    <End Role="Email" Type="Self.Email" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="Email">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_Letter_CaseId">
+    <End Role="Case" Type="Self.Case" Multiplicity="0..1" />
+    <End Role="Letter" Type="Self.Letter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="Letter">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_PhoneCall_CaseId">
+    <End Role="Case" Type="Self.Case" Multiplicity="0..1" />
+    <End Role="PhoneCall" Type="Self.PhoneCall" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="PhoneCall">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Case_Task_CaseId">
+    <End Role="Case" Type="Self.Case" Multiplicity="0..1" />
+    <End Role="Task" Type="Self.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseForm_CaseFormOutcome_CaseFormId">
+    <End Role="CaseForm" Type="Self.CaseForm" Multiplicity="1" />
+    <End Role="CaseFormOutcome" Type="Self.CaseFormOutcome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CaseForm">
+        <PropertyRef Name="CaseFormId" />
+      </Principal>
+      <Dependent Role="CaseFormOutcome">
+        <PropertyRef Name="CaseFormId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_CaseForm_DocumentId">
+    <End Role="Document" Type="Self.Document" Multiplicity="1" />
+    <End Role="CaseForm" Type="Self.CaseForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="DocumentId" />
+      </Principal>
+      <Dependent Role="CaseForm">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Document_documentquestionidentifier_DocumentId">
+    <End Role="Document" Type="Self.Document" Multiplicity="1" />
+    <End Role="DocumentQuestionIdentifier" Type="Self.DocumentQuestionIdentifier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="DocumentId" />
+      </Principal>
+      <Dependent Role="DocumentQuestionIdentifier">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentQuestionIdentifier_DocumentAnswer_DocumentQuestionIdentifierId">
+    <End Role="DocumentQuestionIdentifier" Type="Self.DocumentQuestionIdentifier" Multiplicity="1" />
+    <End Role="DocumentAnswer" Type="Self.DocumentAnswer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentQuestionIdentifier">
+        <PropertyRef Name="DocumentQuestionIdentifierId" />
+      </Principal>
+      <Dependent Role="DocumentAnswer">
+        <PropertyRef Name="DocumentQuestionIdentifierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Appointment_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="Appointment" Type="Self.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Case_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="Case" Type="Self.Case" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Case">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Case_WhoWasNotifiedId">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="Case" Type="Self.Case" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Case">
+        <PropertyRef Name="WhoWasNotifiedId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_CaseAction_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="CaseAction" Type="Self.CaseAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="CaseAction">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_CaseAttachment_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="CaseAttachment" Type="Self.CaseAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="CaseAttachment">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_CaseForm_JointCarerId">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="CaseForm" Type="Self.CaseForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="CaseForm">
+        <PropertyRef Name="JointCarerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_CaseForm_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="CaseForm" Type="Self.CaseForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="CaseForm">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_CaseFormOutcome_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="CaseFormOutcome" Type="Self.CaseFormOutcome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="CaseFormOutcome">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Email_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="Email" Type="Self.Email" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Email">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Letter_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="Letter" Type="Self.Letter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Letter">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_PersonAttendedEducationEstablishment_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="PersonAttendedEducationEstablishment" Type="Self.PersonAttendedEducationEstablishment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="PersonAttendedEducationEstablishment">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_PersonCaseNote_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="PersonCaseNote" Type="Self.PersonCaseNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="PersonCaseNote">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_PersonSignificantEvent_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="PersonSignificantEvent" Type="Self.PersonSignificantEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="PersonSignificantEvent">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_PhoneCall_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="PhoneCall" Type="Self.PhoneCall" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="PhoneCall">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Task_PersonId">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="Task" Type="Self.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CareDirectorQA_CDModelStoreContainer">
+    <EntitySet Name="Appointment" EntityType="Self.Appointment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AssessmentPrintRecord" EntityType="Self.AssessmentPrintRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AttachDocumentType" EntityType="Self.AttachDocumentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Audit" EntityType="Self.Audit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Audit_2018" EntityType="Self.Audit_2018" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Audit_2019" EntityType="Self.Audit_2019" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Audit_2020" EntityType="Self.Audit_2020" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuditChangeSet" EntityType="Self.AuditChangeSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuditChangeSet_2018" EntityType="Self.AuditChangeSet_2018" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuditChangeSet_2019" EntityType="Self.AuditChangeSet_2019" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuditChangeSet_2020" EntityType="Self.AuditChangeSet_2020" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Case" EntityType="Self.Case" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CaseAction" EntityType="Self.CaseAction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CaseAttachment" EntityType="Self.CaseAttachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CaseForm" EntityType="Self.CaseForm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CaseFormOutcome" EntityType="Self.CaseFormOutcome" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Document" EntityType="Self.Document" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentAnswer" EntityType="Self.DocumentAnswer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentQuestionIdentifier" EntityType="Self.DocumentQuestionIdentifier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Email" EntityType="Self.Email" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Letter" EntityType="Self.Letter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonAbsenceHospitalStayReason" EntityType="Self.PersonAbsenceHospitalStayReason" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonAttendedEducationEstablishment" EntityType="Self.PersonAttendedEducationEstablishment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonCaseNote" EntityType="Self.PersonCaseNote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonSignificantEvent" EntityType="Self.PersonSignificantEvent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhoneCall" EntityType="Self.PhoneCall" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Task" EntityType="Self.Task" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeamRestrictedDataAccess" EntityType="Self.TeamRestrictedDataAccess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRestrictedDataAccess" EntityType="Self.UserRestrictedDataAccess" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AttachDocumentType_CaseAttachment_DocumentTypeId" Association="Self.FK_AttachDocumentType_CaseAttachment_DocumentTypeId">
+      <End Role="AttachDocumentType" EntitySet="AttachDocumentType" />
+      <End Role="CaseAttachment" EntitySet="CaseAttachment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttachDocumentType_Document_EdmsDocumentTypeId" Association="Self.FK_AttachDocumentType_Document_EdmsDocumentTypeId">
+      <End Role="AttachDocumentType" EntitySet="AttachDocumentType" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Audit_AuditChangeSet_2018_AuditId" Association="Self.FK_Audit_AuditChangeSet_2018_AuditId">
+      <End Role="Audit_2018" EntitySet="Audit_2018" />
+      <End Role="AuditChangeSet_2018" EntitySet="AuditChangeSet_2018" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Audit_AuditChangeSet_2019_AuditId" Association="Self.FK_Audit_AuditChangeSet_2019_AuditId">
+      <End Role="Audit_2019" EntitySet="Audit_2019" />
+      <End Role="AuditChangeSet_2019" EntitySet="AuditChangeSet_2019" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Audit_AuditChangeSet_2020_AuditId" Association="Self.FK_Audit_AuditChangeSet_2020_AuditId">
+      <End Role="Audit_2020" EntitySet="Audit_2020" />
+      <End Role="AuditChangeSet_2020" EntitySet="AuditChangeSet_2020" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Audit_AuditChangeSet_AuditId" Association="Self.FK_Audit_AuditChangeSet_AuditId">
+      <End Role="Audit" EntitySet="Audit" />
+      <End Role="AuditChangeSet" EntitySet="AuditChangeSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_Appointment_CaseId" Association="Self.FK_Case_Appointment_CaseId">
+      <End Role="Case" EntitySet="Case" />
+      <End Role="Appointment" EntitySet="Appointment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_CaseAction_CaseId" Association="Self.FK_Case_CaseAction_CaseId">
+      <End Role="Case" EntitySet="Case" />
+      <End Role="CaseAction" EntitySet="CaseAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_CaseAttachment_CaseId" Association="Self.FK_Case_CaseAttachment_CaseId">
+      <End Role="Case" EntitySet="Case" />
+      <End Role="CaseAttachment" EntitySet="CaseAttachment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_CaseForm_CaseId" Association="Self.FK_Case_CaseForm_CaseId">
+      <End Role="Case" EntitySet="Case" />
+      <End Role="CaseForm" EntitySet="CaseForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_CaseFormOutcome_CaseId" Association="Self.FK_Case_CaseFormOutcome_CaseId">
+      <End Role="Case" EntitySet="Case" />
+      <End Role="CaseFormOutcome" EntitySet="CaseFormOutcome" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_Email_CaseId" Association="Self.FK_Case_Email_CaseId">
+      <End Role="Case" EntitySet="Case" />
+      <End Role="Email" EntitySet="Email" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_Letter_CaseId" Association="Self.FK_Case_Letter_CaseId">
+      <End Role="Case" EntitySet="Case" />
+      <End Role="Letter" EntitySet="Letter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_PhoneCall_CaseId" Association="Self.FK_Case_PhoneCall_CaseId">
+      <End Role="Case" EntitySet="Case" />
+      <End Role="PhoneCall" EntitySet="PhoneCall" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Case_Task_CaseId" Association="Self.FK_Case_Task_CaseId">
+      <End Role="Case" EntitySet="Case" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseForm_CaseFormOutcome_CaseFormId" Association="Self.FK_CaseForm_CaseFormOutcome_CaseFormId">
+      <End Role="CaseForm" EntitySet="CaseForm" />
+      <End Role="CaseFormOutcome" EntitySet="CaseFormOutcome" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_CaseForm_DocumentId" Association="Self.FK_Document_CaseForm_DocumentId">
+      <End Role="Document" EntitySet="Document" />
+      <End Role="CaseForm" EntitySet="CaseForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Document_documentquestionidentifier_DocumentId" Association="Self.FK_Document_documentquestionidentifier_DocumentId">
+      <End Role="Document" EntitySet="Document" />
+      <End Role="DocumentQuestionIdentifier" EntitySet="DocumentQuestionIdentifier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentQuestionIdentifier_DocumentAnswer_DocumentQuestionIdentifierId" Association="Self.FK_DocumentQuestionIdentifier_DocumentAnswer_DocumentQuestionIdentifierId">
+      <End Role="DocumentQuestionIdentifier" EntitySet="DocumentQuestionIdentifier" />
+      <End Role="DocumentAnswer" EntitySet="DocumentAnswer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Appointment_PersonId" Association="Self.FK_Person_Appointment_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Appointment" EntitySet="Appointment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Case_PersonId" Association="Self.FK_Person_Case_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Case" EntitySet="Case" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Case_WhoWasNotifiedId" Association="Self.FK_Person_Case_WhoWasNotifiedId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Case" EntitySet="Case" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_CaseAction_PersonId" Association="Self.FK_Person_CaseAction_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="CaseAction" EntitySet="CaseAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_CaseAttachment_PersonId" Association="Self.FK_Person_CaseAttachment_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="CaseAttachment" EntitySet="CaseAttachment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_CaseForm_JointCarerId" Association="Self.FK_Person_CaseForm_JointCarerId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="CaseForm" EntitySet="CaseForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_CaseForm_PersonId" Association="Self.FK_Person_CaseForm_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="CaseForm" EntitySet="CaseForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_CaseFormOutcome_PersonId" Association="Self.FK_Person_CaseFormOutcome_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="CaseFormOutcome" EntitySet="CaseFormOutcome" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Email_PersonId" Association="Self.FK_Person_Email_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Email" EntitySet="Email" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Letter_PersonId" Association="Self.FK_Person_Letter_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Letter" EntitySet="Letter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_PersonAttendedEducationEstablishment_PersonId" Association="Self.FK_Person_PersonAttendedEducationEstablishment_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="PersonAttendedEducationEstablishment" EntitySet="PersonAttendedEducationEstablishment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_PersonCaseNote_PersonId" Association="Self.FK_Person_PersonCaseNote_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="PersonCaseNote" EntitySet="PersonCaseNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_PersonSignificantEvent_PersonId" Association="Self.FK_Person_PersonSignificantEvent_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="PersonSignificantEvent" EntitySet="PersonSignificantEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_PhoneCall_PersonId" Association="Self.FK_Person_PhoneCall_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="PhoneCall" EntitySet="PhoneCall" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Task_PersonId" Association="Self.FK_Person_Task_PersonId">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
