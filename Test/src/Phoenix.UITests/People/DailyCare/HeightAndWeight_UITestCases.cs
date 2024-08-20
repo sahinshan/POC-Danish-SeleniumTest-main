@@ -1812,6 +1812,224 @@ namespace Phoenix.UITests.People.DailyCare
 
         }
 
+        [TestProperty("JiraIssueID", "ACC-9446")]
+        [Description("Step(s) from test for story ACC-5928. Verify Previous MUST Score section." +
+            "Does The Person Have An Amputation?, Amputation Level, Muac measurements.")]
+        [TestMethod]
+        [TestCategory("IntegrationTestLevel3_CareProviders_AWS")]
+        [TestProperty("BusinessModule", "Physical Observation and Monitoring")]
+        [TestProperty("Screen 1", "Height & Weight")]
+        public void HeightAndWeight_ACC9446_UITestMethod01()
+        {
+
+            #region CarePhysicalLocation
+
+            var _carePhysicalLocationId = dbHelper.carePhysicalLocation.GetByName("Living Room").FirstOrDefault();
+
+            #endregion
+
+            #region CareEquipment
+
+            var _careEquipmentId = dbHelper.careEquipment.GetByName("No equipment").FirstOrDefault();
+
+            #endregion
+
+            #region careAssistanceNeededId
+
+            var _careAssistanceNeededId = dbHelper.careAssistanceNeeded.GetByName("Independent").FirstOrDefault();
+
+            #endregion
+
+            #region CareWellBeing
+
+            var _careWellBeingdId = dbHelper.careWellbeing.GetByName("Happy").FirstOrDefault();
+
+            #endregion
+
+            #region Amputation Level
+
+            var AmputationLevelOptionSetId = dbHelper.optionSet.GetOptionSetIdByName("Amputation Level").FirstOrDefault();
+            var OptionSetValueId1 = dbHelper.optionsetValue.GetOptionSetValueIdByOptionSetId_Text(AmputationLevelOptionSetId, "Right Foot").FirstOrDefault(); //Right Foot = Numeric Code 2
+            var OptionSetValueId2 = dbHelper.optionsetValue.GetOptionSetValueIdByOptionSetId_Text(AmputationLevelOptionSetId, "Below Right Knee").FirstOrDefault(); //Below Right Knee = Numeric Code 4
+
+            #endregion
+
+            #region Ethnicity
+
+            var _ethnicityId = commonMethodsDB.CreateEthnicity(_teamId, "English", new DateTime(2020, 1, 1));
+
+            #endregion
+
+            #region Person
+
+            var firstName = "Tom";
+            var lastName = _currentDateSuffix;
+            var personId = commonMethodsDB.CreatePersonRecord(firstName, lastName, _ethnicityId, _teamId, new DateTime(2000, 1, 2));
+            var personNumber = (int)dbHelper.person.GetPersonById(personId, "personnumber")["personnumber"];
+
+            #endregion
+
+            #region Steps
+
+            loginPage
+                .GoToLoginPage()
+                .Login(_systemUserName, "Passw0rd_!");
+
+            mainMenu
+                .WaitForMainMenuToLoad()
+                .NavigateToPeopleSection();
+
+            peoplePage
+                .WaitForPeoplePageToLoad()
+                .SearchPersonRecordByID(personNumber.ToString(), personId.ToString())
+                .OpenPersonRecord(personId.ToString());
+
+            personRecordPage
+                .WaitForPersonRecordPageToLoad()
+                .NavigateToHeightWeightObservationsPage();
+
+            heightAndWeightPage
+                .WaitForPageToLoad()
+                .ClickNewRecordButton();
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .InsertTextOnDateAndTimeOccurred_DateField("01/07/2024")
+                .InsertTextOnDateAndTimeOccurred_TimeField("00:30")
+                .SelectConsentGiven("Yes")
+                .ClickEstimatedheight_YesRadioButton()
+                .InsertTextOnHeightmetres("1.85")
+                .ClickEstimatedweight_YesRadioButton()
+                .ValidateAmputationlevelLookupButtonVisible(false)
+                .ClickHasamputation_YesRadioButton()
+                .ValidateAmputationlevelLookupButtonVisible(true)
+                .ClickAmputationlevelLookupButton();
+
+            lookupMultiSelectPopup
+                .WaitForOptionSetLookupMultiSelectPopupToLoad()
+                .AddElementToList(OptionSetValueId1)
+                .AddElementToList(OptionSetValueId2)
+                .TapOKButton();
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .InsertTextOnMuacmeasurementcm("50")
+                .InsertTextOnWeightlosskilos("5")
+                .ValidateAcutediseaseeffect_NoRadioButtonChecked() //Acute Disease Effect (ADE) Field is No by default
+                .ValidateAcutediseaseeffect_YesRadioButtonNotChecked()
+                .ClickAcutediseaseeffect_YesRadioButton();
+
+            heightAndWeightRecordPage
+                .ClickLocationLookupButton();
+
+            lookupMultiSelectPopup
+                .WaitForLookupMultiSelectPopupToLoad()
+                .SelectResultElement(_carePhysicalLocationId);
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .ClickEquipmentLookupButton();
+
+            lookupMultiSelectPopup
+                .WaitForLookupMultiSelectPopupToLoad()
+                .SelectResultElement(_careEquipmentId);
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .ClickWellbeingLookupButton();
+
+            lookupPopup
+                .WaitForLookupPopupToLoad()
+                .SelectResultElement(_careWellBeingdId);
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .ClickAssistanceNeededLookupButton();
+
+            lookupPopup
+                .WaitForLookupPopupToLoad()
+                .SelectResultElement(_careAssistanceNeededId);
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .InsertTextOnTotalTimeSpentWithPersonMinutes("30")
+                .InsertTextOnAdditionalNotes("Test")
+                .ClickSaveAndCloseButton();
+
+            var heightAndWeightRecords = dbHelper.personHeightAndWeight.GetByPersonId(personId);
+            Assert.AreEqual(1, heightAndWeightRecords.Count);
+            var heightAndWeightId1 = heightAndWeightRecords[0];
+
+            heightAndWeightPage
+                .WaitForPageToLoad()
+                .ValidateRecordPresent(heightAndWeightId1, true);
+
+            heightAndWeightPage
+                .OpenRecord(heightAndWeightId1);
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .ValidateMusttotalscorepreviousText("")
+                .ValidateRiskpreviousText("")
+                .ValidateHasamputation_YesRadioButtonChecked()
+                .ValidateHasamputation_NoRadioButtonNotChecked()
+                .ValidateAmputationLevelSelectedElementLinkText(2, "Right Foot\r\n")
+                .ValidateAmputationLevelSelectedElementLinkText(4, "Below Right Knee\r\n")
+                .ValidateMuacmeasurementcmText("50.0")
+                .ValidateBmiresultText("Obese")
+                .ValidateBmiscoreText("31")
+                .ValidateMusttotalscoreText("2")
+                .ValidateRiskText("High Risk")
+                .ValidateCarenoteText("Tom's height was measured as 1.85 m (6 ft, 0 inches). This was an estimated value.\r\n" +
+                "Tom's unplanned weight loss was measured as 5 kg (0 st, 11 lb). This is a percentage loss of %.\r\n" +
+                "Tom's calculated BMI score is 31, which is categorised as Obese. This is an estimated result.\r\n" +
+                "Tom has a MUST Total Score of 2 - High Risk.\r\n" +
+                "Tom was in the Living Room.\r\n" +
+                "Tom used the following equipment: No equipment.\r\n" +
+                "Tom came across as Happy.\r\n" +
+                "Tom did not require any assistance.\r\n" +
+                "This care was given at 01/07/2024 00:30:00.\r\n" +
+                "Tom was assisted by 1 colleague(s).\r\n" +
+                "Overall I spent 30 minutes with Tom.\r\n" +
+                "We would like to note that: Test.");
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .ClickBackButton();
+
+            heightAndWeightPage
+                .WaitForPageToLoad()
+                .ClickNewRecordButton();
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .SelectConsentGiven("Yes");
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .ValidateMusttotalscorepreviousText("2")
+                .ValidateRiskpreviousText("High Risk");
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .ValidateHasamputation_YesRadioButtonChecked()
+                .ValidateHasamputation_NoRadioButtonNotChecked()
+                .ValidateAmputationLevelSelectedElementLinkText(2, "Right Foot\r\n")
+                .ValidateAmputationLevelSelectedElementLinkText(4, "Below Right Knee\r\n");
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .ValidateEstimatedbmi_YesRadioButtonChecked()
+                .ValidateEstimatedbmi_NoRadioButtonNotChecked();
+
+            heightAndWeightRecordPage
+                .WaitForPageToLoad()
+                .ValidateMuacmeasurementcmText("");
+
+            #endregion
+
+        }
+
         #endregion
 
         [Description("Method will return the name of all tests and the Description of each one")]

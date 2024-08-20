@@ -10245,7 +10245,6 @@ namespace Phoenix.UITests
             var _disableGpu = ConfigurationManager.AppSettings["DisableGpu"];
             var _noSandbox = ConfigurationManager.AppSettings["NoSandbox"];
             var _disableDevShmUsage = ConfigurationManager.AppSettings["DisableDevShmUsage"];
-            var _remote-debugging-port = ConfigurationManager.AppSettings["Remote-debugging-port"];
 
             switch (browser)
             {
@@ -10289,13 +10288,7 @@ namespace Phoenix.UITests
                         options.AddArguments("--disable-dev-shm-usage");
                     }
 
-                    
-                    if (_remote-debugging-port.Equals("true"))
-                    {
-                        options.AddArguments("--remote-debugging-port=9222");
-                    }
-                    var chromeDriverService = ChromeDriverService.CreateDefaultService(@"C:\Program Files\Google\Chrome\Driver");
-                    driver = new ChromeDriver(chromeDriverService, options);
+                    driver = new ChromeDriver(options);
                     driver.Manage().Cookies.DeleteAllCookies();
 
                     break;
